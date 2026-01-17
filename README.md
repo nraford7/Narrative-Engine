@@ -109,7 +109,7 @@ The **Director** synthesizes feedback, resolves conflicts, and surfaces decision
 ---
 
 ## Slide 1 — Opening Hook
-**Headline:** It is March 2028, and the Prince knows the water crisis will hit before anyone else does.
+**Headline:** It is March 2028, and the Mayor knows the water crisis will hit before anyone else does.
 
 **Spotlight:** Three weeks before demand spikes, the morning brief flags the pattern.
 Desalination capacity, population movement, industrial permits—the signals converged overnight.
