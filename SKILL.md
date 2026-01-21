@@ -70,7 +70,7 @@ The Focal Statement has three components:
 
 ## PHASE 2: Discovery Questions
 
-Ask 1-2 at a time. User can respond with numbers or their own words.
+Ask one question at a time. Wait for the user to answer before asking the next question. User can respond with numbers or their own words.
 
 ### Question 1: Audience
 
