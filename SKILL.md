@@ -1,26 +1,28 @@
 ---
 name: Narrative-Engine
-description: "Transform any content into narrative-driven slide decks using proven storytelling frameworks. Content-driven length, integrated compression, optional stress testing. Use when converting prose to presentations, restructuring existing decks, or optimizing for specific audiences."
+description: "Transform any content into narrative-driven presentations OR prose using proven storytelling frameworks. Content-driven length, integrated compression, optional stress testing. Use when converting content to presentations, restructuring existing decks, writing long-form pieces, or optimizing for specific audiences."
 ---
 
 # Narrative Engine
 
-Transform content into compelling narrative presentations. Content determines length — no padding, no artificial minimums.
+Transform content into compelling narratives — as presentations or prose. Content determines length — no padding, no artificial minimums.
 
 ## Workflow Overview
 
 ```
 PHASE 1     Content Import
     ↓
-PHASE 1.5   Focal Discovery — "What's the ONE point?"
+PHASE 1.5   Output Format — Presentation / Prose / Both
+    ↓
+PHASE 1.75  Focal Discovery — "What's the ONE point?"
     ↓
 PHASE 2     Discovery Questions — Audience, purpose, content type, tone
     ↓
-PHASE 2.5   Density Mode — High-Impact / Narrative / Evidence
+PHASE 2.5   Density Mode — Varies by output format
     ↓
 PHASE 3     Framework Recommendation — 2-3 options mapped to content
     ↓
-PHASE 4     Build — With integrated compression
+PHASE 4     Build — Presentation or Prose, with integrated compression
     ↓
 PHASE 5     Review Panel — 5 specialist agents
     ↓
@@ -40,13 +42,42 @@ Accept content in any form:
 - Existing presentation text
 - URLs (fetch and extract)
 
-If user pastes content without instructions, acknowledge receipt and proceed to Focal Discovery.
+If user pastes content without instructions, acknowledge receipt and proceed to Output Format.
 
 ---
 
-## PHASE 1.5: Focal Discovery
+## PHASE 1.5: Output Format
 
-**Purpose:** Establish the single point of the deck before anything else.
+Ask before proceeding to focal discovery:
+
+> **What format do you need?**
+> 1. **Presentation** — Slide deck with headlines, spotlights, and design notes
+> 2. **Prose** — Long-form document with sections, transitions, and flow
+> 3. **Both** — Build one, derive the other (specify which first)
+
+### If Prose selected:
+
+Ask for target length:
+
+> **Target length?**
+> 1. **Short** (~500-800 words) — Tight, punchy, every sentence earns its place
+> 2. **Medium** (~1,000-1,500 words) — Room to develop ideas, standard article length
+> 3. **Long** (~2,000-3,000 words) — Comprehensive, detailed, thought leadership depth
+> 4. **Let content determine** — No artificial target
+
+### If Both selected:
+
+> **Which format first?**
+> 1. **Prose → Presentation** — Write the full narrative, then compress to slides
+> 2. **Presentation → Prose** — Build the deck structure, then expand to prose
+
+**Note:** The frameworks (Trojan Horse, Heist, Time Machine, etc.) are *narrative structures* — they work for both formats. The divergence happens at the Build phase.
+
+---
+
+## PHASE 1.75: Focal Discovery
+
+**Purpose:** Establish the single point before anything else.
 
 Read the content and propose 2-3 possible focal points:
 
@@ -62,7 +93,7 @@ Read the content and propose 2-3 possible focal points:
 **Output:** A Focal Statement (1-2 sentences) that becomes the north star.
 
 The Focal Statement has three components:
-- **The One Thing:** Single idea the deck must land
+- **The One Thing:** Single idea the piece must land
 - **The Ask:** Action or shift being driven toward
 - **The Through-Line:** Logical/emotional thread connecting everything
 
@@ -126,6 +157,8 @@ Ask one question at a time. Wait for the user to answer before asking the next q
 
 ## PHASE 2.5: Density Mode Selection
 
+### For Presentations:
+
 > **How concentrated should this deck be?**
 >
 > 1. **High-Impact** — Maximum compression. One punch per slide. Headlines do heavy lifting. For pitches and time-constrained execs.
@@ -134,7 +167,17 @@ Ask one question at a time. Wait for the user to answer before asking the next q
 >
 > 3. **Evidence** — Denser supporting material. Multiple proof points per section. For skeptics, technical audiences, due diligence.
 
-**Key principle:** No minimum slide counts. Content determines length.
+### For Prose:
+
+> **How should this piece read?**
+>
+> 1. **Punchy** — Short paragraphs. High signal density. Every sentence earns its place. Hemingway, not Faulkner.
+>
+> 2. **Flowing** — Room to breathe. Narrative builds allowed. Transitions smooth the ride. Story beats get space to land.
+>
+> 3. **Dense** — Detailed and thorough. Evidence-heavy. Multiple proof points per section. For readers who want depth.
+
+**Key principle:** No minimum word/slide counts. Content determines length.
 
 ---
 
@@ -178,11 +221,11 @@ For these content types, run Audience Advocate and Comms Specialist during frame
 
 ## PHASE 4: Build
 
-Generate the deck with integrated compression. Every slide must justify its existence.
+Generate the output with integrated compression. Every section must justify its existence.
 
 ### Three-Level Clarity System
 
-**Level 1: Focal Agent (Deck Level)**
+**Level 1: Focal Agent (Piece Level)**
 - Does every section trace back to the Focal Statement?
 - Is the through-line clear?
 
@@ -191,14 +234,14 @@ Generate the deck with integrated compression. Every slide must justify its exis
 - Could two sections merge without losing anything?
 - Is the section's role clear? (Setup? Evidence? Turn? Resolution?)
 
-**Level 3: Slide Compression Agent**
-Four lenses on every slide:
+**Level 3: Unit Compression Agent**
+Four lenses on every slide/paragraph:
 
 | Lens | Question | Kill If... |
 |------|----------|------------|
-| **Structure** | If removed, would deck still work? | Redundant, padding |
+| **Structure** | If removed, would piece still work? | Redundant, padding |
 | **Language** | Can this be said in fewer words? | Jargon, filler, bloat |
-| **Clarity** | Grasped in 3 seconds? | Convoluted, unclear |
+| **Clarity** | Grasped quickly? | Convoluted, unclear |
 | **So What** | Why should audience care? | Empty, no benefit |
 
 **Protected Species (do NOT cut):**
@@ -208,7 +251,9 @@ Four lenses on every slide:
 - Specific details that make abstract concrete
 - Callbacks and plants that pay off later
 
-### Slide Format
+---
+
+### PRESENTATION Output Format
 
 Each slide contains:
 - **Headline:** Single sentence, ≤14 words, active voice
@@ -216,7 +261,7 @@ Each slide contains:
 - **Design note:** ONE specific visual suggestion
 - **Source tag:** [DIRECT] / [PARAPHRASE] / [ELABORATED] / [GENERATED]
 
-### Headline Rules
+#### Headline Rules
 
 - **Image & Action:** Concrete actors + strong verbs; avoid "is/are"
 - **Tension & Turn:** Because/Therefore, Not/But, Before/After
@@ -227,18 +272,7 @@ Each slide contains:
 See [`checklists.md`](checklists.md) for headline banlist and quality sweeps.
 See [`agent-reference-persuasion.md`](agent-reference-persuasion.md) for verbalization techniques.
 
-### Content Sourcing Tags
-
-| Tag | Meaning |
-|-----|---------|
-| `[DIRECT]` | Quoted or nearly verbatim from source |
-| `[PARAPHRASE]` | User's ideas restated |
-| `[ELABORATED]` | User's concept expanded |
-| `[GENERATED]` | New content for narrative flow |
-
-Include Sourcing Summary at end of deck.
-
-### Output Format
+#### Presentation Output Template
 
 ```markdown
 # [Deck Title]
@@ -277,9 +311,101 @@ Include Sourcing Summary at end of deck.
 
 ---
 
+### PROSE Output Format
+
+Each section contains:
+- **Section Header:** Clear, specific, often active voice
+- **Body Paragraphs:** Develop the beat, include evidence, maintain flow
+- **Transitions:** Connect sections with logical/emotional bridges
+- **Source attribution:** Inline citations or endnotes as appropriate
+
+#### Prose Rules
+
+- **Section Headers:** Can be longer than slide headlines; clarity over brevity
+- **Paragraph Length:** Varies by density mode (Punchy = 2-4 sentences; Flowing = 4-6; Dense = 6-8)
+- **Transitions:** Every section connects to the next; no orphan ideas
+- **One metaphor family** across the piece (journey OR weather OR architecture, etc.)
+- **The Turn:** The reframe/reveal moment gets its own paragraph or short section
+
+#### Prose Output Template
+
+```markdown
+# [Title]
+
+**Framework:** [Name]
+**Density:** [Punchy / Flowing / Dense]
+**Focal Statement:** [The one point]
+**Metaphor family:** [chosen metaphor]
+**Target length:** [X words]
+
+---
+
+## [Section 1 — Beat Name]
+
+[Opening paragraph that establishes the beat]
+
+[Development paragraph(s) with evidence, examples, or elaboration]
+
+[Transition sentence or paragraph leading to next section]
+
+---
+
+## [Section 2 — Beat Name]
+
+[Continue structure...]
+
+---
+
+[Continue for all sections]
+
+---
+
+## Sourcing Summary
+
+**Actual length:** X words
+**Originality Score:** X% user-sourced / Y% generated
+
+- Direct quotations: N instances
+- Paraphrased: N sections
+- Elaborated: N sections
+- Generated: N sections
+```
+
+---
+
+### Content Sourcing Tags
+
+| Tag | Meaning |
+|-----|---------|
+| `[DIRECT]` | Quoted or nearly verbatim from source |
+| `[PARAPHRASE]` | User's ideas restated |
+| `[ELABORATED]` | User's concept expanded |
+| `[GENERATED]` | New content for narrative flow |
+
+Include Sourcing Summary at end of output.
+
+---
+
+### Converting Between Formats
+
+#### Prose → Presentation
+1. Extract the headline from each section (the single most important sentence)
+2. Select ONE spotlight element per section (best example, stat, or quote)
+3. Add design notes based on the metaphor family
+4. Cut transitions (the deck structure provides flow)
+
+#### Presentation → Prose
+1. Headlines become section headers (can expand slightly)
+2. Spotlights become opening paragraphs
+3. Add development paragraphs (elaboration on the beat)
+4. Write transitions between each section
+5. Expand the Turn/Reveal moment — it deserves more space in prose
+
+---
+
 ## PHASE 5: Review Panel
 
-Five specialist agents review the deck in parallel.
+Five specialist agents review the output in parallel.
 
 ```
                     ┌─────────────────────────────────────┐
@@ -303,9 +429,10 @@ Five specialist agents review the deck in parallel.
 - Reference: [`agent-reference-persuasion.md`](agent-reference-persuasion.md)
 - Key question: "Is the message tight, emotionally resonant, and bulletproof?"
 
-**Visual Designer** — Reviews design notes, upgrades visual metaphors.
+**Visual Designer** — Reviews design notes (presentation) or imagery/metaphor consistency (prose).
 - Reference: [`agent-reference-visual.md`](agent-reference-visual.md)
-- Key question: "What visual would make the key slide unforgettable?"
+- Key question (presentation): "What visual would make the key slide unforgettable?"
+- Key question (prose): "Is the metaphor family consistent? Are images vivid?"
 
 **Critic** — Reviews for pacing, redundancy, weak links.
 - Key question: "If I had to cut 20%, what goes? What's the weakest link?"
@@ -397,7 +524,7 @@ After personas review, Director categorizes:
 
 ## Director Triage
 
-### 🔴 Must Fix (will undermine deck if ignored)
+### 🔴 Must Fix (will undermine piece if ignored)
 1. **[Issue]** ([Persona]) — [Why it matters and how to fix]
 
 ### 🟡 Should Fix (strengthens meaningfully)
@@ -420,7 +547,7 @@ When user says "tighter":
 
 1. **Focal check** — Has the point drifted? Re-confirm.
 2. **Section pass** — Any sections that could merge or be cut?
-3. **Slide pass** — Four-lens compression on every slide.
+3. **Unit pass** — Four-lens compression on every slide/paragraph.
 4. **Output** — Tighter version with change summary.
 
 Repeatable until user is satisfied.
@@ -445,11 +572,12 @@ Repeatable until user is satisfied.
 ## Quick Start
 
 1. User provides content
-2. Propose focal points → user confirms
-3. Ask discovery questions (audience, purpose, tone)
-4. Ask density mode (High-Impact / Narrative / Evidence)
-5. Recommend 2-3 frameworks → user selects
-6. Build deck with integrated compression
-7. Run Review Panel
-8. Offer Stress Test Panel
-9. User requests "tighter" if needed
+2. Ask output format (Presentation / Prose / Both)
+3. Propose focal points → user confirms
+4. Ask discovery questions (audience, purpose, content type, tone)
+5. Ask density mode (varies by format)
+6. Recommend 2-3 frameworks → user selects
+7. Build output with integrated compression
+8. Run Review Panel
+9. Offer Stress Test Panel
+10. User requests "tighter" if needed
