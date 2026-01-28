@@ -166,6 +166,8 @@ Ask one question at a time. Wait for the user to answer before asking the next q
 > 2. **Narrative** — Room to breathe. Story beats get space to land. Emotional builds allowed. For thought leadership and teaching.
 >
 > 3. **Evidence** — Denser supporting material. Multiple proof points per section. For skeptics, technical audiences, due diligence.
+>
+> 4. **ELI5** — Explain Like I'm 5. Maximum accessibility. Simple words, concrete analogies, zero jargon. For non-experts, broad audiences, or when clarity trumps sophistication.
 
 ### For Prose:
 
@@ -176,8 +178,59 @@ Ask one question at a time. Wait for the user to answer before asking the next q
 > 2. **Flowing** — Room to breathe. Narrative builds allowed. Transitions smooth the ride. Story beats get space to land.
 >
 > 3. **Dense** — Detailed and thorough. Evidence-heavy. Multiple proof points per section. For readers who want depth.
+>
+> 4. **ELI5** — Explain Like I'm 5. Simple words, everyday analogies, short sentences. No jargon, no abstractions. Like explaining to a curious child or smart non-expert.
 
 **Key principle:** No minimum word/slide counts. Content determines length.
+
+---
+
+### ELI5 Mode Guidelines
+
+When ELI5 is selected, apply these rules throughout:
+
+**Language Rules:**
+- Use common words (≤2 syllables when possible)
+- Replace jargon with plain language or define it immediately
+- Prefer active voice: "X does Y" not "Y is done by X"
+- Maximum sentence length: ~15 words
+- One idea per sentence
+
+**Analogy Requirements:**
+- Every abstract concept gets a concrete analogy
+- Draw from everyday experience: kitchen, playground, family, sports, weather
+- "It's like..." should appear frequently
+- Test: Would a smart 10-year-old understand this?
+
+**Structure Rules:**
+- Shorter paragraphs (2-3 sentences max)
+- More frequent section breaks
+- Use questions as headers when helpful ("So what does that mean?")
+- Build from familiar → unfamiliar
+
+**What to Avoid:**
+- Industry jargon (or define immediately if unavoidable)
+- Acronyms without expansion
+- Abstract nouns (transformation → change, optimization → making better)
+- Passive constructions
+- Compound sentences with multiple clauses
+- Assuming prior knowledge
+
+**Examples:**
+
+| Instead of... | Write... |
+|---------------|----------|
+| "Leverage synergies across verticals" | "Use what works in one area to help another" |
+| "The algorithm optimizes for engagement" | "The system figures out what keeps people interested" |
+| "Market volatility impacts portfolio allocation" | "When prices jump around, you might want to spread your money differently" |
+| "Stakeholder alignment is critical" | "Everyone involved needs to agree on what we're doing" |
+
+**Framework Adjustment:**
+In ELI5 mode, simpler narrative arcs work better:
+- **Hero's Journey** — natural story shape everyone recognizes
+- **Columbo** — answer-first keeps people oriented
+- **Trojan Horse** — start where they are, guide to insight
+- Avoid: Mystery Box (requires patience), Rashomon (requires holding multiple views)
 
 ---
 
@@ -278,7 +331,7 @@ See [`agent-reference-persuasion.md`](agent-reference-persuasion.md) for verbali
 # [Deck Title]
 
 **Framework:** [Name]
-**Density:** [High-Impact / Narrative / Evidence]
+**Density:** [High-Impact / Narrative / Evidence / ELI5]
 **Focal Statement:** [The one point]
 **Metaphor family:** [chosen metaphor]
 
@@ -333,7 +386,7 @@ Each section contains:
 # [Title]
 
 **Framework:** [Name]
-**Density:** [Punchy / Flowing / Dense]
+**Density:** [Punchy / Flowing / Dense / ELI5]
 **Focal Statement:** [The one point]
 **Metaphor family:** [chosen metaphor]
 **Target length:** [X words]
