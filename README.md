@@ -61,7 +61,7 @@ The skill draws from **17 proven frameworks** across two categories:
 | Duarte Resonate | What is ↔ What could be | Keynotes, vision |
 | SUCCESs | Simple, Unexpected, Concrete, Credible, Emotional, Stories | Quality checklist |
 
-### Phase 3: Build Brief + Generation
+### Phase 3: Build Brief + Subagent Build
 
 A **Build Brief** translates all discovery answers into concrete writing instructions:
 - **Voice** auto-derived from audience + tone (7 distinct profiles)
@@ -72,7 +72,9 @@ A **Build Brief** translates all discovery answers into concrete writing instruc
 
 The build then generates presentation slides or prose sections, each with source tags (`[DIRECT]` / `[PARAPHRASE]` / `[ELABORATED]` / `[GENERATED]`).
 
-### Phase 4: Multi-Agent Review Panel
+The build runs as a **subagent** via the Task tool — offloading the heaviest generation work from the main conversation and reducing context pressure.
+
+### Phase 4: Review Panel (6 Parallel Subagents)
 
 Six specialist agents review your output in parallel:
 
@@ -99,6 +101,8 @@ Six specialist agents review your output in parallel:
 | **Originality Agent** | "Would this feel different from a generic AI output?" |
 
 The **Director** synthesizes feedback, resolves conflicts, and surfaces decisions you need to make.
+
+All six agents run as **parallel subagents** via the Task tool, returning findings simultaneously for the Director to synthesize in the main conversation.
 
 ---
 
@@ -198,7 +202,15 @@ Invoke with `/Narrative-Engine` in Claude Code, then:
 | `agent-reference-persuasion.md` | Comms agent frameworks (Cialdini, SUCCESs, Ogilvy) |
 | `agent-reference-visual.md` | Visual agent frameworks (Tufte, Duarte, metaphors) |
 | `agent-reference-verification.md` | Content agent frameworks (IFCN, SIFT, fallacies) |
+| `prompts/` | Subagent prompt templates (builder, reviewer, stress-tester) |
 | `examples/` | Full workflow examples (climate keynote, post-mortem, remote work) |
+
+### Architecture
+
+Phases 1–3.5 (discovery) run interactively in the main conversation. Phases 4+ dispatch subagents:
+- **Build** (Phase 4): Single subagent reads the Build Brief from `/tmp/`, generates output, self-reviews for originality
+- **Review** (Phase 5): 6 parallel subagents, each with a specialist lens and reference file
+- **Stress Test** (Phase 5.5): 3 parallel subagents with auto-selected personas
 
 ---
 
