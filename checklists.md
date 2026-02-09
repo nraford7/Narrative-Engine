@@ -228,3 +228,83 @@ Four lenses for every slide:
 | **Lawyer** | "What's the exposure?" | Policy, compliance, external-facing |
 | **Conservative** | "Why change what's working?" | Change management, transformation |
 | **COO** | "Would this actually work?" | Execution plans, go-to-market, ops |
+
+---
+
+## Originality & Anti-Sameness Checklist
+
+Run after the build (Phase 4), before the review panel (Phase 5). If any check fails, revise before proceeding.
+
+### Structure
+- [ ] At least one beat breaks the expected pattern — shorter or longer than expected, different format, unexpected placement, or a structural surprise (single-word slide, question with no answer, deliberate silence)
+- [ ] The opening uses a specific strategy from `opening-closing-strategies.md`, NOT the framework's default first beat used generically
+- [ ] The closing uses a specific strategy from `opening-closing-strategies.md`, NOT just a standard callback or "in conclusion"
+
+### Language
+- [ ] No three consecutive headlines share the same grammatical structure — vary between declarative, question, imperative, conditional, fragment
+- [ ] Voice profile from `voice-profiles.md` is consistently applied — read 3 random sections and verify they match the selected voice's sentence structure, vocabulary, and signature moves
+- [ ] At least 2 headlines are specific to THIS content — they would not work in a different deck on a different topic
+
+### The Killer Line
+- [ ] One line in the piece is explicitly designed to be quoted and remembered
+- [ ] It is short (under 15 words), concrete (not abstract), surprising (breaks a pattern), and repeatable (easy to say aloud)
+- [ ] It appears at a high-impact moment — the Turn/Reveal, the close, or the S.T.A.R. moment
+- [ ] It is flagged in the output with a **[KILLER LINE]** tag
+
+### Emotional Distinctiveness
+- [ ] The emotional arc matches the framework's emotional texture from `emotional-arcs.md` — verify the intended feelings at key beats
+- [ ] The writing shifts register at least once — e.g., clinical precision breaking into directness at the Turn, or calm building to urgency at the CTA
+- [ ] The piece would feel meaningfully different if you swapped in a different framework — if not, the framework structure isn't doing enough work
+
+### The AI Test
+- [ ] Read the opening paragraph. Could it have come from any AI writing about any topic? If yes, rewrite until it couldn't.
+- [ ] Scan for and eliminate these generic AI patterns:
+  - "In today's rapidly changing/evolving..."
+  - "Let's dive in / Let's explore..."
+  - "In conclusion..."
+  - "The question isn't if but when..."
+  - "At its core..."
+  - "It's worth noting that..."
+  - "This begs the question..."
+  - "Moving forward..."
+  - "It goes without saying..."
+  - "Now more than ever..."
+- [ ] The piece contains at least one moment of genuine surprise, wit, specificity, or personality that a template could not produce
+
+---
+
+## Killer Line Design Checklist
+
+Every piece must have ONE line designed to be remembered. Use this checklist during the build phase to craft it, and during review to verify it.
+
+### Crafting
+- [ ] Expresses the focal statement in the most compressed, vivid form possible
+- [ ] Uses concrete imagery or physical language — not abstract concepts
+- [ ] Contains tension, contrast, or surprise — two ideas that don't normally sit together
+- [ ] Is self-contained — makes sense without any surrounding context
+- [ ] Would work as an email subject line, a tweet, or a meeting title
+
+### Testing
+- [ ] Say it aloud. Can you repeat it verbatim from memory after hearing it once?
+- [ ] Cover the rest of the piece. Does this one line capture the essential argument?
+- [ ] Could a competitor claim this exact line for their argument? If yes, make it more specific to THIS content.
+- [ ] Would someone text this to a colleague after the presentation? (The viral test)
+
+### Placement
+- [ ] Appears at a structurally high-impact moment (Turn, Reveal, Climax, Close, or S.T.A.R.)
+- [ ] Gets its own visual emphasis in design notes — larger type, standalone slide, or pull-quote formatting
+- [ ] Is NOT buried inside a spotlight paragraph or mid-section — it's a headline, standalone element, or section closer
+
+### Strong Killer Line Examples (for reference)
+- "Email isn't communication — it's other people's to-do lists for you"
+- "The office isn't where work happens — it's where work gets interrupted"
+- "Build what differentiates us; buy everything that doesn't"
+- "Every communication tool eventually becomes an anxiety delivery system"
+- "The pivot isn't the gamble. The pivot is what you do after the gamble failed."
+
+### Weak Killer Line Patterns (avoid)
+- Anything that starts with "The future of..." (too generic)
+- "X is the new Y" (cliché)
+- Anything ending with "...and that changes everything" (overused)
+- Questions framed as "What if we could..." (too soft)
+- Anything a motivational poster could use (too vague)
