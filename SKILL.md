@@ -24,16 +24,40 @@ PHASE 3     Framework Recommendation — Full sweep + dark horse
     ↓
 PHASE 3.5   Build Brief — Translates ALL discovery into concrete writing instructions
     ↓
-PHASE 4     Build — Guided by Build Brief, voice profile, emotional arc
+    ══════ HANDOFF: Write Build Brief + Source to /tmp/ ══════
     ↓
-PHASE 4.5   Originality Check — Anti-sameness sweep before review
+PHASE 4     Build — SUBAGENT (includes Originality Check)
     ↓
-PHASE 5     Review Panel — 6 specialist agents (now includes Originality Agent)
+    ══════ HANDOFF: Output written to /tmp/ ══════
     ↓
-PHASE 5.5   Stress Test Panel — Optional, auto-selected personas
+PHASE 5     Review Panel — 6 PARALLEL SUBAGENTS + Director synthesis
+    ↓
+PHASE 5.5   Stress Test — 3 PARALLEL SUBAGENTS + Director triage (optional)
     ↓
 ON-DEMAND   "Tighter" — Compression passes anytime
 ```
+
+---
+
+## Subagent Architecture
+
+Phases 1–3.5 run interactively in the main conversation. Phases 4, 5, and 5.5 run as subagents via the Task tool, reducing context window pressure and enabling parallel execution.
+
+### Handoff Files
+
+| File | Written by | Read by |
+|------|-----------|---------|
+| `/tmp/ne-build-brief.md` | Main (end of Phase 3.5) | Build, all Reviewers, all Stress Testers |
+| `/tmp/ne-source-content.md` | Main (end of Phase 3.5) | Build subagent |
+| `/tmp/ne-output.md` | Build subagent | Main, all Reviewers, all Stress Testers |
+
+### Prompt Templates
+
+| Template | Phase | Dispatch |
+|----------|-------|----------|
+| [`prompts/builder.md`](prompts/builder.md) | 4 | 1 agent, serial |
+| [`prompts/reviewer.md`](prompts/reviewer.md) | 5 | 6 agents, parallel |
+| [`prompts/stress-tester.md`](prompts/stress-tester.md) | 5.5 | 3 agents, parallel |
 
 ---
 
@@ -534,6 +558,7 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 | [`voice-profiles.md`](voice-profiles.md) | 7 voice profiles with auto-derive mapping |
 | [`emotional-arcs.md`](emotional-arcs.md) | Framework emotional textures + audience calibration |
 | [`opening-closing-strategies.md`](opening-closing-strategies.md) | Opening/closing strategy libraries |
+| [`prompts/`](prompts/) | Subagent prompt templates (builder, reviewer, stress-tester) |
 | [`examples/`](examples/) | Full workflow examples |
 
 ---
@@ -547,9 +572,10 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 5. Ask density mode (varies by format)
 6. **Full sweep** all frameworks → recommend 2 + 1 dark horse → user selects
 7. **Generate Build Brief** (voice, audience profile, emotional arc, strategies, killer line candidates) → user confirms
-8. Build output guided by Build Brief
-9. **Originality check** before review
-10. Run Review Panel (6 agents including Originality Agent)
-11. Offer Stress Test Panel
-12. User requests "tighter" if needed
-13. Offer Change Log export
+8. **Write handoff files** — Build Brief and source content to `/tmp/`
+9. **Dispatch build subagent** — reads `prompts/builder.md`, writes output to `/tmp/ne-output.md` (includes originality check)
+10. **Dispatch 6 review subagents in parallel** — each reads `prompts/reviewer.md` with role-specific parameters
+11. **Director synthesis** in main conversation — present unified recommendations
+12. Offer Stress Test Panel → **dispatch 3 stress test subagents in parallel** if accepted
+13. User requests "tighter" if needed
+14. Offer Change Log export
