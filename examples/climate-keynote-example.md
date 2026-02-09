@@ -247,6 +247,8 @@ This example shows the Narrative Engine workflow applied to a keynote speech abo
 
 ---
 
+> **[Subagent dispatch]** Main conversation writes Build Brief and source content to `/tmp/ne-build-brief.md` and `/tmp/ne-source-content.md`, then dispatches the build subagent via `prompts/builder.md`.
+
 ## Phase 4: Build (Abbreviated — 4 Slides Shown)
 
 **Claude generates deck guided by Build Brief:**
@@ -341,6 +343,8 @@ Before sending to Review Panel, the Originality & Anti-Sameness checklist is run
 
 ---
 
+> **[Subagent dispatch]** Build subagent has written output to `/tmp/ne-output.md`. Six review subagents dispatched in parallel via `prompts/reviewer.md`.
+
 ## Phase 5: Review Panel (Abbreviated)
 
 **Claude:**
@@ -417,3 +421,5 @@ The scaffolding sentence ("Here's the number that should rewrite...") was cut. T
 5. **Opening/Closing Strategy layered on framework:** Future Projection delivers the Time Machine's Future Headline beat — but the *rhetorical* approach (present tense, sensory detail, "you are there") comes from the opening strategy, not the framework default.
 
 6. **Originality Agent catching real issues:** The Slide 3 "Here's the number that should rewrite how you think" was a genuine TED-talk cliche that would have weakened the piece. The fix — stripping the rhetorical scaffolding and trusting the data — improved the output and demonstrated that the Originality Agent adds value, not just process.
+
+7. **Subagent architecture in action:** The build phase ran as a separate subagent reading the Build Brief from `/tmp/`, and all six review agents ran in parallel — reducing context window pressure while maintaining the full quality pipeline.

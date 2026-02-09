@@ -251,6 +251,8 @@ This example shows the Narrative Engine workflow applied to a post-mortem analys
 
 ---
 
+> **[Subagent dispatch]** Main conversation writes Build Brief and source content to `/tmp/ne-build-brief.md` and `/tmp/ne-source-content.md`, then dispatches the build subagent via `prompts/builder.md`.
+
 ## Phase 4: Build (Abbreviated — 4 Slides Shown)
 
 **Claude generates deck guided by Build Brief:**
@@ -345,6 +347,8 @@ Before sending to Review Panel, the Originality & Anti-Sameness checklist is run
 
 ---
 
+> **[Subagent dispatch]** Build subagent has written output to `/tmp/ne-output.md`. Six review subagents dispatched in parallel via `prompts/reviewer.md`.
+
 ## Phase 5: Review Panel (Abbreviated)
 
 **Claude:**
@@ -433,3 +437,5 @@ In the keynote example, the Originality Agent flagged a TED-talk cliche ("Here's
 3. **Evidence density calibrated to audience:** The keynote uses "enough to fill a football stadium" comparisons. This post-mortem uses "847,000 rows" and "02:18:41 UTC." Same system, different audience profile instructions.
 
 4. **Framework + opening/closing strategy combination:** Columbo's Cold Open Outcome beat (structural requirement: state the result) was delivered through a Startling Statistic (rhetorical approach: the number that stops the room). The framework said *what* the opening must accomplish; the strategy said *how* to accomplish it.
+
+5. **Subagent dispatch pattern:** Build and review phases run as subagents. The Build Brief handoff at `/tmp/ne-build-brief.md` contains everything the build subagent needs. Review agents run 6-wide in parallel, each with their specialist reference file.
