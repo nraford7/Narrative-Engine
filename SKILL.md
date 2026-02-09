@@ -20,11 +20,15 @@ PHASE 2     Discovery Questions — Audience, purpose, content type, tone
     ↓
 PHASE 2.5   Density Mode — Varies by output format
     ↓
-PHASE 3     Framework Recommendation — 2-3 options mapped to content
+PHASE 3     Framework Recommendation — Full sweep + dark horse
     ↓
-PHASE 4     Build — Presentation or Prose, with integrated compression
+PHASE 3.5   Build Brief — Translates ALL discovery into concrete writing instructions
     ↓
-PHASE 5     Review Panel — 5 specialist agents
+PHASE 4     Build — Guided by Build Brief, voice profile, emotional arc
+    ↓
+PHASE 4.5   Originality Check — Anti-sameness sweep before review
+    ↓
+PHASE 5     Review Panel — 6 specialist agents (now includes Originality Agent)
     ↓
 PHASE 5.5   Stress Test Panel — Optional, auto-selected personas
     ↓
@@ -236,30 +240,25 @@ In ELI5 mode, simpler narrative arcs work better:
 
 ## PHASE 3: Framework Recommendation
 
-Based on discovery answers, recommend 2-3 frameworks.
+Based on discovery answers, recommend frameworks using the Full Sweep Protocol.
+
+**REQUIRED:** Before recommending, complete the framework scoring sweep in [`framework-selection.md`](framework-selection.md). This means:
+1. Score all 10 narrative arcs (1-5) against this specific combination of inputs
+2. Score the top 5 communication frameworks
+3. Present the top 2 arc + framework pairings with skeleton and tradeoffs
+4. Present 1 Dark Horse — an unexpected option that scores 3+ and could produce something more original
+5. Include a Rejection Log — 1-2 sentences on why low-scoring options don't fit
 
 For each recommendation:
-1. **Name the framework** and category (Narrative Arc vs. Communication Framework)
+1. **Name the framework** and category
 2. **Explain fit** in 2-3 sentences specific to their situation
 3. **Show the skeleton** — their content mapped to the framework's beats
 4. **Flag tradeoffs** — what this framework does well vs. potential drawbacks
+5. **Emotional preview** — what the audience will *feel* at the key moments (reference [`emotional-arcs.md`](emotional-arcs.md))
 
-See [`framework-selection.md`](framework-selection.md) for selection matrix.
-See [`narrative-arcs.md`](narrative-arcs.md) for arc details.
+See [`framework-selection.md`](framework-selection.md) for the full sweep protocol and selection matrices.
+See [`narrative-arcs.md`](narrative-arcs.md) for arc details including emotional textures.
 See [`communication-frameworks.md`](communication-frameworks.md) for framework details.
-
-### Quick Selection Heuristics
-
-| If... | Consider... |
-|-------|-------------|
-| Executive audience | Columbo or Pyramid — answer-first |
-| Skeptical audience | Trojan Horse — meet them where they are |
-| Material has genuine surprise | The Prestige or Mystery Box |
-| Strategy/transformation | The Heist — goal-obstacles-crew |
-| Vision/future focus | Time Machine — future-back |
-| Origin story | Hero's Journey — transformation |
-| Multi-stakeholder | Rashomon — multiple views to synthesis |
-| Post-mortem | Columbo — outcome-first reconstruction |
 
 ### High-Stakes Content: Early Agent Review
 
@@ -272,9 +271,63 @@ For these content types, run Audience Advocate and Comms Specialist during frame
 
 ---
 
+## PHASE 3.5: Build Brief
+
+**Purpose:** Translate ALL discovery answers into concrete writing instructions. This is the bridge between "what did the user say" and "how should this be written." Present the Build Brief to the user for confirmation before building.
+
+Generate a Build Brief in this format:
+
+---
+
+### Build Brief
+
+**Focal Statement:** [from Phase 1.75]
+**Framework:** [selected in Phase 3] + [communication framework overlay]
+**Density:** [from Phase 2.5]
+
+**Voice Profile:** [Auto-derived from audience + tone, or user override]
+- See [`voice-profiles.md`](voice-profiles.md) for full profile
+- Key instruction: [2-3 sentence summary of the voice's rules]
+
+**Audience Profile:** [from Phase 2]
+- See [`audience-profiles.md`](audience-profiles.md) for full profile
+- Trust signals to hit: [list 2-3]
+- Resistance triggers to avoid: [list 2-3]
+- Evidence style: [type]
+- Headline style: [specific to this audience]
+
+**Emotional Arc:** [from emotional-arcs.md]
+- Shape: [e.g., "comfort → unease → snap → reorientation → urgency"]
+- Intensity dial: [1-5, calibrated to audience]
+- Key emotional moment: [which beat, how to handle it]
+
+**Persuasion Strategy:** [2-3 Cialdini principles prioritized for this audience]
+- Primary: [principle] — apply by [specific instruction]
+- Secondary: [principle] — apply by [specific instruction]
+
+**Opening Strategy:** [selected from opening-closing-strategies.md]
+- Type: [e.g., Cold Open Scene]
+- Combined with framework beat: [e.g., "The Prestige's Pledge beat, delivered as a Cold Open Scene"]
+
+**Closing Strategy:** [selected from opening-closing-strategies.md]
+- Type: [e.g., The Simple Truth]
+- Combined with framework beat: [e.g., "The Prestige's Callback beat, delivered as The Simple Truth"]
+
+**Killer Line Target:** [Draft 2-3 candidate killer lines based on the focal statement. Refine during build.]
+
+**Anti-Sameness Notes:** [Any specific instructions to avoid generic patterns — e.g., "This audience has seen 100 'digital transformation' decks. Find a fresh angle on slide structure or metaphor."]
+
+---
+
+> "Here's the Build Brief I'll use to guide the output. Anything you'd change before I build?"
+
+The user can adjust any element. Once confirmed, the Build Brief becomes the binding reference for Phase 4.
+
+---
+
 ## PHASE 4: Build
 
-Generate the output with integrated compression. Every section must justify its existence.
+Generate the output guided by the Build Brief. Every decision references the brief — voice, audience, emotional arc, opening/closing, persuasion strategy. The Build Brief is the primary reference; framework beat structure is the secondary reference.
 
 ### Three-Level Clarity System
 
@@ -304,6 +357,30 @@ Four lenses on every slide/paragraph:
 - Specific details that make abstract concrete
 - Callbacks and plants that pay off later
 
+### Voice Application
+
+Apply the selected voice profile from [`voice-profiles.md`](voice-profiles.md) throughout:
+- **Sentence structure** must match the profile's patterns
+- **Vocabulary** must stay within the profile's register
+- **Paragraph rhythm** must follow the profile's variation pattern
+- **Signature moves** should appear at least 2-3 times in the piece
+
+### Emotional Arc Application
+
+Follow the framework's emotional texture from [`emotional-arcs.md`](emotional-arcs.md):
+- Map the intended audience emotion to each beat
+- Shift language register at the points specified in the arc's texture
+- Calibrate intensity to the audience's emotional ceiling
+- The key emotional moment gets extra craft — do not rush it
+
+### Killer Line Placement
+
+During the build, identify the Killer Line:
+- Refine the candidates from the Build Brief
+- Place it at the highest-impact moment
+- Tag it with **[KILLER LINE]** in the output
+- Verify it passes the tests in [`checklists.md`](checklists.md) Killer Line checklist
+
 ---
 
 ### PRESENTATION Output Format
@@ -325,6 +402,11 @@ Each slide contains:
 See [`checklists.md`](checklists.md) for headline banlist and quality sweeps.
 See [`agent-reference-persuasion.md`](agent-reference-persuasion.md) for verbalization techniques.
 
+**Audience-Conditional Headline Adjustments:**
+- Consult the selected audience profile in [`audience-profiles.md`](audience-profiles.md) for headline style specific to this audience
+- The generic rules above are the baseline; the audience profile overrides where they conflict
+- Example: Executive audience headlines should be answer-first and data-anchored; Keynote audience headlines can be more provocative and metaphor-driven
+
 #### Presentation Output Template
 
 ```markdown
@@ -334,6 +416,11 @@ See [`agent-reference-persuasion.md`](agent-reference-persuasion.md) for verbali
 **Density:** [High-Impact / Narrative / Evidence / ELI5]
 **Focal Statement:** [The one point]
 **Metaphor family:** [chosen metaphor]
+**Voice:** [selected voice profile]
+**Emotional arc:** [shape summary]
+**Opening strategy:** [type]
+**Closing strategy:** [type]
+**Killer Line:** "[the line]"
 
 ---
 
@@ -390,6 +477,11 @@ Each section contains:
 **Focal Statement:** [The one point]
 **Metaphor family:** [chosen metaphor]
 **Target length:** [X words]
+**Voice:** [selected voice profile]
+**Emotional arc:** [shape summary]
+**Opening strategy:** [type]
+**Closing strategy:** [type]
+**Killer Line:** "[the line]"
 
 ---
 
@@ -456,9 +548,23 @@ Include Sourcing Summary at end of output.
 
 ---
 
+## PHASE 4.5: Originality Check
+
+Before sending to the Review Panel, run the Originality & Anti-Sameness Checklist from [`checklists.md`](checklists.md).
+
+If any check fails, revise before proceeding. Key checks:
+- Voice profile consistently applied
+- Emotional arc matches framework texture
+- No three consecutive headlines share grammatical structure
+- Killer Line identified and placed
+- Opening/closing use selected strategies (not defaults)
+- The AI Test: opening doesn't sound generic
+
+---
+
 ## PHASE 5: Review Panel
 
-Five specialist agents review the output in parallel.
+Six specialist agents review the output in parallel.
 
 ```
                     ┌─────────────────────────────────────┐
@@ -466,10 +572,10 @@ Five specialist agents review the output in parallel.
                     │  Synthesizes, resolves conflicts    │
                     └─────────────────────────────────────┘
                                      ▲
-        ┌────────────┬───────────────┼───────────────┬────────────┐
-        ▼            ▼               ▼               ▼            ▼
-   AUDIENCE     COMMS/PR        VISUAL         CRITIC       CONTENT
-   ADVOCATE     SPECIALIST      DESIGNER                    EXPERT
+        ┌──────┬──────┬──────────────┼──────────────┬──────┬──────┐
+        ▼      ▼      ▼             ▼              ▼      ▼      ▼
+   AUDIENCE  COMMS  VISUAL      CRITIC        CONTENT  ORIGINALITY
+   ADVOCATE        DESIGNER                   EXPERT    AGENT
 ```
 
 ### Agent Roles
@@ -495,6 +601,15 @@ Five specialist agents review the output in parallel.
 - Reference: [`agent-reference-verification.md`](agent-reference-verification.md)
 - Key question: "Can every claim be defended if challenged?"
 - Runs Perplexity search for supporting evidence.
+
+**Originality Agent** — Reviews for distinctiveness, freshness, and anti-sameness.
+- Reference: [`checklists.md`](checklists.md) — Originality & Anti-Sameness Checklist
+- Key questions:
+  - "Would this be distinguishable from any other AI-generated piece on this topic?"
+  - "Is the Build Brief actually reflected in the output, or did the build revert to generic?"
+  - "What's the one element that makes this piece *this piece* and no other?"
+- Checks: Voice consistency, emotional arc adherence, headline variety, killer line quality, opening/closing strategy execution
+- Flags: Generic patterns, AI-isms, missed opportunities for distinctiveness
 
 ### Director Synthesis
 
@@ -733,6 +848,10 @@ Choose 4-6 based on the piece:
 | [`agent-reference-persuasion.md`](agent-reference-persuasion.md) | Comms agent deep reference |
 | [`agent-reference-visual.md`](agent-reference-visual.md) | Visual agent deep reference |
 | [`agent-reference-verification.md`](agent-reference-verification.md) | Content expert deep reference |
+| [`audience-profiles.md`](audience-profiles.md) | Deep audience profiles carrying through build |
+| [`voice-profiles.md`](voice-profiles.md) | 7 voice profiles with auto-derive mapping |
+| [`emotional-arcs.md`](emotional-arcs.md) | Framework emotional textures + audience calibration |
+| [`opening-closing-strategies.md`](opening-closing-strategies.md) | Opening/closing strategy libraries |
 | [`examples/`](examples/) | Full workflow examples |
 
 ---
@@ -744,9 +863,11 @@ Choose 4-6 based on the piece:
 3. Propose focal points → user confirms
 4. Ask discovery questions (audience, purpose, content type, tone)
 5. Ask density mode (varies by format)
-6. Recommend 2-3 frameworks → user selects
-7. Build output with integrated compression
-8. Run Review Panel
-9. Offer Stress Test Panel
-10. User requests "tighter" if needed
-11. Offer Change Log export
+6. **Full sweep** all frameworks → recommend 2 + 1 dark horse → user selects
+7. **Generate Build Brief** (voice, audience profile, emotional arc, strategies, killer line candidates) → user confirms
+8. Build output guided by Build Brief
+9. **Originality check** before review
+10. Run Review Panel (6 agents including Originality Agent)
+11. Offer Stress Test Panel
+12. User requests "tighter" if needed
+13. Offer Change Log export
