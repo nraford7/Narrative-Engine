@@ -181,11 +181,16 @@ Invoke with `/Narrative-Engine` in Claude Code, then:
 | `SKILL.md` | Main skill definition and workflow |
 | `narrative-arcs.md` | Beat-by-beat structures for all 10 arcs |
 | `communication-frameworks.md` | Detailed framework descriptions |
-| `framework-selection.md` | Selection matrix by audience/purpose/content |
-| `framework_selection_guide.md` | Complete integration guide |
+| `framework-selection.md` | Full sweep protocol and selection matrices |
+| `audience-profiles.md` | Deep audience profiles with writing instructions |
+| `voice-profiles.md` | 7 voice profiles with auto-derive mapping |
+| `emotional-arcs.md` | Framework emotional textures + audience calibration |
+| `opening-closing-strategies.md` | Opening/closing strategy libraries + pairing matrix |
+| `checklists.md` | All quality checklists (headlines, CTAs, originality, killer line) |
 | `agent-reference-persuasion.md` | Comms agent frameworks (Cialdini, SUCCESs, Ogilvy) |
 | `agent-reference-visual.md` | Visual agent frameworks (Tufte, Duarte, metaphors) |
 | `agent-reference-verification.md` | Content agent frameworks (IFCN, SIFT, fallacies) |
+| `examples/` | Full workflow examples (climate keynote, post-mortem, remote work) |
 
 ---
 

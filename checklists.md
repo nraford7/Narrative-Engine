@@ -308,3 +308,112 @@ Every piece must have ONE line designed to be remembered. Use this checklist dur
 - Anything ending with "...and that changes everything" (overused)
 - Questions framed as "What if we could..." (too soft)
 - Anything a motivational poster could use (too vague)
+
+---
+
+## Change Log Template
+
+Used in the ON-DEMAND Change Log Export phase. The Change Log is **not a generic scorecard**. Metrics should be selected based on what actually matters for *this specific piece* given its audience, purpose, and content type.
+
+```markdown
+# Change Log: [Title]
+
+**Original:** [Brief description of input — word count, format, state]
+**Output:** [Format, word/slide count, framework used]
+**Transformation date:** [Date]
+
+---
+
+## Executive Summary
+
+[2-3 sentences: What was the core transformation? What problem did the original have that the output solves?]
+
+---
+
+## Key Changes
+
+### 1. [Change Category]
+**What changed:** [Specific description]
+**Why:** [Reasoning tied to audience/purpose/framework]
+**Example:**
+> Original: "[quote from original]"
+> Revised: "[quote from output]"
+
+### 2. [Change Category]
+[Continue for 3-5 most significant changes]
+
+---
+
+## Quality Comparison
+
+[Select 4-6 metrics relevant to THIS piece. Examples below — choose what matters:]
+
+| Dimension | Original | Output | Notes |
+|-----------|----------|--------|-------|
+| **Focal clarity** | [Assessment] | [Assessment] | [What changed] |
+| **Emotional engagement** | [Assessment] | [Assessment] | [What changed] |
+| **Call to action strength** | [Assessment] | [Assessment] | [What changed] |
+| **Evidence density** | [Assessment] | [Assessment] | [What changed] |
+| **Skeptic-proofing** | [Assessment] | [Assessment] | [What changed] |
+| **Pacing/flow** | [Assessment] | [Assessment] | [What changed] |
+
+### Metric Selection Rationale
+[1-2 sentences: Why these metrics for this piece? e.g., "Given the skeptical audience and persuasion goal, skeptic-proofing and evidence density matter more than emotional engagement."]
+
+---
+
+## What Stayed the Same
+
+[Acknowledge what was already strong in the original — don't imply everything needed fixing]
+
+- [Element preserved]
+- [Element preserved]
+
+---
+
+## Tradeoffs Made
+
+[Be honest about what was sacrificed for what was gained]
+
+| Gained | Lost/Reduced | Why acceptable |
+|--------|--------------|----------------|
+| [Benefit] | [Cost] | [Reasoning] |
+
+---
+
+## Recommendations for Future Use
+
+[Optional: If the user might iterate on this content again, what should they know?]
+
+- [Recommendation]
+- [Recommendation]
+```
+
+### Metric Menu (Select What Fits)
+
+Choose 4-6 based on the piece:
+
+**For persuasion-focused pieces:**
+- Focal clarity
+- Call to action strength
+- Skeptic-proofing
+- Objection handling
+- Urgency calibration
+
+**For inspiration/vision pieces:**
+- Emotional arc
+- Memorability (quotable lines)
+- Identity resonance
+- Aspiration activation
+
+**For evidence-heavy pieces:**
+- Evidence density
+- Source credibility
+- Logical validity
+- Counterargument coverage
+
+**For all pieces (choose 1-2):**
+- Pacing/flow
+- Audience fit
+- Compression ratio (signal per word/slide)
+- Metaphor coherence
