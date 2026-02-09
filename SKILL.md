@@ -325,198 +325,30 @@ The user can adjust any element. Once confirmed, the Build Brief becomes the bin
 
 ---
 
-## PHASE 4: Build
+## PHASE 4: Build (Subagent)
 
-Generate the output guided by the Build Brief. Every decision references the brief — voice, audience, emotional arc, opening/closing, persuasion strategy. The Build Brief is the primary reference; framework beat structure is the secondary reference.
+The build phase runs as a subagent via the Task tool, offloading the heaviest generation work from the main conversation. Phase 4.5 (Originality Check) is folded into the build subagent as a self-review step.
 
-### Three-Level Clarity System
+### Pre-Build: Write Handoff Files
 
-**Level 1: Focal Agent (Piece Level)**
-- Does every section trace back to the Focal Statement?
-- Is the through-line clear?
+Before dispatching:
+1. Write the confirmed Build Brief to `/tmp/ne-build-brief.md`
+2. Write the user's source content to `/tmp/ne-source-content.md`
 
-**Level 2: Section Clarity Agent**
-- Does this section advance the point, or is it a detour?
-- Could two sections merge without losing anything?
-- Is the section's role clear? (Setup? Evidence? Turn? Resolution?)
+### Dispatch
 
-**Level 3: Unit Compression Agent**
-Four lenses on every slide/paragraph:
+Create one Task:
+- **subagent_type:** `general-purpose`
+- **Prompt:** Read and execute [`prompts/builder.md`](prompts/builder.md)
+- The subagent reads all reference files specified in the Build Brief (arc, voice, audience, emotional texture, strategies, checklists)
+- The subagent runs the Originality & Anti-Sameness Checklist before finalizing (Phase 4.5 folded in)
+- Output written to `/tmp/ne-output.md`
 
-| Lens | Question | Kill If... |
-|------|----------|------------|
-| **Structure** | If removed, would piece still work? | Redundant, padding |
-| **Language** | Can this be said in fewer words? | Jargon, filler, bloat |
-| **Clarity** | Grasped quickly? | Convoluted, unclear |
-| **So What** | Why should audience care? | Empty, no benefit |
+### Post-Build
 
-**Protected Species (do NOT cut):**
-- Vivid metaphors that create memorability
-- Emotional beats that build connection
-- The surprising turn / reveal moment
-- Specific details that make abstract concrete
-- Callbacks and plants that pay off later
-
-### Voice Application
-
-Apply the selected voice profile from [`voice-profiles.md`](voice-profiles.md) throughout:
-- **Sentence structure** must match the profile's patterns
-- **Vocabulary** must stay within the profile's register
-- **Paragraph rhythm** must follow the profile's variation pattern
-- **Signature moves** should appear at least 2-3 times in the piece
-
-### Emotional Arc Application
-
-Follow the framework's emotional texture from [`emotional-arcs.md`](emotional-arcs.md):
-- Map the intended audience emotion to each beat
-- Shift language register at the points specified in the arc's texture
-- Calibrate intensity to the audience's emotional ceiling
-- The key emotional moment gets extra craft — do not rush it
-
-### Killer Line Placement
-
-During the build, identify the Killer Line:
-- Refine the candidates from the Build Brief
-- Place it at the highest-impact moment
-- Tag it with **[KILLER LINE]** in the output
-- Verify it passes the tests in [`checklists.md`](checklists.md) Killer Line checklist
-
----
-
-### PRESENTATION Output Format
-
-Each slide contains:
-- **Headline:** Single sentence, ≤14 words, active voice
-- **Spotlight:** ≤60 words — ONE example, statistic, or quote (with citation)
-- **Design note:** ONE specific visual suggestion
-- **Source tag:** [DIRECT] / [PARAPHRASE] / [ELABORATED] / [GENERATED]
-
-#### Headline Rules
-
-- **Image & Action:** Concrete actors + strong verbs; avoid "is/are"
-- **Tension & Turn:** Because/Therefore, Not/But, Before/After
-- **Cadence:** 8-14 words; favor two-beat rhythm
-- **Specific Anchors:** Name time/place/actor/number in every third headline
-- **One metaphor family** across the deck (journey OR weather OR architecture, etc.)
-
-See [`checklists.md`](checklists.md) for headline banlist and quality sweeps.
-See [`agent-reference-persuasion.md`](agent-reference-persuasion.md) for verbalization techniques.
-
-**Audience-Conditional Headline Adjustments:**
-- Consult the selected audience profile in [`audience-profiles.md`](audience-profiles.md) for headline style specific to this audience
-- The generic rules above are the baseline; the audience profile overrides where they conflict
-- Example: Executive audience headlines should be answer-first and data-anchored; Keynote audience headlines can be more provocative and metaphor-driven
-
-#### Presentation Output Template
-
-```markdown
-# [Deck Title]
-
-**Framework:** [Name]
-**Density:** [High-Impact / Narrative / Evidence / ELI5]
-**Focal Statement:** [The one point]
-**Metaphor family:** [chosen metaphor]
-**Voice:** [selected voice profile]
-**Emotional arc:** [shape summary]
-**Opening strategy:** [type]
-**Closing strategy:** [type]
-**Killer Line:** "[the line]"
-
----
-
-## Slide 1 — [Section/Beat Name]
-**Headline:** [Full sentence, ≤14 words]
-
-**Spotlight (≤60 words):** [One supporting element]
-
-**Design note:** [Specific visual]
-
-**Source:** [DIRECT/PARAPHRASE/ELABORATED/GENERATED]
-
----
-
-[Continue for all slides]
-
----
-
-## Sourcing Summary
-
-**Originality Score:** X% user-sourced / Y% generated
-
-- Direct: N slides
-- Paraphrased: N slides
-- Elaborated: N slides
-- Generated: N slides
-```
-
----
-
-### PROSE Output Format
-
-Each section contains:
-- **Section Header:** Clear, specific, often active voice
-- **Body Paragraphs:** Develop the beat, include evidence, maintain flow
-- **Transitions:** Connect sections with logical/emotional bridges
-- **Source attribution:** Inline citations or endnotes as appropriate
-
-#### Prose Rules
-
-- **Section Headers:** Can be longer than slide headlines; clarity over brevity
-- **Paragraph Length:** Varies by density mode (Punchy = 2-4 sentences; Flowing = 4-6; Dense = 6-8)
-- **Transitions:** Every section connects to the next; no orphan ideas
-- **One metaphor family** across the piece (journey OR weather OR architecture, etc.)
-- **The Turn:** The reframe/reveal moment gets its own paragraph or short section
-
-#### Prose Output Template
-
-```markdown
-# [Title]
-
-**Framework:** [Name]
-**Density:** [Punchy / Flowing / Dense / ELI5]
-**Focal Statement:** [The one point]
-**Metaphor family:** [chosen metaphor]
-**Target length:** [X words]
-**Voice:** [selected voice profile]
-**Emotional arc:** [shape summary]
-**Opening strategy:** [type]
-**Closing strategy:** [type]
-**Killer Line:** "[the line]"
-
----
-
-## [Section 1 — Beat Name]
-
-[Opening paragraph that establishes the beat]
-
-[Development paragraph(s) with evidence, examples, or elaboration]
-
-[Transition sentence or paragraph leading to next section]
-
----
-
-## [Section 2 — Beat Name]
-
-[Continue structure...]
-
----
-
-[Continue for all sections]
-
----
-
-## Sourcing Summary
-
-**Actual length:** X words
-**Originality Score:** X% user-sourced / Y% generated
-
-- Direct quotations: N instances
-- Paraphrased: N sections
-- Elaborated: N sections
-- Generated: N sections
-```
-
----
+1. Read `/tmp/ne-output.md`
+2. Present the complete output to the user
+3. Proceed to Phase 5
 
 ### Content Sourcing Tags
 
@@ -527,93 +359,51 @@ Each section contains:
 | `[ELABORATED]` | User's concept expanded |
 | `[GENERATED]` | New content for narrative flow |
 
-Include Sourcing Summary at end of output.
+> Full output format templates (Presentation, Prose, Converting Between Formats) are in [`prompts/builder.md`](prompts/builder.md).
 
 ---
 
-### Converting Between Formats
+## PHASE 5: Review Panel (6 Parallel Subagents)
 
-#### Prose → Presentation
-1. Extract the headline from each section (the single most important sentence)
-2. Select ONE spotlight element per section (best example, stat, or quote)
-3. Add design notes based on the metaphor family
-4. Cut transitions (the deck structure provides flow)
-
-#### Presentation → Prose
-1. Headlines become section headers (can expand slightly)
-2. Spotlights become opening paragraphs
-3. Add development paragraphs (elaboration on the beat)
-4. Write transitions between each section
-5. Expand the Turn/Reveal moment — it deserves more space in prose
-
----
-
-## PHASE 4.5: Originality Check
-
-Before sending to the Review Panel, run the Originality & Anti-Sameness Checklist from [`checklists.md`](checklists.md).
-
-If any check fails, revise before proceeding. Key checks:
-- Voice profile consistently applied
-- Emotional arc matches framework texture
-- No three consecutive headlines share grammatical structure
-- Killer Line identified and placed
-- Opening/closing use selected strategies (not defaults)
-- The AI Test: opening doesn't sound generic
-
----
-
-## PHASE 5: Review Panel
-
-Six specialist agents review the output in parallel.
+Six specialist agents review the output simultaneously via the Task tool.
 
 ```
                     ┌─────────────────────────────────────┐
                     │            DIRECTOR                 │
                     │  Synthesizes, resolves conflicts    │
+                    │        (main conversation)          │
                     └─────────────────────────────────────┘
                                      ▲
         ┌──────┬──────┬──────────────┼──────────────┬──────┬──────┐
         ▼      ▼      ▼             ▼              ▼      ▼      ▼
    AUDIENCE  COMMS  VISUAL      CRITIC        CONTENT  ORIGINALITY
-   ADVOCATE        DESIGNER                   EXPERT    AGENT
+   ADVOCATE  SPEC   DESIGNER                  EXPERT    AGENT
+                    (parallel subagents)
 ```
 
-### Agent Roles
+### Dispatch
 
-**Audience Advocate** — Reviews as the target audience. Flags what won't land.
-- Reference: Audience profile from Phase 2
-- Key question: "As [audience], does this resonate? What makes me skeptical?"
+Create 6 Tasks simultaneously using [`prompts/reviewer.md`](prompts/reviewer.md) with these parameters:
 
-**Comms/PR Specialist** — Reviews for messaging, emotion, persuasion.
-- Reference: [`agent-reference-persuasion.md`](agent-reference-persuasion.md)
-- Key question: "Is the message tight, emotionally resonant, and bulletproof?"
+| # | Agent | Reference File | Key Question |
+|---|-------|----------------|-------------|
+| 1 | Audience Advocate | [`audience-profiles.md`](audience-profiles.md) | "As [audience], does this resonate?" |
+| 2 | Comms/PR Specialist | [`agent-reference-persuasion.md`](agent-reference-persuasion.md) | "Is the message tight and bulletproof?" |
+| 3 | Visual Designer | [`agent-reference-visual.md`](agent-reference-visual.md) | [format-dependent question] |
+| 4 | Critic | (none) | "If I had to cut 20%, what goes?" |
+| 5 | Content Expert | [`agent-reference-verification.md`](agent-reference-verification.md) | "Can every claim be defended?" |
+| 6 | Originality Agent | [`checklists.md`](checklists.md) | "Would this be distinguishable from any other AI piece?" |
 
-**Visual Designer** — Reviews design notes (presentation) or imagery/metaphor consistency (prose).
-- Reference: [`agent-reference-visual.md`](agent-reference-visual.md)
-- Key question (presentation): "What visual would make the key slide unforgettable?"
-- Key question (prose): "Is the metaphor family consistent? Are images vivid?"
+Each subagent:
+- **subagent_type:** `general-purpose`
+- Reads `/tmp/ne-output.md` and `/tmp/ne-build-brief.md` plus its reference file
+- Returns findings as task result (not written to file)
 
-**Critic** — Reviews for pacing, redundancy, weak links.
-- Key question: "If I had to cut 20%, what goes? What's the weakest link?"
-- Runs Perplexity search for counterarguments and opposing viewpoints.
+See [`prompts/reviewer.md`](prompts/reviewer.md) for full role descriptions and dispatch configurations.
 
-**Content Expert** — Reviews for accuracy, sourcing, logical validity.
-- Reference: [`agent-reference-verification.md`](agent-reference-verification.md)
-- Key question: "Can every claim be defended if challenged?"
-- Runs Perplexity search for supporting evidence.
+### Director Synthesis (Main Conversation)
 
-**Originality Agent** — Reviews for distinctiveness, freshness, and anti-sameness.
-- Reference: [`checklists.md`](checklists.md) — Originality & Anti-Sameness Checklist
-- Key questions:
-  - "Would this be distinguishable from any other AI-generated piece on this topic?"
-  - "Is the Build Brief actually reflected in the output, or did the build revert to generic?"
-  - "What's the one element that makes this piece *this piece* and no other?"
-- Checks: Voice consistency, emotional arc adherence, headline variety, killer line quality, opening/closing strategy execution
-- Flags: Generic patterns, AI-isms, missed opportunities for distinctiveness
-
-### Director Synthesis
-
-Integrates all feedback into unified recommendations:
+After all 6 complete, synthesize into unified recommendations:
 
 1. **Consensus items** — Multiple agents agree → high-confidence recommendation
 2. **Minor conflicts** — Director decides based on audience/purpose
@@ -642,7 +432,7 @@ Integrates all feedback into unified recommendations:
 
 ---
 
-## PHASE 5.5: Stress Test Panel (Optional)
+## PHASE 5.5: Stress Test Panel (3 Parallel Subagents, Optional)
 
 After Review Panel, offer stress testing:
 
@@ -651,18 +441,6 @@ After Review Panel, offer stress testing:
 > You can also add or swap: Engineer, Skeptic, Risk Officer, CFO, Lawyer, Conservative, COO.
 >
 > Run it? (yes / yes, but add X / skip)"
-
-### 7 Stress Test Personas
-
-| Persona | Lens | What They Catch |
-|---------|------|-----------------|
-| **Engineer** | "How does this actually work?" | Hand-wavy claims, logical gaps |
-| **Skeptic** | "Why should I believe this?" | Weak proof, confirmation bias |
-| **Risk Officer** | "What could go wrong?" | Missing caveats, overconfidence |
-| **CFO** | "What are the numbers?" | Fuzzy math, unclear ROI |
-| **Lawyer** | "What's the exposure?" | Overpromises, liability |
-| **Conservative** | "Why change what's working?" | Unaddressed status-quo concerns |
-| **COO** | "Would this actually work?" | Operational blindspots, unrealistic execution |
 
 ### Auto-Selection by Content Type
 
@@ -677,7 +455,16 @@ After Review Panel, offer stress testing:
 | Post-mortem | Engineer, Risk Officer, COO |
 | Keynote | Skeptic, Conservative |
 
-### Director Triage
+### Dispatch
+
+Create 3 Tasks simultaneously using [`prompts/stress-tester.md`](prompts/stress-tester.md) with the auto-selected persona parameters. Each subagent:
+- **subagent_type:** `general-purpose`
+- Reads `/tmp/ne-output.md` and `/tmp/ne-build-brief.md`
+- Returns PASSED/FLAGGED/FAILED verdict with findings as task result
+
+See [`prompts/stress-tester.md`](prompts/stress-tester.md) for full persona descriptions and configurations.
+
+### Director Triage (Main Conversation)
 
 After personas review, Director categorizes:
 
