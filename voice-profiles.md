@@ -268,7 +268,7 @@ NovaCorp's leadership spent four years refining a product that the market had, w
 
 ### Auto-derive rule
 
-Select Dry Wit when tone is Playful for any audience. This is the only voice that maps to Playful across the entire matrix. Also appropriate as a secondary voice option when the content involves failure analysis or post-mortems and the audience can handle levity.
+Select Dry Wit when tone is Playful for any audience except General Public, where Storyteller better fits the accessible, story-first register. Also appropriate as a secondary voice option when the content involves failure analysis or post-mortems and the audience can handle levity.
 
 ---
 

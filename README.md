@@ -1,32 +1,35 @@
 # Narrative Engine
 
-**A Claude Code skill that transforms any content into narrative-driven slide decks using proven storytelling frameworks.**
+**A Claude Code skill that transforms any content into compelling narratives — as presentations or prose — using proven storytelling frameworks.**
 
-Most presentations fail before they begin. Not because the content is wrong, but because the structure is. Narrative Engine matches your material to the right storytelling framework—then builds a complete slide outline with headlines, visuals, and a multi-agent review panel that catches what you'd miss.
+Most presentations fail before they begin. Not because the content is wrong, but because the structure is. Narrative Engine matches your material to the right storytelling framework, auto-derives a distinct voice and emotional arc for your specific audience, then builds the output with a 6-agent review panel that catches what you'd miss.
 
 ---
 
 ## What It Does
 
-Paste an article, outline, research notes, or existing deck. Answer 5 quick questions. Get back:
+Paste an article, outline, research notes, or existing deck. Choose presentation or prose. Answer discovery questions. Get back:
 
-1. **2-3 framework recommendations** tailored to your audience, purpose, and material
-2. **A complete slide outline** with single-point headlines, supporting spotlights, and visual design notes
-3. **A 5-agent review** that stress-tests your deck from multiple perspectives
-4. **Sourcing transparency** showing what came from your content vs. what was generated
+1. **Full-sweep framework scoring** across all 10 arcs + 7 communication frameworks, with a Dark Horse option
+2. **A Build Brief** translating your audience, voice, emotional arc, and strategies into concrete writing instructions
+3. **A complete output** (slides or prose) with auto-derived voice, emotional pacing, and opening/closing strategies
+4. **A 6-agent review** including an Originality Agent that catches generic AI patterns
+5. **Sourcing transparency** showing what came from your content vs. what was generated
 
 ---
 
 ## How It Works
 
-### Phase 1: Discovery (5 Questions)
+### Phase 1: Discovery
 
 ```
+Output format?               → Presentation / Prose / Both
+Focal point?                 → Choose from 2-3 proposed angles
 Who is your audience?        → Executive / Technical / Investors / Skeptics / Mixed...
 What are you trying to do?   → Persuade / Inform / Inspire / Align / Report...
 What type of content?        → Research / Strategy / Case study / Pitch / Vision...
 What tone?                   → Authoritative / Provocative / Warm / Urgent / Balanced...
-Is there a surprise/reveal?  → Yes / No / Help me find one
+Density mode?                → High-Impact / Narrative / Evidence / ELI5
 ```
 
 ### Phase 2: Framework Matching
@@ -58,17 +61,20 @@ The skill draws from **17 proven frameworks** across two categories:
 | Duarte Resonate | What is ↔ What could be | Keynotes, vision |
 | SUCCESs | Simple, Unexpected, Concrete, Credible, Emotional, Stories | Quality checklist |
 
-### Phase 3: Deck Generation
+### Phase 3: Build Brief + Generation
 
-Each slide includes:
-- **Headline:** Single sentence, ≤14 words, active voice, power verbs
-- **Spotlight:** ≤60 words supporting the headline (with source citation)
-- **Design note:** Specific visual recommendation
-- **Source tag:** `[DIRECT]` / `[PARAPHRASE]` / `[ELABORATED]` / `[GENERATED]`
+A **Build Brief** translates all discovery answers into concrete writing instructions:
+- **Voice** auto-derived from audience + tone (7 distinct profiles)
+- **Audience profile** with headline style, evidence preferences, CTA approach
+- **Emotional arc** calibrated to audience tolerance
+- **Opening/closing strategies** from the rhetorical strategy library
+- **Killer line** targets for memorability
+
+The build then generates presentation slides or prose sections, each with source tags (`[DIRECT]` / `[PARAPHRASE]` / `[ELABORATED]` / `[GENERATED]`).
 
 ### Phase 4: Multi-Agent Review Panel
 
-Five specialist agents review your deck in parallel:
+Six specialist agents review your output in parallel:
 
 ```
                     ┌─────────────────────────────────────┐
@@ -77,21 +83,20 @@ Five specialist agents review your deck in parallel:
                     │  presents unified recommendations   │
                     └─────────────────────────────────────┘
                                      ▲
-        ┌────────────┬───────────────┼───────────────┬────────────┐
-        ▼            ▼               ▼               ▼            ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│  AUDIENCE    │ │  COMMS/PR    │ │   VISUAL     │ │   CRITIC     │ │   CONTENT    │
-│  ADVOCATE    │ │  SPECIALIST  │ │   DESIGNER   │ │              │ │   EXPERT     │
-└──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
+        ┌────────┬─────────┬─────────┼─────────┬─────────┬────────┐
+        ▼        ▼         ▼         ▼         ▼         ▼
+   AUDIENCE  COMMS/PR   VISUAL    CRITIC   CONTENT  ORIGINALITY
+   ADVOCATE  SPECIALIST DESIGNER           EXPERT   AGENT
 ```
 
-| Agent | Lens | Key Question |
-|-------|------|--------------|
-| **Audience Advocate** | Mental models, priorities, what makes them tune out | "As [audience], does this land?" |
-| **Comms Specialist** | Message discipline, emotional arc, PR risk, persuasion | "Is this tight and bulletproof?" |
-| **Visual Designer** | Metaphor coherence, Tufte principles, S.T.A.R. moments | "What visual makes this unforgettable?" |
-| **Critic** | Pacing, redundancy, weak links, counterarguments | "What's the weakest link?" |
-| **Content Expert** | Factual accuracy, logical fallacies, source integrity | "Can every claim be defended?" |
+| Agent | Key Question |
+|-------|--------------|
+| **Audience Advocate** | "As [audience], does this land?" |
+| **Comms Specialist** | "Is this tight and bulletproof?" |
+| **Visual Designer** | "What visual makes this unforgettable?" |
+| **Critic** | "What's the weakest link?" |
+| **Content Expert** | "Can every claim be defended?" |
+| **Originality Agent** | "Would this feel different from a generic AI output?" |
 
 The **Director** synthesizes feedback, resolves conflicts, and surfaces decisions you need to make.
 
@@ -138,11 +143,12 @@ date stamp "March 2028" prominent.
 | Without Narrative Engine | With Narrative Engine |
 |--------------------------|----------------------|
 | Generic bullet points | Single-point headlines with power verbs |
-| Unclear structure | Framework matched to audience + purpose |
-| No visual guidance | Specific design notes per slide |
-| Self-review blind spots | 5-agent review catches what you miss |
+| Unclear structure | Framework matched to audience + purpose via full sweep |
+| Same voice every time | 7 auto-derived voice profiles matched to audience + tone |
+| No emotional design | Emotional arcs calibrated to audience tolerance |
+| Self-review blind spots | 6-agent review including Originality Agent |
 | Unknown AI additions | Source tags show exactly what was generated |
-| One-size-fits-all | 17 frameworks × 3 lengths = tailored output |
+| One-size-fits-all | Build Brief ensures every choice propagates through output |
 
 ---
 
@@ -167,10 +173,12 @@ git clone https://github.com/nraford7/Narrative-Engine.git ~/.claude/skills/Narr
 Invoke with `/Narrative-Engine` in Claude Code, then:
 
 1. Paste your content (article, notes, outline, or existing deck)
-2. Answer the 5 discovery questions
-3. Choose from 2-3 recommended frameworks
-4. Select presentation length (10-12 min / 30 min / 60 min)
-5. Receive complete slide outline + review panel synthesis
+2. Choose output format (Presentation / Prose / Both)
+3. Confirm focal point from 2-3 proposed angles
+4. Answer discovery questions (audience, purpose, content type, tone)
+5. Select density mode (High-Impact / Narrative / Evidence / ELI5)
+6. Choose from 2-3 recommended frameworks (scored via full sweep)
+7. Review the Build Brief, then receive complete output + 6-agent review
 
 ---
 
