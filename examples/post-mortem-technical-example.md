@@ -347,48 +347,31 @@ Before sending to Review Panel, the Originality & Anti-Sameness checklist is run
 
 ---
 
-> **[Subagent dispatch]** Build subagent has written output to `/tmp/ne-output.md`. Six review subagents dispatched in parallel via `prompts/reviewer.md`.
+> **[Subagent dispatch]** Build subagent has written output to `/tmp/ne-output.md`. Two targeted review subagents dispatched in parallel via `prompts/reviewer.md` — Audience Advocate (always) + Content Expert (selected for post-mortem/evidence-heavy content).
 
-## Phase 5: Review Panel (Abbreviated)
+## Phase 5: Targeted Review (Abbreviated)
 
 **Claude:**
-> ## Review Panel Synthesis
+> ## Review Summary
+>
+> **Reviewers:** Audience Advocate + Content Expert (selected for post-mortem/evidence-heavy content)
 >
 > ### Strengths
-> - The Investigator voice is consistent and well-calibrated for engineers — precise language, no hype, evidence-first. The contrast with how this would sound in TED Stage voice is night and day. — *Originality Agent*
-> - The Telltale Detail slide (the single log entry) is the strongest beat in the deck. The visual design of one log line on a dark background will be the image engineers remember. — *Visual Designer*
-> - Source attribution is strong — 78% user-sourced gives high credibility with a technical audience that will fact-check internally. — *Content Expert*
 > - Evidence density is appropriate — mechanism steps show actual timestamps, row counts, and error codes. This audience will trust it. — *Audience Advocate*
+> - Source attribution is strong — 78% user-sourced gives high credibility with a technical audience that will fact-check internally. — *Content Expert*
+> - The Telltale Detail slide (the single log entry) is the strongest beat in the deck — *Audience Advocate*
 >
 > ### Recommended Changes
 >
-> **Messaging**
-> - The Playbook section (not shown in abbreviated output) should include a cost estimate for the dependency mapping tooling. Engineers accept investments when the cost is specific: "$340K and 3 engineering-months" beats "meaningful investment." — *Audience Advocate*
+> 1. **Playbook cost specificity** — Audience Advocate
+>    The Playbook section should include a cost estimate for the dependency mapping tooling. Engineers accept investments when the cost is specific: "$340K and 3 engineering-months" beats "meaningful investment."
 >
-> **Originality**
-> - The deck metaphor family is "visibility/blindness" — strong fit. However, "blind spot" appears in two separate slide spotlights. Replace one instance with a different metaphor from the same family: "dark spot on the dependency map" maintains the family without repetition. — *Originality Agent*
->
-> **Technical Accuracy**
-> - Slide 3: Verify that "847,000 rows" matches the actual incident data. If approximate, state it as "approximately 850K rows" — engineers notice when specificity implies precision that doesn't exist. — *Content Expert*
->
-> **Emotional Arc**
-> - The transition from the Telltale Detail (Beat 7) to the How/Why Reveal (Beat 8) should include a "Notice Something" pause. Consider a transition slide with just: "That 2,847ms lock wait. Think about what it means." Give the audience one beat to arrive at the conclusion before you state it. The Investigator voice earns its power by letting the audience be detectives too. — *Comms Specialist*
->
-> ### Originality Agent — Detailed Findings
->
-> **Flagged:**
-> 1. "Blind spot" used twice in separate spotlights — violates metaphor variety within the visibility/blindness family. **Fix: Replace one instance with "dark spot on the dependency map."**
-> 2. The Re-read Evidence section (not shown) uses the phrase "in hindsight" — this is a generic post-mortem word. Replace with something more precise: "viewed through the coupling lens" maintains the Investigator voice and the visibility metaphor.
->
-> **Passed:**
-> - Voice consistency: Investigator voice is maintained throughout — every slide checked shows measured sentences, precise timestamps, evidence-accumulation rhythm, emotional restraint
-> - Build Brief adherence: The Brief specified "no corporate blamelessness language" — confirmed zero instances of "learnings," "opportunities for improvement," or "going forward"
-> - Headline variety: After the Slide 2 revision, headline structures now vary (declarative, evaluative, declarative, temporal)
-> - The Simple Truth closing ("We didn't have a migration failure. We had a visibility failure.") earns its weight because the preceding 12 slides built the evidence that makes this sentence true. Without the build, it would be a platitude. After the build, it's a verdict.
+> 2. **Row count precision** — Content Expert
+>    Slide 3: Verify that "847,000 rows" matches the actual incident data. If approximate, state it as "approximately 850K rows" — engineers notice when specificity implies precision that doesn't exist.
 >
 > ### Overall Assessment
 > **Ready to present?** Yes with minor edits
-> **Most important improvement:** Add the "Notice Something" transition before the How/Why Reveal — it's the difference between an Investigator delivering a verdict and an Investigator letting the room solve the case together.
+> **Most important change:** Add specific cost estimate to the Playbook section.
 
 ---
 
@@ -424,9 +407,9 @@ This post-mortem runs at intensity 1-2. The emotional register is intellectual c
 
 The keynote opens wide (a scene) and closes wide (a vision). The post-mortem opens tight (three numbers) and closes tight (one sentence). Both are effective. Neither would work for the other's audience.
 
-### The Originality Agent in Action
+### Targeted Review vs. Keynote Review
 
-In the keynote example, the Originality Agent flagged a TED-talk cliche ("Here's the number that should rewrite how you think"). In this post-mortem, it flagged metaphor repetition ("blind spot" used twice) and a generic post-mortem word ("in hindsight"). Different content types have different sameness risks — the Agent adapts its checks to the genre.
+In the keynote example, the second reviewer was the Originality Agent (because distinctiveness is the highest-risk dimension for thought leadership). Here, the second reviewer was the Content Expert (because accuracy is the highest-risk dimension for a post-mortem). Different content types get different reviewer pairings — the system adapts to what matters most.
 
 ### Key System Features Demonstrated
 
@@ -438,4 +421,4 @@ In the keynote example, the Originality Agent flagged a TED-talk cliche ("Here's
 
 4. **Framework + opening/closing strategy combination:** Columbo's Cold Open Outcome beat (structural requirement: state the result) was delivered through a Startling Statistic (rhetorical approach: the number that stops the room). The framework said *what* the opening must accomplish; the strategy said *how* to accomplish it.
 
-5. **Subagent dispatch pattern:** Build and review phases run as subagents. The Build Brief handoff at `/tmp/ne-build-brief.md` contains everything the build subagent needs. Review agents run 6-wide in parallel, each with their specialist reference file.
+5. **Targeted review in action:** Two reviewers — Audience Advocate and Content Expert — selected because for a post-mortem, audience fit and technical accuracy are the two highest-risk dimensions. The review produced focused, non-conflicting recommendations (cost specificity, data precision) that strengthen the piece without fragmenting it.

@@ -78,13 +78,28 @@ Return your findings as structured markdown (NOT written to a file). Use this fo
 
 ## Dispatch Configurations
 
-Reference table documenting all 6 review agent parameter sets. The orchestrator uses this table to fill in the placeholders above when dispatching each subagent.
+The orchestrator selects 2 reviewers based on content type (see SKILL.md Phase 5 for the selection table). The Audience Advocate is always one reviewer. The second is selected based on the highest-risk dimension for this content type.
 
 | # | Agent | AGENT_ROLE | REFERENCE_FILE | ROLE_DESCRIPTION | KEY_QUESTION |
 |---|-------|-----------|----------------|-----------------|-------------|
 | 1 | Audience Advocate | Audience Advocate | `audience-profiles.md` | Reviews as the target audience. Flags what won't land. Uses the audience profile from the Build Brief to evaluate whether language, evidence, and framing match what this audience needs. | "As [audience], does this resonate? What makes me skeptical?" |
 | 2 | Comms/PR Specialist | Comms/PR Specialist | `agent-reference-persuasion.md` | Reviews for messaging tightness, emotional resonance, and persuasive effectiveness. Evaluates whether the persuasion strategy from the Build Brief is executed well. | "Is the message tight, emotionally resonant, and bulletproof?" |
-| 3 | Visual Designer | Visual Designer | `agent-reference-visual.md` | Reviews design notes (presentation) or imagery/metaphor consistency (prose). Evaluates visual storytelling effectiveness. | For presentations: "What visual would make the key slide unforgettable?" / For prose: "Is the metaphor family consistent? Are images vivid?" |
-| 4 | Critic | Critic | (none) | Reviews for pacing, redundancy, and weak links. The hardest judge on the panel — finds what could be cut and what's not earning its place. | "If I had to cut 20%, what goes? What's the weakest link?" |
-| 5 | Content Expert | Content Expert | `agent-reference-verification.md` | Reviews for accuracy, sourcing integrity, and logical validity. Checks that claims are defensible and evidence is properly attributed. | "Can every claim be defended if challenged?" |
-| 6 | Originality Agent | Originality Agent | `checklists.md` | Reviews for distinctiveness, freshness, and anti-sameness. Checks voice consistency, emotional arc adherence, headline variety, killer line quality, opening/closing strategy execution. Flags generic patterns and AI-isms. | "Would this be distinguishable from any other AI-generated piece on this topic?" |
+| 3 | Content Expert | Content Expert | `agent-reference-verification.md` | Reviews for accuracy, sourcing integrity, and logical validity. Checks that claims are defensible and evidence is properly attributed. | "Can every claim be defended if challenged?" |
+| 4 | Originality Agent | Originality Agent | `checklists.md` | Reviews for distinctiveness, freshness, and anti-sameness. Checks voice consistency, emotional arc adherence, headline variety, killer line quality, opening/closing strategy execution. Flags generic patterns and AI-isms. | "Would this be distinguishable from any other AI-generated piece on this topic?" |
+
+### Content-Type to Reviewer Mapping
+
+| Content Type | Reviewer 1 | Reviewer 2 |
+|-------------|-----------|-----------|
+| Investor pitch / fundraising | Audience Advocate | Comms Specialist |
+| Sales pitch | Audience Advocate | Comms Specialist |
+| Strategic plan / transformation | Audience Advocate | Content Expert |
+| Post-mortem / retrospective | Audience Advocate | Content Expert |
+| Counterintuitive research | Audience Advocate | Content Expert |
+| Keynote / thought leadership | Audience Advocate | Originality Agent |
+| Vision / inspiration piece | Audience Advocate | Originality Agent |
+| Paradigm shift / new model | Audience Advocate | Originality Agent |
+| Scenario planning | Audience Advocate | Comms Specialist |
+| Case study | Audience Advocate | Content Expert |
+| Product launch | Audience Advocate | Comms Specialist |
+| Policy recommendation | Audience Advocate | Content Expert |

@@ -343,54 +343,35 @@ Before sending to Review Panel, the Originality & Anti-Sameness checklist is run
 
 ---
 
-> **[Subagent dispatch]** Build subagent has written output to `/tmp/ne-output.md`. Six review subagents dispatched in parallel via `prompts/reviewer.md`.
+> **[Subagent dispatch]** Build subagent has written output to `/tmp/ne-output.md`. Two targeted review subagents dispatched in parallel via `prompts/reviewer.md` — Audience Advocate (always) + Originality Agent (selected for keynote/thought leadership content).
 
-## Phase 5: Review Panel (Abbreviated)
+## Phase 5: Targeted Review (Abbreviated)
 
 **Claude:**
-> ## Review Panel Synthesis
+> ## Review Summary
+>
+> **Reviewers:** Audience Advocate + Originality Agent (selected for keynote/thought leadership content)
 >
 > ### Strengths
-> - The Future Projection opening is genuinely immersive — "smells like rain" is a sensory detail that earns attention immediately — *Comms Specialist*
+> - The Future Projection opening is genuinely immersive — "smells like rain" is a sensory detail that earns attention immediately — *Audience Advocate*
 > - The solar cost curve comparison is the single most powerful persuasion tool in the deck; it reframes DAC from "emerging tech" to "proven trajectory" — *Audience Advocate*
-> - The Tiny Past Cause beat (one variable in one equation) creates the wonder/vertigo emotional shift perfectly — *Comms Specialist*
 > - Fork Reveal killer line is strong and repeatable — *Originality Agent*
+> - Voice consistency: TED Stage voice is well-maintained — varied sentence length, "we/you" language, personal bridges — *Originality Agent*
 >
 > ### Recommended Changes
 >
-> **Messaging**
-> - Slide 4 headline: "127 decisions in 43 countries" is data-heavy for a keynote audience. Consider: "Right now, the future of this technology rests on 127 decisions nobody's talking about" — more intrigue, less spreadsheet — *Audience Advocate*
+> 1. **Slide 4 headline** — Audience Advocate
+>    "127 decisions in 43 countries" is data-heavy for a keynote audience. Consider: "Right now, the future of this technology rests on 127 decisions nobody's talking about" — more intrigue, less spreadsheet.
 >
-> **Originality**
-> - Slide 3 spotlight uses "Here's the number that should rewrite how you think" — this is a TED cliche. The data is genuinely startling; it doesn't need rhetorical scaffolding. Let the comparison land on its own: "Solar panels took eight years to drop 74% in cost. Direct air capture did it in four." Full stop. Trust the audience. — *Originality Agent*
+> 2. **Slide 3 spotlight** — Originality Agent
+>    "Here's the number that should rewrite how you think" is a TED cliche. The data is genuinely startling; it doesn't need rhetorical scaffolding. Lead with the comparison directly: "Solar panels took eight years to drop 74% in cost. Direct air capture did it in four." Trust the audience.
 >
-> **Emotional Arc**
-> - The transition from Side Analogy (Beat 3) to Present Decision (Beat 4) needs a stronger emotional bridge. The audience is in "recognition" mode — they need a moment of "this affects me" before you hit them with the fork. Consider adding a one-line transition slide: a single question that makes the speed personal — *Comms Specialist*
->
-> **Visual**
-> - Slide 1 design note calls for a commissioned photograph. Suggest instead: a 4K video still from documentary footage of an actual DAC facility. The "real" quality matters for the opening's credibility — *Visual Designer*
->
-> ### Points Requiring Your Decision
-> > **Conflict:** Audience Advocate recommends softening Slide 4's data-heavy headline, while Content Expert notes the specificity (127, 43) builds credibility. Which approach?
-> > 1. Soften to "127 decisions nobody's talking about" (more intrigue)
-> > 2. Keep the numbers (more credibility)
-> > 3. Hybrid: "127 quiet decisions will shape the next century of air"
->
-> ### Originality Agent — Detailed Findings
->
-> **Flagged:**
-> 1. Slide 3 spotlight: "Here's the number that should rewrite how you think about this technology" — generic TED-talk phrasing. **Fix: Strip the scaffolding. Lead with the comparison directly.**
-> 2. The deck's metaphor family (speed/momentum) is applied well but "window opening and closing" appears in both Slide 4 and the Fork Reveal — diversify the metaphor at one of these points.
->
-> **Passed:**
-> - Voice consistency: TED Stage voice is well-maintained across all slides checked — varied sentence length, "we/you" language, personal bridges, no jargon without grounding
-> - Emotional arc: Wonder → vertigo → recognition progression tracks correctly across Slides 1-3
-> - Killer line quality: "We're not waiting for a breakthrough. The breakthrough is waiting for us." — passes all tests (< 15 words each clause, concrete, surprising inversion, repeatable)
-> - Opening distinctiveness: The Gujarat cement plant scene is specific and original — not generic futurism
+> 3. **Metaphor repetition** — Originality Agent
+>    "Window opening and closing" appears in both Slide 4 and the Fork Reveal — diversify at one of these points.
 >
 > ### Overall Assessment
 > **Ready to present?** Yes with edits
-> **Most important improvement:** Fix the Slide 3 TED cliche flagged by the Originality Agent — the data is strong enough to stand alone.
+> **Most important change:** Fix the Slide 3 TED cliche — the data is strong enough to stand alone.
 
 ---
 
@@ -420,6 +401,6 @@ The scaffolding sentence ("Here's the number that should rewrite...") was cut. T
 
 5. **Opening/Closing Strategy layered on framework:** Future Projection delivers the Time Machine's Future Headline beat — but the *rhetorical* approach (present tense, sensory detail, "you are there") comes from the opening strategy, not the framework default.
 
-6. **Originality Agent catching real issues:** The Slide 3 "Here's the number that should rewrite how you think" was a genuine TED-talk cliche that would have weakened the piece. The fix — stripping the rhetorical scaffolding and trusting the data — improved the output and demonstrated that the Originality Agent adds value, not just process.
+6. **Targeted review catching real issues:** The Originality Agent flagged a genuine TED-talk cliche ("Here's the number that should rewrite how you think") that would have weakened the piece. The Audience Advocate caught a data-heavy headline that didn't fit the keynote audience. Two focused reviewers, not six — enough to catch the highest-value issues without fragmenting the piece.
 
-7. **Subagent architecture in action:** The build phase ran as a separate subagent reading the Build Brief from `/tmp/`, and all six review agents ran in parallel — reducing context window pressure while maintaining the full quality pipeline.
+7. **Subagent architecture in action:** The build phase ran as a separate subagent reading the Build Brief from `/tmp/`, and two targeted review agents ran in parallel — reducing context window pressure while keeping the output coherent.

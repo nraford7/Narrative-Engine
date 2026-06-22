@@ -2,6 +2,17 @@
 
 Detailed beat-by-beat structures for all 10 narrative arcs. These are **engagement-optimized** — they use mystery, delayed revelation, and reframing to hold attention.
 
+### Beat Weights
+
+The Weight column indicates relative importance, not slide count. Content determines length.
+
+| Weight | Meaning |
+|--------|---------|
+| **anchor** | Essential to the arc. Protected emotional beat or key structural moment. Cannot be cut. |
+| **standard** | Carries the narrative forward. Include when content supports it. |
+| **brief** | Supporting beat. Can be a single slide/paragraph or combined with an adjacent beat. |
+| **optional** | Include only if the source content has material to fill it. Skip without loss if not. |
+
 ---
 
 ## A) The Prestige
@@ -12,19 +23,19 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. Pledge | Establish ordinary world; what everyone believes | 2-3 |
-| 2. Plant #1 | Subtle clue that will pay off later | 1 |
-| 3. Deepening | More evidence supporting conventional view | 3-4 |
-| 4. Plant #2 | Second subtle clue | 1 |
-| 5. **Turn [REVEAL]** | Contradictory fact that reframes everything | 2-3 |
-| 6. Misdirection addressed | Why we missed this before | 2 |
-| 7. **Prestige** | The new understanding; what this means | 2-3 |
-| 8. Consequences | Implications and applications | 2-3 |
-| 9. Limits | Honest caveats and boundaries | 1-2 |
-| 10. Action | What to do with this knowledge | 1-2 |
-| 11. Callback | Return to opening with new eyes | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. Pledge | Establish ordinary world; what everyone believes | anchor |
+| 2. Plant #1 | Subtle clue that will pay off later | brief |
+| 3. Deepening | More evidence supporting conventional view | standard |
+| 4. Plant #2 | Second subtle clue | brief |
+| 5. **Turn [REVEAL]** | Contradictory fact that reframes everything | anchor |
+| 6. Misdirection addressed | Why we missed this before | standard |
+| 7. **Prestige** | The new understanding; what this means | anchor |
+| 8. Consequences | Implications and applications | standard |
+| 9. Limits | Honest caveats and boundaries | brief |
+| 10. Action | What to do with this knowledge | brief |
+| 11. Callback | Return to opening with new eyes | anchor |
 
 ### Example Headlines by Beat
 
@@ -60,21 +71,21 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. The Riddle | Open with a compelling question or anomaly | 1-2 |
-| 2. Clue #1 (True) | First piece of evidence | 2-3 |
-| 3. Clue #2 (True) | Second piece of evidence | 2-3 |
-| 4. Clue #3 (Decoy) | Red herring that seems to point somewhere | 2-3 |
-| 5. Red Herring explored | Follow the false trail | 2-3 |
-| 6. Failed Attempt | Why the obvious answer doesn't work | 2 |
-| 7. Overlooked Clue | The detail everyone missed | 1-2 |
-| 8. **Click [REVEAL]** | Everything snaps into place | 2-3 |
-| 9. Re-interpretation | Re-read earlier evidence with new understanding | 2-3 |
-| 10. Cross-domain use | How this applies elsewhere | 2 |
-| 11. Limits | What we still don't know | 1-2 |
-| 12. Takeaways | Actionable conclusions | 1-2 |
-| 13. Tag | Final resonant thought | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. The Riddle | Open with a compelling question or anomaly | anchor |
+| 2. Clue #1 (True) | First piece of evidence | standard |
+| 3. Clue #2 (True) | Second piece of evidence | standard |
+| 4. Clue #3 (Decoy) | Red herring that seems to point somewhere | standard |
+| 5. Red Herring explored | Follow the false trail | anchor |
+| 6. Failed Attempt | Why the obvious answer doesn't work | standard |
+| 7. Overlooked Clue | The detail everyone missed | brief |
+| 8. **Click [REVEAL]** | Everything snaps into place | anchor |
+| 9. Re-interpretation | Re-read earlier evidence with new understanding | anchor |
+| 10. Cross-domain use | How this applies elsewhere | optional |
+| 11. Limits | What we still don't know | brief |
+| 12. Takeaways | Actionable conclusions | brief |
+| 13. Tag | Final resonant thought | brief |
 
 ### Example Headlines by Beat
 
@@ -110,20 +121,20 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. The Vault | What we're trying to achieve (the goal) | 2-3 |
-| 2. Stakes | Why this matters; cost of failure | 2-3 |
-| 3. Obstacles | What stands in our way | 3-4 |
-| 4. Assemble the Crew | Methods, tools, capabilities we'll deploy | 4-6 |
-| 5. The Plan | How these pieces fit together | 2-3 |
-| 6. Dry Run | Early indicators, pilots, or proof points | 2 |
-| 7. Setback | Complication or unexpected challenge | 1-2 |
-| 8. Workaround | How we adapt | 1-2 |
-| 9. **Execution [REVEAL]** | The actual approach in detail | 3-4 |
-| 10. Payoff | Results, wins, outcomes | 2-3 |
-| 11. Getaway | How we sustain/protect gains | 1-2 |
-| 12. Epilogue Twist | Unexpected upside or next target | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. The Vault | What we're trying to achieve (the goal) | anchor |
+| 2. Stakes | Why this matters; cost of failure | standard |
+| 3. Obstacles | What stands in our way | standard |
+| 4. Assemble the Crew | Methods, tools, capabilities we'll deploy | standard |
+| 5. The Plan | How these pieces fit together | standard |
+| 6. Dry Run | Early indicators, pilots, or proof points | optional |
+| 7. Setback | Complication or unexpected challenge | anchor |
+| 8. Workaround | How we adapt | standard |
+| 9. **Execution [REVEAL]** | The actual approach in detail | standard |
+| 10. Payoff | Results, wins, outcomes | anchor |
+| 11. Getaway | How we sustain/protect gains | brief |
+| 12. Epilogue Twist | Unexpected upside or next target | anchor |
 
 ### Example Headlines by Beat
 
@@ -159,19 +170,19 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. Future Headline | Start with a vivid future state | 1-2 |
-| 2. Tiny Past Cause | Trace back to small decision that led there | 2 |
-| 3. Side Analogy | Historical parallel or different domain example | 2 |
-| 4. Present Decision | The choice point we face now | 2-3 |
-| 5. Timeline A | First future if we choose path A | 3-4 |
-| 6. Timeline B | Second future if we choose path B | 3-4 |
-| 7. **Fork [REVEAL]** | The real nature of the choice becomes clear | 2-3 |
-| 8. Levers | What factors we can control | 2-3 |
-| 9. Limits | What we can't predict or control | 1-2 |
-| 10. Now-cast | Immediate next steps | 2 |
-| 11. Rewrite Future Headline | Close with revised/chosen future vision | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. Future Headline | Start with a vivid future state | anchor |
+| 2. Tiny Past Cause | Trace back to small decision that led there | anchor |
+| 3. Side Analogy | Historical parallel or different domain example | optional |
+| 4. Present Decision | The choice point we face now | standard |
+| 5. Timeline A | First future if we choose path A | standard |
+| 6. Timeline B | Second future if we choose path B | standard |
+| 7. **Fork [REVEAL]** | The real nature of the choice becomes clear | anchor |
+| 8. Levers | What factors we can control | standard |
+| 9. Limits | What we can't predict or control | brief |
+| 10. Now-cast | Immediate next steps | brief |
+| 11. Rewrite Future Headline | Close with revised/chosen future vision | anchor |
 
 ### Example Headlines by Beat
 
@@ -206,20 +217,20 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. Everyday Scene | Start with relatable, familiar situation | 2-3 |
-| 2. Escalation #1 | First example showing the pattern | 2 |
-| 3. Escalation #2 | Second example, higher stakes | 2 |
-| 4. Escalation #3 | Third example, pattern now undeniable | 2 |
-| 5. Wrong Frame | Name the assumption everyone's making | 2 |
-| 6. **Reframe [REVEAL]** | Introduce the new lens | 2-3 |
-| 7. 60-Second Demo | Quick proof the new frame works | 2-3 |
-| 8. Social Proof | Others who've adopted this frame | 2 |
-| 9. Limits | When this frame doesn't apply | 1-2 |
-| 10. Two-Step Playbook | Simple actions to apply the insight | 2 |
-| 11. **Button** | Memorable closing that cements the reframe | 1 |
-| 12. Optional Arenas | Other domains where this applies | 1-2 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. Everyday Scene | Start with relatable, familiar situation | anchor |
+| 2. Escalation #1 | First example showing the pattern | standard |
+| 3. Escalation #2 | Second example, higher stakes | standard |
+| 4. Escalation #3 | Third example, pattern now undeniable | standard |
+| 5. Wrong Frame | Name the assumption everyone's making | standard |
+| 6. **Reframe [REVEAL]** | Introduce the new lens | anchor |
+| 7. 60-Second Demo | Quick proof the new frame works | standard |
+| 8. Social Proof | Others who've adopted this frame | optional |
+| 9. Limits | When this frame doesn't apply | brief |
+| 10. Two-Step Playbook | Simple actions to apply the insight | brief |
+| 11. **Button** | Memorable closing that cements the reframe | anchor |
+| 12. Optional Arenas | Other domains where this applies | optional |
 
 ### Example Headlines by Beat
 
@@ -254,23 +265,23 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. Ordinary World | Status quo before the journey | 2 |
-| 2. Stakes | What's at risk if nothing changes | 2 |
-| 3. The Call | The opportunity or challenge that appeared | 2 |
-| 4. Refusal/Skeptics | Initial resistance or doubt | 2 |
-| 5. Mentor/New Frame | The insight or guide that changes perspective | 2-3 |
-| 6. Crossing Threshold | Commitment to the new path | 1-2 |
-| 7. Tests/Evidence A | First challenge and learning | 2 |
-| 8. Tests/Evidence B | Second challenge and learning | 2 |
-| 9. Tests/Evidence C | Third challenge and learning | 2 |
-| 10. Approach | Building toward the decisive moment | 2 |
-| 11. **Ordeal [REVEAL]** | The crucial test or transformation | 2-3 |
-| 12. Reward/Reframe | What was gained; how understanding changed | 2 |
-| 13. Road Back | Integrating the learning | 2 |
-| 14. Resurrection | Final test proving transformation is real | 1-2 |
-| 15. Return with Elixir | The gift brought back to share | 2 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. Ordinary World | Status quo before the journey | anchor |
+| 2. Stakes | What's at risk if nothing changes | standard |
+| 3. The Call | The opportunity or challenge that appeared | standard |
+| 4. Refusal/Skeptics | Initial resistance or doubt | anchor |
+| 5. Mentor/New Frame | The insight or guide that changes perspective | standard |
+| 6. Crossing Threshold | Commitment to the new path | brief |
+| 7. Tests/Evidence A | First challenge and learning | standard |
+| 8. Tests/Evidence B | Second challenge and learning | standard |
+| 9. Tests/Evidence C | Third challenge and learning | optional |
+| 10. Approach | Building toward the decisive moment | brief |
+| 11. **Ordeal [REVEAL]** | The crucial test or transformation | anchor |
+| 12. Reward/Reframe | What was gained; how understanding changed | standard |
+| 13. Road Back | Integrating the learning | brief |
+| 14. Resurrection | Final test proving transformation is real | optional |
+| 15. Return with Elixir | The gift brought back to share | anchor |
 
 ### Example Headlines by Beat
 
@@ -306,19 +317,19 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. Exposition | Context, characters, setting | 3-4 |
-| 2. Inciting Incident | The event that sets everything in motion | 2 |
-| 3. Rising Action A | First complication/evidence | 2-3 |
-| 4. Rising Action B | Second complication, stakes increase | 2-3 |
-| 5. Rising Action C | Third complication, tension peaks | 2-3 |
-| 6. **Climax [REVEAL]** | The decisive turning point | 2-3 |
-| 7. Falling Action A | First consequence of climax | 2 |
-| 8. Falling Action B | Ripple effects spread | 2 |
-| 9. Resolution | Synthesis of what happened | 2-3 |
-| 10. Dénouement | Playbook, implications, humane close | 2-3 |
-| 11. Button | Final resonant image or thought | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. Exposition | Context, characters, setting | anchor |
+| 2. Inciting Incident | The event that sets everything in motion | standard |
+| 3. Rising Action A | First complication/evidence | standard |
+| 4. Rising Action B | Second complication, stakes increase | standard |
+| 5. Rising Action C | Third complication, tension peaks | standard |
+| 6. **Climax [REVEAL]** | The decisive turning point | anchor |
+| 7. Falling Action A | First consequence of climax | standard |
+| 8. Falling Action B | Ripple effects spread | optional |
+| 9. Resolution | Synthesis of what happened | standard |
+| 10. Dénouement | Playbook, implications, humane close | anchor |
+| 11. Button | Final resonant image or thought | anchor |
 
 ### Emotional Texture & Pacing
 
@@ -346,21 +357,21 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. Cold Open Outcome | State the result upfront | 1-2 |
-| 2. Baseline Theory | What most people assume caused it | 2 |
-| 3. Mechanism Step 1 | First piece of the reconstruction | 2-3 |
-| 4. Mechanism Step 2 | Second piece | 2-3 |
-| 5. Mechanism Step 3 | Third piece | 2-3 |
-| 6. Red Herrings | Factors that seemed important but weren't | 2 |
-| 7. Telltale Detail | The overlooked clue that cracks it | 1-2 |
-| 8. **How/Why [REVEAL]** | The actual mechanism explained | 2-3 |
-| 9. Re-read Evidence | Earlier facts now make sense | 2 |
-| 10. Transfer | How this applies to other situations | 2 |
-| 11. Limits | Boundaries of the explanation | 1-2 |
-| 12. Playbook | What to do differently | 2 |
-| 13. Callback | Return to opening with full understanding | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. Cold Open Outcome | State the result upfront | anchor |
+| 2. Baseline Theory | What most people assume caused it | standard |
+| 3. Mechanism Step 1 | First piece of the reconstruction | standard |
+| 4. Mechanism Step 2 | Second piece | standard |
+| 5. Mechanism Step 3 | Third piece | standard |
+| 6. Red Herrings | Factors that seemed important but weren't | optional |
+| 7. Telltale Detail | The overlooked clue that cracks it | anchor |
+| 8. **How/Why [REVEAL]** | The actual mechanism explained | anchor |
+| 9. Re-read Evidence | Earlier facts now make sense | anchor |
+| 10. Transfer | How this applies to other situations | optional |
+| 11. Limits | Boundaries of the explanation | brief |
+| 12. Playbook | What to do differently | standard |
+| 13. Callback | Return to opening with full understanding | anchor |
 
 ### Example Headlines by Beat
 
@@ -395,19 +406,19 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. Base Reality | Establish the normal situation | 2 |
-| 2. Unusual Thing | Something that doesn't fit the pattern | 2 |
-| 3. **Name the Game** | Identify the underlying dynamic | 2-3 |
-| 4. Heighten #1 (Domain A) | Show the game playing out in first context | 3-4 |
-| 5. Heighten #2 (Domain B) | Same game, different context | 3-4 |
-| 6. Heighten #3 (Domain C) | Same game, even more unexpected context | 3-4 |
-| 7. Twist | Unexpected implication of the game | 2 |
-| 8. **Why It Works [REVEAL]** | Deep explanation of the mechanism | 2-3 |
-| 9. Anti-Game | When this pattern breaks down | 2 |
-| 10. Simple Playbook | How to use this insight | 2 |
-| 11. Tag | Memorable close | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. Base Reality | Establish the normal situation | standard |
+| 2. Unusual Thing | Something that doesn't fit the pattern | standard |
+| 3. **Name the Game** | Identify the underlying dynamic | anchor |
+| 4. Heighten #1 (Domain A) | Show the game playing out in first context | standard |
+| 5. Heighten #2 (Domain B) | Same game, different context | standard |
+| 6. Heighten #3 (Domain C) | Same game, even more unexpected context | anchor |
+| 7. Twist | Unexpected implication of the game | standard |
+| 8. **Why It Works [REVEAL]** | Deep explanation of the mechanism | anchor |
+| 9. Anti-Game | When this pattern breaks down | anchor |
+| 10. Simple Playbook | How to use this insight | brief |
+| 11. Tag | Memorable close | brief |
 
 ### Example Headlines by Beat
 
@@ -443,20 +454,20 @@ Detailed beat-by-beat structures for all 10 narrative arcs. These are **engageme
 
 ### Beat Structure
 
-| Beat | Purpose | Slide Count |
-|------|---------|-------------|
-| 1. The Event/Claim | What happened or what's proposed | 2 |
-| 2. View A | First perspective with its evidence | 3-4 |
-| 3. View B | Second perspective with its evidence | 3-4 |
-| 4. View C (optional) | Third perspective if relevant | 2-3 |
-| 5. Cross-Examination | Where the views conflict | 2-3 |
-| 6. Missing Dimension | The axis none of them considered | 2 |
-| 7. **Integrative Frame [REVEAL]** | New understanding that accommodates all | 2-3 |
-| 8. Re-read | How each view looks through new frame | 2-3 |
-| 9. Consequences | What this integration implies | 2 |
-| 10. Guardrails | When integration goes too far | 1-2 |
-| 11. Both/And Playbook | How to act on the synthesis | 2 |
-| 12. Callback | Return to opening claim, transformed | 1 |
+| Beat | Purpose | Weight |
+|------|---------|--------|
+| 1. The Event/Claim | What happened or what's proposed | standard |
+| 2. View A | First perspective with its evidence | anchor |
+| 3. View B | Second perspective with its evidence | anchor |
+| 4. View C (optional) | Third perspective if relevant | optional |
+| 5. Cross-Examination | Where the views conflict | standard |
+| 6. Missing Dimension | The axis none of them considered | anchor |
+| 7. **Integrative Frame [REVEAL]** | New understanding that accommodates all | anchor |
+| 8. Re-read | How each view looks through new frame | standard |
+| 9. Consequences | What this integration implies | standard |
+| 10. Guardrails | When integration goes too far | brief |
+| 11. Both/And Playbook | How to act on the synthesis | standard |
+| 12. Callback | Return to opening claim, transformed | anchor |
 
 ### Example Headlines by Beat
 

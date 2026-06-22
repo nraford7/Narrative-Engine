@@ -8,39 +8,92 @@ Quick-reference tables for selecting the right narrative arc or communication fr
 
 **REQUIRED: Before recommending 2-3 frameworks, complete the full sweep below. Do NOT skip to the Quick Decision Flowchart or heuristic tables -- those exist for reference only, not as shortcuts.**
 
+**The Focal Statement (Phase 1.75) is now a binding scoring dimension. A framework that fits audience/purpose/tone perfectly but cannot structurally deliver The One Thing is a Wrong Framework, not a Strong Pick. The skeleton stamp test in Step 2.5 is the gate.**
+
 ### Step 1: Score all 10 narrative arcs
 
-For the user's specific combination of audience + purpose + content type + tone, briefly score each arc on fit (1-5):
+For the user's specific combination of Focal Statement + audience + purpose + content type + tone, score each arc on TWO dimensions (1-5 each):
 
-| Arc | Fit (1-5) | Key reason |
-|-----|-----------|------------|
-| A) Prestige | | |
-| B) Mystery Box | | |
-| C) Heist | | |
-| D) Time Machine | | |
-| E) Trojan Horse | | |
-| F) Hero's Journey | | |
-| G) Freytag | | |
-| H) Columbo | | |
-| I) Game of Scene | | |
-| J) Rashomon | | |
+- **Context Fit** — does the arc serve this audience/purpose/content/tone combination?
+- **Focal Fit** — does the arc's protected/climax beat naturally deliver The One Thing? (See "Focal Fit Definition" below.)
+
+Combine into a Total (max 10). An arc with high Context Fit but low Focal Fit (≤2) is disqualified — note it in the Rejection Log.
+
+| Arc | Context Fit | Focal Fit | Total | Key reason | Climax beat delivers... |
+|-----|-------------|-----------|-------|------------|-------------------------|
+| A) Prestige | | | | | The reveal/reframe |
+| B) Mystery Box | | | | | The click of recognition |
+| C) Heist | | | | | The successful execution |
+| D) Time Machine | | | | | The fork/decision |
+| E) Trojan Horse | | | | | The paradigm shift |
+| F) Hero's Journey | | | | | The transformation/identity shift |
+| G) Freytag | | | | | The catharsis |
+| H) Columbo | | | | | The mechanism/cause |
+| I) Game of Scene | | | | | The pattern recognition |
+| J) Rashomon | | | | | The synthesis across views |
 
 ### Step 2: Score top communication frameworks
 
-Score the 5 most relevant communication frameworks for this content.
+Score the 5 most relevant communication frameworks for this content on the same two dimensions (Context Fit + Focal Fit).
+
+### Step 2.5: Skeleton Stamp Test (Gate 1)
+
+For the top 2 arc + framework candidates by Total score, run the skeleton stamp test before recommending. **This is a pass/fail gate — a candidate that fails cannot be the Top Pick or Strong Alternative regardless of its scores.**
+
+For each candidate, write out:
+
+```
+FOCAL STATEMENT
+  One Thing:    [from Phase 1.75]
+  Ask:          [from Phase 1.75]
+  Through-Line: [from Phase 1.75]
+
+FRAMEWORK SKELETON STAMPED ONTO FOCAL
+  Beat 1 (Opening):   What does this beat carry of the Focal? → [...]
+  Beat 2:             [...]
+  ...
+  Climax/Payoff Beat: What does this beat deliver?            → [...]
+  Closing Beat:       What does this beat leave the audience with? → [...]
+
+CLIMAX TEST
+  Does the climax/payoff beat structurally deliver The One Thing? [Y/N]
+  Does the closing beat structurally deliver The Ask?             [Y/N]
+  Is the Through-Line carried by the arc's natural emotional shape? [Y/N]
+```
+
+**Pass criterion:** All three must be Y. If any are N, the arc cannot land the focal — its gravity will pull the piece toward a different payload (e.g., Hero's Journey climaxes on identity transformation; if your Focal is a strategic decision, the climax will drift from "do X" to "become Y").
+
+**If neither top candidate passes:** Do NOT recommend a workaround. Return to Step 1 with the Focal Fit dimension re-weighted, OR escalate to the user: *"None of the top frameworks structurally land your focal — the strongest candidates pull the piece toward [X] instead of [Focal]. Possible options: (1) reframe the focal, (2) accept a Dark Horse with lower context fit but better focal fit, (3) split into two pieces."*
 
 ### Step 3: Recommend
 
-Present to the user:
+Present to the user (only candidates that passed the skeleton stamp test are eligible for Top Pick / Strong Alternative):
 
-1. **Top pick:** Highest-scoring arc + best communication framework pairing. Show skeleton, tradeoffs, emotional preview.
-2. **Strong alternative:** Second-highest arc + framework pairing. Show what it does differently.
-3. **Dark Horse:** One arc that scored 3+ but is NOT the obvious choice. Explain what unexpected angle it would bring. Label it clearly as "Dark Horse -- [Arc Name]."
-4. **Rejection log:** In 2-3 sentences, note why the lowest-scoring arcs don't fit this content. This demonstrates genuine consideration of the full library.
+1. **Top pick:** Highest Total that passed the skeleton stamp. Show the stamped skeleton, tradeoffs, emotional preview.
+2. **Strong alternative:** Second-highest that passed. Show what it does differently — especially what it carries of the focal differently.
+3. **Dark Horse:** One arc that scored 3+ on Focal Fit (even if Context Fit is lower) and would land the focal in an unexpected way. Label clearly as "Dark Horse -- [Arc Name]." Dark Horses are exempt from passing the skeleton stamp on first run, but must be flagged with the structural risk if selected.
+4. **Rejection log:** 2-3 sentences. Call out specifically (a) arcs that scored well on Context Fit but failed Focal Fit and why, and (b) low Total arcs that don't fit this content.
+
+### Focal Fit Definition
+
+An arc has **high Focal Fit (4-5)** when its protected/climax beat naturally delivers the *kind of payload* the One Thing is:
+
+| If The One Thing is... | High Focal Fit arcs | Why |
+|------------------------|---------------------|-----|
+| A counterintuitive reveal or reframe | Prestige, Mystery Box, Trojan Horse | Their climax IS a reveal/reframe |
+| A strategic decision or choice | Time Machine, Heist | Their climax IS the fork or the execution path |
+| A causal explanation | Columbo | Its climax IS the mechanism |
+| An identity or transformation shift | Hero's Journey, Freytag | Their climax IS becoming/realizing |
+| A synthesis across competing views | Rashomon | Its climax IS the synthesis |
+| A hidden pattern made visible | Game of Scene | Its climax IS the pattern naming |
+
+An arc has **low Focal Fit (1-2)** when its climax delivers a *different kind* of payload than the One Thing requires. Example: trying to land a strategic decision (Time Machine territory) inside Hero's Journey will produce a piece whose emotional crest sits at the protagonist's transformation — not at the decision the audience must make. The piece can still feel good. It just won't land the point.
 
 ### Why This Protocol Exists
 
-Without the full sweep, recommendations gravitate to the same 4-5 frameworks (Heist, Trojan Horse, Columbo, Prestige, Hero's Journey). The sweep ensures Freytag, Game of Scene, Time Machine, Rashomon, Mystery Box, and less common communication frameworks get genuine consideration.
+Without the full sweep, recommendations gravitate to the same 4-5 frameworks (Heist, Trojan Horse, Columbo, Prestige, Hero's Journey).
+
+Without the focal fidelity dimension and skeleton stamp test, recommendations gravitate toward whichever framework feels right for the *audience/tone* — and the focal statement gets quietly betrayed by the arc's gravity. The sweep ensures Freytag, Game of Scene, Time Machine, Rashomon, Mystery Box, and less common communication frameworks get genuine consideration; the focal fidelity gate ensures whichever framework wins can actually land the point.
 
 ---
 
@@ -140,17 +193,19 @@ Gather these inputs before running the selection protocol:
 
 ## By Purpose
 
-| Purpose | Best Arc | Best Framework | Slides | Key Principle |
-|---------|----------|----------------|--------|---------------|
-| **Persuade to act** | Heist (C), Trojan Horse (E) | AIDA, Raskin | 15-25 | Single clear CTA |
-| **Inform / educate** | Game of Scene (I), Columbo (H) | Cognitive Load, Story Circle | 25-40 | Chunk + complement; audience as learner-hero |
-| **Inspire / motivate** | Hero's Journey (F), Prestige (A), Freytag (G) | Duarte, Cinderella | 20-35 | Peak + strong ending; Freytag for dramatic catharsis |
-| **Align / consensus** | Rashomon (J), Heist (C) | Unity, SCQA, Story Circle | 20-30 | Acknowledge all views; shared journey |
-| **Report / update** | Columbo (H) | Pyramid | 10-20 | Answer-first |
-| **Defend / justify** | Columbo (H), Rashomon (J) | Evidence + MECE | 15-25 | Anticipate objections |
-| **Entertain** | Prestige (A), Game of Scene (I) | SUCCESs, Peak-end | 25-40 | Maximize surprise |
-| **Teach patterns** | Game of Scene (I), Freytag (G) | Cognitive Load, Vonnegut Shapes | 25-40 | Name the game; dramatic structure aids retention |
-| **Drive identity shift** | Hero's Journey (F), Freytag (G) | Story Circle, Schwartz Awareness | 20-35 | Transformation through dramatic arc + audience-as-hero |
+| Purpose | Best Arc | Best Framework | Key Principle |
+|---------|----------|----------------|---------------|
+| **Persuade to act** | Heist (C), Trojan Horse (E) | AIDA, Raskin | Single clear CTA |
+| **Inform / educate** | Game of Scene (I), Columbo (H) | Cognitive Load, Story Circle | Chunk + complement; audience as learner-hero |
+| **Inspire / motivate** | Hero's Journey (F), Prestige (A), Freytag (G) | Duarte, Cinderella | Peak + strong ending; Freytag for dramatic catharsis |
+| **Align / consensus** | Rashomon (J), Heist (C) | Unity, SCQA, Story Circle | Acknowledge all views; shared journey |
+| **Report / update** | Columbo (H) | Pyramid | Answer-first |
+| **Defend / justify** | Columbo (H), Rashomon (J) | Evidence + MECE | Anticipate objections |
+| **Entertain** | Prestige (A), Game of Scene (I) | SUCCESs, Peak-end | Maximize surprise |
+| **Teach patterns** | Game of Scene (I), Freytag (G) | Cognitive Load, Vonnegut Shapes | Name the game; dramatic structure aids retention |
+| **Drive identity shift** | Hero's Journey (F), Freytag (G) | Story Circle, Schwartz Awareness | Transformation through dramatic arc + audience-as-hero |
+
+**Length principle:** Slide count follows from content density and audience patience, not from purpose category. The builder's Content Length Assessment (Step 0) determines the right length for each piece. A focused 8-slide deck can be more effective than a padded 20-slide one.
 
 ---
 

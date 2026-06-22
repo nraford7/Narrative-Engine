@@ -183,27 +183,28 @@ This example shows the Narrative Engine workflow applied to a research article a
 
 ---
 
-## Phase 5: Review Panel (Abbreviated)
+## Phase 5: Targeted Review (Abbreviated)
 
 **Claude:**
-> ## Review Panel Synthesis
+> ## Review Summary
+>
+> **Reviewers:** Audience Advocate + Comms Specialist (selected for persuasion/pitch content)
 >
 > ### Strengths
 > - The "Turn" reveal at slide 4 will genuinely surprise this audience — *Audience Advocate*
 > - Message discipline is tight: one clear takeaway (remote > hybrid) — *Comms Specialist*
-> - The before/after productivity comparison will be memorable — *Visual Designer*
 >
 > ### Recommended Changes
 >
-> **Messaging**
-> - Slide 2: "designed hybrid for balance" → "bet on hybrid for balance" (stronger verb) — *Comms Specialist*
+> 1. **Slide 2 headline** — Comms Specialist
+>    "designed hybrid for balance" → "bet on hybrid for balance" (stronger verb)
 >
-> **Audience Fit**
-> - Add one sentence acknowledging hybrid's perceived benefits before dismissing — *Audience Advocate*
+> 2. **Preempt objections** — Audience Advocate
+>    Add one sentence acknowledging hybrid's perceived benefits before dismissing
 >
 > ### Overall Assessment
 > **Ready to present?** Yes with minor edits
-> **Most important improvement:** Add acknowledgment of hybrid benefits to preempt objections.
+> **Most important change:** Add acknowledgment of hybrid benefits to preempt objections.
 
 ---
 

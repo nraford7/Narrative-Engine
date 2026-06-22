@@ -532,3 +532,157 @@ Society functions as overlapping groups. Rather than persuading individuals, ide
 - [The Edward Bernays Reader - Ig Publishing](https://www.igpub.com/the-edward-bernays-reader/)
 - [Engineering of Consent - Wikipedia](https://en.wikipedia.org/wiki/The_Engineering_of_Consent)
 - [Propaganda Summary - Growth Summary](https://growthsummary.com/book-summary/propaganda/)
+
+---
+
+## 13. Buyer Psychology for Narrative Design
+
+These models explain *why* specific narrative choices work. Use them to make more intentional decisions about messaging, structure, and framing.
+
+### Understanding Your Audience
+
+**Confirmation Bias** — People seek and accept information that confirms what they already believe, and resist information that contradicts it.
+
+*Narrative application:* Start from the audience's existing beliefs and extend them toward your conclusion, rather than arguing against their worldview head-on. "You already know X is true — here's what that means for Y."
+
+*Builder instruction:* In the Build Brief's audience analysis, identify 1-2 beliefs the audience already holds that support your focal statement. Open from those beliefs.
+
+**Fundamental Attribution Error** — People attribute others' failures to character ("they're lazy") but their own failures to circumstances ("the process was broken").
+
+*Narrative application:* When addressing audience pain points, blame the process/system/tools — never imply the audience is at fault. "It's not that your team can't execute — it's that the current workflow makes execution nearly impossible."
+
+*Builder instruction:* Audit every problem-framing slide. If any sentence could be read as blaming the audience, rewrite to blame the situation.
+
+**Curse of Knowledge** — Once you know something, you can't remember what it felt like not to know it. Experts drastically overestimate how clear their explanations are.
+
+*Narrative application:* The builder is often closer to the material than the audience. Jargon, acronyms, and assumed context leak in without noticing.
+
+*Builder instruction:* After drafting, read every headline as if you've never heard of this topic. If any sentence requires prior knowledge to parse, simplify or add context. When in doubt, explain.
+
+### Making Stories Land
+
+**Availability Heuristic** — People judge probability and importance based on how easily examples come to mind. Vivid, concrete stories are more "available" than abstract statistics.
+
+*Narrative application:* One vivid story of a specific person's transformation is more persuasive than aggregate data. Lead with the story, then support with numbers.
+
+*Builder instruction:* Every major claim should have either a concrete example or a vivid scenario attached. "Imagine..." and "Picture this..." are availability triggers.
+
+**Mere Exposure Effect** — Repeated exposure to something increases preference for it, even without conscious recognition. Familiarity breeds liking, not contempt.
+
+*Narrative application:* Repeat your key themes and core language across multiple beats of the narrative. The focal statement should echo (in varied forms) at least 3 times throughout the piece.
+
+*Builder instruction:* Identify 2-3 key phrases from the focal statement. Weave them through the opening, the turn/reveal, and the close — varied enough to avoid monotony, consistent enough to build familiarity.
+
+**Mimetic Desire** — People want things because other people want them. Desire is contagious and socially learned, not internally generated.
+
+*Narrative application:* Show others wanting, pursuing, or benefiting from what you're offering. "Teams at [respected company] adopted this" works not because of authority alone, but because it triggers imitative desire.
+
+*Builder instruction:* Include at least one moment where the audience sees peers or aspirational figures already engaged with your solution. Social proof and mimetic desire compound each other.
+
+### Building Trust & Likability
+
+**Pratfall Effect** — A competent person or brand becomes *more* likable after showing a small, relatable flaw. Perfection creates distance; strategic vulnerability creates connection.
+
+*Narrative application:* One honest admission of limitation, difficulty, or past failure makes the rest of your claims more believable. "We tried X and it didn't work — here's what we learned" is more persuasive than an unbroken success story.
+
+*Builder instruction:* Include one moment of strategic vulnerability — a lesson learned, a limitation acknowledged, or a challenge still being worked on. Place it before your strongest proof points so credibility compounds.
+
+### Driving Action
+
+**Paradox of Choice** — More options lead to decision paralysis, lower satisfaction, and higher regret. Fewer choices drive more action.
+
+*Narrative application:* Every slide or section with multiple CTAs, multiple next steps, or multiple options weakens all of them. One clear action per moment.
+
+*Builder instruction:* The final CTA slide should have exactly ONE next step. If you must offer options, cap at three and visually emphasize the recommended one.
+
+**Default Effect** — People disproportionately choose whatever is pre-selected or presented as the standard option, even when alternatives are available.
+
+*Narrative application:* When presenting options (pricing tiers, implementation paths, next steps), position your preferred option as the default — "most popular," "recommended," or simply listed first and with more visual weight.
+
+*Builder instruction:* If the deck includes a choice point, explicitly mark one option as recommended or default. Don't present equal options and hope the audience picks right.
+
+**Goal-Gradient Effect** — People accelerate effort as they approach a goal. The closer the finish line feels, the more motivated they become.
+
+*Narrative application:* Show the audience how close they already are to the desired outcome. "You've already done the hard part — this is the last 20%." Progress visualization (steps completed, milestones passed) drives completion.
+
+*Builder instruction:* For action-oriented pieces, frame the CTA as a continuation of progress already made, not a fresh start. "You're already here → this gets you there" is stronger than "Start your journey."
+
+**Zero-Price Effect** — "Free" is not just a low price — it's a psychologically different category. People overvalue free options relative to their actual utility.
+
+*Narrative application:* If anything in your offering is genuinely free (trial, consultation, resource, tool), call it out explicitly. "Free" triggers an emotional response that "low-cost" or "affordable" cannot match.
+
+*Builder instruction:* If a free element exists, give it its own moment — don't bury "free trial" in a list of features. The word "free" earns a headline.
+
+---
+
+## 14. Advanced Persuasion Techniques
+
+Tactical techniques that extend beyond Cialdini's six principles. Use these to design CTA sequences, pricing frames, and review processes.
+
+### Foot-in-the-Door
+
+**Mechanism:** A small initial commitment makes people significantly more likely to agree to a larger subsequent request. Consistency pressure drives escalation.
+
+**Narrative application — CTA sequencing:**
+- Don't ask for the big commitment first
+- Sequence: Free resource → email signup → demo → trial → purchase
+- In a deck: micro-agreement slides ("Would you agree that X?") build toward the final ask
+- Each "yes" makes the next "yes" easier
+
+**Builder instruction:** Before the main CTA, include 2-3 rhetorical questions or statements the audience will mentally agree with. By the time you ask for the real commitment, they've already said "yes" three times.
+
+### Door-in-the-Face
+
+**Mechanism:** An initial large (even unreasonable) request, when refused, makes a subsequent moderate request seem much more reasonable by comparison.
+
+**Narrative application — pricing and proposals:**
+- Show the full-scope / premium option first, then present the recommended option as the reasonable middle ground
+- "The complete transformation would require X — but you can get 80% of the value with Y"
+- Works especially well in consulting proposals and enterprise pricing
+
+**Builder instruction:** When presenting investment or commitment asks, consider leading with the aspirational / maximum version before revealing the actual ask. The contrast makes the real ask feel like a deal.
+
+### Contrast Effect
+
+**Mechanism:** People evaluate things relative to what they just experienced, not in absolute terms. Placing two things side-by-side amplifies perceived differences.
+
+**Narrative application — before/after framing:**
+- The "before" state should be vivid and specific enough to make the "after" state feel dramatically different
+- Place the worst version of the current state immediately before the best version of the future state
+- Works for: process comparisons, competitive positioning, transformation narratives
+
+**Builder instruction:** Every transformation slide should follow the pattern: specific pain (linger on it) → immediate contrast with specific gain. Don't separate before/after with explanation — the juxtaposition itself is the argument.
+
+### Jobs to Be Done
+
+**Mechanism:** People don't buy products — they "hire" them to do a job. The job is the outcome they need, not the features they use.
+
+**Narrative application — outcome framing:**
+- Frame everything around what the audience is trying to accomplish, not what the product/service does
+- "You need to [job] — here's how" beats "Our product does [features]"
+- Aligns messaging with the audience's internal monologue
+
+**Builder instruction:** Audit every feature claim. Rewrite as: "[Audience] needs to [job]. [Feature] does that by [mechanism]." If you can't name the job, the feature doesn't belong in the narrative.
+
+### Inversion
+
+**Mechanism:** Instead of asking "How do I make this succeed?" ask "What would guarantee this fails?" Then avoid those things.
+
+**Narrative application — review lens for the Critic agent:**
+- "What would make this piece fail with this audience?"
+- "What would make them stop reading/listening?"
+- "What would make them trust us less?"
+- Inverting the goal reveals blind spots that positive thinking misses
+
+**Builder instruction:** After completing a draft, run one inversion pass: "If I wanted this to fail, what would I keep?" Anything that survives that question needs revision.
+
+### Second-Order Thinking
+
+**Mechanism:** Consider not just the immediate effect of a message, but the downstream consequences. "And then what?"
+
+**Narrative application — messaging consequence check:**
+- If we claim X, what will the audience expect next? Can we deliver?
+- If we use fear/urgency, will it backfire with this audience's sophistication level?
+- If we make this promise, what happens when they hold us to it?
+
+**Builder instruction:** For every bold claim or emotional appeal, ask "And then what?" twice. If the second-order consequence is negative (overpromise → disappointment, urgency → skepticism), dial back the first-order message.
