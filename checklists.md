@@ -175,6 +175,11 @@ Layer onto any deck:
 - [ ] **Liking:** Is there common ground and "we" language?
 - [ ] **Scarcity:** Is cost of inaction clear?
 - [ ] **Unity:** Does this feel like "us" not "us vs. them"?
+- [ ] **Confirmation Bias:** Does messaging align with what the audience already believes?
+- [ ] **Curse of Knowledge:** Would someone unfamiliar with this space understand every sentence?
+- [ ] **Paradox of Choice:** Is there ONE clear next step, not multiple competing CTAs?
+- [ ] **Contrast Effect:** Is the before/after or old-way/new-way contrast vivid and specific?
+- [ ] **Pratfall Effect:** Is there one strategic vulnerability that builds trust?
 
 ---
 
@@ -256,20 +261,18 @@ Run after the build (Phase 4), before the review panel (Phase 5). If any check f
 - [ ] The writing shifts register at least once — e.g., clinical precision breaking into directness at the Turn, or calm building to urgency at the CTA
 - [ ] The piece would feel meaningfully different if you swapped in a different framework — if not, the framework structure isn't doing enough work
 
-### The AI Test
+### The AI Test (superseded — use the Humanizing Pass)
+
+> The surface checks below are now the **floor**, not the whole test. The named discipline is
+> `prose-craft.md` (Tier 1, sentence-level) + `humanizing-pass.md` § Tier 2 (discourse-level
+> structural deltas: theme-statement budget, open threads, temporal complexity, discourse redundancy,
+> idiosyncrasy). Surface scrubbing alone does not de-slop a draft — run both tiers.
+
 - [ ] Read the opening paragraph. Could it have come from any AI writing about any topic? If yes, rewrite until it couldn't.
-- [ ] Scan for and eliminate these generic AI patterns:
-  - "In today's rapidly changing/evolving..."
-  - "Let's dive in / Let's explore..."
-  - "In conclusion..."
-  - "The question isn't if but when..."
-  - "At its core..."
-  - "It's worth noting that..."
-  - "This begs the question..."
-  - "Moving forward..."
-  - "It goes without saying..."
-  - "Now more than ever..."
-- [ ] The piece contains at least one moment of genuine surprise, wit, specificity, or personality that a template could not produce
+
+The pattern list below is **examples only** — the binding banlist is the prose-craft Filter (Tier 1), and the idiosyncrasy requirement is the Tier-2 delta in `humanizing-pass.md`. Don't maintain a third copy here; these are illustrations, not the source of truth:
+
+  - "In today's rapidly changing/evolving...", "Let's dive in / Let's explore...", "In conclusion...", "The question isn't if but when...", "At its core...", "It's worth noting that...", "This begs the question...", "Moving forward...", "It goes without saying...", "Now more than ever..."
 
 ---
 

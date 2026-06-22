@@ -13,51 +13,86 @@ Transform content into compelling narratives — as presentations or prose. Cont
 PHASE 1     Content Import
     ↓
 PHASE 1.5   Output Format — Presentation / Prose / Both
+            ⇒ Presentation selected → BUILD ON THE keynote-create MODEL (titles-as-beats + render)
     ↓
-PHASE 1.75  Focal Discovery — "What's the ONE point?"
+PHASE 1.75  Focal Discovery — "What's the ONE point?"  (= keynote-create punchline)
     ↓
 PHASE 2     Discovery Questions — Audience, purpose, content type, tone
     ↓
 PHASE 2.5   Density Mode — Varies by output format
     ↓
 PHASE 3     Framework Recommendation — Full sweep + dark horse
+            ★ GATE 1: Focal Fidelity Scoring + Skeleton Stamp Test ★
     ↓
 PHASE 3.5   Build Brief — Translates ALL discovery into concrete writing instructions
     ↓
     ══════ HANDOFF: Write Build Brief + Source to /tmp/ ══════
     ↓
-PHASE 4     Build — SUBAGENT (includes Originality Check)
+PHASE 4     Build — SUBAGENT (Content Length Assessment + Originality Check)
+            • Prose path → build, then Tier-1 prose-craft pass on every paragraph
+            • Presentation path → keynote-create Stage 3 (titles-as-beats, titles-only test,
+              prose-craft on titles) then Stage 4 render → /impeccable → PDF
     ↓
     ══════ HANDOFF: Output written to /tmp/ ══════
     ↓
-PHASE 5     Review Panel — 6 PARALLEL SUBAGENTS + Director synthesis
+PHASE 4.6   ★ GATE 2: Focal Fidelity Loop ★
+            Cold-Read Judge SUBAGENT → PASS / NEEDS_REVISION / FRAMEWORK_MISMATCH
+            (decks: the keynote-create titles-only test IS this gate)
+            • PASS → continue to Phase 4.7
+            • NEEDS_REVISION → re-dispatch builder in revision mode (max 3 passes)
+            • FRAMEWORK_MISMATCH → escape valve back to Phase 3
     ↓
-PHASE 5.5   Stress Test — 3 PARALLEL SUBAGENTS + Director triage (optional)
+PHASE 4.7   ★ GATE 3: Humanizing Pass ★  (evidence-grounded de-slop)
+            Tier 2 discourse-level structural-delta gate — see humanizing-pass.md
     ↓
-ON-DEMAND   "Tighter" — Compression passes anytime
+PHASE 5     Targeted Review — 2 SUBAGENTS (content-type selected) + Director synthesis
+    ↓
+PHASE 5.5   Stress Test — 3 SUBAGENTS + Director triage (high-stakes content only)
+    ↓
+ON-DEMAND   "Tighter" — Compression passes anytime (re-runs prose-craft + humanizing)
 ```
+
+**Three structural gates protect the work:**
+
+- **Gate 1 (Phase 3)** stops a Wrong Framework from being chosen — frameworks are scored on focal fidelity and must pass the skeleton stamp test before they can be a Top Pick.
+- **Gate 2 (Phase 4.6)** catches drift between intent and execution — a cold-read judge reads the output before the brief, names the One Thing, and compares. If revision can close the gap it loops; if it can't, it escapes back to Phase 3 with a framework-mismatch diagnosis. For decks, the keynote-create **titles-only test** is this gate.
+- **Gate 3 (Phase 4.7)** catches AI-slop the first two miss — a discourse-level humanizing pass grounded in the narrative-structure research corpus. The evidence: a classifier still detects AI from *structure* at 93.9% after surface lexical cleanup, so sentence-polishing alone cannot de-slop a draft. See [`humanizing-pass.md`](humanizing-pass.md).
+
+**Sentence discipline is always on.** Every prose paragraph and every deck title is built through the **embedded prose-craft discipline** ([`prose-craft.md`](prose-craft.md) + [`prose-craft-constructions.md`](prose-craft-constructions.md)) during the build (Tier 1 of the humanizing pass). It is *embedded, not invoked* — the build subagent reads these files directly, so Narrative Engine runs once with no dependency on a separate skill. This is non-optional and replaces the old qualitative "AI Test" with a named discipline.
 
 ---
 
 ## Subagent Architecture
 
-Phases 1–3.5 run interactively in the main conversation. Phases 4, 5, and 5.5 run as subagents via the Task tool, reducing context window pressure and enabling parallel execution.
+Phases 1–3.5 run interactively in the main conversation. Phases 4, 4.6, 5, and 5.5 run as subagents via the Task tool, reducing context window pressure and enabling parallel execution.
 
 ### Handoff Files
 
 | File | Written by | Read by |
 |------|-----------|---------|
-| `/tmp/ne-build-brief.md` | Main (end of Phase 3.5) | Build, all Reviewers, all Stress Testers |
+| `/tmp/ne-build-brief.md` | Main (end of Phase 3.5) | Build, Focal Judge, Reviewers, Stress Testers |
 | `/tmp/ne-source-content.md` | Main (end of Phase 3.5) | Build subagent |
-| `/tmp/ne-output.md` | Build subagent | Main, all Reviewers, all Stress Testers |
+| `/tmp/ne-output.md` | Build subagent | Main, Focal Judge, Reviewers, Stress Testers |
+| `/tmp/ne-cold-read.md` | Focal Judge (Phase A) | Focal Judge (Phase B), Build (revision mode) |
+| `/tmp/ne-focal-judge.md` | Focal Judge (Phase B) | Main, Build (revision mode) |
+| `/tmp/ne-focal-judge-prior.md` | Main (between Phase 4.6 passes) | Focal Judge (pattern detection) |
 
 ### Prompt Templates
 
 | Template | Phase | Dispatch |
 |----------|-------|----------|
-| [`prompts/builder.md`](prompts/builder.md) | 4 | 1 agent, serial |
-| [`prompts/reviewer.md`](prompts/reviewer.md) | 5 | 6 agents, parallel |
-| [`prompts/stress-tester.md`](prompts/stress-tester.md) | 5.5 | 3 agents, parallel |
+| [`prompts/builder.md`](prompts/builder.md) | 4 (initial), 4.6 (revision) | 1 agent, serial. Self-detects mode via `/tmp/ne-focal-judge.md` |
+| [`prompts/focal-fidelity-judge.md`](prompts/focal-fidelity-judge.md) | 4.6 | 1 agent, serial. Single obsession: does the piece land The One Thing? |
+| [`prompts/reviewer.md`](prompts/reviewer.md) | 5 | 2 agents, parallel (content-type selected) |
+| [`prompts/stress-tester.md`](prompts/stress-tester.md) | 5.5 | 3 agents, parallel (high-stakes only) |
+
+### Pre-Phase-4.6 File Hygiene
+
+Between focal-fidelity passes, the orchestrator must rotate judge artifacts so the next pass can do pattern detection:
+
+1. Before re-dispatching the Focal Judge for pass N+1, copy `/tmp/ne-focal-judge.md` → `/tmp/ne-focal-judge-prior.md`.
+2. Before re-dispatching the Builder in revision mode, leave `/tmp/ne-focal-judge.md` in place — that file is the Builder's signal to enter Revision Mode.
+3. After the loop exits (PASS, FRAMEWORK_MISMATCH, or cap reached), delete `/tmp/ne-focal-judge.md` and `/tmp/ne-focal-judge-prior.md` so a future build does not accidentally enter revision mode.
 
 ---
 
@@ -100,6 +135,37 @@ Ask for target length:
 > 2. **Presentation → Prose** — Build the deck structure, then expand to prose
 
 **Note:** The frameworks (Trojan Horse, Heist, Time Machine, etc.) are *narrative structures* — they work for both formats. The divergence happens at the Build phase.
+
+### If Presentation (or Both, presentation half) selected: build on the keynote-create model
+
+Narrative Engine owns the *intelligence* a deck needs that keynote-create lacks — full framework
+sweep, focal-fidelity scoring, audience profiling, the review panel. keynote-create owns the *deck
+craft* Narrative Engine lacks — titles-as-story-beats, the titles-only test, five-act compression by
+length, and an actual render pipeline to HTML + PDF. **For any presentation, use both: Narrative
+Engine's discovery and gates wrap around a keynote-create build.**
+
+The handoff maps cleanly because the two skills already share a spine:
+
+| Narrative Engine | keynote-create equivalent |
+|---|---|
+| Focal Statement (Phase 1.75) | **Punchline** — the deck's one-line spine |
+| Density Mode (Phase 2.5) | **Density** — identical four modes (High-Impact / Narrative / Evidence / ELI5) |
+| Chosen arc + skeleton (Phase 3) | The **five-act arc**, with the chosen NE arc supplying the dramatic shape |
+| Build (Phase 4) | keynote-create **Stage 3** (title sequence) + **Stage 4** (render → /impeccable → PDF) |
+| Focal Fidelity Loop (Phase 4.6) | The **titles-only test** (spoken-prose + antecedent checks) |
+
+Because the Focal Statement *is* the punchline and the density modes are identical, do **not**
+re-ask keynote-create's Stage 1–2 questions. Run Narrative Engine's discovery once, then enter
+keynote-create at its Stage 3. The defining keynote-create constraint carries through: **every slide
+title is a short complete sentence that delivers one story beat; read top-to-bottom, the titles tell
+the whole narrative with no bodies needed.**
+
+**The title-craft is embedded, not invoked.** The build subagent reads
+[`deck-title-craft.md`](deck-title-craft.md) (a verbatim embed of keynote-create's title guide) and
+applies it directly — Narrative Engine runs once, with no dependency on a separate skill for the title
+build. Only the **render stage** (Stage 4 — `keynote-render.mjs` → `/impeccable` → PDF) runs in the
+orchestrator after the gates pass and legitimately calls keynote-create, since that is main-conversation
+work, not a subagent.
 
 ---
 
@@ -262,25 +328,30 @@ In ELI5 mode, simpler narrative arcs work better:
 
 ---
 
-## PHASE 3: Framework Recommendation
+## PHASE 3: Framework Recommendation (Gate 1)
 
-Based on discovery answers, recommend frameworks using the Full Sweep Protocol.
+Based on discovery answers, recommend frameworks using the Full Sweep Protocol. **Gate 1 — focal fidelity scoring + skeleton stamp test — is non-optional and lives inside this phase.**
 
 **REQUIRED:** Before recommending, complete the framework scoring sweep in [`framework-selection.md`](framework-selection.md). This means:
-1. Score all 10 narrative arcs (1-5) against this specific combination of inputs
-2. Score the top 5 communication frameworks
-3. Present the top 2 arc + framework pairings with skeleton and tradeoffs
-4. Present 1 Dark Horse — an unexpected option that scores 3+ and could produce something more original
-5. Include a Rejection Log — 1-2 sentences on why low-scoring options don't fit
+1. Score all 10 narrative arcs on TWO dimensions (1-5 each): **Context Fit** (audience/purpose/content/tone) and **Focal Fit** (does the arc's climax beat structurally deliver The One Thing?). Combined Total = max 10.
+2. Score the top 5 communication frameworks on the same two dimensions.
+3. **Run the Skeleton Stamp Test on the top 2 candidates by Total score.** Stamp each candidate's beat structure onto the Focal Statement and verify three conditions: (a) the climax/payoff beat structurally delivers the One Thing, (b) the closing beat structurally delivers the Ask, (c) the Through-Line is carried by the arc's natural emotional shape. **All three must be Y to pass.** A candidate that fails the skeleton stamp test cannot be Top Pick or Strong Alternative regardless of its scores.
+4. Present the top 2 arc + framework pairings (skeleton-stamp-passing only) with the stamped skeleton, tradeoffs, and emotional preview.
+5. Present 1 Dark Horse — an unexpected option scoring 3+ on Focal Fit specifically (Context Fit may be lower) that would land the focal in an unexpected way. Dark Horses are exempt from passing the skeleton stamp on first run, but flag the structural risk if selected.
+6. Include a Rejection Log — 1-2 sentences calling out (a) arcs that scored well on Context Fit but failed Focal Fit, and (b) low-Total arcs that don't fit this content.
+
+If neither top candidate passes the skeleton stamp test, do NOT recommend a workaround. Escalate to the user with a clear diagnosis:
+
+> "None of the top frameworks structurally land your focal — the strongest candidates pull the piece toward [X] instead of [Focal]. Possible options: (1) reframe the focal, (2) accept a Dark Horse with lower context fit but better focal fit, (3) split into two pieces."
 
 For each recommendation:
 1. **Name the framework** and category
-2. **Explain fit** in 2-3 sentences specific to their situation
-3. **Show the skeleton** — their content mapped to the framework's beats
-4. **Flag tradeoffs** — what this framework does well vs. potential drawbacks
+2. **Show the stamped skeleton** — beat-by-beat, with explicit notes on what each beat carries of the focal, and whether the climax delivers the One Thing
+3. **Explain fit** in 2-3 sentences specific to their situation
+4. **Flag tradeoffs** — what this framework does well vs. potential drawbacks (including any focal-fidelity risks)
 5. **Emotional preview** — what the audience will *feel* at the key moments (reference [`emotional-arcs.md`](emotional-arcs.md))
 
-See [`framework-selection.md`](framework-selection.md) for the full sweep protocol and selection matrices.
+See [`framework-selection.md`](framework-selection.md) for the full sweep protocol, scoring matrices, and the Focal Fit Definition table mapping payload kinds to high-fit arcs.
 See [`narrative-arcs.md`](narrative-arcs.md) for arc details including emotional textures.
 See [`communication-frameworks.md`](communication-frameworks.md) for framework details.
 
@@ -325,9 +396,11 @@ Generate a Build Brief in this format:
 - Intensity dial: [1-5, calibrated to audience]
 - Key emotional moment: [which beat, how to handle it]
 
-**Persuasion Strategy:** [2-3 Cialdini principles prioritized for this audience]
+**Persuasion Strategy:** [2-3 principles from Cialdini or Buyer Psychology, prioritized for this audience]
 - Primary: [principle] — apply by [specific instruction]
 - Secondary: [principle] — apply by [specific instruction]
+- Buyer psychology lens: [1 relevant model, e.g., "Confirmation Bias — align with audience's existing belief that X"]
+- See [`agent-reference-persuasion.md`](agent-reference-persuasion.md) §13-14 for full model catalog
 
 **Opening Strategy:** [selected from opening-closing-strategies.md]
 - Type: [e.g., Cold Open Scene]
@@ -351,7 +424,11 @@ The user can adjust any element. Once confirmed, the Build Brief becomes the bin
 
 ## PHASE 4: Build (Subagent)
 
-The build phase runs as a subagent via the Task tool, offloading the heaviest generation work from the main conversation. Phase 4.5 (Originality Check) is folded into the build subagent as a self-review step.
+The build phase runs as a subagent via the Task tool, offloading the heaviest generation work from the main conversation. The build includes a Content Length Assessment (Step 0) and Originality Check (Phase 4.5), both folded into the subagent.
+
+### Content-Driven Length
+
+The builder determines length from the source content, not from the arc template. Arc beat structures are a **menu, not a checklist** — the builder skips or combines beats that lack enough content to justify their own slide or section. A strong 8-slide deck beats a padded 20-slide deck.
 
 ### Pre-Build: Write Handoff Files
 
@@ -364,15 +441,18 @@ Before dispatching:
 Create one Task:
 - **subagent_type:** `general-purpose`
 - **Prompt:** Read and execute [`prompts/builder.md`](prompts/builder.md)
+- The subagent first runs a Content Length Assessment (Step 0) to count substantive points and set a target length
 - The subagent reads all reference files specified in the Build Brief (arc, voice, audience, emotional texture, strategies, checklists)
+- **Prose path:** build the draft, then apply the **embedded prose-craft discipline** ([`prose-craft.md`](prose-craft.md)) to every paragraph as the sentence-level pass (Tier 1 of the humanizing pass — register-matched to the Density Mode; see [`humanizing-pass.md`](humanizing-pass.md))
+- **Presentation path:** execute keynote-create Stage 3 — draft the title sequence as story beats, run the cold-read self-check and the **titles-only test**, then apply the **embedded prose-craft discipline to the titles only** (bodies stay as terse bullets). Stage 4 render → `/impeccable` layout promotion → PDF happens after the gates pass.
 - The subagent runs the Originality & Anti-Sameness Checklist before finalizing (Phase 4.5 folded in)
 - Output written to `/tmp/ne-output.md`
 
 ### Post-Build
 
 1. Read `/tmp/ne-output.md`
-2. Present the complete output to the user
-3. Proceed to Phase 5
+2. Do NOT present the output yet — first run **Phase 4.6 (Focal Fidelity Loop)**
+3. After Phase 4.6 returns PASS, run **Phase 4.7 (Humanizing Pass)**, then present the output and proceed to Phase 5
 
 ### Content Sourcing Tags
 
@@ -387,9 +467,132 @@ Create one Task:
 
 ---
 
-## PHASE 5: Review Panel (6 Parallel Subagents)
+## PHASE 4.6: Focal Fidelity Loop (Gate 2)
 
-Six specialist agents review the output simultaneously via the Task tool.
+Between Build (Phase 4) and Targeted Review (Phase 5), the output passes through a single-purpose judge whose only obsession is: **does this piece land The One Thing?** Phase 5 reviewers focus on prose quality, audience fit, and persuasion — they have access to the Build Brief but their key questions are not about focal fidelity. Without Gate 2, focal drift slips past Phase 5 because the piece reads internally coherent.
+
+### Why a separate gate, not just another reviewer
+
+The framework's beat structure has gravity. Once an arc is selected, the build naturally serves the arc — and the arc serves *its* climax payload, which may not be the focal payload. Specialist reviewers compound the problem: they evaluate craft against the Build Brief without re-deriving the One Thing from the output itself. A cold-read judge breaks that gravity by reading the output *before* the brief and reporting what it actually communicates.
+
+### Pass Cap
+
+**Maximum 3 builder passes per loop** (initial build + 2 revisions). Empirically, drift that does not converge in 3 passes is structural — editing cannot close it, only changing the framework can.
+
+### Loop Logic
+
+```
+Pass 1:  Builder (initial) → Output v1
+         ↓
+         Focal Judge (cold-read v1) → Verdict v1
+         ↓
+         ├─ PASS                  → Exit loop, proceed to Phase 5
+         ├─ NEEDS_REVISION        → Pass 2
+         └─ FRAMEWORK_MISMATCH    → Escape to Phase 3 with diagnosis
+
+Pass 2:  Rotate ne-focal-judge.md → ne-focal-judge-prior.md
+         Builder (revision mode reads judge findings) → Output v2
+         ↓
+         Focal Judge (cold-read v2, pattern-checks against prior) → Verdict v2
+         ↓
+         ├─ PASS                  → Exit loop, proceed to Phase 5
+         ├─ NEEDS_REVISION        → Pass 3
+         └─ FRAMEWORK_MISMATCH    → Escape to Phase 3 with diagnosis
+
+Pass 3:  Rotate ne-focal-judge.md → ne-focal-judge-prior.md
+         Builder (revision mode) → Output v3
+         ↓
+         Focal Judge (cold-read v3, pattern-checks) → Verdict v3
+         ↓
+         ├─ PASS                  → Exit loop, proceed to Phase 5
+         └─ NEEDS_REVISION OR     → CAP REACHED → Escalate to user with
+            FRAMEWORK_MISMATCH       diagnosis. The judge will typically
+                                     auto-escalate NEEDS_REVISION to
+                                     FRAMEWORK_MISMATCH at this point.
+```
+
+### Dispatch (each pass)
+
+The Focal Judge runs as a single-agent serial dispatch. Do NOT parallelize — its cold-read protocol depends on a deterministic file-reading order.
+
+- **subagent_type:** `general-purpose`
+- **Prompt:** Read and execute [`prompts/focal-fidelity-judge.md`](prompts/focal-fidelity-judge.md)
+- **Inputs read by judge:** `/tmp/ne-output.md`, `/tmp/ne-build-brief.md`, `/tmp/ne-focal-judge-prior.md` (if exists)
+- **Outputs written by judge:** `/tmp/ne-cold-read.md`, `/tmp/ne-focal-judge.md`
+
+After dispatch, the orchestrator (main conversation):
+
+1. Reads `/tmp/ne-focal-judge.md` to get the verdict.
+2. Routes based on verdict (see Loop Logic above).
+3. **Before re-dispatching** for a revision pass: copy `/tmp/ne-focal-judge.md` → `/tmp/ne-focal-judge-prior.md` so the next judge run can detect convergence patterns.
+4. **After loop exit** (any cause): delete both judge files so the next build starts clean.
+
+### Builder Revision Mode
+
+The Builder prompt detects revision mode automatically: if `/tmp/ne-focal-judge.md` exists when the Builder dispatches, it reads the judge findings and the prior `/tmp/ne-output.md` and applies *targeted edits* rather than a full rebuild. See [`prompts/builder.md`](prompts/builder.md) "Revision Mode Workflow" for details.
+
+The orchestrator does NOT need to send different prompts for initial vs. revision dispatch — the Builder self-routes on file presence.
+
+### Verdict Handling
+
+**On PASS:**
+> "Focal fidelity confirmed — the cold-read of the output matches the Focal Statement. Proceeding to specialist review (Phase 5)."
+
+Show the user a short summary: cold-read One Thing, Brief One Thing, and the judge's confidence/notes. Then continue.
+
+**On NEEDS_REVISION (within cap):**
+> "Pass [N] focal drift detected: [judge's specific drift summary]. Dispatching builder in revision mode to address [specific edits]."
+
+Don't ask the user — loop automatically until PASS or cap. The user can interrupt, but the default is to drive to PASS.
+
+**On FRAMEWORK_MISMATCH (any pass) OR cap reached:**
+> "The selected framework cannot structurally land your focal. The judge diagnosed: [diagnosis]. Recommended Phase 3 alternatives: [list]. Options: (1) restart Phase 3 with a different framework, (2) revise the Focal Statement, (3) accept the current draft as-is and move on. Which do you prefer?"
+
+Do not silently restart Phase 3 — the user owns the decision because reframing the focal vs. switching frameworks vs. accepting drift is a judgment call about the work, not a mechanical step.
+
+### What Phase 4.6 does NOT do
+
+- It does not coach prose quality. That is Phase 5's job.
+- It does not check audience fit, persuasion, factual accuracy, or originality. Those are Phase 5 / 5.5.
+- It does not re-derive the focal — the focal is established in Phase 1.75 and is binding through Phase 4.6. If the user wants to change the focal, that is a Phase 1.75 reset, which restarts Phase 3 → 4 → 4.6.
+
+The narrow scope is the point. A single-question gate is sharper than a multi-dimensional reviewer for this specific failure mode.
+
+---
+
+## PHASE 4.7: Humanizing Pass (Gate 3)
+
+After focal fidelity passes and before the review panel, the draft passes through the humanizing
+pass — the de-slopping layer. Full protocol and the cardinal rules in [`humanizing-pass.md`](humanizing-pass.md); the essentials:
+
+**Why a separate gate from prose-craft.** prose-craft (Tier 1, run in the build) cleans the
+*sentence* — lexical tells, monotone cadence. But the research corpus shows a classifier still
+detects AI from *structure* at 93.9% macro-F1 after that lexical cleanup. The AI signature lives in
+the discourse, not the words. Tier 2 is the only gate that reaches it.
+
+**The check (Tier 2 — discourse level).** Run the structural-delta checklist against the draft:
+
+1. **Theme-statement budget** — humans state the theme 52% of the time, AI 77%. Cut redundant body
+   restatements; keep the explicit statement only at the climax and close. *(Note the irony: the
+   Focal Statement and Killer Line push toward over-statement — this gate is the counterweight.)*
+2. **Tolerate asymmetry / open threads** — resist resolving and moralizing every beat; leave honestly-open questions open.
+3. **Preserve temporal complexity** — verify intended non-linearity wasn't flattened to chronology.
+4. **Discourse redundancy** — kill runs of paragraphs that make the identical move; no fractal summary.
+5. **Restore idiosyncrasy** — one concrete particular per section; one un-templatable moment in the piece.
+
+**The cardinal rule, non-negotiable:** these are **gates and drift detectors, never optimization
+objectives**. The figures are fiction-derived and directional. Do not loop a generator against them —
+optimizing the metric manufactures the slop the pass removes. Flag drift, then fix by hand.
+
+**Disposition:**
+- If the draft passes, note it briefly and proceed to Phase 5.
+- If it drifts on one or more deltas, apply targeted edits in place (this is an edit pass, not a rebuild), then re-check and proceed.
+
+---
+
+## PHASE 5: Targeted Review (2 Parallel Subagents)
+
+Two specialist agents review the output simultaneously via the Task tool. The agents are selected based on content type to focus on the dimensions that matter most for this specific piece.
 
 ```
                     ┌─────────────────────────────────────┐
@@ -398,45 +601,63 @@ Six specialist agents review the output simultaneously via the Task tool.
                     │        (main conversation)          │
                     └─────────────────────────────────────┘
                                      ▲
-        ┌──────┬──────┬──────────────┼──────────────┬──────┬──────┐
-        ▼      ▼      ▼             ▼              ▼      ▼      ▼
-   AUDIENCE  COMMS  VISUAL      CRITIC        CONTENT  ORIGINALITY
-   ADVOCATE  SPEC   DESIGNER                  EXPERT    AGENT
-                    (parallel subagents)
+                          ┌──────────┼──────────┐
+                          ▼                     ▼
+                    REVIEWER 1             REVIEWER 2
+               (content-type selected, parallel subagents)
 ```
+
+### Why 2, Not 6
+
+The builder already runs compression (Three-Level Clarity System) and originality checking (Phase 4.5) internally. Adding 6 independent reviewers fragments the unified voice and emotional arc that the builder produced. Two focused reviewers catch the highest-value issues without overwhelming the piece with competing rewrites.
+
+### Reviewer Selection by Content Type
+
+The Audience Advocate is always one reviewer — "does this land for the audience?" is the universal review question. The second reviewer is selected based on the highest-risk dimension for this content type.
+
+| Content Type | Reviewer 1 (always) | Reviewer 2 (selected) | Why this pairing |
+|-------------|---------------------|----------------------|-----------------|
+| Investor pitch / fundraising | Audience Advocate | Comms Specialist | Messaging tightness is make-or-break for pitches |
+| Sales pitch | Audience Advocate | Comms Specialist | Persuasion must be airtight |
+| Strategic plan / transformation | Audience Advocate | Content Expert | Claims must survive scrutiny |
+| Post-mortem / retrospective | Audience Advocate | Content Expert | Technical accuracy is non-negotiable |
+| Counterintuitive research | Audience Advocate | Content Expert | Evidence must be bulletproof |
+| Keynote / thought leadership | Audience Advocate | Originality Agent | Distinctiveness matters most here |
+| Vision / inspiration piece | Audience Advocate | Originality Agent | Must not feel generic |
+| Paradigm shift / new model | Audience Advocate | Originality Agent | Fresh framing is the whole point |
+| Scenario planning | Audience Advocate | Comms Specialist | Fork framing must be tight |
+| Case study | Audience Advocate | Content Expert | Facts drive the credibility |
+| Product launch | Audience Advocate | Comms Specialist | Messaging clarity is key |
+| Policy recommendation | Audience Advocate | Content Expert | Evidence and accuracy critical |
 
 ### Dispatch
 
-Create 6 Tasks simultaneously using [`prompts/reviewer.md`](prompts/reviewer.md) with these parameters:
-
-| # | Agent | Reference File | Key Question |
-|---|-------|----------------|-------------|
-| 1 | Audience Advocate | [`audience-profiles.md`](audience-profiles.md) | "As [audience], does this resonate?" |
-| 2 | Comms/PR Specialist | [`agent-reference-persuasion.md`](agent-reference-persuasion.md) | "Is the message tight and bulletproof?" |
-| 3 | Visual Designer | [`agent-reference-visual.md`](agent-reference-visual.md) | [format-dependent question] |
-| 4 | Critic | (none) | "If I had to cut 20%, what goes?" |
-| 5 | Content Expert | [`agent-reference-verification.md`](agent-reference-verification.md) | "Can every claim be defended?" |
-| 6 | Originality Agent | [`checklists.md`](checklists.md) | "Would this be distinguishable from any other AI piece?" |
+Create 2 Tasks simultaneously using [`prompts/reviewer.md`](prompts/reviewer.md) with the content-type-selected parameters.
 
 Each subagent:
 - **subagent_type:** `general-purpose`
 - Reads `/tmp/ne-output.md` and `/tmp/ne-build-brief.md` plus its reference file
 - Returns findings as task result (not written to file)
 
+**Judge hygiene.** The reviewers (and the Phase 4.6 / 5.5 judges) are LLM-as-judge, which carries
+verbosity, position, and self-preference bias. Instruct each to score against the Build Brief and the
+Content-Driven Length principle — a tight piece is not worse than a padded one — and treat confidence
+scores as advisory, not as a gate. See [`humanizing-pass.md`](humanizing-pass.md) → *Judge hygiene*.
+
 See [`prompts/reviewer.md`](prompts/reviewer.md) for full role descriptions and dispatch configurations.
 
 ### Director Synthesis (Main Conversation)
 
-After all 6 complete, synthesize into unified recommendations:
+After both complete, synthesize into focused recommendations:
 
-1. **Consensus items** — Multiple agents agree → high-confidence recommendation
-2. **Minor conflicts** — Director decides based on audience/purpose
-3. **Strong conflicts** — Escalate to user for decision
+1. **Agreement** — Both agents flag the same issue → high-confidence fix
+2. **Complementary** — Each catches different issues → present both
+3. **Conflict** — Escalate to user for decision
 
 **Output format:**
 
 ```markdown
-## Review Panel Synthesis
+## Review Summary
 
 ### Strengths
 - [What's working] — *Agent attribution*
@@ -445,26 +666,33 @@ After all 6 complete, synthesize into unified recommendations:
 1. **[Change]** — *Agent attribution*
    [Specific recommendation]
 
-### Points Requiring Your Decision
-> **Conflict:** [Agent A] says X, [Agent B] says Y
-> Which approach? 1. [Option A] 2. [Option B] 3. Keep as-is
+### Points Requiring Your Decision (if any)
+> [Agent A] says X, [Agent B] says Y — which approach?
 
 ### Overall Assessment
 **Ready?** [Yes / Yes with edits / Needs revision]
-**Most important improvement:** [One sentence]
+**Most important change:** [One sentence]
 ```
 
 ---
 
-## PHASE 5.5: Stress Test Panel (3 Parallel Subagents, Optional)
+## PHASE 5.5: Stress Test Panel (High-Stakes Content Only)
 
-After Review Panel, offer stress testing:
+The stress test is reserved for content types where the stakes justify additional scrutiny. **Do not auto-offer for every piece.**
 
-> "Want me to run the Stress Test Panel? Based on your content type [X], I'd test against: **[Persona 1]**, **[Persona 2]**, **[Persona 3]**.
+### When to Offer
+
+Offer the stress test only for these content types:
+- Investor pitch / fundraising
+- Sales pitch
+- Policy recommendation
+- Strategic plan / transformation (when presented to decision-makers)
+
+For all other content types, skip Phase 5.5 unless the user explicitly requests it.
+
+> "This is a [content type] — want me to stress test it? I'd test against: **[Persona 1]**, **[Persona 2]**, **[Persona 3]**.
 >
-> You can also add or swap: Engineer, Skeptic, Risk Officer, CFO, Lawyer, Conservative, COO.
->
-> Run it? (yes / yes, but add X / skip)"
+> You can also swap in: Engineer, Skeptic, Risk Officer, CFO, Lawyer, Conservative, COO."
 
 ### Auto-Selection by Content Type
 
@@ -473,11 +701,7 @@ After Review Panel, offer stress testing:
 | Investor pitch | CFO, COO, Skeptic |
 | Sales pitch | Skeptic, COO, Engineer |
 | Strategic plan | COO, Conservative, Risk Officer |
-| Technical proposal | Engineer, Skeptic, COO |
 | Policy recommendation | Lawyer, Risk Officer, Conservative |
-| Product launch | COO, Skeptic, Engineer |
-| Post-mortem | Engineer, Risk Officer, COO |
-| Keynote | Skeptic, Conservative |
 
 ### Dispatch
 
@@ -503,13 +727,13 @@ After personas review, Director categorizes:
 
 ## Director Triage
 
-### 🔴 Must Fix (will undermine piece if ignored)
+### Must Fix (will undermine piece if ignored)
 1. **[Issue]** ([Persona]) — [Why it matters and how to fix]
 
-### 🟡 Should Fix (strengthens meaningfully)
+### Should Fix (strengthens meaningfully)
 1. **[Issue]** ([Persona]) — [Recommendation]
 
-### 🟢 Could Fix (nice-to-have)
+### Could Fix (nice-to-have)
 1. **[Issue]** ([Persona]) — [Optional improvement]
 
 ### Director's Recommendation
@@ -527,7 +751,8 @@ When user says "tighter":
 1. **Focal check** — Has the point drifted? Re-confirm.
 2. **Section pass** — Any sections that could merge or be cut?
 3. **Unit pass** — Four-lens compression on every slide/paragraph.
-4. **Output** — Tighter version with change summary.
+4. **Re-run prose-craft + the humanizing pass** — compression tends to flatten sentence-length variance (a Reinhart AI-tell) and to re-introduce theme-restatement; re-check both Tier 1 and Tier 2 after cutting. For decks, re-run the titles-only test.
+5. **Output** — Tighter version with change summary.
 
 Repeatable until user is satisfied.
 
@@ -547,8 +772,11 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 
 | File | Contains |
 |------|----------|
+| [`humanizing-pass.md`](humanizing-pass.md) | The de-slop layer — Tier 1 (prose-craft) + Tier 2 (discourse structural-delta checklist), judge hygiene, and the gate-not-objective rule. Grounded in the narrative-structure research corpus. |
+| [`prose-craft.md`](prose-craft.md) + [`prose-craft-constructions.md`](prose-craft-constructions.md) | Embedded sentence-level discipline (Floor/Filter/Ceiling + construction catalog). Tier 1 of the humanizing pass. Applied directly by the builder — not a separate skill call. |
+| [`deck-title-craft.md`](deck-title-craft.md) | Embedded keynote-create title guide — action titles, the titles-only test, antecedent test, rewrite examples. Used by the presentation build path. |
 | [`checklists.md`](checklists.md) | All quality checklists (headlines, CTAs, pricing, compression) |
-| [`framework-selection.md`](framework-selection.md) | Selection matrices by audience, purpose, tone |
+| [`framework-selection.md`](framework-selection.md) | Selection matrices by audience, purpose, tone — and the focal-fidelity scoring + skeleton stamp test (Gate 1) |
 | [`narrative-arcs.md`](narrative-arcs.md) | 10 narrative arc structures with beats |
 | [`communication-frameworks.md`](communication-frameworks.md) | Efficiency frameworks (Pyramid, AIDA, PAS, etc.) |
 | [`agent-reference-persuasion.md`](agent-reference-persuasion.md) | Comms agent deep reference |
@@ -558,7 +786,10 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 | [`voice-profiles.md`](voice-profiles.md) | 7 voice profiles with auto-derive mapping |
 | [`emotional-arcs.md`](emotional-arcs.md) | Framework emotional textures + audience calibration |
 | [`opening-closing-strategies.md`](opening-closing-strategies.md) | Opening/closing strategy libraries |
-| [`prompts/`](prompts/) | Subagent prompt templates (builder, reviewer, stress-tester) |
+| [`prompts/builder.md`](prompts/builder.md) | Build subagent — initial mode + revision mode (Phase 4 / 4.6) |
+| [`prompts/focal-fidelity-judge.md`](prompts/focal-fidelity-judge.md) | Cold-read judge — Gate 2, single obsession: does the piece land The One Thing? |
+| [`prompts/reviewer.md`](prompts/reviewer.md) | Targeted review subagents (Phase 5) — Audience Advocate + content-type-selected specialist |
+| [`prompts/stress-tester.md`](prompts/stress-tester.md) | Stress test panel (Phase 5.5, high-stakes only) |
 | [`examples/`](examples/) | Full workflow examples |
 
 ---
@@ -566,16 +797,21 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 ## Quick Start
 
 1. User provides content
-2. Ask output format (Presentation / Prose / Both)
-3. Propose focal points → user confirms
+2. Ask output format (Presentation / Prose / Both). **If Presentation → build on the keynote-create model** (titles-as-beats + render); Narrative Engine's discovery and gates wrap around it.
+3. Propose focal points → user confirms (this becomes the Focal Statement — binding through Phase 4.6; for decks it is the keynote-create punchline)
 4. Ask discovery questions (audience, purpose, content type, tone)
 5. Ask density mode (varies by format)
-6. **Full sweep** all frameworks → recommend 2 + 1 dark horse → user selects
+6. **Full sweep** all frameworks with focal-fidelity scoring + skeleton stamp test (**Gate 1**) → recommend 2 passing candidates + 1 dark horse → user selects
 7. **Generate Build Brief** (voice, audience profile, emotional arc, strategies, killer line candidates) → user confirms
 8. **Write handoff files** — Build Brief and source content to `/tmp/`
-9. **Dispatch build subagent** — reads `prompts/builder.md`, writes output to `/tmp/ne-output.md` (includes originality check)
-10. **Dispatch 6 review subagents in parallel** — each reads `prompts/reviewer.md` with role-specific parameters
-11. **Director synthesis** in main conversation — present unified recommendations
-12. Offer Stress Test Panel → **dispatch 3 stress test subagents in parallel** if accepted
-13. User requests "tighter" if needed
-14. Offer Change Log export
+9. **Dispatch build subagent** — runs content length assessment, builds, runs **prose-craft** (Tier 1) on prose/titles, runs originality check, writes to `/tmp/ne-output.md`. Presentation path follows keynote-create Stage 3.
+10. **Run Focal Fidelity Loop** (**Gate 2**) — dispatch focal-fidelity-judge subagent (decks: titles-only test). Loop revisions up to 3 passes total. Routes:
+    - PASS → continue to step 10.5
+    - NEEDS_REVISION → re-dispatch builder in revision mode, re-judge
+    - FRAMEWORK_MISMATCH or cap reached → escalate to user; consider Phase 3 reset
+10.5. **Run Humanizing Pass** (**Gate 3**) — Tier-2 discourse structural-delta check (`humanizing-pass.md`); fix drift by hand. For decks, render → `/impeccable` → PDF after this passes.
+11. **Dispatch 2 targeted review subagents in parallel** — content-type selected from `prompts/reviewer.md`
+12. **Director synthesis** in main conversation — present focused recommendations
+13. For high-stakes content only: offer Stress Test Panel → **dispatch 3 stress test subagents** if accepted
+14. User requests "tighter" if needed
+15. Offer Change Log export

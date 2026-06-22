@@ -2,7 +2,9 @@
 
 **A Claude Code skill that transforms any content into compelling narratives — as presentations or prose — using proven storytelling frameworks.**
 
-Most presentations fail before they begin. Not because the content is wrong, but because the structure is. Narrative Engine matches your material to the right storytelling framework, auto-derives a distinct voice and emotional arc for your specific audience, then builds the output with a 6-agent review panel that catches what you'd miss.
+Most presentations fail before they begin. Not because the content is wrong, but because the structure is. Narrative Engine matches your material to the right storytelling framework, auto-derives a distinct voice and emotional arc for your specific audience, then drives the output through three structural gates and a targeted review that catch what you'd miss.
+
+It runs as one self-contained skill. The sentence-level discipline (`prose-craft`) and the deck title-craft (`keynote-create`) are **embedded**, not invoked — so a single run never depends on a separate skill at build time.
 
 ---
 
@@ -12,9 +14,10 @@ Paste an article, outline, research notes, or existing deck. Choose presentation
 
 1. **Full-sweep framework scoring** across all 10 arcs + 7 communication frameworks, with a Dark Horse option
 2. **A Build Brief** translating your audience, voice, emotional arc, and strategies into concrete writing instructions
-3. **A complete output** (slides or prose) with auto-derived voice, emotional pacing, and opening/closing strategies
-4. **A 6-agent review** including an Originality Agent that catches generic AI patterns
-5. **Sourcing transparency** showing what came from your content vs. what was generated
+3. **A complete output** (slides or prose) with auto-derived voice, emotional pacing, and opening/closing strategies — every sentence and every slide title run through the embedded `prose-craft` discipline
+4. **Three structural gates** — framework fit, focal fidelity, and an evidence-grounded **humanizing pass** that de-slops at the discourse level, not just the surface
+5. **A targeted review** (content-type-selected specialists) plus an optional stress-test panel for high-stakes work
+6. **Sourcing transparency** showing what came from your content vs. what was generated
 
 ---
 
@@ -70,39 +73,28 @@ A **Build Brief** translates all discovery answers into concrete writing instruc
 - **Opening/closing strategies** from the rhetorical strategy library
 - **Killer line** targets for memorability
 
-The build then generates presentation slides or prose sections, each with source tags (`[DIRECT]` / `[PARAPHRASE]` / `[ELABORATED]` / `[GENERATED]`).
+The build runs as a **subagent** via the Task tool, taking one of two paths:
 
-The build runs as a **subagent** via the Task tool — offloading the heaviest generation work from the main conversation and reducing context pressure.
+- **Prose path** — generate sections, then apply the embedded `prose-craft` discipline (Floor / Filter / Ceiling) to every paragraph as the sentence-level pass.
+- **Presentation path** — build on the **keynote-create model** (embedded): every slide title is a short complete sentence delivering one story beat, so the titles read top-to-bottom tell the whole story. The title sequence passes the **titles-only test** before bodies are filled; `prose-craft` runs on the titles. The render → `/impeccable` → PDF export runs in the orchestrator after the gates pass.
 
-### Phase 4: Review Panel (6 Parallel Subagents)
+Every unit carries source tags (`[DIRECT]` / `[PARAPHRASE]` / `[ELABORATED]` / `[GENERATED]`).
 
-Six specialist agents review your output in parallel:
+### The three gates
 
-```
-                    ┌─────────────────────────────────────┐
-                    │            DIRECTOR                 │
-                    │  Synthesizes, resolves conflicts,   │
-                    │  presents unified recommendations   │
-                    └─────────────────────────────────────┘
-                                     ▲
-        ┌────────┬─────────┬─────────┼─────────┬─────────┬────────┐
-        ▼        ▼         ▼         ▼         ▼         ▼
-   AUDIENCE  COMMS/PR   VISUAL    CRITIC   CONTENT  ORIGINALITY
-   ADVOCATE  SPECIALIST DESIGNER           EXPERT   AGENT
-```
+The output is driven through three structural gates before review:
 
-| Agent | Key Question |
-|-------|--------------|
-| **Audience Advocate** | "As [audience], does this land?" |
-| **Comms Specialist** | "Is this tight and bulletproof?" |
-| **Visual Designer** | "What visual makes this unforgettable?" |
-| **Critic** | "What's the weakest link?" |
-| **Content Expert** | "Can every claim be defended?" |
-| **Originality Agent** | "Would this feel different from a generic AI output?" |
+| Gate | Phase | Catches |
+|------|-------|---------|
+| **1 · Framework fit** | 3 | A wrong framework whose climax can't structurally land your point (skeleton stamp test) |
+| **2 · Focal fidelity** | 4.6 | Drift between intent and execution — a cold-read judge names the One Thing before reading the brief (for decks, the titles-only test) |
+| **3 · Humanizing pass** | 4.7 | AI-slop the first two miss — a discourse-level de-slop grounded in the narrative-structure research corpus |
 
-The **Director** synthesizes feedback, resolves conflicts, and surfaces decisions you need to make.
+The humanizing pass is two-tier because the evidence demands it: a classifier still detects AI from *structure* at 93.9% after surface lexical cleanup, so sentence-polishing alone cannot de-slop a draft. Tier 1 is `prose-craft` (sentence); Tier 2 is a structural-delta checklist — theme-statement restraint, open threads, temporal complexity, discourse-redundancy, idiosyncrasy. **The deltas are gates and drift detectors, never optimization targets.**
 
-All six agents run as **parallel subagents** via the Task tool, returning findings simultaneously for the Director to synthesize in the main conversation.
+### Phase 5: Targeted Review + Stress Test
+
+Two specialist subagents review in parallel — the **Audience Advocate** always, plus one selected by content type (Comms Specialist, Content Expert, or Originality Agent). A **Director** synthesizes findings in the main conversation. For high-stakes content (pitches, policy, strategy), an optional **3-persona stress test** (e.g. CFO, COO, Skeptic) runs before delivery. Judges are run with bias hygiene (verbosity / position / self-preference), and their confidence scores are advisory, not gates.
 
 ---
 
@@ -150,7 +142,8 @@ date stamp "March 2028" prominent.
 | Unclear structure | Framework matched to audience + purpose via full sweep |
 | Same voice every time | 7 auto-derived voice profiles matched to audience + tone |
 | No emotional design | Emotional arcs calibrated to audience tolerance |
-| Self-review blind spots | 6-agent review including Originality Agent |
+| Self-review blind spots | Three gates + a content-selected review panel |
+| Generic AI prose | Embedded `prose-craft` (sentence) + a discourse-level humanizing pass |
 | Unknown AI additions | Source tags show exactly what was generated |
 | One-size-fits-all | Build Brief ensures every choice propagates through output |
 
@@ -199,18 +192,25 @@ Invoke with `/Narrative-Engine` in Claude Code, then:
 | `emotional-arcs.md` | Framework emotional textures + audience calibration |
 | `opening-closing-strategies.md` | Opening/closing strategy libraries + pairing matrix |
 | `checklists.md` | All quality checklists (headlines, CTAs, originality, killer line) |
+| `humanizing-pass.md` | The de-slop layer — Tier 1 (prose-craft) + Tier 2 (discourse structural-delta checklist), judge hygiene, the gate-not-objective rule. Grounded in the narrative-structure research corpus. |
+| `prose-craft.md` + `prose-craft-constructions.md` | Embedded sentence-level discipline (Floor/Filter/Ceiling + construction catalog). Applied directly by the builder — not a separate skill call. |
+| `deck-title-craft.md` | Embedded keynote-create title guide — action titles, titles-only test, antecedent test, rewrite examples. Used by the presentation build path. |
 | `agent-reference-persuasion.md` | Comms agent frameworks (Cialdini, SUCCESs, Ogilvy) |
 | `agent-reference-visual.md` | Visual agent frameworks (Tufte, Duarte, metaphors) |
 | `agent-reference-verification.md` | Content agent frameworks (IFCN, SIFT, fallacies) |
-| `prompts/` | Subagent prompt templates (builder, reviewer, stress-tester) |
+| `prompts/` | Subagent prompt templates (builder, focal-fidelity-judge, reviewer, stress-tester) |
 | `examples/` | Full workflow examples (climate keynote, post-mortem, remote work) |
 
 ### Architecture
 
 Phases 1–3.5 (discovery) run interactively in the main conversation. Phases 4+ dispatch subagents:
-- **Build** (Phase 4): Single subagent reads the Build Brief from `/tmp/`, generates output, self-reviews for originality
-- **Review** (Phase 5): 6 parallel subagents, each with a specialist lens and reference file
-- **Stress Test** (Phase 5.5): 3 parallel subagents with auto-selected personas
+- **Build** (Phase 4): single subagent reads the Build Brief from `/tmp/`, generates output, runs the embedded `prose-craft` pass (Tier 1), self-reviews for originality
+- **Gate 2 — Focal Fidelity** (Phase 4.6): a cold-read judge loops the builder up to 3 passes until the output lands the One Thing
+- **Gate 3 — Humanizing Pass** (Phase 4.7): discourse-level structural-delta check (Tier 2)
+- **Review** (Phase 5): 2 parallel subagents (Audience Advocate + content-selected specialist) + Director synthesis
+- **Stress Test** (Phase 5.5, high-stakes only): 3 parallel subagents with auto-selected personas
+
+**Embedded, not invoked.** `prose-craft` and the keynote-create title guide are copied into the skill so the build subagent never calls another skill at dispatch time. Only the deck render stage (`keynote-render.mjs` → `/impeccable`) calls keynote-create, and that runs in the orchestrator. Each embed carries a source-path + date header for clean re-syncing.
 
 ---
 
@@ -251,3 +251,5 @@ Built on frameworks from:
 - Edward Tufte (Data Visualization)
 - Joseph Campbell (Hero's Journey)
 - Christopher Nolan / J.J. Abrams (Narrative structures)
+- William Strunk Jr. (economy) — via the embedded `prose-craft` discipline
+- The humanizing pass is grounded in a fact-checked narrative-structure research corpus (Labov, McAdams, Reagan et al., StoryScope, Reinhart et al., QUDsim) — gates and drift detectors, never optimization targets
