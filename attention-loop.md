@@ -26,9 +26,9 @@ Close the current question and, in the same beat, open the next — momentum acr
 ## Sentence-level tactics
 
 - **Stakes:** "If [claim] is true, then [consequence]." Names the cost of being wrong.
-- **Head-fake / compression:** the *logic* of "[Thing] is not [surface role]; it is [deeper role]" — reveal the deeper role beneath the obvious one.
-  > **Filter guard:** do not literally stamp "X is not Y — it's Z" as the surface form. That collides head-on with the Filter's negative-parallelism cap (one per piece). Use the *move*; vary the wording every time. Stamped as a template, it is the tell the humanizing pass removes.
 - **Re-hook:** end the section on the question the next section answers, so the reader crosses the seam already leaning forward.
+
+**The Head Fake carries no template — negative parallelism is banned here.** Reveal the deeper cause beneath the obvious one in whatever surface form the passage calls for. Never the "X is not Y; it is Z" shape. That construction is negative parallelism, which the Filter caps at one per piece — and the attention loop is forbidden from spending that budget. The head fake is a *structural* move (a better model surfacing beneath the obvious one), not a sentence template; enforce it as structure and vary the wording every time. Any stamped "not X, but Y" the build produces from this beat is a defect, cut on sight.
 
 ---
 
