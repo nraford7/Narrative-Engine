@@ -60,6 +60,10 @@ ON-DEMAND   "Tighter" — Compression passes anytime (re-runs prose-craft + huma
 
 **Sentence discipline is always on.** Every prose paragraph and every deck title is built through the **embedded prose-craft discipline** ([`prose-craft.md`](prose-craft.md) + [`prose-craft-constructions.md`](prose-craft-constructions.md)) during the build (Tier 1 of the humanizing pass). It is *embedded, not invoked* — the build subagent reads these files directly, so Narrative Engine runs once with no dependency on a separate skill. This is non-optional and replaces the old qualitative "AI Test" with a named discipline.
 
+**Two build-time companions run alongside it, both embedded:**
+- **High-style figures** ([`rhetorical-figures.md`](rhetorical-figures.md)) — the *Intensify* layer. A catalog of rhetorical schemes (antithesis, chiasmus, anaphora, tricolon…) spent only at the piece's few load-bearing moments — the opening, the turn, the close, the Killer Line, the emotional peaks, the cover/turn/last deck titles. Rationed and governed by the same naming test as prose-craft; it lives *inside* the Filter's caps, never above them.
+- **The attention loop** ([`attention-loop.md`](attention-loop.md)) — the per-section engagement engine (Stakes → Big Question → Head Fake → Re-hook). It shapes *how each section pulls the reader to the next*, one scale below the macro arc. A positive build discipline, not a gate; its cardinal rule — never surprise before the stakes are set — is verified during the build.
+
 ---
 
 ## Subagent Architecture
@@ -410,7 +414,9 @@ Generate a Build Brief in this format:
 - Type: [e.g., The Simple Truth]
 - Combined with framework beat: [e.g., "The Prestige's Callback beat, delivered as The Simple Truth"]
 
-**Killer Line Target:** [Draft 2-3 candidate killer lines based on the focal statement. Refine during build.]
+**Killer Line Target:** [Draft 2-3 candidate killer lines based on the focal statement. Refine during build. Build at least one candidate on a named high-style figure from [`rhetorical-figures.md`](rhetorical-figures.md) — antithesis, chiasmus, or antanaclasis for a close; anaphora or tricolon for a build. Name the figure and the effect.]
+
+**Attention Map:** [From [`attention-loop.md`](attention-loop.md). For each major section/act: **Stakes** (what's at risk, stated before any surprise) + **Open question** (the gap this section opens and the next resolves). Plus the **through-question** the whole piece holds open until the focal payoff.]
 
 **Anti-Sameness Notes:** [Any specific instructions to avoid generic patterns — e.g., "This audience has seen 100 'digital transformation' decks. Find a fresh angle on slide structure or metaphor."]
 
@@ -443,8 +449,8 @@ Create one Task:
 - **Prompt:** Read and execute [`prompts/builder.md`](prompts/builder.md)
 - The subagent first runs a Content Length Assessment (Step 0) to count substantive points and set a target length
 - The subagent reads all reference files specified in the Build Brief (arc, voice, audience, emotional texture, strategies, checklists)
-- **Prose path:** build the draft, then apply the **embedded prose-craft discipline** ([`prose-craft.md`](prose-craft.md)) to every paragraph as the sentence-level pass (Tier 1 of the humanizing pass — register-matched to the Density Mode; see [`humanizing-pass.md`](humanizing-pass.md))
-- **Presentation path:** execute keynote-create Stage 3 — draft the title sequence as story beats, run the cold-read self-check and the **titles-only test**, then apply the **embedded prose-craft discipline to the titles only** (bodies stay as terse bullets). Stage 4 render → `/impeccable` layout promotion → PDF happens after the gates pass.
+- **Prose path:** structure each section on the **attention loop** ([`attention-loop.md`](attention-loop.md)) — set stakes before any surprise, open one live question, re-hook across the seam — then build the draft, then apply the **embedded prose-craft discipline** ([`prose-craft.md`](prose-craft.md)) to every paragraph as the sentence-level pass (Tier 1 of the humanizing pass — register-matched to the Density Mode; see [`humanizing-pass.md`](humanizing-pass.md)). At the piece's load-bearing moments only (opening, turn, close, Killer Line, emotional peaks), spend a **high-style figure** ([`rhetorical-figures.md`](rhetorical-figures.md)) — inside the Filter's caps, each passing the naming test.
+- **Presentation path:** execute keynote-create Stage 3 — draft the title sequence as story beats, run the cold-read self-check and the **titles-only test**, then apply the **embedded prose-craft discipline to the titles only** (bodies stay as terse bullets). Spend a **high-style figure** ([`rhetorical-figures.md`](rhetorical-figures.md)) on the cover title, the turn title, and the last title only — but the stranger test and spoken-prose test outrank the figure (a clever title that breaks the chain fails). Stage 4 render → `/impeccable` layout promotion → PDF happens after the gates pass.
 - The subagent runs the Originality & Anti-Sameness Checklist before finalizing (Phase 4.5 folded in)
 - Output written to `/tmp/ne-output.md`
 
@@ -774,6 +780,8 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 |------|----------|
 | [`humanizing-pass.md`](humanizing-pass.md) | The de-slop layer — Tier 1 (prose-craft) + Tier 2 (discourse structural-delta checklist), judge hygiene, and the gate-not-objective rule. Grounded in the narrative-structure research corpus. |
 | [`prose-craft.md`](prose-craft.md) + [`prose-craft-constructions.md`](prose-craft-constructions.md) | Embedded sentence-level discipline (Floor/Filter/Ceiling + construction catalog). Tier 1 of the humanizing pass. Applied directly by the builder — not a separate skill call. |
+| [`rhetorical-figures.md`](rhetorical-figures.md) | The Intensify layer — a catalog of high-style figures (surprise + repetition families) spent at load-bearing moments only. Rationed inside the Filter's caps; governed by the naming test. Used by the build for the Killer Line, the turn, the close, and deck cover/turn/last titles. |
+| [`attention-loop.md`](attention-loop.md) | The per-section engagement engine (Stakes → Big Question → Head Fake → Re-hook). A positive build discipline that shapes how each section pulls the reader forward, one scale below the macro arc. Also the diagnostic for a draft that is "structurally sound but inert." |
 | [`deck-title-craft.md`](deck-title-craft.md) | Embedded keynote-create title guide — action titles, the titles-only test, antecedent test, rewrite examples. Used by the presentation build path. |
 | [`checklists.md`](checklists.md) | All quality checklists (headlines, CTAs, pricing, compression) |
 | [`framework-selection.md`](framework-selection.md) | Selection matrices by audience, purpose, tone — and the focal-fidelity scoring + skeleton stamp test (Gate 1) |

@@ -194,6 +194,8 @@ Invoke with `/Narrative-Engine` in Claude Code, then:
 | `checklists.md` | All quality checklists (headlines, CTAs, originality, killer line) |
 | `humanizing-pass.md` | The de-slop layer — Tier 1 (prose-craft) + Tier 2 (discourse structural-delta checklist), judge hygiene, the gate-not-objective rule. Grounded in the narrative-structure research corpus. |
 | `prose-craft.md` + `prose-craft-constructions.md` | Embedded sentence-level discipline (Floor/Filter/Ceiling + construction catalog). Applied directly by the builder — not a separate skill call. |
+| `rhetorical-figures.md` | The Intensify layer — high-style figures (antithesis, chiasmus, anaphora, tricolon…) spent at load-bearing moments only. Rationed inside the Filter's caps; used for the Killer Line, the turn, the close, and deck cover/turn/last titles. |
+| `attention-loop.md` | The per-section engagement engine (Stakes → Big Question → Head Fake → Re-hook). Shapes how each section pulls the reader forward, one scale below the macro arc. Also the diagnostic for a draft that reads correct but inert. |
 | `deck-title-craft.md` | Embedded keynote-create title guide — action titles, titles-only test, antecedent test, rewrite examples. Used by the presentation build path. |
 | `agent-reference-persuasion.md` | Comms agent frameworks (Cialdini, SUCCESs, Ogilvy) |
 | `agent-reference-visual.md` | Visual agent frameworks (Tufte, Duarte, metaphors) |
@@ -252,4 +254,6 @@ Built on frameworks from:
 - Joseph Campbell (Hero's Journey)
 - Christopher Nolan / J.J. Abrams (Narrative structures)
 - William Strunk Jr. (economy) — via the embedded `prose-craft` discipline
+- Mark Forsyth (*The Elements of Eloquence*) — the high-style figures in the Intensify layer
+- The attention loop (Stakes → Big Question → Head Fake → Re-hook) — prediction-reward reading mechanics, per-section
 - The humanizing pass is grounded in a fact-checked narrative-structure research corpus (Labov, McAdams, Reagan et al., StoryScope, Reinhart et al., QUDsim) — gates and drift detectors, never optimization targets
