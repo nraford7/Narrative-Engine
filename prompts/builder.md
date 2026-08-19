@@ -226,7 +226,7 @@ built. This is Tier 1 of the humanizing pass — apply it yourself, do not call 
 
 - **Prose output:** run all three passes on every paragraph — Ceiling first (build varied,
   intentional sentences; kill monotone cadence), Filter second (cut machine-tells; hold the hard
-  caps — ≤3 em-dashes/piece, ≤1 negative parallelism, ≤1 tricolon/section), Floor last (tighten word
+  caps — ≤3 em-dashes/piece, zero negative parallelism, ≤1 tricolon/section), Floor last (tighten word
   by word). Match the register to the Density Mode using the table in `humanizing-pass.md` → Tier 1.
 - **Presentation output:** run prose-craft on the **titles only** (bodies stay terse bullets/fragments).
 - **CTA / pricing / the explicit Ask:** exempt from the Filter — the Persuasion Overlay governs

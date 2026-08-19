@@ -67,9 +67,9 @@ A single instance is usually fine. The tell is repetition or stacking. Sweep for
 
 **Scope of the limits below:** *piece* = the whole document; *section* = one heading-delimited block; a standalone paragraph counts as both. A 3-paragraph essay with no headings = 3 sections, so a per-section cap (e.g. one tricolon) resets each paragraph; in a lone paragraph the per-piece and per-section caps are identical.
 
-**Word choice** — Ban: delve, utilize, leverage (verb), robust, streamline, harness, tapestry, landscape (for domains), paradigm, synergy, ecosystem. Ban magic adverbs faking significance: quietly, deeply, fundamentally, remarkably, arguably. Don't dodge the copula: "is" beats "serves as / stands as / represents."
+**Word choice** — Ban: delve, utilize, leverage (verb), robust, streamline, harness, tapestry, landscape (for domains), paradigm, synergy, ecosystem, multifaceted, nuanced, pivotal, transformative, compelling (as generic praise). Ban magic adverbs faking significance: quietly, deeply, fundamentally, remarkably, arguably, strikingly. Ban verbs faking depth: underscore, resonate, illuminate, pave the way. Don't dodge the copula: "is" beats "serves as / stands as / represents."
 
-**Sentence structure** — Negative parallelism ("not X — it's Y"): **one per piece max, zero is better.** Ban the countdown ("Not X. Not Y. Just Z."), the self-answered question ("The X? A Y."), anaphora past two in a row, stacked tricolons (**one rule-of-three per section max** — the cap rations the *device*; build the ones that survive as a real series form, see `prose-craft-constructions.md` → The Series). Ban "it's worth noting / importantly / notably." No "-ing" significance tails ("highlighting its role," "reflecting broader trends").
+**Sentence structure** — Negative parallelism ("not X — it's Y"): **zero per piece, hard ban.** Always use positive form instead — state what the thing *is*, never define it by what it isn't. Ban the countdown ("Not X. Not Y. Just Z."), the self-answered question ("The X? A Y."), anaphora past two in a row, stacked tricolons (**one rule-of-three per section max** — the cap rations the *device*; build the ones that survive as a real series form, see `prose-craft-constructions.md` → The Series). Ban "it's worth noting / importantly / notably." No "-ing" significance tails ("highlighting its role," "reflecting broader trends"). Ban "earns its weight / earns its place" (generic significance). Ban "one of the most [superlative] in history/ever" (generic superlative — be specific or cut).
 
 **Tone** — Ban: "here's the kicker / here's the thing," "let's break this down / unpack / dive in," "imagine a world where," "the truth is simple." No grandiose stakes inflation — match stakes to actual stakes. No vague attributions ("experts say") without names. No invented concept-labels treated as established.
 
@@ -142,8 +142,8 @@ When context is tight, run this single checklist instead of three passes:
 - [ ] Active, positive, concrete; emphatic word at the end (Floor)
 - [ ] First sentence creates curiosity, not summary; rewritten until it earns the second (Floor)
 - [ ] Dead words cut: very/just/actually/in order to/the fact that (Floor)
-- [ ] ≤1 negative parallelism, ≤1 tricolon/section, ≤3 em-dashes total (Filter)
-- [ ] No delve/leverage/robust/tapestry, no "it's worth noting," no signposted conclusion (Filter)
+- [ ] Zero negative parallelism ("not X — it's Y"), ≤1 tricolon/section, ≤3 em-dashes total (Filter)
+- [ ] No delve/leverage/robust/tapestry/nuanced/pivotal/compelling, no "earns its weight," no "it's worth noting," no signposted conclusion, no generic superlatives (Filter)
 - [ ] Sentence lengths vary; openers vary (not every sentence subject-first); at least one built sentence per section (Ceiling)
 - [ ] Lists built as a real series form, not the reflex `A, B, and C`; passive used only for one of its four jobs (Ceiling/Floor)
 - [ ] Sentences cohere structurally — key-term, demonstrative, end-loaded pivot — not by bolted-on "Furthermore/Moreover" (Cohesion)

@@ -62,7 +62,7 @@ The Filter rations several of these devices *as machine-tells*. Those caps still
 
 - **Anaphora** — Filter bans anaphora past two clauses in a row. So a figured anaphora runs to two, on purpose, at a peak; a third is a tell.
 - **Tricolon** — Filter caps rule-of-three at **one per section**. This catalog is the craft for building that one as a real series form (asyndeton / polysyndeton / dropped-final-and — see `prose-craft-constructions.md` → The Series). The cap rations the device; the figure earns the survivor.
-- **Antithesis vs. negative parallelism** — the Filter bans the reflexive "not X — it's Y" (one per piece max). Antithesis is the *earned* version: a genuine opposition, placed at a turn, named. If it collapses into the reflexive template stamped on every section, it is the tell the Filter kills, not the figure this file teaches.
+- **Antithesis vs. negative parallelism** — the Filter hard-bans the reflexive "not X — it's Y" (zero per piece). Antithesis must use positive form: state what the thing *is* as a genuine opposition ("X is Y"), never define it by what it isn't ("X is not A — it's B"). If it collapses into the reflexive "not X" template, it is the tell the Filter kills.
 - **Banned outright, no figure exempts them:** the countdown ("Not X. Not Y. Just Z."), the self-answered question ("The X? A Y."), the "-ing" significance tail. A figure that decays into one of these is a tell.
 
 **The naming test governs every instance.** Name the effect in a phrase or cut it — *even when you are under budget.* Naming never raises a cap; it decides which instance survives at the cap and strips the unearned ones below it.
