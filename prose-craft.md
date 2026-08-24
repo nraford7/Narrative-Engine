@@ -2,7 +2,7 @@
 
 > **This is a verbatim embed of the standalone `prose-craft` skill, copied into Narrative Engine so
 > the build subagent is self-contained — it never has to invoke another skill at dispatch time.**
-> Source: `~/.claude/skills/prose-craft/SKILL.md` · embedded 2026-06-22. If the canonical skill
+> Source: `~/.claude/skills/prose-craft/SKILL.md` · embedded 2026-06-22 · re-synced 2026-08-24 (canonical 08c6a19). If the canonical skill
 > changes, re-sync this file. The companion catalog lives at
 > [`prose-craft-constructions.md`](prose-craft-constructions.md).
 
@@ -67,15 +67,17 @@ A single instance is usually fine. The tell is repetition or stacking. Sweep for
 
 **Scope of the limits below:** *piece* = the whole document; *section* = one heading-delimited block; a standalone paragraph counts as both. A 3-paragraph essay with no headings = 3 sections, so a per-section cap (e.g. one tricolon) resets each paragraph; in a lone paragraph the per-piece and per-section caps are identical.
 
-**Word choice** — Ban: delve, utilize, leverage (verb), robust, streamline, harness, tapestry, landscape (for domains), paradigm, synergy, ecosystem, multifaceted, nuanced, pivotal, transformative, compelling (as generic praise). Ban magic adverbs faking significance: quietly, deeply, fundamentally, remarkably, arguably, strikingly. Ban verbs faking depth: underscore, resonate, illuminate, pave the way. Don't dodge the copula: "is" beats "serves as / stands as / represents."
+**Word choice** — Ban: delve, utilize, leverage (verb), robust, streamline, harness, certainly, tapestry, landscape (for domains), paradigm, synergy, ecosystem, framework (for anything not literally a framework), multifaceted, nuanced, pivotal, transformative, compelling (as generic praise). Ban magic adverbs faking significance: quietly, deeply, fundamentally, remarkably, arguably, strikingly. Ban verbs faking depth: underscore, resonate, illuminate, pave the way. Don't dodge the copula: "is" beats "serves as / stands as / marks / represents."
 
-**Sentence structure** — Negative parallelism ("not X — it's Y"): **zero per piece, hard ban.** Always use positive form instead — state what the thing *is*, never define it by what it isn't. Ban the countdown ("Not X. Not Y. Just Z."), the self-answered question ("The X? A Y."), anaphora past two in a row, stacked tricolons (**one rule-of-three per section max** — the cap rations the *device*; build the ones that survive as a real series form, see `prose-craft-constructions.md` → The Series). Ban "it's worth noting / importantly / notably." No "-ing" significance tails ("highlighting its role," "reflecting broader trends"). Ban "earns its weight / earns its place" (generic significance). Ban "one of the most [superlative] in history/ever" (generic superlative — be specific or cut).
+**Sentence structure** — Negative parallelism ("not X — it's Y"): **zero per piece, hard ban.** Always use positive form instead — state what the thing *is*, never define it by what it isn't. The ban covers the variants: causal ("not because X, but because Y") and the cross-sentence reframe ("The question isn't X. The question is Y."). Ban the countdown ("Not X. Not Y. Just Z."), the self-answered question ("The X? A Y."), anaphora past two in a row, stacked tricolons (**one rule-of-three per section max** — the cap rations the *device*; build the ones that survive as a real series form, see `prose-craft-constructions.md` → The Series). Ban "it's worth noting / it bears mentioning / importantly / interestingly / notably." No "-ing" significance tails ("highlighting its role," "reflecting broader trends"). Ban "earns its weight / earns its place" (generic significance). Ban "one of the most [superlative] in history/ever" (generic superlative — be specific or cut). False ranges: "from X to Y" only when X and Y sit on a real spectrum with a meaningful middle.
 
-**Tone** — Ban: "here's the kicker / here's the thing," "let's break this down / unpack / dive in," "imagine a world where," "the truth is simple." No grandiose stakes inflation — match stakes to actual stakes. No vague attributions ("experts say") without names. No invented concept-labels treated as established.
+**Paragraph shape** — No sentence fragments standing alone as paragraphs for manufactured punch. No listicle-in-prose ("The first... The second... The third..."): use a real list, or write genuinely connected paragraphs.
+
+**Tone** — Ban: "here's the kicker / here's the thing," "let's break this down / unpack / dive in," "imagine a world where," "the truth is simple." No grandiose stakes inflation — match stakes to actual stakes. No vague attributions ("experts say") without names. No invented concept-labels treated as established. No teacher-mode analogies ("think of it as..."): an analogy survives only when it is clearer than the concept. No performative vulnerability or staged self-awareness: real specificity beats polished confession.
 
 **Formatting** — **Em-dashes: three per piece, hard ceiling.** Provenance doesn't raise the cap — naming decides *which* dashes survive, never how many are allowed, and cuts habitual ones even when you're under budget. (Same for any rationed device — see the naming test under Conflict Resolution.) No bold-first on every bullet. No arrows, no smart quotes — standard keyboard characters.
 
-**Composition** — No fractal summaries (say it once). No signposted conclusion ("in conclusion, to sum up"). No "despite its challenges" acknowledge-then-dismiss. If the argument is one point, write it in the space one point needs.
+**Composition** — No fractal summaries (say it once). No signposted conclusion ("in conclusion, to sum up"). No "despite its challenges" acknowledge-then-dismiss. If the argument is one point, write it in the space one point needs. Retire a metaphor after two uses. One example developed well beats five name-dropped companies or revolutions.
 
 ## The Ceiling — Tufte (construct on purpose)
 
@@ -142,8 +144,9 @@ When context is tight, run this single checklist instead of three passes:
 - [ ] Active, positive, concrete; emphatic word at the end (Floor)
 - [ ] First sentence creates curiosity, not summary; rewritten until it earns the second (Floor)
 - [ ] Dead words cut: very/just/actually/in order to/the fact that (Floor)
-- [ ] Zero negative parallelism ("not X — it's Y"), ≤1 tricolon/section, ≤3 em-dashes total (Filter)
+- [ ] Zero negative parallelism (any variant, incl. "not because X, but because Y"), ≤1 tricolon/section, ≤3 em-dashes total (Filter)
 - [ ] No delve/leverage/robust/tapestry/nuanced/pivotal/compelling, no "earns its weight," no "it's worth noting," no signposted conclusion, no generic superlatives (Filter)
+- [ ] No fragment-paragraphs, no listicle-in-prose, no false ranges; metaphors retired after two uses (Filter)
 - [ ] Sentence lengths vary; openers vary (not every sentence subject-first); at least one built sentence per section (Ceiling)
 - [ ] Lists built as a real series form, not the reflex `A, B, and C`; passive used only for one of its four jobs (Ceiling/Floor)
 - [ ] Sentences cohere structurally — key-term, demonstrative, end-loaded pivot — not by bolted-on "Furthermore/Moreover" (Cohesion)
