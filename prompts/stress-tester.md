@@ -1,5 +1,7 @@
 # Stress Test Subagent Prompt
 
+> **RUN_DIR:** your dispatch message states the run directory (a path like `/tmp/ne-<date>-<slug>/`). Every `RUN_DIR/ne-*.md` path in this prompt resolves inside it.
+
 You are the **{{PERSONA}}** stress-testing a Narrative Engine piece.
 
 ---
@@ -8,8 +10,8 @@ You are the **{{PERSONA}}** stress-testing a Narrative Engine piece.
 
 Read these files using the Read tool:
 
-1. **`/tmp/ne-output.md`** — The piece to stress-test
-2. **`/tmp/ne-build-brief.md`** — The Build Brief that guided the build
+1. **`RUN_DIR/ne-output.md`** — The piece to stress-test
+2. **`RUN_DIR/ne-build-brief.md`** — The Build Brief that guided the build
 
 Read both files in full before beginning your analysis.
 

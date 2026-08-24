@@ -1,6 +1,6 @@
 # High-Style Figures — the Intensify Layer
 
-The fourth craft axis. The embedded `prose-craft` discipline gives three: the **Floor** (correctness and economy), the **Filter** (kill machine-tells), the **Ceiling** (construct varied sentences on purpose). This file adds the **Figure** — named rhetorical schemes of *repetition* and *reversal* that intensify a single load-bearing line so it lands harder than its content alone would.
+The fourth craft axis. The embedded `prose-craft` discipline gives three: the **Floor** (correctness and economy), the **Filter** (kill machine-tells), the **Ceiling** (construct varied sentences on purpose). This file adds the **Figure** — named rhetorical schemes of *repetition* and *reversal* that intensify a single anchor line so it lands harder than its content alone would.
 
 **How this differs from the Ceiling.** The Ceiling (Tufte) is *sentence architecture* — where the free modifiers branch, where the subject sits, how the series is built. Figures are a different axis: *patterns of sound and structure at the phrase level.* A cumulative sentence is a Ceiling move; a chiasmus is a Figure. They stack — a figured line is often also a built sentence — but they are chosen separately.
 
@@ -10,7 +10,7 @@ The fourth craft axis. The embedded `prose-craft` discipline gives three: the **
 
 ## Where a figure earns its place
 
-Figures are spent at the piece's **load-bearing moments** — and a piece has few:
+Figures are spent at the piece's **anchor moments** — and a piece has few:
 
 - The **opening line** and the **closing line**.
 - The **turn** (Act 3 / the pivot beat) — the sentence where everything changes.
@@ -91,7 +91,7 @@ Spend a figure on the cover, the turn, and the last title. Keep the connective t
 
 ## Checklist
 
-1. Identify the piece's load-bearing moments (opening, turn, close, thesis, killer line, emotional peaks). There are few.
+1. Identify the piece's anchor moments (opening, turn, close, thesis, killer line, emotional peaks). There are few.
 2. For each, choose **one** figure whose mechanism matches the beat — surprise for a turn, repetition for a build, antithesis for a weighing.
 3. Run the **naming test**: name the effect in a phrase. Can't? Cut it.
 4. Run the **feel test**: does it read as slight intensification, or as technique showing off? If the latter, cut it.

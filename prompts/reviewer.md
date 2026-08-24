@@ -1,5 +1,7 @@
 # {{AGENT_ROLE}} — Review Subagent Prompt
 
+> **RUN_DIR:** your dispatch message states the run directory (a path like `/tmp/ne-<date>-<slug>/`). Every `RUN_DIR/ne-*.md` path in this prompt resolves inside it.
+
 You are the **{{AGENT_ROLE}}** on the Narrative Engine Review Panel.
 
 ---
@@ -8,8 +10,8 @@ You are the **{{AGENT_ROLE}}** on the Narrative Engine Review Panel.
 
 Read these files using the Read tool:
 
-1. `/tmp/ne-output.md` — The piece to review
-2. `/tmp/ne-build-brief.md` — The Build Brief that guided the build
+1. `RUN_DIR/ne-output.md` — The piece to review
+2. `RUN_DIR/ne-build-brief.md` — The Build Brief that guided the build
 3. `{{REFERENCE_FILE}}` — Your specialist reference (if specified; some agents have none)
 
 > **Note:** The skill directory is `/Users/noahraford/.claude/skills/Narrative-Engine/`. Reference files are relative to this directory. If `{{REFERENCE_FILE}}` is `(none)`, skip that read.

@@ -10,7 +10,7 @@ It runs as one self-contained skill. The sentence-level discipline (`prose-craft
 
 ## What It Does
 
-Paste an article, outline, research notes, or existing deck. Choose presentation or prose. Answer discovery questions. Get back:
+Paste an article, outline, research notes, or existing deck. Pick **Fast mode** (everything inferred from the content, one consolidated Build Brief to correct or approve) or **Guided mode** (step-by-step discovery). Get back:
 
 1. **Full-sweep framework scoring** across all 10 arcs + 7 communication frameworks, with a Dark Horse option
 2. **A Build Brief** translating your audience, voice, emotional arc, and strategies into concrete writing instructions
@@ -94,7 +94,7 @@ The humanizing pass is two-tier because the evidence demands it: a classifier st
 
 ### Phase 5: Targeted Review + Stress Test
 
-Two specialist subagents review in parallel — the **Audience Advocate** always, plus one selected by content type (Comms Specialist, Content Expert, or Originality Agent). A **Director** synthesizes findings in the main conversation. For high-stakes content (pitches, policy, strategy), an optional **3-persona stress test** (e.g. CFO, COO, Skeptic) runs before delivery. Judges are run with bias hygiene (verbosity / position / self-preference), and their confidence scores are advisory, not gates.
+Auto-runs for high-stakes content (pitches, policy, strategy); offered in one line for everything else, since the three gates have already run. Two specialist subagents review in parallel — the **Audience Advocate** always, plus one selected by content type (Comms Specialist, Content Expert, or Originality Agent). A **Director** synthesizes findings in the main conversation. For high-stakes content, an optional **3-persona stress test** (e.g. CFO, COO, Skeptic) runs before delivery. Judges are run with bias hygiene (verbosity / position / self-preference), and their confidence scores are advisory, not gates.
 
 ---
 
@@ -170,12 +170,12 @@ git clone https://github.com/nraford7/Narrative-Engine.git ~/.claude/skills/Narr
 Invoke with `/Narrative-Engine` in Claude Code, then:
 
 1. Paste your content (article, notes, outline, or existing deck)
-2. Choose output format (Presentation / Prose / Both)
-3. Confirm focal point from 2-3 proposed angles
-4. Answer discovery questions (audience, purpose, content type, tone)
-5. Select density mode (High-Impact / Narrative / Evidence / ELI5)
+2. Pick mode: **Fast** (steps 3–7 inferred, one consolidated brief to approve) or **Guided** (step-by-step)
+3. Choose output format (Presentation / Prose / Both)
+4. Confirm focal point from 2-3 proposed angles
+5. Answer discovery questions (audience, purpose, content type, tone), then density mode
 6. Choose from 2-3 recommended frameworks (scored via full sweep)
-7. Review the Build Brief, then receive complete output + 6-agent review
+7. Review the compiled Build Brief, then receive complete output through the three gates
 
 ---
 
@@ -194,7 +194,7 @@ Invoke with `/Narrative-Engine` in Claude Code, then:
 | `checklists.md` | All quality checklists (headlines, CTAs, originality, killer line) |
 | `humanizing-pass.md` | The de-slop layer — Tier 1 (prose-craft) + Tier 2 (discourse structural-delta checklist), judge hygiene, the gate-not-objective rule. Grounded in the narrative-structure research corpus. |
 | `prose-craft.md` + `prose-craft-constructions.md` | Embedded sentence-level discipline (Floor/Filter/Ceiling + construction catalog). Applied directly by the builder — not a separate skill call. |
-| `rhetorical-figures.md` | The Intensify layer — high-style figures (antithesis, chiasmus, anaphora, tricolon…) spent at load-bearing moments only. Rationed inside the Filter's caps; used for the Killer Line, the turn, the close, and deck cover/turn/last titles. |
+| `rhetorical-figures.md` | The Intensify layer — high-style figures (antithesis, chiasmus, anaphora, tricolon…) spent at anchor moments only. Rationed inside the Filter's caps; used for the Killer Line, the turn, the close, and deck cover/turn/last titles. |
 | `attention-loop.md` | The per-section engagement engine (Stakes → Big Question → Head Fake → Re-hook). Shapes how each section pulls the reader forward, one scale below the macro arc. Also the diagnostic for a draft that reads correct but inert. |
 | `deck-title-craft.md` | Embedded keynote-create title guide — action titles, titles-only test, antecedent test, rewrite examples. Used by the presentation build path. |
 | `agent-reference-persuasion.md` | Comms agent frameworks (Cialdini, SUCCESs, Ogilvy) |
@@ -206,7 +206,7 @@ Invoke with `/Narrative-Engine` in Claude Code, then:
 ### Architecture
 
 Phases 1–3.5 (discovery) run interactively in the main conversation. Phases 4+ dispatch subagents:
-- **Build** (Phase 4): single subagent reads the Build Brief from `/tmp/`, generates output, runs the embedded `prose-craft` pass (Tier 1), self-reviews for originality
+- **Build** (Phase 4): single subagent reads the compiled Build Brief from the per-run directory (`/tmp/ne-<date>-<slug>/`), generates output, runs the embedded `prose-craft` pass (Tier 1), self-reviews for originality
 - **Gate 2 — Focal Fidelity** (Phase 4.6): a cold-read judge loops the builder up to 3 passes until the output lands the One Thing
 - **Gate 3 — Humanizing Pass** (Phase 4.7): discourse-level structural-delta check (Tier 2)
 - **Review** (Phase 5): 2 parallel subagents (Audience Advocate + content-selected specialist) + Director synthesis
