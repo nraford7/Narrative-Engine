@@ -147,7 +147,7 @@ Is the climax/landing beat structurally aligned with the One Thing, or is it pul
 ## Recommended Action
 
 ### If PASS
-[Brief statement: "The piece lands The One Thing, the opening's question is answered by the close, and the cold-read matches the Focal Statement. Proceed to Phase 5."]
+[Brief statement: "The piece lands The One Thing, the opening's question is answered by the close, and the cold-read matches the Focal Statement. Proceed to Phase 4.7, then the Phase 4.8 evidence gate; this verdict does not authorize delivery."]
 
 ### If NEEDS_REVISION
 - **What to change:** [Specific edits — rewrite the climax beat, sharpen the closing, repair the title chain, make the opening raise the piece's real question, make the ending answer it, drop section X, reorder beats, etc.]
@@ -254,4 +254,4 @@ When FOCAL_MISMATCH is downgraded to advisory, issue the verdict the piece other
 | `RUN_DIR/ne-cold-read.md` | A + A2 | Your cold-read of the body-only output (engagement questions, title-chain result for decks), plus the Source Check — all written before reading the brief |
 | `RUN_DIR/ne-focal-judge.md` | B | Verdict, `needs_revision_count`, drift analysis, engagement check, Source Check outcome, recommended action |
 
-The orchestrator (main conversation) reads `RUN_DIR/ne-focal-judge.md` to decide whether to PASS (proceed to Phase 5), LOOP (re-dispatch builder in revision mode), ESCALATE (back to Phase 3 for shape reset), or REOPEN Phase 1.75 (FOCAL_MISMATCH with `focal_origin: inferred`, first mismatch this run).
+The orchestrator (main conversation) reads `RUN_DIR/ne-focal-judge.md` to decide whether to PASS (proceed to Phase 4.7, then Phase 4.8 before delivery), LOOP (re-dispatch builder in revision mode), ESCALATE (back to Phase 3 for shape reset), or REOPEN Phase 1.75 (FOCAL_MISMATCH with `focal_origin: inferred`, first mismatch this run).

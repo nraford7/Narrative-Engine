@@ -49,7 +49,7 @@ already delivers two of the corpus's humanizing levers for free:
 | Density Mode | prose-craft register |
 |---|---|
 | High-Impact / Punchy | Floor-dominant — short base clauses, payload up front, ration the Ceiling |
-| Narrative / Flowing | Balanced — one or two built sentences per section for rhythm |
+| Narrative / Flowing | Balanced — developed sentences when their detail or rhythm serves the material |
 | Evidence / Dense | Floor on claim sentences; Ceiling allowed for evidence development (longer paragraphs are fine) |
 | ELI5 | Floor-dominant + prose-craft's plain-language rules reinforce ELI5 |
 
@@ -134,7 +134,7 @@ When context is tight, the humanizing pass collapses to:
 
 - [ ] **Tier 1:** ran prose-craft (register-matched to density); CTAs exempted to the persuasion overlay.
 - [ ] **Theme:** mid-piece body restatements cut; explicit statement kept at climax + close (the answer-first opening and deck title chains are exempt — the budget never removes an opening a shape requires).
-- [ ] **Resolution:** at least one thread left genuinely open; no forced moral bow on every beat.
+- [ ] **Resolution:** preserve questions the source leaves open; a fully resolved piece passes when the source supports its resolution.
 - [ ] **Time:** intended non-linearity survived; recurring patterns told iteratively.
 - [ ] **Redundancy:** no run of paragraphs making the identical move; no fractal summary.
 - [ ] **Idiosyncrasy:** templated sameness flagged; concrete particulars from the source preferred over abstractions; nothing manufactured — a plain, well-supported section passes.

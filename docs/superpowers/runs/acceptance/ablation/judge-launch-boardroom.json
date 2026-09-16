@@ -1,0 +1,34 @@
+{
+  "decks": [
+    {
+      "deck": 1,
+      "hook": 9,
+      "chain": 8,
+      "fidelity": 4,
+      "payoff": 8,
+      "natural": 5,
+      "rank": 3,
+      "verdict": "A compelling opening and clear causal progression are weakened by invented collective suspicion, unsupported claims that every launch target was beaten, and confusion between green services and dashboards. The closing callback and predicted fourth incident manufacture urgency beyond the source."
+    },
+    {
+      "deck": 2,
+      "hook": 9,
+      "chain": 7.5,
+      "fidelity": 5,
+      "payoff": 9,
+      "natural": 7,
+      "rank": 2,
+      "verdict": "The opening establishes concrete stakes and the ending makes the investment decision explicit, though the argument doubles back to product performance. Fidelity suffers from conflating the nine-figure relationship with the renewal, contradictory outage timing, and unsupported assertions about crashes and health checks."
+    },
+    {
+      "deck": 3,
+      "hook": 6.5,
+      "chain": 8.5,
+      "fidelity": 10,
+      "payoff": 8.5,
+      "natural": 8,
+      "rank": 1,
+      "verdict": "The opening is less arresting but immediately relevant to leadership, and the titles form a concise, coherent case for approval. Claims remain grounded in the source, and the ending delivers a clear budget, staffing commitment, duration, and scope without manufactured drama."
+    }
+  ]
+}

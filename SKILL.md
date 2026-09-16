@@ -105,7 +105,7 @@ All handoff files live in a per-run directory the orchestrator creates at the en
 
 1. **Judge rotation:** before re-dispatching the Focal Judge for a later pass, copy `RUN_DIR/ne-focal-judge.md` → `RUN_DIR/ne-focal-judge-prior.md` so the next pass can do pattern detection and carry the `needs_revision_count` counter forward.
 2. **Trigger lifecycle:** a trigger file (`ne-focal-judge.md`, `ne-evidence-review.md`, `ne-humanizing-flags.md`) left in place is the builder's signal to enter Revision Mode. The orchestrator deletes a trigger file when its findings are resolved.
-3. **End-of-loop cleanup:** after all gates pass (or the run escalates), delete all three trigger files and `ne-focal-judge-prior.md`. The sidecar `ne-output-meta.md` is kept until delivery.
+3. **End-of-loop cleanup:** after all gates pass, delete all three trigger files and `ne-focal-judge-prior.md`. Preserve unresolved reports and the sidecar on escalation; attach or link them before ending the run. The sidecar `ne-output-meta.md` is kept until delivery.
 
 ---
 
@@ -327,9 +327,9 @@ When ELI5 is selected, apply these rules throughout:
 - One idea per sentence
 
 **Analogy Requirements:**
-- Every abstract concept gets a concrete analogy
+- Use a concrete analogy when it explains an abstract concept more clearly
 - Draw from everyday experience: kitchen, playground, family, sports, weather
-- "It's like..." should appear frequently
+- Use the source's concrete examples where they suffice; no analogy quota applies
 - Test: Would a smart 10-year-old understand this?
 
 **Structure Rules:**
@@ -522,6 +522,7 @@ Do NOT parallelize the judge — its protocol depends on a deterministic file-re
 3. **FRAMEWORK_MISMATCH** → the shape cannot structurally land the focal; editing will not fix it. Escalate to the user:
    > "The selected shape cannot structurally land your focal. The judge diagnosed: [diagnosis]. Options: (1) restart Phase 3 with a different shape, (2) revise the Focal Statement, (3) accept the current draft as-is. Which do you prefer?"
    Do not silently restart Phase 3 — the user owns that decision.
+   - **Fresh-draft restart:** after the user authorizes a new shape or focal, archive the current reports, then clear all trigger files and `ne-focal-judge-prior.md` before the new builder dispatch. Reset the evidence review count for the new draft. Preserve the run-level focal-reopen count; a shape restart does not grant another automatic focal reset.
 4. **FOCAL_MISMATCH** → the judge's source check found an audience-relevant, source-supported claim more consequential than the brief's focal. The piece is not badly built — it is built on the wrong One Thing.
    - **Automatic reset (once per run):** ONLY when the brief marks `focal_origin: inferred` (Fast mode, user never touched the focal line) and no reset has happened this run. Before re-entering the pipeline: delete ALL trigger files (`ne-focal-judge.md`, `ne-focal-judge-prior.md`, `ne-evidence-review.md`, `ne-humanizing-flags.md`) so the reset build starts clean in Initial Build Mode with a fresh `needs_revision_count`; the evidence reviewer's two-run cap also resets with the new draft. Then reopen Phase 1.75 with the judge's quoted passage as a new candidate; the user's new choice is marked `focal_origin: user-selected-after-reset`; then re-run Phases 3 → 3.5 → 4.
    - **Advisory (every other case):** for `user-selected`, `user-stated`, or `user-selected-after-reset` origins — and for ANY second mismatch in a run regardless of origin — the judge downgrades to an advisory inside the verdict it otherwise issues. The orchestrator surfaces the quoted passage and the audience-relevance argument to the user, never resets on its own.
@@ -544,9 +545,9 @@ Every post-build revision — whichever gate triggered it — runs the same loop
 
 1. Leave (or write) the trigger file in RUN_DIR; dispatch the builder, which self-routes into Revision Mode against the highest-priority trigger present (`ne-focal-judge.md` > `ne-evidence-review.md` > `ne-humanizing-flags.md`) and makes the smallest edits that close the findings.
 2. **(a)** The builder re-runs Tier-1 prose-craft + the bans on every edited section (its own contract).
-3. **(b)** The orchestrator ALWAYS re-runs the evidence reviewer on the changed sections after any builder revision — regardless of which gate triggered it. This counts against the evidence reviewer's two-run cap.
+3. **(b)** The first evidence review of a draft always audits the entire draft, even when a focal or humanizing repair caused its dispatch. Later reviews audit changed sections plus every unresolved prior finding. Keep an evidence review count and archived last report in the run record, independent of trigger-file presence; pass the count and last report path in the reviewer dispatch. A clean report may be removed as a trigger without erasing this history. Every dispatch counts toward the two-run cap. When Phase 4.8 is reached with an unchanged draft already audited CLEAN, reuse that result; do not spend a redundant review.
 4. **(c)** Judge revalidation: when the FOCAL JUDGE originated the repair, the orchestrator ALWAYS re-dispatches the judge on the revised draft — the gate that found the problem confirms its fix, whatever was edited. When another gate originated the repair, one judge re-read is triggered only if the revision touched the governing claim, the ask, the climax, or the close.
-5. **(d)** A trigger file is deleted when its findings are resolved; end-of-loop cleanup deletes all three triggers plus `ne-focal-judge-prior.md`. The sidecar is kept until delivery.
+5. **(d)** A trigger file is deleted when its findings are resolved; successful end-of-loop cleanup deletes all three triggers plus `ne-focal-judge-prior.md`. Archive each report before removing its trigger. Preserve unresolved reports and the sidecar on escalation. The sidecar is kept until delivery.
 6. **(e)** Caps: evidence reviewer 2 runs total per draft; judge NEEDS_REVISION capped at 3 via its `needs_revision_count` counter. Any cap breach escalates to the user with the findings files.
 
 ---

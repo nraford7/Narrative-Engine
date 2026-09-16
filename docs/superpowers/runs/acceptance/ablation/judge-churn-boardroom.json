@@ -1,0 +1,34 @@
+{
+  "decks": [
+    {
+      "deck": 1,
+      "hook": 8,
+      "chain": 9,
+      "fidelity": 10,
+      "payoff": 9,
+      "natural": 9,
+      "rank": 1,
+      "verdict": "A direct, budget-relevant opening leads through a coherent argument to a specific decision and trade-off. It preserves observational and modeling limits throughout, though the opening creates more decision relevance than curiosity."
+    },
+    {
+      "deck": 2,
+      "hook": 8,
+      "chain": 8.5,
+      "fidelity": 6,
+      "payoff": 9,
+      "natural": 7.5,
+      "rank": 2,
+      "verdict": "The argument builds clearly toward the requested reallocation, but declaring discounts ineffective and price objections a symptom exceeds the evidence. The unsupported 'again' and unqualified modeling headline further weaken fidelity, while some rhetorical contrasts feel packaged."
+    },
+    {
+      "deck": 3,
+      "hook": 8,
+      "chain": 8.5,
+      "fidelity": 3,
+      "payoff": 7,
+      "natural": 5,
+      "rank": 3,
+      "verdict": "The narrative has momentum, but invents when renewal decisions form, claims concessions cannot close the gap, and adds unsupported implementation commitments and urgency. Its stayed/left contrast turns probabilistic findings into a manufactured reveal, undermining an otherwise clear ask."
+    }
+  ]
+}

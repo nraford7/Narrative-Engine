@@ -1,0 +1,13 @@
+{
+  "SKILL.md": "b89478a80aca58bdd3351a9dde954a107a1ec25e570a74523c6eab8106550045",
+  "framework-selection.md": "18299c42fd1073a4b3817642f9e4b081e7bf5eb4501ae987a5bc0eb96a6c29cc",
+  "prose-craft.md": "e109dbdcd317e7e530f533365d7fb23efbcbed5f1fa7c65875594fa4de8759da",
+  "prose-craft-constructions.md": "0468a2cf734cb1809a104a4411f7e060632977da155251192c7bb6fa337b6966",
+  "deck-title-craft.md": "420eb3f2fd11c799470b056181fd5fb79b37b8f4bfb838f8cb35ada133f92194",
+  "humanizing-pass.md": "41da4d231f89da013a07b495f0f6187ea18d0ddac78e4f9a47fdfd30950334e6",
+  "prompts/builder.md": "e8b013bc10b52ff619e21136ccad9846113599619ac19edb1ed20d9005a14d75",
+  "prompts/focal-fidelity-judge.md": "68d1e035247e848d858203fe6e10ead2716781dd2eced22c82078deef2a4423b",
+  "prompts/evidence-reviewer.md": "5886936b74b908021f7da85e3e81f143e22ea57823157792bf4410b55c219028",
+  "prompts/reviewer.md": "f9a8f6e6ab004413952eabda32fc4fc88fa319d11cfa8cda3c45942cd5be708d",
+  "prompts/stress-tester.md": "4ef25a19736a29974cf2834790c82ba156da99bca26698748c24dbd4c9d330d4"
+}

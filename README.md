@@ -1,259 +1,71 @@
 # Narrative Engine
 
-**A Claude Code skill that transforms any content into compelling narratives — as presentations or prose — using proven storytelling frameworks.**
+A Claude Code skill for developing source-supported arguments as presentations or prose. It establishes the audience and purpose, reads the material, builds an argument outline, and checks the resulting piece through separate comprehension and evidence reviews.
 
-Most presentations fail before they begin. Not because the content is wrong, but because the structure is. Narrative Engine matches your material to the right storytelling framework, auto-derives a distinct voice and emotional arc for your specific audience, then drives the output through three structural gates and a targeted review that catch what you'd miss.
+## Workflow
 
-It runs as one self-contained skill. The sentence-level discipline (`prose-craft`) and the deck title-craft (`keynote-create`) are **embedded**, not invoked — so a single run never depends on a separate skill at build time.
+1. **Choose the communication situation.** Import the source, choose Fast or Guided mode, and identify the audience, ask, format and density. Presentations support Boardroom sentence titles or Keynote fragments with narration.
+2. **Find the focal claim.** A Material Read identifies stakes, tensions, strongest passages and any genuine surprise. Two or three candidates are surfaced even in Fast mode. User-selected claims remain under the user's control.
+3. **Develop the argument.** Explain what each section contributes before choosing a shape. Answer-first is the default. Named arcs are optional and must have source-supported essential beats.
+4. **Approve the compiled brief.** The builder receives the brief, source and embedded craft files. Catalogs are references for the orchestrator and reviewers; their relevant guidance is compiled into the brief.
+5. **Build the piece.** The builder follows the argument, checks the title or section-opening sequence, preserves qualifications, and applies sentence craft. Ornament is optional; a plain, supported sentence passes.
+6. **Review and repair.** A blind reader checks what the piece communicates. A separate reviewer checks claims against the source. Repairs use one bounded route, with unresolved findings retained and surfaced.
 
----
+Fast mode infers the discovery choices and presents one consolidated brief for correction or approval. Guided mode asks step by step. Content determines length; there are no minimum slide or word counts.
 
-## What It Does
+## Gates
 
-Paste an article, outline, research notes, or existing deck. Pick **Fast mode** (everything inferred from the content, one consolidated Build Brief to correct or approve) or **Guided mode** (step-by-step discovery). Get back:
+| Gate | Purpose |
+|---|---|
+| Shape fit, Phase 3 | Named arcs must pass a source-support audit and the skeleton stamp test. Direct explanation is a valid choice. |
+| Focal fidelity, Phase 4.6 | Read the audience-facing body before the source or brief. Check recovered point, engagement and the register-appropriate argument sequence. |
+| Humanizing check, Phase 4.7 | Flag repetitive or manufactured writing; repairs return to the builder. This check never directly edits the approved draft. |
+| Evidence review, Phase 4.8 | Check unsupported claims, changed qualifications, missing reasoning, ask overreach and provenance tags against the original material. |
 
-1. **Full-sweep framework scoring** across all 10 arcs + 7 communication frameworks, with a Dark Horse option
-2. **A Build Brief** translating your audience, voice, emotional arc, and strategies into concrete writing instructions
-3. **A complete output** (slides or prose) with auto-derived voice, emotional pacing, and opening/closing strategies — every sentence and every slide title run through the embedded `prose-craft` discipline
-4. **Three structural gates** — framework fit, focal fidelity, and an evidence-grounded **humanizing pass** that de-slops at the discourse level, not just the surface
-5. **A targeted review** (content-type-selected specialists) plus an optional stress-test panel for high-stakes work
-6. **Sourcing transparency** showing what came from your content vs. what was generated
+A focal mismatch may reopen discovery once when the focal was inferred. User-stated or selected focals receive an advisory instead. Any revision receives evidence review; the first evidence audit covers the full draft. Later audits check changes and prior findings. Review caps escalate unresolved issues rather than silently approving them.
 
----
+Specialist reviews add audience and persuasion checks for high-stakes material. The narrative-structure research informing the humanizing checklist is fiction-derived; its percentages are directional context, not validated deck-quality thresholds.
 
-## How It Works
+## Outputs
 
-### Phase 1: Discovery
+Each run uses its own `/tmp/ne-<date>-<slug>/` directory.
 
-```
-Output format?               → Presentation / Prose / Both
-Focal point?                 → Choose from 2-3 proposed angles
-Who is your audience?        → Executive / Technical / Investors / Skeptics / Mixed...
-What are you trying to do?   → Persuade / Inform / Inspire / Align / Report...
-What type of content?        → Research / Strategy / Case study / Pitch / Vision...
-What tone?                   → Authoritative / Provocative / Warm / Urgent / Balanced...
-Density mode?                → High-Impact / Narrative / Evidence / ELI5
-```
+| File | Contents |
+|---|---|
+| `ne-build-brief.md` | Audience, ask, focal origin, Material Read, argument outline and compiled instructions |
+| `ne-source-content.md` | Original source material |
+| `ne-output.md` | Audience-facing presentation or prose |
+| `ne-output-meta.md` | Focal metadata, executed outline, source anchors and revision notes; withheld from the blind judge |
+| `ne-cold-read.md` | Reader's recovered argument and subsequent source check |
+| Review reports | Focal, evidence and humanizing findings, archived before resolved trigger files are removed |
 
-### Phase 2: Framework Matching
+Unresolved reports survive escalation. The sidecar remains available through delivery. For a presentation, the later rendering stage invokes the existing keynote-create renderer; this rebuild changes Narrative Engine only.
 
-The skill draws from **17 proven frameworks** across two categories:
+## Installation and use
 
-**10 Narrative Arcs** (engagement-optimized)
-| Arc | Structure | Best For |
-|-----|-----------|----------|
-| The Prestige | Pledge → Turn → Prestige | Counterintuitive findings |
-| Mystery Box | Clues → Red herrings → Click | Research with unexpected conclusions |
-| The Heist | Goal → Obstacles → Crew → Execution | Strategy & transformation |
-| Time Machine | Future-back → Present fork → Path | Vision & scenario planning |
-| Trojan Horse | Relatable → Escalate → Reframe | Paradigm shifts, skeptical audiences |
-| Hero's Journey | Call → Trials → Ordeal → Return | Origin stories, change management |
-| Columbo | Outcome first → Reconstruction | Post-mortems, root cause analysis |
-| Game of the Scene | Pattern → Name it → Heighten 3x | Hidden dynamics, cross-domain insight |
-| Rashomon | Multi-view → Missing axis → Synthesis | Controversial topics, stakeholder alignment |
-| Freytag's Five-Act | Exposition → Climax → Resolution | Complex emotional narratives |
-
-**7 Communication Frameworks** (efficiency-optimized)
-| Framework | Structure | Best For |
-|-----------|-----------|----------|
-| Minto Pyramid | Answer → MECE supports → Evidence | Executive updates, board decks |
-| SCQA | Situation → Complication → Question → Answer | Opening hooks |
-| AIDA | Attention → Interest → Desire → Action | Sales, fundraising |
-| PAS | Problem → Agitation → Solution | Change management |
-| Raskin Sales Deck | Change → Stakes → Vision → Features → Proof | B2B sales |
-| Duarte Resonate | What is ↔ What could be | Keynotes, vision |
-| SUCCESs | Simple, Unexpected, Concrete, Credible, Emotional, Stories | Quality checklist |
-
-### Phase 3: Build Brief + Subagent Build
-
-A **Build Brief** translates all discovery answers into concrete writing instructions:
-- **Voice** auto-derived from audience + tone (7 distinct profiles)
-- **Audience profile** with headline style, evidence preferences, CTA approach
-- **Emotional arc** calibrated to audience tolerance
-- **Opening/closing strategies** from the rhetorical strategy library
-- **Killer line** targets for memorability
-
-The build runs as a **subagent** via the Task tool, taking one of two paths:
-
-- **Prose path** — generate sections, then apply the embedded `prose-craft` discipline (Floor / Filter / Ceiling) to every paragraph as the sentence-level pass.
-- **Presentation path** — build on the **keynote-create model** (embedded): every slide title is a short complete sentence delivering one story beat, so the titles read top-to-bottom tell the whole story. The title sequence passes the **titles-only test** before bodies are filled; `prose-craft` runs on the titles. The render → `/impeccable` → PDF export runs in the orchestrator after the gates pass.
-
-Every unit carries source tags (`[DIRECT]` / `[PARAPHRASE]` / `[ELABORATED]` / `[GENERATED]`).
-
-### The three gates
-
-The output is driven through three structural gates before review:
-
-| Gate | Phase | Catches |
-|------|-------|---------|
-| **1 · Framework fit** | 3 | A wrong framework whose climax can't structurally land your point (skeleton stamp test) |
-| **2 · Focal fidelity** | 4.6 | Drift between intent and execution — a cold-read judge names the One Thing before reading the brief (for decks, the titles-only test) |
-| **3 · Humanizing pass** | 4.7 | AI-slop the first two miss — a discourse-level de-slop grounded in the narrative-structure research corpus |
-
-The humanizing pass is two-tier because the evidence demands it: a classifier still detects AI from *structure* at 93.9% after surface lexical cleanup, so sentence-polishing alone cannot de-slop a draft. Tier 1 is `prose-craft` (sentence); Tier 2 is a structural-delta checklist — theme-statement restraint, open threads, temporal complexity, discourse-redundancy, idiosyncrasy. **The deltas are gates and drift detectors, never optimization targets.**
-
-### Phase 5: Targeted Review + Stress Test
-
-Auto-runs for high-stakes content (pitches, policy, strategy); offered in one line for everything else, since the three gates have already run. Two specialist subagents review in parallel — the **Audience Advocate** always, plus one selected by content type (Comms Specialist, Content Expert, or Originality Agent). A **Director** synthesizes findings in the main conversation. For high-stakes content, an optional **3-persona stress test** (e.g. CFO, COO, Skeptic) runs before delivery. Judges are run with bias hygiene (verbosity / position / self-preference), and their confidence scores are advisory, not gates.
-
----
-
-## Output Example
-
-```markdown
-# Regional Governance: The Invisible Infrastructure
-
-**Framework:** Time Machine
-**Slides:** 14
-**Metaphor family:** Nervous system / pulse / sensing
-
----
-
-## Slide 1 — Opening Hook
-**Headline:** It is March 2028, and the Mayor knows the water crisis will hit before anyone else does.
-
-**Spotlight:** Three weeks before demand spikes, the morning brief flags the pattern.
-Desalination capacity, population movement, industrial permits—the signals converged overnight.
-
-**Design note:** Split screen—calm office on left, converging trend lines on right,
-date stamp "March 2028" prominent.
-
-**Source:** [GENERATED]
-
----
-
-## Sourcing Summary
-
-**Originality Score:** 43% user-sourced / 57% generated
-
-- Direct from source: 3 slides
-- Paraphrased: 2 slides
-- Elaborated: 3 slides
-- Generated: 6 slides
-```
-
----
-
-## Benefits
-
-| Without Narrative Engine | With Narrative Engine |
-|--------------------------|----------------------|
-| Generic bullet points | Single-point headlines with power verbs |
-| Unclear structure | Framework matched to audience + purpose via full sweep |
-| Same voice every time | 7 auto-derived voice profiles matched to audience + tone |
-| No emotional design | Emotional arcs calibrated to audience tolerance |
-| Self-review blind spots | Three gates + a content-selected review panel |
-| Generic AI prose | Embedded `prose-craft` (sentence) + a discourse-level humanizing pass |
-| Unknown AI additions | Source tags show exactly what was generated |
-| One-size-fits-all | Build Brief ensures every choice propagates through output |
-
----
-
-## Installation
-
-Copy the `Narrative-Engine` folder to your Claude Code skills directory:
-
-```
-~/.claude/skills/Narrative-Engine/
-```
-
-Or clone this repository:
+Clone into the Claude Code skills directory:
 
 ```bash
 git clone https://github.com/nraford7/Narrative-Engine.git ~/.claude/skills/Narrative-Engine
 ```
 
----
+Invoke `/Narrative-Engine` and supply your material. The build's sentence and title-craft resources are embedded, so they do not require separate skill invocations.
 
-## Usage
+## Reference library
 
-Invoke with `/Narrative-Engine` in Claude Code, then:
+- [SKILL.md](SKILL.md): operative workflow and file contracts.
+- [framework-selection.md](framework-selection.md): conditional selection, payload fit and source-support tests.
+- [narrative-arcs.md](narrative-arcs.md) and [communication-frameworks.md](communication-frameworks.md): optional structures.
+- Audience, voice, emotional-arc, opening/closing and rhetorical-figure catalogs: orchestrator/reviewer references.
+- [prose-craft.md](prose-craft.md), [prose-craft-constructions.md](prose-craft-constructions.md), [deck-title-craft.md](deck-title-craft.md), and [humanizing-pass.md](humanizing-pass.md): embedded craft resources.
+- [prompts/](prompts/): builder, blind judge, evidence reviewer and specialist contracts.
+- [SYNC.md](SYNC.md): canonical sources and exact Narrative Engine adaptations.
 
-1. Paste your content (article, notes, outline, or existing deck)
-2. Pick mode: **Fast** (steps 3–7 inferred, one consolidated brief to approve) or **Guided** (step-by-step)
-3. Choose output format (Presentation / Prose / Both)
-4. Confirm focal point from 2-3 proposed angles
-5. Answer discovery questions (audience, purpose, content type, tone), then density mode
-6. Choose from 2-3 recommended frameworks (scored via full sweep)
-7. Review the compiled Build Brief, then receive complete output through the three gates
+## Verification
 
----
+```bash
+bash scripts/check-rebuild.sh
+bash scripts/check-sync.sh
+```
 
-## Files
-
-| File | Purpose |
-|------|---------|
-| `SKILL.md` | Main skill definition and workflow |
-| `narrative-arcs.md` | Beat-by-beat structures for all 10 arcs |
-| `communication-frameworks.md` | Detailed framework descriptions |
-| `framework-selection.md` | Full sweep protocol and selection matrices |
-| `audience-profiles.md` | Deep audience profiles with writing instructions |
-| `voice-profiles.md` | 7 voice profiles with auto-derive mapping |
-| `emotional-arcs.md` | Framework emotional textures + audience calibration |
-| `opening-closing-strategies.md` | Opening/closing strategy libraries + pairing matrix |
-| `checklists.md` | All quality checklists (headlines, CTAs, originality, killer line) |
-| `humanizing-pass.md` | The de-slop layer — Tier 1 (prose-craft) + Tier 2 (discourse structural-delta checklist), judge hygiene, the gate-not-objective rule. Grounded in the narrative-structure research corpus. |
-| `prose-craft.md` + `prose-craft-constructions.md` | Embedded sentence-level discipline (Floor/Filter/Ceiling + construction catalog). Applied directly by the builder — not a separate skill call. |
-| `rhetorical-figures.md` | The Intensify layer — high-style figures (antithesis, chiasmus, anaphora, tricolon…) spent at anchor moments only. Rationed inside the Filter's caps; used for the Killer Line, the turn, the close, and deck cover/turn/last titles. |
-| `attention-loop.md` | The per-section engagement engine (Stakes → Big Question → Head Fake → Re-hook). Shapes how each section pulls the reader forward, one scale below the macro arc. Also the diagnostic for a draft that reads correct but inert. |
-| `deck-title-craft.md` | Embedded keynote-create title guide — action titles, titles-only test, antecedent test, rewrite examples. Used by the presentation build path. |
-| `agent-reference-persuasion.md` | Comms agent frameworks (Cialdini, SUCCESs, Ogilvy) |
-| `agent-reference-visual.md` | Visual agent frameworks (Tufte, Duarte, metaphors) |
-| `agent-reference-verification.md` | Content agent frameworks (IFCN, SIFT, fallacies) |
-| `prompts/` | Subagent prompt templates (builder, focal-fidelity-judge, reviewer, stress-tester) |
-| `examples/` | Full workflow examples (climate keynote, post-mortem, remote work) |
-
-### Architecture
-
-Phases 1–3.5 (discovery) run interactively in the main conversation. Phases 4+ dispatch subagents:
-- **Build** (Phase 4): single subagent reads the compiled Build Brief from the per-run directory (`/tmp/ne-<date>-<slug>/`), generates output, runs the embedded `prose-craft` pass (Tier 1), self-reviews for originality
-- **Gate 2 — Focal Fidelity** (Phase 4.6): a cold-read judge loops the builder up to 3 passes until the output lands the One Thing
-- **Gate 3 — Humanizing Pass** (Phase 4.7): discourse-level structural-delta check (Tier 2)
-- **Review** (Phase 5): 2 parallel subagents (Audience Advocate + content-selected specialist) + Director synthesis
-- **Stress Test** (Phase 5.5, high-stakes only): 3 parallel subagents with auto-selected personas
-
-**Embedded, not invoked.** `prose-craft` and the keynote-create title guide are copied into the skill so the build subagent never calls another skill at dispatch time. Only the deck render stage (`keynote-render.mjs` → `/impeccable`) calls keynote-create, and that runs in the orchestrator. Each embed carries a source-path + date header for clean re-syncing.
-
----
-
-## Framework Selection Quick Reference
-
-| If your audience is... | And your goal is... | Consider... |
-|------------------------|---------------------|-------------|
-| Executive / Board | Any | Pyramid or Columbo (answer-first) |
-| Skeptics | Persuade | Trojan Horse + PAS |
-| Investors | Inspire | Hero's Journey + Cinderella |
-| Mixed / Cross-functional | Align | Rashomon or Heist |
-| General / Keynote | Entertain | Prestige or Time Machine |
-
-| If your content has... | Consider... |
-|------------------------|-------------|
-| A genuine surprise | Prestige or Mystery Box |
-| Multiple stakeholder views | Rashomon |
-| A transformation story | Hero's Journey |
-| Future vision | Time Machine |
-| Root cause analysis | Columbo |
-
----
-
-## License
-
-MIT
-
----
-
-## Credits
-
-Built on frameworks from:
-- Barbara Minto (Pyramid Principle)
-- Nancy Duarte (Resonate, Slide:ology)
-- Chip & Dan Heath (Made to Stick)
-- Robert Cialdini (Influence)
-- Andy Raskin (Greatest Sales Deck)
-- Edward Tufte (Data Visualization)
-- Joseph Campbell (Hero's Journey)
-- Christopher Nolan / J.J. Abrams (Narrative structures)
-- William Strunk Jr. (economy) — via the embedded `prose-craft` discipline
-- Mark Forsyth (*The Elements of Eloquence*) — the high-style figures in the Intensify layer
-- The attention loop (Stakes → Big Question → Head Fake → Re-hook) — prediction-reward reading mechanics, per-section
-- The humanizing pass is grounded in a fact-checked narrative-structure research corpus (Labov, McAdams, Reagan et al., StoryScope, Reinhart et al., QUDsim) — gates and drift detectors, never optimization targets
+The first command checks key workflow invariants; the second checks embedded material against locally available canonicals, including a finite list of documented adaptations. Neither substitutes for behavioral acceptance tests. The [rebuild plan](docs/superpowers/plans/2026-09-16-ne-spine-rebuild.md) specifies the protocol scenarios and blinded source-to-output comparisons.

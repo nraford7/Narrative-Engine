@@ -1,0 +1,7 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "medium",
+  "elapsed_seconds": 9.7,
+  "exit_code": 0,
+  "input_sha256": "7de9920c1ea69a3489a85cea434b789c98af4be0471357a9b72aa2fecb0fd0b1"
+}

@@ -1,6 +1,6 @@
 # Prose Craft (embedded module)
 
-> **This is a verbatim embed of the standalone `prose-craft` skill, copied into Narrative Engine so
+> **This is an NE-adapted embed of the standalone `prose-craft` skill, copied into Narrative Engine so
 > the build subagent is self-contained — it never has to invoke another skill at dispatch time.**
 > Source: `~/.claude/skills/prose-craft/SKILL.md` · embedded 2026-06-22 · re-synced 2026-08-24 (canonical b6cdbe0). If the canonical skill
 > changes, re-sync this file. The companion catalog lives at
@@ -59,7 +59,7 @@ Condensed. The rules that do real work:
 
 If none of those four is the payoff, use active. Variety alone is not a reason.
 
-**The first sentence is its own job.** The opening line of a piece does work no other sentence does: it decides whether the reader continues. Make it create curiosity, not summarize. It deserves rewrites the rest of the draft doesn't — give it disproportionate effort and judge it by one test: does the reader want the second sentence?
+**The first sentence is its own job.** The opening line of a piece does work no other sentence does: it decides whether the reader continues. Make it give this audience a reason to continue; an answer-first opening can state the claim directly. It deserves rewrites the rest of the draft doesn't — give it disproportionate effort and judge it by one test: does the reader want the second sentence?
 
 ## The Filter — Tropes (kill machine-tells)
 
@@ -97,9 +97,9 @@ The positive moves none of the other layers teach. Full catalog with real exampl
 | **Parallelism** | Co-ordinate ideas in matching grammar for rhythm and weight | — |
 | **Syntactic symbolism** | Make the *shape* enact the meaning (suspense via a held sentence, balance via a balanced one) | — |
 
-**The Ceiling's job: kill monotony.** If every sentence is the same length and shape (subject-verb-object, subject-verb-object), the prose is dead even when each sentence is "correct." Vary length. Vary where the weight falls. Build at least one sentence that rewards a reader's breath.
+**The Ceiling's job: kill monotony.** If every sentence is the same length and shape (subject-verb-object, subject-verb-object), the prose is dead even when each sentence is "correct." Vary length. Vary where the weight falls. Use a more developed sentence when its additional detail or rhythm serves the material; plain sentences need no ornament.
 
-**The Figure — the optional fourth axis.** Named rhetorical schemes of surprise and repetition (antithesis, chiasmus, controlled anaphora) that intensify a piece's two or three anchor moments: the opening, the turn, the close. Catalog in `rhetorical-figures.md`. Load it only for savored registers; every figure lives inside the Filter's caps and passes the naming test.
+**The Figure — the optional fourth axis.** Named rhetorical schemes of surprise and repetition (antithesis, chiasmus, controlled anaphora) that intensify a piece's two or three anchor moments: the opening, the turn, the close. The orchestrator may compile a source-supported figure into the brief. The builder uses only its declared craft inputs; every figure lives inside the Filter's caps and passes the naming test.
 
 ## Cohesion — the paragraph-level move
 
@@ -138,7 +138,7 @@ The same sentence is right in one place and wrong in another. The Filter is alwa
 | Register | Lean | Sentences |
 |----------|------|-----------|
 | CTA, UI text, error message, exec summary, anything scanned | **Floor-dominant.** Ration the Ceiling. | Short base clauses, minimal branching, payload up front. |
-| Memo, briefing, report body | **Balanced.** | Mostly tight; one or two built sentences per section for rhythm. |
+| Memo, briefing, report body | **Balanced.** | Mostly tight; develop a sentence when the material benefits from the added detail or rhythm. |
 | Essay, argument passage, narrative, anything read linearly and savored | **Ceiling leads.** | Cumulative sentences, varied branching, syntactic symbolism welcome. |
 
 A cumulative sentence is gorgeous in an essay and a liability on a button.
@@ -148,13 +148,13 @@ A cumulative sentence is gorgeous in an essay and a liability on a button.
 When context is tight, run this single checklist instead of three passes:
 
 - [ ] Active, positive, concrete; emphatic word at the end (Floor)
-- [ ] First sentence creates curiosity, not summary; rewritten until the reader wants the second (Floor)
+- [ ] First sentence gives the audience a reason to continue; answer-first claims are valid openings (Floor)
 - [ ] Dead words cut: very/just/actually/in order to/the fact that (Floor)
 - [ ] Zero negative parallelism (any variant, incl. "not because X, but because Y"), ≤1 tricolon/section, ≤3 em-dashes total (Filter)
 - [ ] No delve/leverage/robust/tapestry/nuanced/pivotal/compelling, no "earns its weight," no "it's worth noting," no signposted conclusion, no generic superlatives (Filter)
 - [ ] No fragment-paragraphs, no listicle-in-prose, no false ranges; metaphors retired after two uses (Filter)
-- [ ] Sentence lengths vary; openers vary (not every sentence subject-first); at least one built sentence per section (Ceiling)
-- [ ] Anchor moments figured on purpose (savored registers only, `rhetorical-figures.md`); everything else left plain (Figure)
+- [ ] Check for monotonous repetition; vary sentence construction where the meaning benefits, with no per-section quota (Ceiling)
+- [ ] Any figure serves a source-supported moment and passes the naming test; an entirely plain piece passes (Figure)
 - [ ] Lists built as a real series form, not the reflex `A, B, and C`; passive used only for one of its four jobs (Ceiling/Floor)
 - [ ] Sentences cohere structurally — key-term, demonstrative, end-loaded pivot — not by bolted-on "Furthermore/Moreover" (Cohesion)
 - [ ] Every device passes the naming test; every modifier passes the deletion test (Conflict Resolution)

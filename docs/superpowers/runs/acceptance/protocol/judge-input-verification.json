@@ -1,0 +1,90 @@
+[
+  {
+    "cold_read_written_before_source": true,
+    "source_check_written_before_brief": true,
+    "transcript": "evidence-final-judge.jsonl",
+    "read_order": [
+      [
+        1,
+        "ne-output.md"
+      ],
+      [
+        3,
+        "ne-source-content.md"
+      ],
+      [
+        6,
+        "ne-build-brief.md"
+      ]
+    ],
+    "body_only": true,
+    "no_sidecar_read": true,
+    "completed": true
+  },
+  {
+    "cold_read_written_before_source": true,
+    "source_check_written_before_brief": true,
+    "transcript": "evidence-initial-judge.jsonl",
+    "read_order": [
+      [
+        1,
+        "ne-output.md"
+      ],
+      [
+        3,
+        "ne-source-content.md"
+      ],
+      [
+        6,
+        "ne-build-brief.md"
+      ]
+    ],
+    "body_only": true,
+    "no_sidecar_read": true,
+    "completed": true
+  },
+  {
+    "cold_read_written_before_source": true,
+    "source_check_written_before_brief": true,
+    "transcript": "focal-leg1-judge.jsonl",
+    "read_order": [
+      [
+        1,
+        "ne-output.md"
+      ],
+      [
+        3,
+        "ne-source-content.md"
+      ],
+      [
+        6,
+        "ne-build-brief.md"
+      ]
+    ],
+    "body_only": true,
+    "no_sidecar_read": true,
+    "completed": true
+  },
+  {
+    "cold_read_written_before_source": true,
+    "source_check_written_before_brief": true,
+    "transcript": "focal-leg2-judge.jsonl",
+    "read_order": [
+      [
+        1,
+        "ne-output.md"
+      ],
+      [
+        3,
+        "ne-source-content.md"
+      ],
+      [
+        6,
+        "ne-build-brief.md"
+      ]
+    ],
+    "body_only": true,
+    "no_sidecar_read": true,
+    "completed": true
+  }
+]

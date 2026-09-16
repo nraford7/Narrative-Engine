@@ -17,7 +17,7 @@ Builders drift toward stronger claims under narrative pressure — a hedge dropp
 3. `RUN_DIR/ne-source-content.md` — the source. The only ground truth in this review.
 4. `RUN_DIR/ne-build-brief.md` — for the stated ask and argument outline (used in checks 3 and 4 only).
 5. `RUN_DIR/ne-cold-read.md` (if present) — the judge's cold read; use its "what lands hardest" moments as priority audit targets, since peak-impact claims are where overclaiming concentrates.
-6. `RUN_DIR/ne-evidence-review.md` (second run only — if this file already exists, this IS your second run): read your prior report BEFORE auditing or overwriting it. Every prior finding must be explicitly confirmed resolved or re-raised — the builder's Revision Notes list what it believes it closed; verify, don't trust.
+6. Prior evidence report (second run only): your dispatch supplies the evidence review count and the archived last report path. Read that report BEFORE auditing or overwriting anything. Do not infer run number from trigger-file presence; clean triggers may have been removed. Every prior finding must be explicitly confirmed resolved or re-raised — the builder's Revision Notes list what it believes it closed; verify, don't trust.
 
 ---
 
@@ -90,7 +90,7 @@ The sidecar's provenance tags verified against reality.
 ## Scope and Second Run
 
 - **Style and taste are explicitly out of scope.** Do not comment on prose quality, tone, structure, or word choice. A clumsy sentence that matches the source passes; an elegant one that outruns it does not. Fidelity to the source is the only axis.
-- **Two runs total per draft.** Your second run, after a builder revision, re-checks the changed sections only (the sidecar's Revision Notes name them) — plus any finding from your first run, to confirm each is resolved. Do not re-audit untouched sections.
+- **Two runs total per draft.** The first run audits the entire draft, including when an earlier gate has already caused a revision. Your second run, after a builder revision, re-checks the changed sections only (the sidecar's Revision Notes name them) — plus any finding from your first run, to confirm each is resolved. Do not re-audit untouched sections.
 
 ## Anti-Patterns to Avoid
 

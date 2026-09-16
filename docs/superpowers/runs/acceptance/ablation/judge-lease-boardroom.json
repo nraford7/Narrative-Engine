@@ -1,0 +1,34 @@
+{
+  "decks": [
+    {
+      "deck": 1,
+      "hook": 7.5,
+      "chain": 8,
+      "fidelity": 8.5,
+      "payoff": 9,
+      "natural": 8,
+      "rank": 2,
+      "verdict": "The deadline creates a practical reason to continue, and the recommendation follows a coherent argument through alternatives to approval. Some repetition slows the case, while omitted estimate qualifiers and the unsupported month-end/15 October relationship reduce fidelity."
+    },
+    {
+      "deck": 2,
+      "hook": 8,
+      "chain": 9.5,
+      "fidelity": 10,
+      "payoff": 9.5,
+      "natural": 8.5,
+      "rank": 1,
+      "verdict": "The recommendation-first opening suits this audience, and five titles form a concise argument that lands the exact approval request. Repeated presentation scaffolding feels templated, but the substantive case preserves estimates, tradeoffs, and the conditional capacity benefit."
+    },
+    {
+      "deck": 3,
+      "hook": 7.5,
+      "chain": 7.5,
+      "fidelity": 5.5,
+      "payoff": 8.5,
+      "natural": 6.5,
+      "rank": 3,
+      "verdict": "The clear recommendation and ask are weakened by a prolonged setup and a manufactured space-problem reveal. Fidelity suffers from invented hiring assumptions, the false claim that capacity arrives within whichever lease is signed, and wording that treats first refusal as securing the floor."
+    }
+  ]
+}

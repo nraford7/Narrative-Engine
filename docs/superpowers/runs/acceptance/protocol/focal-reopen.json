@@ -1,0 +1,11 @@
+{
+  "focal_reopen_count": 1,
+  "phase": "1.75",
+  "candidate_from_judge": "Onboarding speed predicts renewal and preliminary modeling favors option(c).",
+  "forced_fixture_choice": "Retention metrics held steady in Q3.",
+  "focal_origin": "user-selected-after-reset",
+  "note": "Simulated deliberate user choice required by scenario; neither actual user endorsement nor evaluator instruction.",
+  "removed_triggers": [
+    "ne-focal-judge.md"
+  ]
+}
