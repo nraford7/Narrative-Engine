@@ -1,71 +1,146 @@
 # Narrative Engine
 
-A Claude Code skill for developing source-supported arguments as presentations or prose. It establishes the audience and purpose, reads the material, builds an argument outline, and checks the resulting piece through separate comprehension and evidence reviews.
+**Turn a pile of information into a story or argument people can follow.**
 
-## Workflow
+Narrative Engine is a skill for Claude Code. Give it a report, rough notes, an article or an existing presentation, and tell it who you want to reach. It helps find the point worth making, choose an opening, arrange the evidence and write the piece.
 
-1. **Choose the communication situation.** Import the source, choose Fast or Guided mode, and identify the audience, ask, format and density. Presentations support Boardroom sentence titles or Keynote fragments with narration.
-2. **Find the focal claim.** A Material Read identifies stakes, tensions, strongest passages and any genuine surprise. Two or three candidates are surfaced even in Fast mode. User-selected claims remain under the user's control.
-3. **Develop the argument.** Explain what each section contributes before choosing a shape. Answer-first is the default. Named arcs are optional and must have source-supported essential beats.
-4. **Approve the compiled brief.** The builder receives the brief, source and embedded craft files. Catalogs are references for the orchestrator and reviewers; their relevant guidance is compiled into the brief.
-5. **Build the piece.** The builder follows the argument, checks the title or section-opening sequence, preserves qualifications, and applies sentence craft. Ornament is optional; a plain, supported sentence passes.
-6. **Review and repair.** A blind reader checks what the piece communicates. A separate reviewer checks claims against the source. Repairs use one bounded route, with unresolved findings retained and surfaced.
+The aim is to make each part lead somewhere. In a presentation, the slide titles should carry an argument when read in order. In an article or briefing, the sections should develop an idea rather than repeat it in different words.
 
-Fast mode infers the discovery choices and presents one consolidated brief for correction or approval. Guided mode asks step by step. Content determines length; there are no minimum slide or word counts.
+It can produce:
 
-## Gates
+- **Presentation content:** slide titles, supporting text and visual suggestions.
+- **Prose:** a briefing, article, essay or other written piece.
+- **Both:** develop one version, then adapt it to the other format.
 
-| Gate | Purpose |
+## How it works
+
+1. **Understand the audience and the purpose.** Who is this for? What should they understand, decide or do after reading it?
+2. **Read for what matters.** Look for the real stakes, an unresolved question, a useful finding or a strong passage already in the source. A surprise is useful when one exists; it should never be invented.
+3. **Offer a few possible main points.** Claude proposes two or three directions and explains the choice. You can choose one, change it or keep the point you started with.
+4. **Work out the argument.** Decide what the reader needs to understand and what each section adds. The usual approach is to state the answer early and explain it. Storytelling structures are available when the material suits them.
+5. **Write and review.** One reviewer reads the piece before seeing the brief, checking what it actually communicates. Another compares its claims with the source. Claude repairs problems it finds and brings unresolved issues back to you.
+
+You choose how much guidance to give:
+
+- **Fast:** Claude makes the initial choices and shows you one brief to correct or approve.
+- **Guided:** Claude asks the questions one at a time.
+
+For presentations, you can also choose **Boardroom**, with full-sentence titles that carry the argument, or **Keynote**, with shorter titles supported by spoken narration. The amount of useful material determines the length.
+
+## A worked example
+
+This is a fictional, simplified example showing the intended approach, not a recorded test output.
+
+### The starting material
+
+> Over a six-week period, our support team's average first reply fell from six hours to two hours. Average time to resolve a ticket stayed at five days. Tickets needing engineering help waited an average of three days before an engineer took ownership. The team proposes a four-week pilot that assigns an engineer when those tickets are escalated. We need the head of customer operations to approve the pilot.
+
+You could ask:
+
+```text
+/Narrative-Engine
+
+Turn these notes into a short presentation for our head of customer
+operations. The decision is whether to approve the four-week pilot.
+Use Fast mode and Boardroom titles. Keep the limits of the evidence clear.
+```
+
+### Finding the point
+
+A topic list would be easy: response times, resolution times, engineering, next steps. It would leave the reader to work out why those subjects belong together.
+
+The useful tension is that the team's headline improvement has not shortened the customer's wait for a fix. The engineering handoff gives the team a specific next step to test.
+
+A possible main point is:
+
+> Test earlier engineering ownership to see whether it shortens the time customers wait for a fix.
+
+### Building the sequence
+
+| Slide title | What the slide establishes |
 |---|---|
-| Shape fit, Phase 3 | Named arcs must pass a source-support audit and the skeleton stamp test. Direct explanation is a valid choice. |
-| Focal fidelity, Phase 4.6 | Read the audience-facing body before the source or brief. Check recovered point, engagement and the register-appropriate argument sequence. |
-| Humanizing check, Phase 4.7 | Flag repetitive or manufactured writing; repairs return to the builder. This check never directly edits the approved draft. |
-| Evidence review, Phase 4.8 | Check unsupported claims, changed qualifications, missing reasoning, ask overreach and provenance tags against the original material. |
+| **Faster replies still leave customers waiting five days for a fix.** | First replies improved from six hours to two; average resolution time stayed unchanged. |
+| **Tickets needing engineering wait three days for someone to take ownership.** | There is a specific delay worth investigating within that group of tickets. |
+| **Assign an engineer at escalation and test whether that wait falls.** | The proposed pilot addresses the observed handoff delay. Its effect is still unknown. |
+| **Approve a four-week pilot and measure whether customers get their fixes sooner.** | The decision and the measure of success follow from the opening problem. |
 
-A focal mismatch may reopen discovery once when the focal was inferred. User-stated or selected focals receive an advisory instead. Any revision receives evidence review; the first evidence audit covers the full draft. Later audits check changes and prior findings. Review caps escalate unresolved issues rather than silently approving them.
+The opening gives the audience a reason to care. The middle identifies a possible explanation and a practical test. The ending asks for a decision the evidence can support.
 
-Specialist reviews add audience and persuasion checks for high-stakes material. The narrative-structure research informing the humanizing checklist is fiction-derived; its percentages are directional context, not validated deck-quality thresholds.
+The evidence reviewer should catch a title such as “Earlier engineering ownership will cut resolution time.” The notes support testing that idea; they do not establish that it works. The three-day figure also applies specifically to tickets needing engineering, not to every ticket.
 
-## Outputs
+## What it's good at
 
-Each run uses its own `/tmp/ne-<date>-<slug>/` directory.
+- **Turning reports into arguments.** Useful for decision papers, executive briefings, research summaries and presentations that have plenty of information but no clear direction.
+- **Connecting slide titles.** Helping a sequence move from a question or finding to its implications and a decision.
+- **Finding a useful opening in existing material.** Especially when a concrete detail or tension is buried under background information.
+- **Keeping claims close to the evidence.** Checking that a possibility has not become a promise, or an association has not become a claim of cause and effect.
+- **Adapting a piece for a particular audience.** The same material may need a different starting point for a board, a technical team or a general audience.
 
-| File | Contents |
-|---|---|
-| `ne-build-brief.md` | Audience, ask, focal origin, Material Read, argument outline and compiled instructions |
-| `ne-source-content.md` | Original source material |
-| `ne-output.md` | Audience-facing presentation or prose |
-| `ne-output-meta.md` | Focal metadata, executed outline, source anchors and revision notes; withheld from the blind judge |
-| `ne-cold-read.md` | Reader's recovered argument and subsequent source check |
-| Review reports | Focal, evidence and humanizing findings, archived before resolved trigger files are removed |
+## What it's not so good at
 
-Unresolved reports survive escalation. The sidecar remains available through delivery. For a presentation, the later rendering stage invokes the existing keynote-create renderer; this rebuild changes Narrative Engine only.
+- **Getting the hook right every time.** It can choose a sensible but predictable opening, or introduce a recommendation before the reader has a reason to care. Your judgment still matters.
+- **Matching a distinctive voice without examples.** Give it passages you like, especially if warmth, humor or an unusual style is important.
+- **Making weak material persuasive.** Missing evidence and unclear decisions often need more work from the author. Better wording cannot supply the missing substance.
+- **Checking whether the source itself is true.** Its evidence review compares the writing with the material you provide. It is not independent research or external fact-checking.
+- **Quick, tiny edits.** The questions and review stages can be excessive for a short email or a single sentence. They also use more time and model allowance than a simple writing prompt.
+- **Producing finished slide design on its own.** It develops presentation content. The later rendering step uses the separate [keynote-create](https://github.com/nraford7/keynote-create) tools and their setup.
 
-## Installation and use
+The latest small comparison found stronger results for source fidelity and argument flow than for opening hooks. It used Codex-generated drafts against saved earlier outputs while Claude was unavailable, so it cannot cleanly separate improvements in the skill from differences between models. Treat it as useful evidence, not a guarantee.
 
-Clone into the Claude Code skills directory:
+## How to install it
+
+You'll need **Claude Code** and **Git**. This repository is set up for Claude Code's local skills, rather than a plain chat window. See [Claude Code's guide to skills](https://code.claude.com/docs/en/skills) for how local skills are loaded.
+
+### 1. Download the skill
+
+Open a terminal and run:
 
 ```bash
+mkdir -p ~/.claude/skills
 git clone https://github.com/nraford7/Narrative-Engine.git ~/.claude/skills/Narrative-Engine
 ```
 
-Invoke `/Narrative-Engine` and supply your material. The build's sentence and title-craft resources are embedded, so they do not require separate skill invocations.
+This puts the skill in your personal skills folder, where Claude Code can use it across projects.
 
-## Reference library
+### 2. Check the file paths
 
-- [SKILL.md](SKILL.md): operative workflow and file contracts.
-- [framework-selection.md](framework-selection.md): conditional selection, payload fit and source-support tests.
-- [narrative-arcs.md](narrative-arcs.md) and [communication-frameworks.md](communication-frameworks.md): optional structures.
-- Audience, voice, emotional-arc, opening/closing and rhetorical-figure catalogs: orchestrator/reviewer references.
-- [prose-craft.md](prose-craft.md), [prose-craft-constructions.md](prose-craft-constructions.md), [deck-title-craft.md](deck-title-craft.md), and [humanizing-pass.md](humanizing-pass.md): embedded craft resources.
-- [prompts/](prompts/): builder, blind judge, evidence reviewer and specialist contracts.
-- [SYNC.md](SYNC.md): canonical sources and exact Narrative Engine adaptations.
+Some instructions currently contain paths from the maintainer's computer. If you are installing on another computer, ask Claude Code:
 
-## Verification
-
-```bash
-bash scripts/check-rebuild.sh
-bash scripts/check-sync.sh
+```text
+I installed Narrative Engine in ~/.claude/skills/Narrative-Engine.
+Check the instructions in its prompts folder and update any paths beginning
+/Users/noahraford/.claude/skills/Narrative-Engine/ to point to my installation.
+Keep all other instructions unchanged.
 ```
 
-The first command checks key workflow invariants; the second checks embedded material against locally available canonicals, including a finite list of documented adaptations. Neither substitutes for behavioral acceptance tests. Historical development plans and acceptance records remain available in Git history.
+The writing guides are included in the repository. You do not need to install prose-craft separately to use them. Finished slide rendering requires the separate keynote-create setup mentioned above.
+
+### 3. Try it
+
+Start Claude Code and type:
+
+```text
+/Narrative-Engine
+```
+
+Then paste your material or point Claude to a file, and say who it is for and what you want the piece to achieve. For example:
+
+```text
+Use Narrative Engine on quarterly-review.md. Write a short briefing for
+our leadership team. They need to decide which of the three proposals
+to fund. Use Fast mode, and preserve the uncertainty in the estimates.
+```
+
+### Updating an existing installation
+
+If you have not changed the local files:
+
+```bash
+git -C ~/.claude/skills/Narrative-Engine pull --ff-only
+```
+
+If you adjusted file paths or other instructions, ask Claude to preserve those changes while updating. Do not overwrite your customizations just to make the update succeed.
+
+## Looking under the hood
+
+[SKILL.md](SKILL.md) contains the full workflow. The [prompts folder](prompts/) contains the writer and reviewer instructions, and [SYNC.md](SYNC.md) explains where the included writing guides come from. Historical development plans and test records remain in Git history.
