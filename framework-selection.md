@@ -1,44 +1,40 @@
 # Framework Selection Reference
 
-Quick-reference tables for selecting the right narrative arc or communication framework based on context.
+Selection protocol for narrative arcs, plus reference matrices for tie-breaking and communication-framework overlays.
 
 ---
 
 ## Framework Selection Protocol
 
-**REQUIRED: Before recommending 2-3 frameworks, complete the full sweep below. Do NOT skip to the Quick Decision Flowchart or heuristic tables -- those exist for reference only, not as shortcuts.**
+Category-driven selection stamps shapes onto content: pick an arc because the content type or audience "usually" takes it, and the piece bends toward the arc's payload instead of the material's. Material support is the selector — an arc is a candidate only when the source itself supplies its surprise, its payload kind, and its beats. The matrices below the banner are tie-breakers, never generators.
 
-**The Focal Statement (Phase 1.75) is now a binding scoring dimension. A framework that fits audience/purpose/tone perfectly but cannot structurally deliver The One Thing is a Wrong Framework, not a Strong Pick. The skeleton stamp test in Step 2.5 is the gate.**
+**Inputs:** the Material Read from Phase 1.75 (stake, tension, genuine-surprise line, strongest existing passages), the Focal Statement (One Thing, Ask, Through-Line), and the source content.
 
-### Step 1: Score all 10 narrative arcs
+### Step 0: Reveal Gate
 
-For the user's specific combination of Focal Statement + audience + purpose + content type + tone, score each arc on TWO dimensions (1-5 each):
+Read the Material Read's genuine-surprise line. It gates the three engagement arcs — Prestige, Mystery Box, Trojan Horse — before anything else runs. **Never invent a surprise to unlock an arc.**
 
-- **Context Fit** — does the arc serve this audience/purpose/content/tone combination?
-- **Focal Fit** — does the arc's protected/climax beat naturally deliver The One Thing? (See "Focal Fit Definition" below.)
+| The genuine-surprise line says... | Consequence |
+|-----------------------------------|-------------|
+| A real surprise, with the source passage that carries it | Prestige, Mystery Box, Trojan Horse remain eligible |
+| "none — never manufacture one" | All three engagement arcs are struck before Step 1, in every payload row they appear in |
+| A surprise is claimed but no source passage can be quoted for it | Treat as none and strike all three — a surprise you cannot quote does not exist |
 
-Combine into a Total (max 10). An arc with high Context Fit but low Focal Fit (≤2) is disqualified — note it in the Rejection Log.
+### Step 1: Payload Match
 
-| Arc | Context Fit | Focal Fit | Total | Key reason | Climax beat delivers... |
-|-----|-------------|-----------|-------|------------|-------------------------|
-| A) Prestige | | | | | The reveal/reframe |
-| B) Mystery Box | | | | | The click of recognition |
-| C) Heist | | | | | The successful execution |
-| D) Time Machine | | | | | The fork/decision |
-| E) Trojan Horse | | | | | The paradigm shift |
-| F) Hero's Journey | | | | | The transformation/identity shift |
-| G) Freytag | | | | | The catharsis |
-| H) Columbo | | | | | The mechanism/cause |
-| I) Game of Scene | | | | | The pattern recognition |
-| J) Rashomon | | | | | The synthesis across views |
+Name the *kind of payload* The One Thing is — a reveal/reframe, a decision, a causal explanation, a transformation, a synthesis, a pattern made visible. Take the arcs from the matching row of the Focal Fit Definition table (below) as your candidates, minus any struck at Step 0. This yields 2-4 candidates, never more.
 
-### Step 2: Score top communication frameworks
+If The One Thing matches no row — a plain recommendation, a status, a body of findings with no single narrative payload — do not force a row. Skip to Step 4 and recommend no-framework direct explanation.
 
-Score the 5 most relevant communication frameworks for this content on the same two dimensions (Context Fit + Focal Fit).
+### Step 2: Beat-Support Audit
 
-### Step 2.5: Skeleton Stamp Test (Gate 1)
+For each candidate, list its essential/anchor beats (from `narrative-arcs.md`). Match every one to a quoted source passage — the actual sentences that would fill the beat, quoted, not summarized or gestured at. **Any unmatched beat rejects the arc.** Inventing content to fill a beat — [GENERATED] backfill — is forbidden; a beat the source cannot fill is a rejection, not a writing assignment.
 
-For the top 2 arc + framework candidates by Total score, run the skeleton stamp test before recommending. **This is a pass/fail gate — a candidate that fails cannot be the Top Pick or Strong Alternative regardless of its scores.**
+Record each rejection with the missing beat named ("Heist rejected: no Obstacles passage in the source").
+
+### Step 3: Skeleton Stamp Test
+
+For every candidate that survived Steps 0-2, run the skeleton stamp test before recommending. **This is a pass/fail gate — a candidate that fails cannot be recommended.**
 
 For each candidate, write out:
 
@@ -63,16 +59,19 @@ CLIMAX TEST
 
 **Pass criterion:** All three must be Y. If any are N, the arc cannot land the focal — its gravity will pull the piece toward a different payload (e.g., Hero's Journey climaxes on identity transformation; if your Focal is a strategic decision, the climax will drift from "do X" to "become Y").
 
-**If neither top candidate passes:** Do NOT recommend a workaround. Return to Step 1 with the Focal Fit dimension re-weighted, OR escalate to the user: *"None of the top frameworks structurally land your focal — the strongest candidates pull the piece toward [X] instead of [Focal]. Possible options: (1) reframe the focal, (2) accept a Dark Horse with lower context fit but better focal fit, (3) split into two pieces."*
+**If no surviving candidate passes:** Do NOT recommend a workaround. Widen to adjacent payload kinds once — the neighboring rows of the Focal Fit Definition table closest in kind to your payload — and re-run Steps 2-3 on those arcs (the reveal gate still applies). If still nothing passes, recommend no-framework direct explanation: answer-first, the argument outline as the structure. Never loosen the beat-support audit to save an arc.
 
-### Step 3: Recommend
+### Step 4: Recommend
 
-Present to the user (only candidates that passed the skeleton stamp test are eligible for Top Pick / Strong Alternative):
+Present to the user (only candidates that passed Steps 0-3 are eligible):
 
-1. **Top pick:** Highest Total that passed the skeleton stamp. Show the stamped skeleton, tradeoffs, emotional preview.
-2. **Strong alternative:** Second-highest that passed. Show what it does differently — especially what it carries of the focal differently.
-3. **Dark Horse:** One arc that scored 3+ on Focal Fit (even if Context Fit is lower) and would land the focal in an unexpected way. Label clearly as "Dark Horse -- [Arc Name]." Dark Horses are exempt from passing the skeleton stamp on first run, but must be flagged with the structural risk if selected.
-4. **Rejection log:** 2-3 sentences. Call out specifically (a) arcs that scored well on Context Fit but failed Focal Fit and why, and (b) low Total arcs that don't fit this content.
+1. **Top pick:** The strongest survivor. Each recommendation carries a one-line trace to the Material Read — "the material's tension is X; this arc's spine is built for X." Show the stamped skeleton, tradeoffs, emotional preview.
+2. **Strong alternative** (when a second candidate survived): same trace line; show what it carries of the focal differently.
+3. **No named framework — direct explanation:** a first-class option in every recommendation set, never a fallback apology. Answer-first, the argument outline as the structure. When the material's strength is plain, well-supported argument with no genuine reveal, this IS the top pick.
+4. **Dark Horse (optional):** an arc from an adjacent payload row that would land the focal in an unexpected way — eligible only if it passes the SAME gates as every candidate: the reveal gate (Step 0), the beat-support audit (Step 2 — every essential beat matched to a quoted source passage), and the skeleton stamp (Step 3). An arc with an unsupported beat is rejected, never offered with a risk flag. Label clearly as "Dark Horse — [Arc Name]"; its only license is coming from an adjacent payload row.
+5. **Rejection log:** 2-3 sentences naming what cut each rejected candidate — the reveal gate, the specific unmatched beat, or the failed stamp.
+
+**Communication-framework overlay:** chosen from the reference matrices below AFTER the arc decision (or with direct explanation). Overlays shape delivery — they never generate arc candidates.
 
 ### Focal Fit Definition
 
@@ -89,11 +88,11 @@ An arc has **high Focal Fit (4-5)** when its protected/climax beat naturally del
 
 An arc has **low Focal Fit (1-2)** when its climax delivers a *different kind* of payload than the One Thing requires. Example: trying to land a strategic decision (Time Machine territory) inside Hero's Journey will produce a piece whose emotional crest sits at the protagonist's transformation — not at the decision the audience must make. The piece can still feel good. It just won't land the point.
 
-### Why This Protocol Exists
+---
 
-Without the full sweep, recommendations gravitate to the same 4-5 frameworks (Heist, Trojan Horse, Columbo, Prestige, Hero's Journey).
+## Reference matrices — tie-breakers only
 
-Without the focal fidelity dimension and skeleton stamp test, recommendations gravitate toward whichever framework feels right for the *audience/tone* — and the focal statement gets quietly betrayed by the arc's gravity. The sweep ensures Freytag, Game of Scene, Time Machine, Rashomon, Mystery Box, and less common communication frameworks get genuine consideration; the focal fidelity gate ensures whichever framework wins can actually land the point.
+Everything below this line is reference material. Use it to break ties among candidates that survived Steps 0-2 or to pick a communication-framework overlay — never to generate candidates.
 
 ---
 
@@ -205,7 +204,7 @@ Gather these inputs before running the selection protocol:
 | **Teach patterns** | Game of Scene (I), Freytag (G) | Cognitive Load, Vonnegut Shapes | Name the game; dramatic structure aids retention |
 | **Drive identity shift** | Hero's Journey (F), Freytag (G) | Story Circle, Schwartz Awareness | Transformation through dramatic arc + audience-as-hero |
 
-**Length principle:** Slide count follows from content density and audience patience, not from purpose category. The builder's Content Length Assessment (Step 0) determines the right length for each piece. A focused 8-slide deck can be more effective than a padded 20-slide one.
+**Length principle:** Slide count follows from content density and audience patience, not from purpose category. The builder's spine (Step 9 — content-driven length) determines the right length for each piece. A focused 8-slide deck can be more effective than a padded 20-slide one.
 
 ---
 
