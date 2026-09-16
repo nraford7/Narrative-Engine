@@ -28,7 +28,7 @@ Close the current question and, in the same beat, open the next — momentum acr
 - **Stakes:** "If [claim] is true, then [consequence]." Names the cost of being wrong.
 - **Re-hook:** end the section on the question the next section answers, so the reader crosses the seam already leaning forward.
 
-**The Head Fake carries no template — negative parallelism is banned here.** Reveal the deeper cause beneath the obvious one in whatever surface form the passage calls for. Never the "X is not Y; it is Z" shape. That construction is negative parallelism, which the Filter caps at one per piece — and the attention loop is forbidden from spending that budget. The head fake is a *structural* move (a better model surfacing beneath the obvious one), not a sentence template; enforce it as structure and vary the wording every time. Any stamped "not X, but Y" the build produces from this beat is a defect, cut on sight.
+**The Head Fake carries no template — negative parallelism is banned here.** Reveal the deeper cause beneath the obvious one in whatever surface form the passage calls for. Never the "X is not Y; it is Z" shape. That construction is negative parallelism, which the Filter bans outright (zero per piece) — there is no budget for the attention loop to spend. The head fake is a *structural* move (a better model surfacing beneath the obvious one), not a sentence template; enforce it as structure and vary the wording every time. Any stamped "not X, but Y" the build produces from this beat is a defect, cut on sight.
 
 ---
 

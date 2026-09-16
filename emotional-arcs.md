@@ -1,5 +1,7 @@
 # Emotional Arc Maps
 
+> **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
+
 Comprehensive emotional texture reference for all 10 narrative arcs, audience-specific calibration, and detailed beat maps for common combinations. Referenced during Build Brief (Phase 3.5) and Build (Phase 4).
 
 ---

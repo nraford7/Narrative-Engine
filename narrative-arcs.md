@@ -1,5 +1,7 @@
 # Narrative Arcs Reference
 
+> **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
+
 Detailed beat-by-beat structures for all 10 narrative arcs. These are **engagement-optimized** — they use mystery, delayed revelation, and reframing to hold attention.
 
 ### Beat Weights

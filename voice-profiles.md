@@ -1,5 +1,7 @@
 # Voice Profiles
 
+> **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
+
 Seven distinct writing voices for the Narrative Engine. The voice is auto-derived from audience + tone during the Build Brief phase (see [Auto-Derive Mapping Matrix](#auto-derive-mapping-matrix)), but the user can override it at any time.
 
 > **Override:** If the user names a voice directly ("use the Provocateur voice") or describes a voice ("write this like a skeptical journalist"), honor that over the auto-derive result.
@@ -48,7 +50,7 @@ Select Boardroom when audience is Executive or Investors and tone is Authoritati
 
 ### Description
 
-The voice of someone who has earned the right to stand on a big stage and chooses to talk *with* the audience, not *at* them. Authority worn lightly, ideas built collaboratively.
+The voice of someone with every credential to command a big stage who chooses to talk *with* the audience instead of at them. Authority worn lightly, ideas built collaboratively.
 
 ### Sentence structure
 
@@ -68,13 +70,13 @@ Emotion is present and intentional. Move between curiosity, surprise, and shared
 
 ### Signature moves
 
-1. **The Personal Bridge:** Begin a point with a specific personal anecdote or observation, then pivot to the universal principle it reveals. "Last Tuesday I watched a barista remake the same drink four times. She wasn't being difficult. She was doing what every great company refuses to do: admitting the first version wasn't good enough."
-2. **The Reframe Question:** Ask a question that reframes the entire problem. Not "How do we fix this?" but "What if the thing we're trying to fix is actually the thing we should be building on?"
+1. **The Personal Bridge:** Begin a point with a specific personal anecdote or observation, then pivot to the universal principle it reveals. "Last Tuesday I watched a barista remake the same drink four times. She was doing what every great company refuses to do: admitting the first version fell short."
+2. **The Reframe Question:** Ask a question that reframes the entire problem — swap "How do we fix this?" for "What if the thing we're trying to fix is actually the thing we should be building on?"
 3. **The Callback:** Plant a detail early and return to it later with new meaning. The audience feels the click of connection.
 
 ### Example paragraph
 
-Here's what nobody tells you about a pivot: it's not a turn. It's a demolition and a rebuild happening at the same time, while customers are still living in the building. NovaCorp looked at their numbers last quarter and saw what everyone in this room has seen at some point: the thing that built you is now the thing that's slowing you down. Their legacy product was 81% of revenue. It was also 81% of the reason they couldn't move. So they made a choice that sounds simple and is anything but. They decided to stop being the company they were and start becoming the company the market actually needs. The question isn't whether that's brave. The question is: what are the rest of us waiting for?
+Here's what nobody tells you about a pivot: it's a demolition and a rebuild happening at the same time, while customers are still living in the building. NovaCorp looked at their numbers last quarter and saw what everyone in this room has seen at some point: the thing that built you is now the thing that's slowing you down. Their legacy product was 81% of revenue. It was also 81% of the reason they couldn't move. So they made a choice that sounds simple and is anything but. They decided to stop being the company they were and start becoming the company the market actually needs. Call that brave. Then ask: what are the rest of us waiting for?
 
 ### Auto-derive rule
 
@@ -108,11 +110,11 @@ Channel controlled anger, intellectual impatience, and moral clarity. The emotio
 
 1. **The Sacred Cow Barbecue:** Name the assumption everyone treats as untouchable, then dismantle it with evidence. "Everyone says customer retention is king. Your retention rate is 94%. You're also dying. Maybe retention is just a comfortable metric for companies afraid to find new customers."
 2. **The Uncomfortable Question:** Pose a question that the reader cannot answer without confronting their own complicity. "If your strategy is so sound, why are you reading this instead of executing it?"
-3. **The Inversion:** Take the conventional wisdom and flip it. "The problem isn't that NovaCorp's pivot is risky. The problem is that not pivoting has been risky for three years and nobody had the guts to say it."
+3. **The Inversion:** Take the conventional wisdom and flip it. "Everyone calls NovaCorp's pivot risky. The real risk started three years ago, when standing still began costing them the market and nobody had the guts to say it."
 
 ### Example paragraph
 
-NovaCorp spent four years optimizing a product the market stopped wanting two years ago. That's not strategy. That's denial with a spreadsheet. Their board called it "staying the course." Wall Street has another word for it. Now they're pivoting, and everyone's wringing their hands about the risk of change. Nobody wrung their hands about the risk of standing still while market share dropped from 23% to 14% in a single quarter. The pivot isn't the gamble. The pivot is what you do after the gamble already failed. Stop debating whether to jump. The building is on fire.
+NovaCorp spent four years optimizing a product the market stopped wanting two years ago. Call that what it is: denial with a spreadsheet. Their board called it "staying the course." Wall Street has another word for it. Now they're pivoting, and everyone's wringing their hands about the risk of change. Nobody wrung their hands about the risk of standing still while market share dropped from 23% to 14% in a single quarter. The pivot is what you do after the gamble already failed. Stop debating whether to jump. The building is on fire.
 
 ### Auto-derive rule
 
@@ -183,7 +185,7 @@ Emotion is carried by the characters and the scenes, not by the narrator's comme
 ### Signature moves
 
 1. **The Cold Open:** Begin with a specific, vivid scene that drops the reader into the middle of the action. No context. No setup. "It was 2am on a Tuesday when the dashboard turned red." Context comes after the reader is already hooked.
-2. **The Human Detail:** Anchor every strategic decision in a human moment. Not "the board approved the pivot" but "the CFO closed her laptop, looked across the table, and said: 'If we don't do this now, there won't be a board meeting next quarter.'"
+2. **The Human Detail:** Anchor every strategic decision in a human moment — swap "the board approved the pivot" for "the CFO closed her laptop, looked across the table, and said: 'If we don't do this now, there won't be a board meeting next quarter.'"
 3. **The Echo:** End the piece by returning to an image or detail from the opening, now transformed by everything the reader has learned.
 
 ### Example paragraph

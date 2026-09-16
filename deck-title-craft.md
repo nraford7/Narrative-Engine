@@ -3,7 +3,7 @@
 > **This is a verbatim embed of keynote-create's `references/title-craft.md`, copied into Narrative
 > Engine so the deck build is self-contained — the build subagent never has to reach into another
 > skill at dispatch time.** Source: `~/.claude/skills/keynote-create/references/title-craft.md` ·
-> embedded 2026-06-22 · re-synced 2026-08-24. If keynote-create changes, re-sync this file. The render
+> embedded 2026-06-22 · re-synced 2026-09-16. If keynote-create changes, re-sync this file. The render
 > stage (Stage 4 — `keynote-render.mjs` + `/impeccable` + style-pack layouts) runs in the orchestrator,
 > not the subagent, so it legitimately still calls keynote-create; only the *title build* is embedded here.
 
@@ -37,7 +37,7 @@ A slide is a unit of story. One title = one move in the argument. If you find yo
 - Weak: "Customer feedback was mixed."
 - Strong: "Power users loved it; new users bounced."
 
-Numbers, names, and concrete nouns earn attention. Abstractions slide off.
+Numbers, names, and concrete nouns hold attention. Abstractions slide off.
 
 ### 6. Forward motion
 Each title should make the next feel inevitable. If adjacent titles can be swapped without loss of sense, the sequence isn't doing narrative work — it's listing.

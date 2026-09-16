@@ -6,7 +6,7 @@ Narrative Engine embeds copies of external material so the build subagent runs s
 |---|---|---|---|
 | `prose-craft.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/SKILL.md` | Verbatim body (header + scope section + file refs differ by design) | 2026-08-24 @ canonical `b6cdbe0` |
 | `prose-craft-constructions.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/constructions.md` | Verbatim (title + internal refs differ) | 2026-08-24 |
-| `deck-title-craft.md` | `~/Projects/keynote-create-skill/references/title-craft.md` | Verbatim body (header differs) | 2026-08-24 |
+| `deck-title-craft.md` | `~/Projects/keynote-create-skill/references/title-craft.md` | Verbatim body (header differs) | 2026-09-16 |
 | `rhetorical-figures.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/figures.md` | **Adapted, not verbatim** — this file adds NE-specific sections (humanizing-pass tie-in, deck-title tests); the figure tables and Filter budgets must stay aligned | 2026-08-24 |
 
 ## Sync procedure

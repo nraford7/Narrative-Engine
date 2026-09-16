@@ -11,8 +11,7 @@ structure. Therefore the humanizing pass has two tiers, and the second is not op
 | **Tier 1 — Sentence** | Word and clause | embedded `prose-craft.md` | Lexical AI-tells, monotone cadence, dead words, hedging |
 | **Tier 2 — Discourse** | Paragraph, section, whole piece | The structural-delta checklist below | AI signatures that *survive* lexical cleanup — over-resolution, theme-over-statement, chronological flattening, same-move repetition |
 
-Run Tier 1 inside the build (every pass). Run Tier 2 as a gate after focal fidelity (Phase 4.7),
-before the review panel.
+Run Tier 1 inside the build (every pass). Tier 2 runs INSIDE the build (builder self-check); Phase 4.7 verifies and flags only — repairs go through the builder's revision route.
 
 ---
 
@@ -79,6 +78,7 @@ This is the engine optimizing along the single strongest AI tell.
 - **Exception — the focal still has to land.** Keep the explicit statement at the climax and the close
   (that is the Ask doing its job). Cut the *redundant* restatements in the body. The budget rations
   body restatements; it never removes the one payoff that delivers the One Thing.
+- **Carve-out:** the answer-first opening statement in prose AND the deck title chain are protected; the budget governs mid-piece restatements only.
 
 ### 2. Tolerate asymmetry and open threads
 
@@ -104,12 +104,11 @@ Reviewers miss it because each paragraph reads fine *locally.*
 - [ ] Read the section as a sequence of *moves*, not sentences. If three paragraphs all do "claim → example → restate-claim," collapse or vary them.
 - [ ] No fractal summary — the piece should not say the same thing at three zoom levels.
 
-### 5. Restore idiosyncrasy
+### 5. Idiosyncrasy (conditional detector)
 
 **Feature-space rarity: 0.71 human vs 0.49 AI (Cohen's d = 0.83).** AI clusters at the mean.
 
-- [ ] Replace one generic phrasing per section with a concrete particular — a specific number, name, image, or the source's own words.
-- [ ] At least one moment of genuine specificity, wit, or personality that a template could not produce. (This is the existing "AI Test," now with a measured target behind it.)
+- [ ] Flag templated sameness where it appears; when the source offers a concrete particular, prefer it over an abstraction — but a plain, well-supported section is NOT a failure, and no "un-templatable moment" may be manufactured to satisfy this check.
 
 ---
 
@@ -134,9 +133,9 @@ checklist plus a human spot-check, not the judge's confidence score.
 When context is tight, the humanizing pass collapses to:
 
 - [ ] **Tier 1:** ran prose-craft (register-matched to density); CTAs exempted to the persuasion overlay.
-- [ ] **Theme:** body restatements cut; explicit statement kept only at climax + close.
-- [ ] **Resolution:** at least one thread left honestly open; no forced moral bow on every beat.
+- [ ] **Theme:** mid-piece body restatements cut; explicit statement kept at climax + close (the answer-first opening and deck title chains are exempt — the budget never removes an opening a shape requires).
+- [ ] **Resolution:** at least one thread left genuinely open; no forced moral bow on every beat.
 - [ ] **Time:** intended non-linearity survived; recurring patterns told iteratively.
 - [ ] **Redundancy:** no run of paragraphs making the identical move; no fractal summary.
-- [ ] **Idiosyncrasy:** one concrete particular restored per section; one un-templatable moment present.
+- [ ] **Idiosyncrasy:** templated sameness flagged; concrete particulars from the source preferred over abstractions; nothing manufactured — a plain, well-supported section passes.
 - [ ] **Gate, not objective:** none of the above was optimized toward as a target.

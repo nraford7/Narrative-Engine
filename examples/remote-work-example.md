@@ -1,6 +1,6 @@
 # Example Workflow: Remote Work Research
 
-This example shows the Narrative Engine workflow applied to a research article about remote work productivity.
+This example shows the Narrative Engine workflow applied to a research article about remote work productivity. It follows the spine flow: focal discovery → discovery questions → density → argument outline + shape → build brief → subagent build (body-only output + metadata sidecar) → gates → targeted review.
 
 ---
 
@@ -10,40 +10,44 @@ This example shows the Narrative Engine workflow applied to a research article a
 
 ---
 
-## Phase 1.5: Focal Discovery
+## Phase 1.75: Focal Discovery
 
 **Claude:**
-> I've reviewed your article on remote work productivity research. Based on the content, I see these potential focal points:
+> First, two one-liners so every candidate gets judged against them:
 >
-> 1. **The counterintuitive finding:** Fully remote workers outperform hybrid workers — this challenges the "hybrid is best of both worlds" assumption
-> 2. **The cost argument:** Current hybrid policies cost companies significantly in lost productivity
-> 3. **The talent angle:** Remote-first policies are becoming a competitive advantage for hiring
+> **Audience:** The executive team that owns the 2022 hybrid policy.
+> **Ask:** Approve a shift from hybrid to a remote-first team model.
 >
-> Which direction should we optimize for? Or is there a different point you want to land?
+> **Material Read:**
+> - **Stake:** The current hybrid policy is costing measurable output; the leases and the policy renew this year.
+> - **Tension:** The policy was designed for "best of both worlds" — the data says the worlds don't combine.
+> - **Genuine surprise:** The mechanism. Belonging predicted retention better than compensation did.
+> - **Strongest existing passages:** the 23%/847-employee output comparison; the belonging-vs-compensation regression; the context-switching cost analysis.
+> - **What changes:** Execs stop treating remote work as a perk to balance and start treating team cohesion as the thing to engineer.
+>
+> Candidate focal points:
+>
+> 1. **The performance claim:** Fully remote outperformed hybrid by 23% — rebuild the team model around it.
+> 2. **The cost claim:** Hybrid's context-switching is a measurable productivity tax the current policy pays every week.
+> 3. **The talent claim:** Remote-first is now an outright hiring and retention advantage.
+>
+> Which should we optimize for? Or is there a different point you want to land?
 
-**User:** 1 — the counterintuitive finding
+**User:** 1
 
 **Claude:**
-> Got it. Our focal statement: **"Contrary to conventional wisdom, fully remote workers outperform hybrid workers on productivity metrics — and the data suggests it's time to rethink our hybrid policy."**
+> Focal Statement: **"Fully remote outperformed hybrid by 23% — rebuild the team model around it."**
+> - **The One Thing:** Remote won outright; the policy should follow the winner.
+> - **The Ask:** Approve the remote-first transition.
+> - **The Through-Line:** We measured what we assumed — and the assumption lost.
 >
-> Everything in this deck will build toward or support this point.
+> `focal_origin: user-selected`
 
 ---
 
 ## Phase 2: Discovery Questions
 
-**Claude:**
-> **Who is your audience?**
-> 1. Executive / Board
-> 2. Technical / Engineering
-> 3. Sales / Marketing
-> 4. Investors / VCs
-> 5. General Public / Keynote
-> 6. Skeptics / Resisters
-> 7. Mixed / Cross-functional
-> 8. Academic / Research
-
-**User:** 1
+*Audience was pinned in Phase 1.75, so that question is skipped.*
 
 **Claude:**
 > **What are you trying to accomplish?**
@@ -79,107 +83,112 @@ This example shows the Narrative Engine workflow applied to a research article a
 > 1. **High-Impact** — Maximum compression. One punch per slide. For time-constrained execs who want the answer fast.
 > 2. **Narrative** — Room for the story to breathe. Emotional builds and context. For audiences who came to learn.
 > 3. **Evidence** — Denser supporting material. Multiple proof points. For skeptics or due diligence.
+> 4. **ELI5** — Maximum accessibility. Simple words, concrete analogies, zero jargon.
 
 **User:** 1 — they have limited time
 
 ---
 
-## Phase 3: Framework Recommendation
+## Phase 3: Argument Outline + Conditional Shape
 
 **Claude:**
-> Based on your inputs:
-> - Executive audience wanting efficiency
-> - Counterintuitive finding (remote > hybrid)
-> - Persuade to act
-> - High-Impact density
+> **Argument Outline** — what this exec team needs, in order:
+> 1. The answer and the recommendation, immediately (they have limited time).
+> 2. Why we believed hybrid was right — the 2022 bet, stated fairly.
+> 3. What we measured and what we expected to find.
+> 4. Why remote won — the mechanism (belonging predicted retention better than compensation).
+> 5. What the transition costs and what staying costs.
+> 6. The decision and the timeline.
 >
-> ## Recommendation 1: The Prestige + Pyramid Hybrid ★★★★★
->
-> **Why this works:** Your exec audience wants efficiency (Pyramid gives answer-first), but you have a genuine "Turn" — the counterintuitive finding. This hybrid lets you lead with the recommendation while structuring evidence as a revelation.
->
-> **Your content in this structure:**
-> 1. **Pledge (Answer):** "Our data suggests fully remote outperforms hybrid for productivity"
-> 2. **Setup:** Conventional wisdom says hybrid is best of both worlds
-> 3. **Evidence stack:** Show expected patterns first
-> 4. **Turn [REVEAL]:** "But when we isolated for X, the pattern inverted"
-> 5. **Prestige:** Reframe what this means for policy
-> 6. **Recommendation:** Specific policy changes + timeline
->
-> **Tradeoffs:**
-> - ✓ Respects exec time (answer first)
-> - ✓ Creates memorable "aha" moment
-> - ⚠ Requires genuine surprise in the data (you have it)
->
-> [Additional recommendations omitted for brevity]
->
-> **Which framework would you like?**
+> **Shape: answer-first.** The claim lands on slide 1; the middle defends it. The Material Read names one genuine surprise — the belonging mechanism — so the deck holds that back for the mid-deck turn while the headline finding leads. No named arc needed; the argument outline already carries the piece.
 
-**User:** 1
+**User:** Agreed
 
 ---
 
-## Phase 4: Build (Abbreviated)
+## Phase 3.5: Build Brief (Abbreviated)
 
-**Claude generates deck with integrated compression:**
+**Claude:**
+> Here's the Build Brief I'll hand the builder — focal statement (`user-selected`), audience + ask, the full Material Read, the outline above, shape `answer-first` · register `boardroom`, density High-Impact, plus voice and audience essentials (trust signals: sample size, methodology transparency; resistance trigger to avoid: implying the 2022 decision was foolish). Anything you'd change before I build?
+
+**User:** Build it.
+
+---
+
+## Phase 4: Build (Subagent, Abbreviated)
+
+The builder runs THE SPINE in a subagent and writes **two files**: the body-only deliverable and a metadata sidecar. No framework names, focal restatements, or sourcing tags appear in the deliverable.
+
+### `ne-output.md` (body only)
 
 ```markdown
 # Rethinking Remote: What Our Data Actually Shows
 
-**Framework:** Prestige + Pyramid
-**Density:** High-Impact
-**Focal Statement:** Fully remote outperforms hybrid on productivity
+**Punchline:** Fully remote outperformed hybrid by 23% — rebuild the team model around it.
+
+## Title sequence
+1. Fully remote outperformed hybrid by 23% — rebuild the team model around it
+2. We bet on hybrid to capture the best of both worlds
+3. We tracked three cohorts for 18 months expecting hybrid to win
+4. Belonging predicted retention better than compensation did
+   [...titles 5-8 continue: costs, transition plan, decision]
 
 ---
 
-## Slide 1 — The Pledge
-**Headline:** Our productivity data contradicts everything we assumed about hybrid work
-
-**Spotlight:** After 18 months and 847 employees tracked, fully remote workers produced 23% more output than hybrid workers. This challenges the "best of both worlds" narrative driving current policy.
-
-**Source:** [DIRECT]
+## Slide 1 — The Answer
+**Headline:** Fully remote outperformed hybrid by 23% — rebuild the team model around it
+**Spotlight (≤60 words):** 847 employees tracked for 18 months: fully remote workers produced 23% more output than hybrid workers, with equivalent collaboration scores (Productivity study, §3). The recommendation: rebuild the team model around fully remote work.
+**Design note:** Single large stat (23%) against white space; recommendation as a one-line subhead.
 
 ---
 
-## Slide 2 — The Conventional Wisdom
-**Headline:** We designed hybrid for balance — in-office collaboration plus remote focus time
-
-**Spotlight:** The 2022 policy assumed hybrid captures benefits of both models: face-to-face for creativity, home for deep work. Most Fortune 500 companies made similar assumptions.
-
-**Source:** [PARAPHRASE]
+## Slide 2 — The Bet We Made
+**Headline:** We bet on hybrid to capture the best of both worlds
+**Spotlight (≤60 words):** The 2022 policy assumed hybrid combines face-to-face creativity with at-home deep work. Most Fortune 500 companies made the same bet, on the same reasoning (Productivity study, §1–2).
+**Design note:** Timeline strip, 2022 policy milestone highlighted.
 
 ---
 
-## Slide 3 — What We Expected to Find
-**Headline:** We hypothesized hybrid workers would show the highest satisfaction and output
-
-**Spotlight:** Study design tracked three cohorts — full office, hybrid, full remote — measuring output, satisfaction, and collaboration quality over 18 months.
-
-**Source:** [ELABORATED]
+## Slide 3 — What We Expected
+**Headline:** We tracked three cohorts for 18 months expecting hybrid to win
+**Spotlight (≤60 words):** The study tracked full-office, hybrid, and full-remote cohorts on output, satisfaction, and collaboration quality (Productivity study, §4). Our hypothesis: hybrid tops both.
+**Design note:** Three-column cohort layout; hybrid column visually favored.
 
 ---
 
-## Slide 4 — The Turn [REVEAL at 40%]
-**Headline:** Instead, fully remote workers outperformed hybrid by 23% on every output metric
-
-**Spotlight:** The data surprised us. Remote workers showed higher focus time (6.2 vs 4.1 hours/day), faster project completion, and equivalent collaboration scores. The "balance" of hybrid was actually creating context-switching costs.
-
-**Source:** [DIRECT]
+## Slide 4 — The Turn
+**Headline:** Belonging predicted retention better than compensation did
+**Spotlight (≤60 words):** Across all three cohorts, team-belonging scores predicted 12-month retention more strongly than total compensation (Productivity study, §9). Remote teams built belonging deliberately — rituals, working agreements, protected focus time (6.2 vs 4.1 hrs/day). Hybrid assumed the office would supply it, and paid for that assumption in context-switching costs.
+**Design note:** Two-bar comparison: belonging vs compensation as retention predictors.
 
 ---
 
-[Slides 5-8 continue with evidence, implications, and recommendation...]
-
----
-
-## Sourcing Summary
-
-**Originality Score:** 72% user-sourced / 28% generated
-
-- Direct from source: 4 slides
-- Paraphrased: 2 slides
-- Elaborated: 1 slide
-- Generated: 1 slide (transition/framing)
+[Slides 5-8 continue with costs, transition plan, and the decision ask...]
 ```
+
+Slide 1 already delivered the finding and the recommendation; slide 4's job is the *mechanism* — the one thing in the source this audience doesn't already believe. The Turn adds new information; it never re-reveals the answer.
+
+### `ne-output-meta.md` (sidecar, excerpt)
+
+```markdown
+## Sourcing Summary
+| Slide | Tag | Source anchor |
+|---|---|---|
+| 1 | [DIRECT] | 23% output comparison, ¶3 |
+| 2 | [PARAPHRASE] | 2022 policy rationale, ¶1-2 |
+| 3 | [ELABORATED] | study design, ¶4 |
+| 4 | [DIRECT] | belonging regression, ¶9 |
+
+**Originality:** 72% source-derived / 28% generated.
+```
+
+---
+
+## Phases 4.6–4.8: Gates (Abbreviated)
+
+- **Gate 2 (blind focal judge):** cold-reads the body only, names the One Thing ("remote won; rebuild around it"), checks the source for a more consequential claim, finds none — **PASS**. Title-chain tests pass: the sequence reads as spoken prose, no dangling antecedents.
+- **Gate 3 (humanizing check):** no structural flags.
+- **Gate 4 (evidence review):** spot-checks the sidecar's tags against the source; confirms the belonging claim carries the source's correlational hedge — **CLEAN**.
 
 ---
 
@@ -188,19 +197,19 @@ This example shows the Narrative Engine workflow applied to a research article a
 **Claude:**
 > ## Review Summary
 >
-> **Reviewers:** Audience Advocate + Comms Specialist (selected for persuasion/pitch content)
+> **Reviewers:** Audience Advocate + Content Expert (selected for counterintuitive research — the evidence must be bulletproof)
 >
 > ### Strengths
-> - The "Turn" reveal at slide 4 will genuinely surprise this audience — *Audience Advocate*
-> - Message discipline is tight: one clear takeaway (remote > hybrid) — *Comms Specialist*
+> - Answer-first opening respects exec time; slide 4 then gives them something new — *Audience Advocate*
+> - The belonging claim keeps the source's correlational framing, and the 23% figure travels with its sample size — *Content Expert*
 >
 > ### Recommended Changes
 >
-> 1. **Slide 2 headline** — Comms Specialist
->    "designed hybrid for balance" → "bet on hybrid for balance" (stronger verb)
+> 1. **Slide 4 evidence** — Content Expert
+>    Put the regression's effect sizes in an appendix; a counterintuitive claim this central needs the numbers within reach.
 >
 > 2. **Preempt objections** — Audience Advocate
->    Add one sentence acknowledging hybrid's perceived benefits before dismissing
+>    Add one sentence acknowledging hybrid's perceived benefits before the cost slides.
 >
 > ### Overall Assessment
 > **Ready to present?** Yes with minor edits
@@ -211,9 +220,9 @@ This example shows the Narrative Engine workflow applied to a research article a
 ## Phase 5.5: Stress Test Panel (Optional)
 
 **Claude:**
-> Want me to run the Stress Test Panel? Based on your content type (strategic recommendation), I'd test against: **COO**, **Conservative**, and **Skeptic**.
+> Want me to run the Stress Test Panel? This is a strategic plan presented to decision-makers, so I'd test against: **COO**, **Conservative**, and **Risk Officer**.
 >
-> You can also add: Engineer, Risk Officer, CFO, Lawyer
+> You can also add: Engineer, Skeptic, CFO, Lawyer
 >
 > Run it?
 
@@ -232,7 +241,7 @@ This example shows the Narrative Engine workflow applied to a research article a
 > 1. 18 months is a short study period — could this be a pandemic anomaly?
 > 2. What about new employee onboarding? The data may not capture that.
 >
-> ### The Skeptic — PASSED WITH NOTES
+> ### The Risk Officer — PASSED WITH NOTES
 > **Concerns:**
 > 1. Sample size is good but selection bias possible — who self-selected into each cohort?
 >
@@ -245,7 +254,7 @@ This example shows the Narrative Engine workflow applied to a research article a
 >
 > ### 🟡 Should Fix
 > 1. **Study duration caveat** (Conservative) — Acknowledge 18 months is a snapshot; recommend continued tracking.
-> 2. **Selection bias** (Skeptic) — Add one sentence about how cohorts were formed.
+> 2. **Selection bias** (Risk Officer) — Add one sentence about how cohorts were formed.
 >
 > ### 🟢 Could Fix
 > 1. **Office space** (COO) — Important but probably out of scope for this deck.
@@ -254,4 +263,4 @@ This example shows the Narrative Engine workflow applied to a research article a
 
 ## Final Deck
 
-User implements Must Fix and Should Fix items, resulting in a tight 10-slide deck that lands the counterintuitive finding while preempting key objections.
+User implements Must Fix and Should Fix items, resulting in a tight 10-slide deck that leads with the recommendation, lands the belonging mechanism mid-deck, and preempts the key objections.

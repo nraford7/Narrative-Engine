@@ -1,5 +1,7 @@
 # Audience Profiles — Writing Instructions by Audience Type
 
+> **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
+
 Reference file for the Narrative Engine Build phase (Phase 4). When writing for a selected audience, load the matching profile and follow its directives throughout content generation — headlines, spotlights, prose paragraphs, CTAs, and review panel calibration.
 
 These are **instructions to the writer**, not descriptions of the audience. Follow them as rules.

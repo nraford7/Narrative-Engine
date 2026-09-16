@@ -1,5 +1,7 @@
 # High-Style Figures — the Intensify Layer
 
+> **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
+
 The fourth craft axis. The embedded `prose-craft` discipline gives three: the **Floor** (correctness and economy), the **Filter** (kill machine-tells), the **Ceiling** (construct varied sentences on purpose). This file adds the **Figure** — named rhetorical schemes of *repetition* and *reversal* that intensify a single anchor line so it lands harder than its content alone would.
 
 **How this differs from the Ceiling.** The Ceiling (Tufte) is *sentence architecture* — where the free modifiers branch, where the subject sits, how the series is built. Figures are a different axis: *patterns of sound and structure at the phrase level.* A cumulative sentence is a Ceiling move; a chiasmus is a Figure. They stack — a figured line is often also a built sentence — but they are chosen separately.

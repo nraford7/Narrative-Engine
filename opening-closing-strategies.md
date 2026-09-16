@@ -1,5 +1,7 @@
 # Opening & Closing Strategy Library
 
+> **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
+
 Rhetorical strategies for how to *begin* and *end* a narrative piece. These layer **on top of** framework beat structures — the framework defines the structural opening (e.g., "Pledge," "Vault," "Cold Open Outcome"), and this file defines the rhetorical approach used to deliver that beat.
 
 ---
@@ -108,7 +110,7 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 - Frameworks: Time Machine (Future Headline beat), Heist (Vault beat), Duarte Resonate (What Could Be beats), Raskin (Promised Land beat)
 
 **Example:**
-> "Imagine it's January 2028. Your retention rate hasn't moved in two years, but your revenue is up 35%. Not because you stopped losing customers — you did — but because the pricing restructure you launched in Q2 2026 turned your 'flight risk' segment into your highest-LTV cohort. The customers who were leaving over price became the ones who stayed longest once price matched perceived value."
+> "Imagine it's January 2028. Your retention rate hasn't moved in two years, but your revenue is up 35%. The pricing restructure you launched in Q2 2026 turned your 'flight risk' segment into your highest-LTV cohort. The customers who were leaving over price became the ones who stayed longest once price matched perceived value."
 
 **Avoid when:** The audience is skeptical or evidence-oriented — speculative futures feel ungrounded to engineers and analysts. Also avoid when the timeline is so distant that consequences feel abstract rather than urgent.
 
@@ -126,7 +128,7 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 - Frameworks: Prestige (Turn beat), Trojan Horse (Wrong Frame / Reframe beats), Columbo (Cold Open Outcome beat), Mystery Box (Failed Attempt beat)
 
 **Example:**
-> "You've been told that customer retention is a service problem — that churn means your product isn't delivering enough value. The data says the opposite. In a study of 2,300 churned accounts, 71% rated the product 4 or 5 stars in their exit survey. They didn't leave because your product failed them. They left because your pricing did."
+> "You've been told that customer retention is a service problem — that churn means your product isn't delivering enough value. The data says the opposite. In a study of 2,300 churned accounts, 71% rated the product 4 or 5 stars in their exit survey. The product kept its promise. The pricing drove them out."
 
 **Avoid when:** You cannot immediately back the contradiction with credible evidence. An unsupported contradiction reads as clickbait, not insight. Also avoid when building consensus — contradictions create winners and losers, which can fracture alignment-seeking audiences.
 
@@ -200,9 +202,9 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 - Frameworks: Time Machine (Rewrite Future Headline beat), Duarte Resonate (New Bliss), Raskin (Promised Land), Heist (Payoff beat)
 
 **Example:**
-> "Six months from now, your retention team is renamed your pricing intelligence team. The churn dashboard is replaced by a pricing elasticity model that flags at-risk segments before they churn — not after. Your Monday meeting isn't a post-mortem. It's a planning session. And the VP of Customer Success? She's presenting to the board on how a pricing restructure drove the highest net revenue retention in company history."
+> "Six months from now, your retention team is renamed your pricing intelligence team. The churn dashboard is replaced by a pricing elasticity model that flags at-risk segments before they churn. Your Monday meeting turns from post-mortem into planning session. And the VP of Customer Success? She's presenting to the board on how a pricing restructure drove the highest net revenue retention in company history."
 
-**Avoid when:** The audience is skeptical and you haven't earned the right to paint an optimistic future — unearned optimism reads as naive. Also avoid when the path from present to future is unclear; a beautiful destination without a visible road creates frustration.
+**Avoid when:** The audience is skeptical and you have not yet built the credibility to paint an optimistic future — optimism without a track record reads as naive. Also avoid when the path from present to future is unclear; a beautiful destination without a visible road creates frustration.
 
 ---
 
@@ -236,7 +238,7 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 - Frameworks: Trojan Horse (Button beat), Prestige (Prestige beat), Columbo (Playbook beat), Game of Scene (Tag beat)
 
 **Example:**
-> "Your customers aren't leaving because they don't love your product. They're leaving because they can't justify your price. Fix the price. Keep the customers."
+> "Your customers still love your product. They leave over your price. Fix the price. Keep the customers."
 
 **Avoid when:** The truth is genuinely complex and cannot be honestly reduced to one sentence without distortion. A false simplification undermines the rigor of everything before it. Also avoid when the audience values nuance as a signal of expertise (academic settings, policy discussions).
 
@@ -284,10 +286,10 @@ Recommended opening + closing combinations by audience and purpose. Each row rep
 
 | # | Audience | Purpose | Recommended Opening | Recommended Closing | Why |
 |---|----------|---------|--------------------|--------------------|-----|
-| 1 | Executive / Board | Persuade to act | Startling Statistic | Challenge | Executives respect data-led hooks and respond to urgency framing. Numbers earn attention; the challenge converts it to action. |
+| 1 | Executive / Board | Persuade to act | Startling Statistic | Challenge | Executives respect data-led hooks and respond to urgency framing. Numbers hold attention; the challenge converts it to action. |
 | 2 | Executive / Board | Report / update | Contradiction | The Simple Truth | A contradiction signals "this isn't a routine update," and a simple truth gives them the takeaway they'll repeat to their teams. |
 | 3 | Technical / Engineering | Inform / educate | Provocative Question | Lingering Question | Technical audiences engage with intellectual puzzles. Opening with a question activates their problem-solving mode; closing with a deeper question respects their desire to continue thinking. |
-| 4 | Technical / Engineering | Defend / justify | Startling Statistic | Callback | Data earns credibility with technical audiences. The callback structurally proves that your evidence resolves the opening claim. |
+| 4 | Technical / Engineering | Defend / justify | Startling Statistic | Callback | Data builds credibility with technical audiences. The callback structurally proves that your evidence resolves the opening claim. |
 | 5 | Sales / Marketing | Persuade to act | Cold Open Scene | Challenge | Sales teams respond to concrete scenarios and competitive urgency. The scene makes the problem real; the challenge makes inaction uncomfortable. |
 | 6 | Sales / Marketing | Inspire / motivate | Shared Pain | Future Vision | Naming the shared frustration builds solidarity; painting the transformed state gives them something to run toward. |
 | 7 | Investors / VCs | Persuade to act | Future Projection | Personal Commitment | Investors need to see the destination and believe the team will execute. Future projection shows the market; personal commitment shows the founder's conviction. |
@@ -345,7 +347,7 @@ The Rewrite Future Headline beat closes by returning to the future state with a 
 
 ### Trojan Horse's Button + The Simple Truth
 
-The Button beat must deliver a memorable closing that cements the reframe. The Simple Truth strategy delivers this by compressing the entire reframe into one sentence. After walking the audience through escalating examples and the reframe, stripping everything to "your customers aren't leaving because of your product; they're leaving because of your price" creates a sentence they will repeat. The Button is the nail; The Simple Truth is the hammer.
+The Button beat must deliver a memorable closing that cements the reframe. The Simple Truth strategy delivers this by compressing the entire reframe into one sentence. After walking the audience through escalating examples and the reframe, stripping everything to "your customers still love your product; they leave over your price" creates a sentence they will repeat. The Button is the nail; The Simple Truth is the hammer.
 
 ### Rashomon's Callback + Callback (Strategy)
 

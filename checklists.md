@@ -9,7 +9,7 @@ Consolidated quality checklists for deck review. Use the relevant sections based
 Run on every deck before delivery:
 
 - [ ] **Focal clarity:** Can you state the ONE point in one sentence?
-- [ ] **Slide necessity:** Does every slide earn its place? (Could any be cut without loss?)
+- [ ] **Slide necessity:** Does every slide justify its spot? (Could any be cut without loss?)
 - [ ] **Headline power:** Vivid verb, concrete nouns, one idea, ≤14 words
 - [ ] **Spotlight quality:** ≤60 words, specific, tied to headline, cited if sourced
 - [ ] **Arc integrity:** Reveal at correct position (~55-65% for twist arcs); plants and callbacks present
@@ -71,7 +71,7 @@ Can every headline be defended if challenged?
 
 - [ ] Claims have supporting evidence in the spotlight
 - [ ] Statistics have sources
-- [ ] Superlatives are earned ("best" requires proof)
+- [ ] Superlatives are backed ("best" requires proof)
 - [ ] No fabricated or exaggerated claims
 
 ### Sweep 6: Verbalization (Key Headlines Only)
@@ -251,10 +251,10 @@ Run after the build (Phase 4), before the review panel (Phase 5). If any check f
 - [ ] At least 2 headlines are specific to THIS content — they would not work in a different deck on a different topic
 
 ### The Killer Line
-- [ ] One line in the piece is explicitly designed to be quoted and remembered
-- [ ] It is short (under 15 words), concrete (not abstract), surprising (breaks a pattern), and repeatable (easy to say aloud)
-- [ ] It appears at a high-impact moment — the Turn/Reveal, the close, or the S.T.A.R. moment
-- [ ] It is flagged in the output with a **[KILLER LINE]** tag
+- [ ] A piece MAY carry a killer line when the material yields one — harvested from the draft or the source, never pre-drafted; absence is not a failure
+- [ ] When present, it is short (under 15 words), concrete (not abstract), surprising (breaks a pattern), and repeatable (easy to say aloud)
+- [ ] When present, it appears at a high-impact moment — the Turn/Reveal, the close, or the S.T.A.R. moment
+- [ ] When present, it is flagged in the output with a **[KILLER LINE]** tag
 
 ### Emotional Distinctiveness
 - [ ] The emotional arc matches the framework's emotional texture from `emotional-arcs.md` — verify the intended feelings at key beats
@@ -270,7 +270,7 @@ Run after the build (Phase 4), before the review panel (Phase 5). If any check f
 
 - [ ] Read the opening paragraph. Could it have come from any AI writing about any topic? If yes, rewrite until it couldn't.
 
-The pattern list below is **examples only** — the binding banlist is the prose-craft Filter (Tier 1), and the idiosyncrasy requirement is the Tier-2 delta in `humanizing-pass.md`. Don't maintain a third copy here; these are illustrations, not the source of truth:
+The pattern list below is **examples only** — the binding banlist is the prose-craft Filter (Tier 1), and the idiosyncrasy detector is the Tier-2 delta in `humanizing-pass.md`. Don't maintain a third copy here; these are illustrations, not the source of truth:
 
   - "In today's rapidly changing/evolving...", "Let's dive in / Let's explore...", "In conclusion...", "The question isn't if but when...", "At its core...", "It's worth noting that...", "This begs the question...", "Moving forward...", "It goes without saying...", "Now more than ever..."
 
@@ -278,7 +278,7 @@ The pattern list below is **examples only** — the binding banlist is the prose
 
 ## Killer Line Design Checklist
 
-Every piece must have ONE line designed to be remembered. Use this checklist during the build phase to craft it, and during review to verify it.
+A piece MAY carry a killer line when the material yields one — harvested from the draft or the source, never pre-drafted; absence is not a failure. When one is present, use this checklist during the build phase to shape it, and during review to verify it.
 
 ### Crafting
 - [ ] Expresses the focal statement in the most compressed, vivid form possible
@@ -299,11 +299,11 @@ Every piece must have ONE line designed to be remembered. Use this checklist dur
 - [ ] Is NOT buried inside a spotlight paragraph or mid-section — it's a headline, standalone element, or section closer
 
 ### Strong Killer Line Examples (for reference)
-- "Email isn't communication — it's other people's to-do lists for you"
-- "The office isn't where work happens — it's where work gets interrupted"
+- "Email is other people's to-do lists for you"
+- "The office is where work goes to get interrupted"
 - "Build what differentiates us; buy everything that doesn't"
 - "Every communication tool eventually becomes an anxiety delivery system"
-- "The pivot isn't the gamble. The pivot is what you do after the gamble failed."
+- "The pivot is what you do after the gamble already failed."
 
 ### Weak Killer Line Patterns (avoid)
 - Anything that starts with "The future of..." (too generic)

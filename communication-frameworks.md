@@ -1,5 +1,7 @@
 # Communication Frameworks Reference
 
+> **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
+
 Detailed structures for efficiency-optimized communication frameworks. These prioritize clarity, speed, and persuasion over engagement through mystery.
 
 ---
