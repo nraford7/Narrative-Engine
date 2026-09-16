@@ -37,21 +37,21 @@ Any prose for human eyes. Strongest signal: the draft reads flat, padded, hedged
 
 ## The Floor — Strunk (correctness + economy)
 
-Condensed. The rules that earn their keep:
+Condensed. The rules that do real work:
 
 | Rule | Do |
 |------|----|
 | Active voice | Subject acts. The passive is a tool, not a fault — reach for it on purpose (see *Passive: when it's the right choice* below), never by accident. |
 | Positive form | Say what *is*, not what isn't. ("forgot" not "did not remember") |
 | Definite, specific, concrete | The named thing beats the abstraction every time. |
-| Omit needless words | Every word must report. Cut filler, not qualification that earns its place. |
+| Omit needless words | Every word must report. Cut filler, not qualification that does real work. |
 | Keep related words together | Subject near verb, modifier near what it modifies. |
 | Emphatic word at the end | The end of the sentence is the loudest position. Put the payload there. |
 | Parallel form for parallel ideas | Co-ordinate ideas take co-ordinate grammar. |
 
-**Cut by default** (these survive only if they pass the naming test — a nameable rhetorical job, e.g. "actually" flagging a real contrast): very, really, quite, just, actually, basically, in order to (→ to), the fact that, there is/are openings. Default is delete; the burden is on the word to earn its place. Replace: utilize→use, leverage→use, facilitate→help.
+**Cut by default** (these survive only if they pass the naming test — a nameable rhetorical job, e.g. "actually" flagging a real contrast): very, really, quite, just, actually, basically, in order to (→ to), the fact that, there is/are openings. Default is delete; the burden of proof is on the word. Replace: utilize→use, leverage→use, facilitate→help.
 
-**Passive: when it's the right choice.** The passive earns its place for four specific jobs — and never as mere change of pace, never back-to-back:
+**Passive: when it's the right choice.** The passive is right for four specific jobs — and never as mere change of pace, never back-to-back:
 - **Dropped agent.** The actor is unknown, obvious, or irrelevant. "Aristotle's psychology is marred with obscurity" — naming the agent yields the absurd "marred *by Aristotle*."
 - **End-weight.** The payload deserves the loud final slot. "...the fundamentals of life, such as death." Active buries "death" mid-sentence and kills the punch.
 - **Cohesion.** Keeps one recurring topic in subject position across sentences so the reader tracks a single thread.
@@ -59,7 +59,7 @@ Condensed. The rules that earn their keep:
 
 If none of those four is the payoff, use active. Variety alone is not a reason.
 
-**The first sentence is its own job.** The opening line of a piece does work no other sentence does: it decides whether the reader continues. Make it create curiosity, not summarize. It earns rewrites the rest of the draft doesn't — give it disproportionate effort and judge it by one test: does the reader want the second sentence?
+**The first sentence is its own job.** The opening line of a piece does work no other sentence does: it decides whether the reader continues. Make it create curiosity, not summarize. It deserves rewrites the rest of the draft doesn't — give it disproportionate effort and judge it by one test: does the reader want the second sentence?
 
 ## The Filter — Tropes (kill machine-tells)
 
@@ -71,7 +71,7 @@ A single instance is usually fine. The tell is repetition or stacking. Sweep for
 
 **Word choice** — Ban: delve, utilize, leverage (verb), robust, streamline, harness, certainly, tapestry, landscape (for domains), paradigm, synergy, ecosystem, framework (for anything not literally a framework), multifaceted, nuanced, pivotal, transformative, compelling (as generic praise). Ban magic adverbs faking significance: quietly, deeply, fundamentally, remarkably, arguably, strikingly. Ban verbs faking depth: underscore, resonate, illuminate, pave the way. Ban: plethora, myriad, "when it comes to" (→ for). Don't dodge the copula: "is" beats "serves as / stands as / marks / represents."
 
-**Sentence structure** — Negative parallelism ("not X — it's Y"): **zero per piece, hard ban.** Always use positive form instead — state what the thing *is*, never define it by what it isn't. The ban covers the variants: causal ("not because X, but because Y") and the cross-sentence reframe ("The question isn't X. The question is Y."). Ban the countdown ("Not X. Not Y. Just Z."), the self-answered question ("The X? A Y."), anaphora past two in a row, stacked tricolons (**one rule-of-three per section max** — the cap rations the *device*; build the ones that survive as a real series form, see `prose-craft-constructions.md` → The Series). Ban "it's worth noting / it bears mentioning / importantly / interestingly / notably." No "-ing" significance tails ("highlighting its role," "reflecting broader trends"). Ban "earns its weight / earns its place" (generic significance). Ban "one of the most [superlative] in history/ever" (generic superlative — be specific or cut). False ranges: "from X to Y" only when X and Y sit on a real spectrum with a meaningful middle.
+**Sentence structure** — Negative parallelism ("not X — it's Y"): **zero per piece, hard ban.** Always use positive form instead — state what the thing *is*, never define it by what it isn't. The ban covers the variants: causal ("not because X, but because Y") and the cross-sentence reframe ("The question isn't X. The question is Y."). Ban the countdown ("Not X. Not Y. Just Z."), the self-answered question ("The X? A Y."), anaphora past two in a row, stacked tricolons (**one rule-of-three per section max** — the cap rations the *device*; build the ones that survive as a real series form, see `prose-craft-constructions.md` → The Series). Ban "it's worth noting / it bears mentioning / importantly / interestingly / notably." No "-ing" significance tails ("highlighting its role," "reflecting broader trends"). Ban the ENTIRE earn family: "earn/earned/earns/earning," "earns its weight/place/keep," "hard-earned," "the argument earns X" (NR total ban 2026-09-06 — prose certifying its own argumentative labor; say where the thing came from or what it does instead). Ban "the room / which rooms / rooms where" and all spatial metonyms used as proxies for a location, event, domain, or experience (NR 2026-09-06 — an AI tell; name the actual meeting, negotiation, domain, or years of practice; literal rooms in narrated scenes are fine). Ban "one of the most [superlative] in history/ever" (generic superlative — be specific or cut). False ranges: "from X to Y" only when X and Y sit on a real spectrum with a meaningful middle.
 
 **Paragraph shape** — No sentence fragments standing alone as paragraphs for manufactured punch. No listicle-in-prose ("The first... The second... The third..."): use a real list, or write genuinely connected paragraphs.
 
@@ -97,7 +97,7 @@ The positive moves none of the other layers teach. Full catalog with real exampl
 | **Parallelism** | Co-ordinate ideas in matching grammar for rhythm and weight | — |
 | **Syntactic symbolism** | Make the *shape* enact the meaning (suspense via a held sentence, balance via a balanced one) | — |
 
-**The Ceiling's job: kill monotony.** If every sentence is the same length and shape (subject-verb-object, subject-verb-object), the prose is dead even when each sentence is "correct." Vary length. Vary where the weight falls. Build at least one sentence that earns a reader's breath.
+**The Ceiling's job: kill monotony.** If every sentence is the same length and shape (subject-verb-object, subject-verb-object), the prose is dead even when each sentence is "correct." Vary length. Vary where the weight falls. Build at least one sentence that rewards a reader's breath.
 
 **The Figure — the optional fourth axis.** Named rhetorical schemes of surprise and repetition (antithesis, chiasmus, controlled anaphora) that intensify a piece's two or three anchor moments: the opening, the turn, the close. Catalog in `rhetorical-figures.md`. Load it only for savored registers; every figure lives inside the Filter's caps and passes the naming test.
 
@@ -126,7 +126,7 @@ Strunk says omit needless words and avoid loose sentences. Tufte celebrates the 
 **Device budget (Filter) vs. devices (Ceiling).**
 Tropes rations em-dashes and long/varied sentences; Tufte's mid-branching leans on dashes and his cumulatives run long. Resolve by **provenance:**
 - The caps are absolute (em-dashes: three, period). A device you deploy *on purpose, for an effect you can name in one phrase,* is craft, not a tell — but craft still lives within the cap.
-- **The naming test (governs every rationed element — words, em-dashes, tricolons, parallel runs):** name the effect in a phrase ("dash suspends the clause for surprise"). Can't name the job? It's a tell — cut it, *even when you're under budget.* Naming never raises a cap; it decides which instances survive when you're at or over the cap, and strips the unearned ones below it. The cap sets the maximum; the naming test removes everything that doesn't earn its place underneath.
+- **The naming test (governs every rationed element — words, em-dashes, tricolons, parallel runs):** name the effect in a phrase ("dash suspends the clause for surprise"). Can't name the job? It's a tell — cut it, *even when you're under budget.* Naming never raises a cap; it decides which instances survive when you're at or over the cap, and strips the unjustified ones below it. The cap sets the maximum; the naming test removes everything that cannot name its job underneath.
 - Master-on-purpose beats model-by-default, even when the surface structure is identical.
 
 **Note — where Floor and Filter agree:** both push you off negative constructions. Strunk's "positive form" and the Filter's ban on negative parallelism reinforce each other. No conflict; double weight.
@@ -139,7 +139,7 @@ The same sentence is right in one place and wrong in another. The Filter is alwa
 |----------|------|-----------|
 | CTA, UI text, error message, exec summary, anything scanned | **Floor-dominant.** Ration the Ceiling. | Short base clauses, minimal branching, payload up front. |
 | Memo, briefing, report body | **Balanced.** | Mostly tight; one or two built sentences per section for rhythm. |
-| Essay, argument passage, narrative, anything read linearly and savored | **Ceiling earns its place.** | Cumulative sentences, varied branching, syntactic symbolism welcome. |
+| Essay, argument passage, narrative, anything read linearly and savored | **Ceiling leads.** | Cumulative sentences, varied branching, syntactic symbolism welcome. |
 
 A cumulative sentence is gorgeous in an essay and a liability on a button.
 
@@ -148,7 +148,7 @@ A cumulative sentence is gorgeous in an essay and a liability on a button.
 When context is tight, run this single checklist instead of three passes:
 
 - [ ] Active, positive, concrete; emphatic word at the end (Floor)
-- [ ] First sentence creates curiosity, not summary; rewritten until it earns the second (Floor)
+- [ ] First sentence creates curiosity, not summary; rewritten until the reader wants the second (Floor)
 - [ ] Dead words cut: very/just/actually/in order to/the fact that (Floor)
 - [ ] Zero negative parallelism (any variant, incl. "not because X, but because Y"), ≤1 tricolon/section, ≤3 em-dashes total (Filter)
 - [ ] No delve/leverage/robust/tapestry/nuanced/pivotal/compelling, no "earns its weight," no "it's worth noting," no signposted conclusion, no generic superlatives (Filter)
