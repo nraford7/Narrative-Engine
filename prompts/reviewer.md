@@ -12,7 +12,8 @@ Read these files using the Read tool:
 
 1. `RUN_DIR/ne-output.md` — The piece to review
 2. `RUN_DIR/ne-build-brief.md` — The Build Brief that guided the build
-3. `{{REFERENCE_FILE}}` — Your specialist reference (if specified; some agents have none)
+3. `RUN_DIR/ne-source-content.md` — The original source material. Spot-check claims against the source; a verdict on sourcing you did not check is a guess.
+4. `{{REFERENCE_FILE}}` — Your specialist reference (if specified; some agents have none)
 
 > **Note:** The skill directory is `/Users/noahraford/.claude/skills/Narrative-Engine/`. Reference files are relative to this directory. If `{{REFERENCE_FILE}}` is `(none)`, skip that read.
 
@@ -80,7 +81,7 @@ Return your findings as structured markdown (NOT written to a file). Use this fo
 
 ## Dispatch Configurations
 
-The orchestrator selects 2 reviewers based on content type (see SKILL.md Phase 5 for the selection table). The Audience Advocate is always one reviewer. The second is selected based on the highest-risk dimension for this content type.
+The orchestrator selects 2 reviewers based on content type. The Audience Advocate is always one reviewer. The second is selected based on the highest-risk dimension for this content type.
 
 | # | Agent | AGENT_ROLE | REFERENCE_FILE | ROLE_DESCRIPTION | KEY_QUESTION |
 |---|-------|-----------|----------------|-----------------|-------------|
@@ -89,19 +90,4 @@ The orchestrator selects 2 reviewers based on content type (see SKILL.md Phase 5
 | 3 | Content Expert | Content Expert | `agent-reference-verification.md` | Reviews for accuracy, sourcing integrity, and logical validity. Checks that claims are defensible and evidence is properly attributed. | "Can every claim be defended if challenged?" |
 | 4 | Originality Agent | Originality Agent | `checklists.md` | Reviews for distinctiveness, freshness, and anti-sameness. Checks voice consistency, emotional arc adherence, headline variety, killer line quality, opening/closing strategy execution. Flags generic patterns and AI-isms. | "Would this be distinguishable from any other AI-generated piece on this topic?" |
 
-### Content-Type to Reviewer Mapping
-
-| Content Type | Reviewer 1 | Reviewer 2 |
-|-------------|-----------|-----------|
-| Investor pitch / fundraising | Audience Advocate | Comms Specialist |
-| Sales pitch | Audience Advocate | Comms Specialist |
-| Strategic plan / transformation | Audience Advocate | Content Expert |
-| Post-mortem / retrospective | Audience Advocate | Content Expert |
-| Counterintuitive research | Audience Advocate | Content Expert |
-| Keynote / thought leadership | Audience Advocate | Originality Agent |
-| Vision / inspiration piece | Audience Advocate | Originality Agent |
-| Paradigm shift / new model | Audience Advocate | Originality Agent |
-| Scenario planning | Audience Advocate | Comms Specialist |
-| Case study | Audience Advocate | Content Expert |
-| Product launch | Audience Advocate | Comms Specialist |
-| Policy recommendation | Audience Advocate | Content Expert |
+Reviewer roles are named in your dispatch message; the mapping table lives in SKILL.md Phase 5 (single source).

@@ -12,8 +12,9 @@ Read these files using the Read tool:
 
 1. **`RUN_DIR/ne-output.md`** — The piece to stress-test
 2. **`RUN_DIR/ne-build-brief.md`** — The Build Brief that guided the build
+3. **`RUN_DIR/ne-source-content.md`** — The original source material. Spot-check claims against the source; a verdict on sourcing you did not check is a guess.
 
-Read both files in full before beginning your analysis.
+Read all files in full before beginning your analysis.
 
 ---
 
@@ -98,15 +99,4 @@ The main conversation selects 3 personas per run based on content type. Below is
 | 6 | Conservative | "Why change what's working? What's wrong with the status quo?" | Unaddressed status-quo concerns, change-for-change's-sake, disruption without justification |
 | 7 | COO | "Would this actually work in practice? Can we execute this?" | Operational blindspots, unrealistic execution plans, resource assumptions, timeline fantasies |
 
-### Auto-Selection by Content Type
-
-| Content Type | Auto-Selected Personas |
-|--------------|----------------------|
-| Investor pitch | CFO, COO, Skeptic |
-| Sales pitch | Skeptic, COO, Engineer |
-| Strategic plan | COO, Conservative, Risk Officer |
-| Technical proposal | Engineer, Skeptic, COO |
-| Policy recommendation | Lawyer, Risk Officer, Conservative |
-| Product launch | COO, Skeptic, Engineer |
-| Post-mortem | Engineer, Risk Officer, COO |
-| Keynote | Skeptic, Conservative |
+Personas are named in your dispatch message; the selection table lives in SKILL.md Phase 5.5 (single source).
