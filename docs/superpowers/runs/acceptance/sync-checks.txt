@@ -1,6 +1,0 @@
-Command: bash scripts/check-sync.sh
-Exit: 0
-OK    prose-craft.md <- prose-craft/SKILL.md + documented NE adaptations
-OK    prose-craft-constructions.md <- prose-craft/constructions.md
-OK    deck-title-craft.md <- keynote-create references/title-craft.md
-NOTE  rhetorical-figures.md is adapted, not verbatim — verify figure tables + Filter budgets against prose-craft/figures.md by eye (see SYNC.md).

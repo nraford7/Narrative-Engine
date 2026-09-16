@@ -68,4 +68,4 @@ bash scripts/check-rebuild.sh
 bash scripts/check-sync.sh
 ```
 
-The first command checks key workflow invariants; the second checks embedded material against locally available canonicals, including a finite list of documented adaptations. Neither substitutes for behavioral acceptance tests. The [rebuild plan](docs/superpowers/plans/2026-09-16-ne-spine-rebuild.md) specifies the protocol scenarios and blinded source-to-output comparisons.
+The first command checks key workflow invariants; the second checks embedded material against locally available canonicals, including a finite list of documented adaptations. Neither substitutes for behavioral acceptance tests. Historical development plans and acceptance records remain available in Git history.

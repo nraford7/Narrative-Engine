@@ -1,7 +1,0 @@
-Command: python3 scripts/test-check-sync.py
-Exit: 0
-...
-----------------------------------------------------------------------
-Ran 3 tests in 0.150s
-
-OK
