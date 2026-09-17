@@ -20,10 +20,10 @@ It can produce:
 4. **Work out the argument.** Decide what the reader needs to understand and what each section adds. The usual approach is to state the answer early and explain it. Storytelling structures are available when the material suits them.
 5. **Write and review.** One reviewer reads the piece before seeing the brief, checking what it actually communicates. Another compares its claims with the source. Claude repairs problems it finds and brings unresolved issues back to you.
 
-You choose how much guidance to give:
+Every new piece starts with a required choice: **Fast or Deep**. There is no default. Unless you explicitly choose a mode in your request, Claude asks and waits for your answer; asking for speed does not choose Fast.
 
 - **Fast:** Claude makes the initial choices and shows you one brief to correct or approve.
-- **Guided:** Claude asks the questions one at a time.
+- **Deep:** Claude works through the audience, intended use, desired outcome, format, tone and main point with you before building the argument. It confirms what you have already supplied and asks about what is missing.
 
 For presentations, you can also choose **Boardroom**, with full-sentence titles that carry the argument, or **Keynote**, with shorter titles supported by spoken narration. The amount of useful material determines the length.
 

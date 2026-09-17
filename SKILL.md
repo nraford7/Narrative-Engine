@@ -124,11 +124,11 @@ If user pastes content without instructions, acknowledge receipt and proceed to 
 
 ## PHASE 1.25: Mode
 
-Ask once, before any other question:
+A mode choice is mandatory for each new piece. Before discovery, outlining, or drafting, ask the question below and wait for the user to choose. If the user has already explicitly chosen Fast or Deep for this piece, acknowledge that choice without asking again. A revision of the same piece keeps its selected mode.
 
 > **How do you want to work?**
 > 1. **Fast** — I read your content, infer every discovery answer (format, register, audience, ask, focal point, purpose, content type, tone, density, shape), and present one pre-filled Build Brief for you to correct or approve. One confirmation, then build.
-> 2. **Guided** — full step-by-step discovery: each question in turn.
+> 2. **Deep** — work through the framing together: audience, intended use, desired outcome, format, tone, and the main point before building the argument. Ask each unresolved question in turn; confirm information already supplied instead of asking for it again.
 
 **Fast mode mechanics:**
 - Run Phases 1.5–3.5 internally, without asking questions. Infer each answer from the content and conversation context; where genuinely ambiguous, make the best call and mark it `[INFERRED — LOW CONFIDENCE]` in the brief.
@@ -138,13 +138,13 @@ Ask once, before any other question:
 - Present ONE consolidated message: the inferred discovery answers as a compact table, then the compiled Build Brief. The user corrects any line or says go.
 - Gates 2–4, the review panel, and the stress test behave identically in both modes.
 
-**Default:** if the request already implies speed ("just write it", "quick pass") or the content arrived with clear instructions, default to Fast and say so — the user can switch. Otherwise ask.
+**No default mode. Never select Fast automatically.** Clear instructions, complete source material, urgency, "just write it", "quick pass", "no questions", and permission to proceed are not mode choices. If no explicit choice has been made, ask Fast or Deep and stop until the user answers; silence is not a choice. This applies equally to standalone use and use through another skill. Treat the former name "Guided" as an explicit choice of Deep for compatibility.
 
 ---
 
 ## PHASE 1.5: Output Format
 
-*Guided mode only — Fast mode infers this and surfaces it in the consolidated brief.*
+*Deep mode only — Fast mode infers this and surfaces it in the consolidated brief.*
 
 Ask before proceeding to focal discovery:
 
@@ -227,7 +227,7 @@ The Material Read is pasted in full into the Build Brief — it is the builder's
 
 ## PHASE 2: Discovery Questions
 
-*Guided mode only — Fast mode infers these and surfaces them in the consolidated brief.*
+*Deep mode only — Fast mode infers these and surfaces them in the consolidated brief.*
 
 Ask one question at a time. Wait for the user to answer before asking the next question. User can respond with numbers or their own words. **Skip the audience question if Phase 1.75 Step 1 already answered it.**
 
@@ -285,7 +285,7 @@ Ask one question at a time. Wait for the user to answer before asking the next q
 
 ## PHASE 2.5: Density Mode Selection
 
-*Guided mode only — Fast mode infers this and surfaces it in the consolidated brief.*
+*Deep mode only — Fast mode infers this and surfaces it in the consolidated brief.*
 
 ### For Presentations:
 
@@ -808,11 +808,11 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 ## Quick Start
 
 1. User provides content
-2. **Ask mode: Fast or Guided.** Fast infers steps 3–8 from the content and presents one consolidated brief (focal candidates always visible, `focal_origin: inferred`); Guided walks them one at a time.
-3. Ask output format (Presentation / Prose / Both). **If Presentation → ask the register: Boardroom sentence-titles or Keynote fragments (default Boardroom).** *(Guided; inferred + surfaced in Fast)*
+2. **Require an explicit mode choice: Fast or Deep; never default.** If none has been supplied for this piece, ask and wait. Fast infers steps 3–8 from the content and presents one consolidated brief (focal candidates always visible, `focal_origin: inferred`); Deep walks them one at a time.
+3. Ask output format (Presentation / Prose / Both). **If Presentation → ask the register: Boardroom sentence-titles or Keynote fragments (default Boardroom).** *(Deep; inferred + surfaced in Fast)*
 4. **Pin audience + ask** (one line each; skip only if stated), then do the **Material Read** (stake, tension, genuine surprise or "none", strongest passages, what changes)
 5. **Propose 2-3 stance-committing focal candidates** → user confirms → Focal Statement (One Thing / Ask / Through-Line) + `focal_origin` recorded. For decks this is the punchline.
-6. Ask remaining discovery (purpose, content type, tone), then density mode *(Guided; inferred in Fast)*
+6. Ask remaining discovery (purpose, content type, tone), then density mode *(Deep; inferred in Fast)*
 7. **Write the Argument Outline**, then choose the shape conditionally (**Gate 1**): answer-first default; withheld-reveal only on a genuine surprise; named arc only after the beat-support audit (quoted passages) + skeleton stamp test in `framework-selection.md`
 8. **Compile the Build Brief** (focal + origin, audience/ask, Material Read in full, argument outline, shape + register, density, voice + audience essentials, optional passage-pointer for open/close) → user confirms
 9. **Create RUN_DIR** (`/tmp/ne-<yymmdd>-<slug>/`), write Build Brief and source content into it
