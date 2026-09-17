@@ -1,5 +1,7 @@
 # Communication Frameworks Reference
 
+> Delivery reference only. Purpose, source fidelity and the approved outline take precedence. Example slide allocations and numerical ratios are illustrations, not quotas. Do not manufacture agitation, scarcity, social proof or an action request. Use only the operation that clarifies the selected argument; do not stack competing structures.
+
 > **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
 
 Detailed structures for efficiency-optimized communication frameworks. These prioritize clarity, speed, and persuasion over engagement through mystery.

@@ -37,6 +37,8 @@ Read with the Read tool, in this order.
 
 Read `RUN_DIR/ne-build-brief.md`. It carries:
 
+- Purpose and observable success condition; audience starting position (known / inferred / unknown); intended use, format and length limits
+- Detail, assumed knowledge, rhythm, tone and operative voice instructions; evidence boundaries
 - Focal Statement (with its `focal_origin` line)
 - Material Read (stake, tension, genuine surprise or "none", strongest existing passages, what changes)
 - Argument Outline — what this audience needs to understand, in what order, what each section adds
@@ -53,10 +55,10 @@ Read `RUN_DIR/ne-source-content.md` — the user's original material. Every clai
 
 ### 3. Craft files (exactly these four — nothing else)
 
-- `/Users/noahraford/.claude/skills/Narrative-Engine/prose-craft.md` — the sentence-level discipline (Ceiling / Filter / Floor). Apply it yourself; do not invoke a separate skill.
-- `/Users/noahraford/.claude/skills/Narrative-Engine/prose-craft-constructions.md` — its constructions catalog.
-- `/Users/noahraford/.claude/skills/Narrative-Engine/deck-title-craft.md` — **presentation output only.** Title-chain discipline, the spoken-prose and antecedent tests, register variants.
-- `/Users/noahraford/.claude/skills/Narrative-Engine/humanizing-pass.md` — **read the Tier-2 structural-delta checklist only.** The deltas are gates and drift detectors, never optimization targets.
+- `NE_ROOT/prose-craft.md` — the sentence-level discipline (Ceiling / Filter / Floor). Apply it yourself; do not invoke a separate skill.
+- `NE_ROOT/prose-craft-constructions.md` — its constructions catalog.
+- `NE_ROOT/deck-title-craft.md` — **presentation output only.** Title-chain discipline, the spoken-prose and antecedent tests, register variants.
+- `NE_ROOT/humanizing-pass.md` — **read the Tier-2 structural-delta checklist only.** The deltas are gates and drift detectors, never optimization targets.
 
 That is the whole reading list. No other file is an input to this build.
 
@@ -64,7 +66,7 @@ That is the whole reading list. No other file is an input to this build.
 
 ## THE SPINE (the build procedure)
 
-1. MATERIAL ANCHOR. Re-read the brief's Material Read and argument outline. Your job is to
+1. MATERIAL ANCHOR. Check that the brief includes purpose/success, audience starting position, format/use/limits, evidence boundaries and approved point/structure. If a consequential field is missing or contradictory, return a brief-gap report to the orchestrator before drafting; do not invent it. Re-read the brief's Material Read and argument outline. Your job is to
    execute THAT argument for THAT audience — not to decorate it.
 2. CLAIM. The brief's focal statement is the governing claim. Every section serves it.
 3. SHAPE. Follow the brief's shape. ANSWER-FIRST: the claim lands by slide/section 2; the
@@ -74,8 +76,7 @@ That is the whole reading list. No other file is an input to this build.
    beat skeleton and its pacing notes; beats without cited source support were already cut.
 4. TITLES/SECTIONS AS A CHAIN. Each title (deck) or section opening (prose) is a short
    complete sentence delivering one beat, carrying its setup or resolving the prior thread.
-   Keynote register: fragments are the register; complete sentences are rationed for the
-   3-4 lines meant to land; the chain test applies to the beat + narration read instead.
+   Keynote register: fragments are the register; use complete sentences wherever needed for clarity; the chain test applies to the beat + narration read instead.
 5. TEST, THEN REVISE ONCE. Titles-only/spoken-prose test + antecedent test + stranger test
    (per deck-title-craft.md; register-appropriate variant). For prose: read section openings
    in sequence as one paragraph — same chain standard. One revision pass.
@@ -96,10 +97,9 @@ That is the whole reading list. No other file is an input to this build.
    humanizing-pass.md as a self-check — flag-and-fix once, never optimize against it.
    Carve-outs: the answer-first opening statement (prose) and the title chain (decks) are
    protected from the theme-statement budget; it governs mid-piece restatements only.
-9. LENGTH. Content-driven. Count the source's substantive points; a strong 8-slide deck beats
-   a padded 20-slide deck; skip outline sections the source cannot fill.
+9. LENGTH AND PURPOSE. Fit the approved length/time limits without padding. Test each success criterion: an educational piece explains the mechanism or distinction; a persuasive piece supports its action and addresses the relevant objection; a report makes changes and uncertainty clear. Preserve required reasoning and qualifications. If the approved outline cannot be supported or fitted, report the conflict rather than silently cutting an essential step.
 
-**On Step 9 and named arcs:** the beat structure is a menu, not a checklist. Beats the source cannot fill were already cut when the brief was compiled — do not resurrect them, and do not pad kept beats to make them feel fuller than the material is.
+**On Step 9 and named arcs:** every essential/anchor beat was supported during brief compilation and must survive. Missing support for an essential beat is a brief gap, not permission to invent or omit it. Only nonessential beats can be cut or combined. Never resurrect omitted optional beats or pad them.
 
 ---
 
@@ -122,9 +122,10 @@ You write TWO files. `RUN_DIR/ne-output.md` is the deliverable body and NOTHING 
 ---
 
 ## Slide 1 — [Title]
-**Headline:** [the title, a short complete sentence — or the keynote fragment + narration line]
+**Headline:** [visible title: sentence or fragment according to register]
 **Spotlight (≤60 words):** [ONE example, statistic, or quote, with citation]
 **Design note:** [one specific visual suggestion]
+**Narration:** [actual spoken words when required by the brief or fragment-led register; separate from the visible title]
 
 ---
 
@@ -156,6 +157,9 @@ You write TWO files. `RUN_DIR/ne-output.md` is the deliverable body and NOTHING 
 ## Shape & Register
 [answer-first | withheld-reveal | named arc: <name>] · [boardroom | keynote | prose + density mode]
 [One line on any shape decision you made inside the brief's rules.]
+
+## Purpose and constraints check
+[For each approved success criterion, identify the section doing the work. Record actual length and adherence to format/use, treatment and evidence boundaries. This is self-assessment, not an independent verdict.]
 
 ## Argument Outline (as executed)
 [The outline as built — note any sections combined or skipped for lack of source content, and why.]

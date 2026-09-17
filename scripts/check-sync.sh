@@ -7,7 +7,6 @@ cd "$(dirname "$0")/.." || exit 2
 
 PC_CANON="$HOME/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/SKILL.md"
 PCC_CANON="$HOME/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/constructions.md"
-DTC_CANON="$HOME/Projects/keynote-create-skill/references/title-craft.md"
 
 # Lines that legitimately differ between embed and canonical (headers, banners,
 # frontmatter, local file references). Anything NOT matching these is drift.
@@ -58,7 +57,7 @@ else
   check prose-craft.md "$PC_CANON" "prose-craft.md <- prose-craft/SKILL.md"
 fi
 check prose-craft-constructions.md "$PCC_CANON" "prose-craft-constructions.md <- prose-craft/constructions.md"
-check deck-title-craft.md          "$DTC_CANON" "deck-title-craft.md <- keynote-create references/title-craft.md"
+echo "LOCAL deck-title-craft.md — independently maintained; historical provenance in SYNC.md"
 
 echo "NOTE  rhetorical-figures.md is adapted, not verbatim — verify figure tables + Filter budgets against prose-craft/figures.md by eye (see SYNC.md)."
 

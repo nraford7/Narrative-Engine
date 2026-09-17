@@ -1,146 +1,139 @@
 # Narrative Engine
 
-**Turn a pile of information into a story or argument people can follow.**
+Narrative Engine is a skill for turning notes, reports and research into a clear, engaging argument. It can write articles, essays, briefings and presentation narratives.
 
-Narrative Engine is a skill for Claude Code. Give it a report, rough notes, an article or an existing presentation, and tell it who you want to reach. It helps find the point worth making, choose an opening, arrange the evidence and write the piece.
-
-The aim is to make each part lead somewhere. In a presentation, the slide titles should carry an argument when read in order. In an article or briefing, the sections should develop an idea rather than repeat it in different words.
-
-It can produce:
-
-- **Presentation content:** slide titles, supporting text and visual suggestions.
-- **Prose:** a briefing, article, essay or other written piece.
-- **Both:** develop one version, then adapt it to the other format.
+It starts by working out who the piece is for, what it needs to accomplish and what the source actually supports. Then it helps you choose the main point and how the piece should unfold. It writes and reviews the result against that brief.
 
 ## How it works
 
-1. **Understand the audience and the purpose.** Who is this for? What should they understand, decide or do after reading it?
-2. **Read for what matters.** Look for the real stakes, an unresolved question, a useful finding or a strong passage already in the source. A surprise is useful when one exists; it should never be invented.
-3. **Offer a few possible main points.** Claude proposes two or three directions and explains the choice. You can choose one, change it or keep the point you started with.
-4. **Work out the argument.** Decide what the reader needs to understand and what each section adds. The usual approach is to state the answer early and explain it. Storytelling structures are available when the material suits them.
-5. **Write and review.** One reviewer reads the piece before seeing the brief, checking what it actually communicates. Another compares its claims with the source. Claude repairs problems it finds and brings unresolved issues back to you.
+Every new piece begins with a required choice. There is no default:
 
-Every new piece starts with a required choice: **Fast or Deep**. There is no default. Unless you explicitly choose a mode in your request, Claude asks and waits for your answer; asking for speed does not choose Fast.
+- **Deep:** work through the unanswered framing questions together.
+- **Fast:** let the agent infer missing answers and show you its assumptions and proposed brief for approval.
 
-- **Fast:** Claude makes the initial choices and shows you one brief to correct or approve.
-- **Deep:** Claude works through the audience, intended use, desired outcome, format, tone and main point with you before building the argument. It confirms what you have already supplied and asks about what is missing.
+Asking for a “quick pass” does not select Fast. Both modes do the same analysis and reviews.
 
-For presentations, you can also choose **Boardroom**, with full-sentence titles that carry the argument, or **Keynote**, with shorter titles supported by spoken narration. The amount of useful material determines the length.
+The process is:
+
+1. **Define the assignment.** Choose the purpose—educate, persuade, inspire, align, report, defend or engage—and describe what success means.
+2. **Understand the audience.** Establish what they know, believe and care about. Choose prose, a presentation or both, and set the intended use and length.
+3. **Read the material.** Identify useful evidence, strong passages, uncertainty, conflicting findings and missing information. Explain why particular material matters to this audience.
+4. **Explore possible points.** Compare a few claims or insights, with their support and limitations.
+5. **Compare ways to tell it.** See a direct explanation alongside any narrative arc the material supports. Each option shows an opening, progression, payoff and trade-off.
+6. **Approve the brief.** Choose the point and structure together, with the writing treatment and evidence boundaries visible.
+7. **Write and review.** A separate writer follows the brief. Reviewers check what the result actually communicates, whether it fulfills the purpose and whether its claims hold up against the source.
+
+You can choose the amount of detail, assumed reader knowledge, rhythm and tone separately. A detailed piece can still be accessible; a short piece can still be written for specialists.
 
 ## A worked example
 
-This is a fictional, simplified example showing the intended approach, not a recorded test output.
+This is a fictional example of the process, not a recorded result.
 
-### The starting material
+**The source:** A team reviewed 100 support tickets from one week. Forty-two concerned initial setup. Managers selected the sample; it was not random. No onboarding improvement was tested, and the review did not measure staffing needs.
 
-> Over a six-week period, our support team's average first reply fell from six hours to two hours. Average time to resolve a ticket stayed at five days. Tickets needing engineering help waited an average of three days before an engineer took ownership. The team proposes a four-week pilot that assigns an engineer when those tickets are escalated. We need the head of customer operations to approve the pilot.
+**The assignment:** Write a short briefing to educate managers who assume that more tickets always require more staff.
 
-You could ask:
+The skill connects the assignment to the evidence:
 
-```text
-/Narrative-Engine
+> The setup finding helps explain that requests have different causes. But counting requests does not tell us how much work they require, and this sample cannot establish staffing needs.
 
-Turn these notes into a short presentation for our head of customer
-operations. The decision is whether to approve the four-week pilot.
-Use Fast mode and Boardroom titles. Keep the limits of the evidence clear.
-```
+It offers possible points:
 
-### Finding the point
+- “Ticket counts alone do not establish staffing needs.”
+- “The review identifies a setup problem worth investigating, but not a proven solution.”
 
-A topic list would be easy: response times, resolution times, engineering, next steps. It would leave the reader to work out why those subjects belong together.
+It then compares structures. A direct explanation can work: explain what the sample shows, what it cannot show, and what information would answer the staffing question. A mystery or transformation arc would need events or discoveries this source does not contain, so it should be rejected.
 
-The useful tension is that the team's headline improvement has not shortened the customer's wait for a fix. The engineering handoff gives the team a specific next step to test.
+You choose the first point. The resulting brief calls for a plain explanation of counts, causes and effort, preserves the sample limitations, and avoids a sales pitch for an untested intervention.
 
-A possible main point is:
+A different source could support a different structure. A retrospective with a documented outcome, overlooked clue and tested mechanism might suit **Columbo**: state what happened, then reconstruct why. You see that outline alongside the direct explanation before choosing.
 
-> Test earlier engineering ownership to see whether it shortens the time customers wait for a fix.
+## What the narrative arcs do
 
-### Building the sequence
+The ten arcs offer different ways to organize understanding:
 
-| Slide title | What the slide establishes |
+| Arc | Useful movement |
 |---|---|
-| **Faster replies still leave customers waiting five days for a fix.** | First replies improved from six hours to two; average resolution time stayed unchanged. |
-| **Tickets needing engineering wait three days for someone to take ownership.** | There is a specific delay worth investigating within that group of tickets. |
-| **Assign an engineer at escalation and test whether that wait falls.** | The proposed pilot addresses the observed handoff delay. Its effect is still unknown. |
-| **Approve a four-week pilot and measure whether customers get their fixes sooner.** | The decision and the measure of success follow from the opening problem. |
+| Prestige | Expectation → contradiction → reinterpretation |
+| Mystery Box | Question → clues → explanation |
+| Heist | Goal → obstacles → capabilities → execution |
+| Time Machine | Possible futures → causes → present choice |
+| Trojan Horse | Familiar case → deeper implication → new frame |
+| Hero’s Journey | Starting position → challenges → transformation |
+| Freytag | Developing conflict → turning point → consequences |
+| Columbo | Known outcome → reconstruction → explanation |
+| Game of the Scene | Examples → recurring pattern → recognition |
+| Rashomon | Different accounts → comparison → synthesis |
 
-The opening gives the audience a reason to care. The middle identifies a possible explanation and a practical test. The ending asks for a decision the evidence can support.
+An arc earns its place through the source. Essential stages need evidence. Missing ones reject the arc; optional stages can be omitted. There is always a direct-explanation option. No invented surprise, obligatory emotional reversal or minimum number of sections.
 
-The evidence reviewer should catch a title such as “Earlier engineering ownership will cut resolution time.” The notes support testing that idea; they do not establish that it works. The three-day figure also applies specifically to tickets needing engineering, not to every ticket.
+## What it is good at
 
-## What it's good at
+- Finding a useful main point in substantial source material.
+- Adapting the same material for different audiences and purposes.
+- Turning disconnected sections into a connected argument.
+- Comparing narrative approaches before committing to one.
+- Making uncertainty and limits harder to lose during rewriting.
+- Producing written presentation sequences as well as prose.
 
-- **Turning reports into arguments.** Useful for decision papers, executive briefings, research summaries and presentations that have plenty of information but no clear direction.
-- **Connecting slide titles.** Helping a sequence move from a question or finding to its implications and a decision.
-- **Finding a useful opening in existing material.** Especially when a concrete detail or tension is buried under background information.
-- **Keeping claims close to the evidence.** Checking that a possibility has not become a promise, or an association has not become a claim of cause and effect.
-- **Adapting a piece for a particular audience.** The same material may need a different starting point for a board, a technical team or a general audience.
+## What it is less good at
 
-## What it's not so good at
+- **Supplying missing evidence.** It works from the material you provide. It does not automatically research a weak claim into a strong one.
+- **Knowing your audience without context.** It can suggest assumptions, but you are better placed to correct them.
+- **Guaranteeing a compelling hook.** A source may support a useful explanation without a dramatic discovery.
+- **Guaranteeing truth or reader response.** Writers and reviewers are language models. Their judgments can be wrong, and choosing a named arc does not prove it will engage readers better.
+- **Producing finished visual decks.** Its presentation output is written content and, where needed, narration—not a rendered PDF, PowerPoint or Keynote file.
 
-- **Getting the hook right every time.** It can choose a sensible but predictable opening, or introduce a recommendation before the reader has a reason to care. Your judgment still matters.
-- **Matching a distinctive voice without examples.** Give it passages you like, especially if warmth, humor or an unusual style is important.
-- **Making weak material persuasive.** Missing evidence and unclear decisions often need more work from the author. Better wording cannot supply the missing substance.
-- **Checking whether the source itself is true.** Its evidence review compares the writing with the material you provide. It is not independent research or external fact-checking.
-- **Quick, tiny edits.** The questions and review stages can be excessive for a short email or a single sentence. They also use more time and model allowance than a simple writing prompt.
-- **Producing finished slide design on its own.** It develops presentation content. The later rendering step uses the separate [keynote-create](https://github.com/nraford7/keynote-create) tools and their setup.
+**Instruction limits:** the mode choice is required by the skill, but it is an instruction rather than a software-enforced dialog. Some hosts give an explicit “no questions” request priority over skill instructions. Avoid that conflict, or state that the Fast/Deep choice must still be asked.
 
-The latest small comparison found stronger results for source fidelity and argument flow than for opening hooks. It used Codex-generated drafts against saved earlier outputs while Claude was unavailable, so it cannot cleanly separate improvements in the skill from differences between models. Treat it as useful evidence, not a guarantee.
+Deep mode takes more conversation. Fast reduces the back-and-forth, but you still need to inspect and approve the brief. Independent writing and review also use more time and tokens than a single prompt.
 
 ## How to install it
 
-You'll need **Claude Code** and **Git**. This repository is set up for Claude Code's local skills, rather than a plain chat window. See [Claude Code's guide to skills](https://code.claude.com/docs/en/skills) for how local skills are loaded.
+The writing guides and narrative references are included. No other writing or presentation skill is required.
 
-### 1. Download the skill
+### Claude Code
 
-Open a terminal and run:
+For a new installation:
 
 ```bash
 mkdir -p ~/.claude/skills
 git clone https://github.com/nraford7/Narrative-Engine.git ~/.claude/skills/Narrative-Engine
 ```
 
-This puts the skill in your personal skills folder, where Claude Code can use it across projects.
-
-### 2. Check the file paths
-
-Some instructions currently contain paths from the maintainer's computer. If you are installing on another computer, ask Claude Code:
+Start a new session and ask:
 
 ```text
-I installed Narrative Engine in ~/.claude/skills/Narrative-Engine.
-Check the instructions in its prompts folder and update any paths beginning
-/Users/noahraford/.claude/skills/Narrative-Engine/ to point to my installation.
-Keep all other instructions unchanged.
+Use Narrative Engine in Deep mode on my report.
+I want a short briefing for our leadership team.
+Help me establish the purpose and main point before writing.
 ```
 
-The writing guides are included in the repository. You do not need to install prose-craft separately to use them. Finished slide rendering requires the separate keynote-create setup mentioned above.
+### Codex
 
-### 3. Try it
-
-Start Claude Code and type:
-
-```text
-/Narrative-Engine
-```
-
-Then paste your material or point Claude to a file, and say who it is for and what you want the piece to achieve. For example:
-
-```text
-Use Narrative Engine on quarterly-review.md. Write a short briefing for
-our leadership team. They need to decide which of the three proposals
-to fund. Use Fast mode, and preserve the uncertainty in the estimates.
-```
-
-### Updating an existing installation
-
-If you have not changed the local files:
+For a new standalone installation:
 
 ```bash
-git -C ~/.claude/skills/Narrative-Engine pull --ff-only
+mkdir -p ~/.agents/skills
+git clone https://github.com/nraford7/Narrative-Engine.git ~/.agents/skills/narrative-engine
 ```
 
-If you adjusted file paths or other instructions, ask Claude to preserve those changes while updating. Do not overwrite your customizations just to make the update succeed.
+Start a new session and ask for `narrative-engine` (Narrative Engine) by name. If several installed skills expose that name, specify the standalone installation path.
 
-## Looking under the hood
+The agent resolves references from the installed folder. Independent reviews require a host that supports isolated agents. If those are unavailable, the skill should disclose that limitation and label the result as a draft rather than claim independent review.
 
-[SKILL.md](SKILL.md) contains the full workflow. The [prompts folder](prompts/) contains the writer and reviewer instructions, and [SYNC.md](SYNC.md) explains where the included writing guides come from. Historical development plans and test records remain in Git history.
+### Updating
+
+From the installation you want to update:
+
+```bash
+git pull --ff-only
+```
+
+If you have edited the skill locally, preserve your changes when updating. The clone commands above are for new installations, not replacements for existing folders.
+
+## Files and examples
+
+[SKILL.md](SKILL.md) contains the workflow. [Framework selection](framework-selection.md) explains how structures qualify. The [prompts](prompts/) contain the writer and reviewer instructions. The [examples](examples/) show complete framing decisions using fictional material. [SYNC.md](SYNC.md) records the included craft references.
+
+For repeatable checks, run `bash scripts/check-rebuild.sh` and follow the [behavioral scenarios](tests/behavioral-scenarios.md). These check instructions and observed behavior; they do not certify the quality of every future piece.

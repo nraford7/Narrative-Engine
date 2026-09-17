@@ -1,57 +1,34 @@
 ---
-name: Narrative-Engine
-description: "Transform any content into narrative-driven presentations OR prose through a minimal build spine wrapped in rich judgment — a blind focal judge, a source-holding evidence gate, and content-driven length. Use when converting content to presentations, restructuring existing decks, writing long-form pieces, or optimizing for specific audiences."
+name: narrative-engine
+description: "Requires an explicit Fast or Deep choice before work. Transform any content into narrative-driven presentations OR prose through a minimal build spine wrapped in rich judgment — a blind focal judge, a source-holding evidence gate, and content-driven length. Use when converting content to presentations, restructuring existing decks, writing long-form pieces, or optimizing for specific audiences."
 ---
 
 # Narrative Engine
+
+## Start here — mode gate
+
+For a new piece, first check whether the user explicitly selected **Fast** or **Deep**. If neither was selected, the next response is only the mode question with a brief explanation of the two choices. Stop there: no source analysis, brief, outline, writing or agent dispatch. Do not treat “quick”, “just write it”, or “no questions” as selecting a mode. Asking the mode is part of invoking this skill, not optional discovery. Use this first-response form:
+
+> Choose **Fast** (I infer the framing and show a brief for approval) or **Deep** (we work through the framing together). Neither is selected by default.
+
+If the user explicitly selected a mode for this piece, continue to Phase 1.5. If they explicitly decline this workflow itself, explain that the work would be outside Narrative Engine rather than claiming its process was followed.
+
 
 Transform content into compelling narratives — as presentations or prose. Content determines length — no padding, no artificial minimums. The architecture: **generation minimal, judgment rich.** The builder gets a small, compiled contract and a short spine; the heavy machinery (catalogs, matrices, cold reads, source audits) lives with the orchestrator and the judges.
 
 ## Workflow Overview
 
 ```
-PHASE 1     Content Import
-    ↓
-PHASE 1.25  Mode — FAST (infer everything, one consolidated confirmation)
-                 / GUIDED (step-by-step discovery)
-    ↓
-PHASE 1.5   Output Format — Presentation / Prose / Both
-            (Presentation → register question: Boardroom sentence-titles / Keynote fragments)
-    ↓
-PHASE 1.75  Audience + Ask → Material Read → Focal candidates
-            ⇒ Focal Statement + focal_origin (the north star; for decks, the punchline)
-    ↓
-PHASE 2     Discovery — audience (skip if answered), purpose, content type, tone
-    ↓
-PHASE 2.5   Density Mode — varies by output format
-    ↓
-PHASE 3     Argument Outline + Conditional Shape
-            ★ GATE 1: beat-support audit + skeleton stamp test (named arcs only) ★
-    ↓
-PHASE 3.5   Build Brief — compiles everything the builder is allowed to know
-    ↓
-    ══════ HANDOFF: create RUN_DIR, write Build Brief + Source into it ══════
-    ↓
-PHASE 4     Build — SUBAGENT runs THE SPINE (prompts/builder.md)
-            writes ne-output.md (BODY ONLY) + ne-output-meta.md (sidecar)
-    ↓
-PHASE 4.6   ★ GATE 2: Focal Fidelity — blind cold-read judge SUBAGENT ★
-            PASS / NEEDS_REVISION / FRAMEWORK_MISMATCH / FOCAL_MISMATCH
-    ↓
-PHASE 4.7   ★ GATE 3: Humanizing check — orchestrator, flag-only ★
-            drift → ne-humanizing-flags.md → builder revision
-    ↓
-PHASE 4.8   ★ GATE 4: Evidence Review — SUBAGENT holding the source ★
-            CLEAN / FINDINGS (BLOCKING findings loop to the builder)
-    ↓
-    (Gates 2-4 all repair through ONE shared repair loop — see below)
-    ↓
-PHASE 5     Targeted Review — 2 SUBAGENTS + Director synthesis
-            (auto for high-stakes content; offered for everything else)
-    ↓
-PHASE 5.5   Stress Test — 3 SUBAGENTS + Director triage (high-stakes content only)
-    ↓
-ON-DEMAND   "Tighter" — compression passes anytime (re-runs prose-craft + humanizing)
+Import → mandatory Fast / Deep choice
+  → Purpose + success → Audience starting position → Format, use, limits
+  → Material Read: support, relevance, limits and unknowns
+  → Content type + writing treatment → Provisional points
+  → Compare reasoning + direct explanation + supported arcs (Gate 1)
+  → Approve point and structure together → Compile and check brief
+  → Writer: body + private metadata
+  → Blind focal/purpose review (Gate 2) → Writing check (Gate 3)
+  → Source evidence review (Gate 4) → Targeted review / optional stress test
+  → Deliver written prose/presentation; compression and change log on request
 ```
 
 **Four structural gates protect the work:**
@@ -69,11 +46,11 @@ ON-DEMAND   "Tighter" — compression passes anytime (re-runs prose-craft + huma
 
 ## Subagent Architecture
 
-Phases 1–3.5 run interactively in the main conversation. Phases 4, 4.6, 4.8, 5, and 5.5 run as subagents via the Task tool, reducing context window pressure and enabling parallel execution. Phase 4.7 runs in the orchestrator (flag-only).
+Phases 1–3.5 run in the main conversation using the selected interaction mode. Phases 4, 4.6, 4.8, 5, and 5.5 run as subagents using fresh isolated agents (Claude Code Task or the host equivalent). Do not fork the conversation into the builder or blind judge. If isolation is unavailable, disclose the limitation and offer a draft; never describe a same-context reread as blind. Phase 4.7 runs in the orchestrator (flag-only).
 
 ### Handoff Files
 
-All handoff files live in a per-run directory the orchestrator creates at the end of Phase 3.5: `RUN_DIR = /tmp/ne-<yymmdd>-<slug>/` (slug from the focal topic). Every dispatch prompt must state the RUN_DIR; the templates refer to files by name and resolve them inside it. Concurrent runs never collide, and deleting the directory cleans up the whole run.
+All handoff files live in a per-run directory the orchestrator creates at the end of Phase 3.5: `RUN_DIR = mkdtemp("ne-<topic>-")` (a unique temporary directory). Every dispatch prompt must state the RUN_DIR; the templates refer to files by name and resolve them inside it. Concurrent runs never collide, and deleting the directory cleans up the whole run.
 
 | File | Written by | Read by |
 |------|-----------|---------|
@@ -90,6 +67,10 @@ All handoff files live in a per-run directory the orchestrator creates at the en
 **Builder revision-mode trigger priority:** `ne-focal-judge.md` > `ne-evidence-review.md` > `ne-humanizing-flags.md`. The builder self-routes on file presence — any trigger present means Revision Mode against the highest-priority file.
 
 **The sidecar rule.** `ne-output.md` is the deliverable body and nothing else; all metadata (focal statement, shape, argument outline, sourcing tags, revision notes) lives in `ne-output-meta.md`. The focal judge NEVER receives the sidecar — it would contaminate the cold read. The evidence reviewer DOES receive it and spot-checks its sourcing tags against the source.
+
+### Portable role dispatch
+
+Set `NE_ROOT` to this skill installation’s absolute directory and include it with `RUN_DIR` in every role dispatch. Resolve `NE_ROOT/...` before reading. Use the host’s isolated-agent tool for Task calls; role inputs, read order and review limits remain the same. The original source stays intact in the run directory. For Both, use a separate child run directory per output so verdicts and triggers never cross formats.
 
 ### Prompt Templates
 
@@ -124,327 +105,172 @@ If user pastes content without instructions, acknowledge receipt and proceed to 
 
 ## PHASE 1.25: Mode
 
-A mode choice is mandatory for each new piece. Before discovery, outlining, or drafting, ask the question below and wait for the user to choose. If the user has already explicitly chosen Fast or Deep for this piece, acknowledge that choice without asking again. A revision of the same piece keeps its selected mode.
+A mode choice is mandatory for each new piece. Before discovery, outlining or drafting, ask and wait unless the user already explicitly chose a mode for this piece. Revisions retain that choice.
 
 > **How do you want to work?**
-> 1. **Fast** — I read your content, infer every discovery answer (format, register, audience, ask, focal point, purpose, content type, tone, density, shape), and present one pre-filled Build Brief for you to correct or approve. One confirmation, then build.
-> 2. **Deep** — work through the framing together: audience, intended use, desired outcome, format, tone, and the main point before building the argument. Ask each unresolved question in turn; confirm information already supplied instead of asking for it again.
+> 1. **Fast** — I work through the same analysis, infer missing answers, and show the assumptions, candidate points and structure comparison in one brief for correction or approval.
+> 2. **Deep** — we work through unresolved framing questions, then choose the point and how it unfolds together.
 
-**Fast mode mechanics:**
-- Run Phases 1.5–3.5 internally, without asking questions. Infer each answer from the content and conversation context; where genuinely ambiguous, make the best call and mark it `[INFERRED — LOW CONFIDENCE]` in the brief.
-- **Fast mode ALWAYS surfaces the focal candidates.** The 2-3 stance-committing candidates from Phase 1.75 appear in the consolidated brief, one line each, with the chosen one marked. `focal_origin` is honest about who chose: if the user's request itself stated the point, record `user-stated` — Fast mode never downgrades an explicitly supplied focal to `inferred`. Record `inferred` only when the skill picked the focal with no user input on it; the user editing the focal line in the brief flips it to `user-selected`.
-- The Argument Outline and the chosen shape (with its trace-to-material justification) surface in the consolidated brief. A beat-support-audit or skeleton-stamp failure on a named arc still escalates to the user, in either mode.
-- The deck register (Boardroom / Keynote) is inferred and surfaced in the brief.
-- Present ONE consolidated message: the inferred discovery answers as a compact table, then the compiled Build Brief. The user corrects any line or says go.
-- Gates 2–4, the review panel, and the stress test behave identically in both modes.
+**No default mode. Never select Fast automatically.** Urgency, clear instructions, "quick pass", "just write it", "no questions" and permission to proceed are not choices. Ask Fast or Deep and stop until answered. Silence is not a choice. The former name Guided means Deep.
 
-**No default mode. Never select Fast automatically.** Clear instructions, complete source material, urgency, "just write it", "quick pass", "no questions", and permission to proceed are not mode choices. If no explicit choice has been made, ask Fast or Deep and stop until the user answers; silence is not a choice. This applies equally to standalone use and use through another skill. Treat the former name "Guided" as an explicit choice of Deep for compatibility.
+Both modes perform Phases 1.5–3.5 in the same order. Fast infers missing answers and labels assumptions, especially `[INFERRED — LOW CONFIDENCE]`; it never presents assumptions about an audience as known facts. Deep asks one unresolved question at a time, offering the relevant menu and accepting free text; confirm supplied information instead of asking twice. Fast surfaces 2–3 provisional focal candidates unless a supplied point makes alternatives unnecessary, relevant evidence limits, and direct explanation alongside any eligible arc. Neither mode bypasses final brief approval or the review gates.
 
 ---
 
-## PHASE 1.5: Output Format
+## PHASE 1.5: Assignment — Purpose, Audience, Format and Use
 
-*Deep mode only — Fast mode infers this and surfaces it in the consolidated brief.*
+Record these before the Material Read. A quick source inspection to understand the assignment is allowed; do not select a focal or structure yet. User-supplied points are retained as user-owned constraints to test, not replaced by inferred alternatives.
 
-Ask before proceeding to focal discovery:
+### Purpose and success condition
 
-> **What format do you need?**
-> 1. **Presentation** — Slide deck with headlines, spotlights, and design notes
-> 2. **Prose** — Long-form document with sections, transitions, and flow
-> 3. **Both** — Build one, derive the other (specify which first)
+> **What should this piece accomplish?**
 
-### If Presentation selected: ask the register
+| Purpose | What the source analysis must look for |
+|---|---|
+| Persuade to act | Reasons for action, alternatives, objections and support sufficient for the proposed action. |
+| Inform / Educate | Concepts, mechanisms, misconceptions and examples needed for understanding. |
+| Inspire / Motivate | Credible possibilities, meaningful stakes and reasons to engage. |
+| Align / Build consensus | Shared facts, differing assumptions, agreements and unresolved disagreements. |
+| Report / Update | Changes, results, exceptions, current status and implications. |
+| Defend / Justify | The challenged position, objections and evidence addressing them. |
+| Entertain / Engage | Interesting observations, scenes, questions or discoveries genuinely present in the material. |
 
-> **What register should the deck speak in?**
-> 1. **Boardroom** — every slide title is a short complete sentence delivering one story beat; read top-to-bottom, the titles tell the whole narrative. *(default)*
-> 2. **Keynote** — fragments are the register; complete sentences are rationed for the 3-4 lines meant to land; the chain lives in the beat + narration read.
+Then establish a concrete success condition: what should the reader understand, be able to explain, decide, feel or do afterward? Choose a primary purpose when purposes compete; record a secondary one only when useful. An action is optional. Keep the internal `Ask` field for compatibility: for education or reflection it means the intended change in understanding, not a forced call to action.
 
-Default to Boardroom if the user has no preference. In Fast mode, infer the register and surface it in the consolidated brief.
+### Audience and starting position
 
-### If Prose selected:
+> **Who is this for?** Executive / Board; Technical / Engineering; Sales / Marketing; Investors / VCs; General Public; Skeptics / Resisters; Mixed / Cross-functional; Academic / Research; or a description in your own words.
 
-Ask for target length:
+Establish the relevant existing knowledge, beliefs, concerns and likely objections. Ask only what is unresolved and consequential. Record unknowns as unknown; in Fast, label hypotheses as inferred. The category is a starting point, not evidence about particular people. Do not infer their beliefs from their job title alone.
 
-> **Target length?**
-> 1. **Short** (~500-800 words) — Tight, punchy, every sentence pulls its weight
-> 2. **Medium** (~1,000-1,500 words) — Room to develop ideas, standard article length
-> 3. **Long** (~2,000-3,000 words) — Comprehensive, detailed, thought leadership depth
-> 4. **Let content determine** — No artificial target
+### Format, intended use and limits
 
-### If Both selected:
+> **What format do you need?** Presentation / Prose / Both.
 
-> **Which format first?**
-> 1. **Prose → Presentation** — Write the full narrative, then compress to slides
-> 2. **Presentation → Prose** — Build the deck structure, then expand to prose
+- **Prose:** establish intended use (article, essay, briefing, report or other), whether it must stand alone, and target length: Short (~500–800 words), Medium (~1,000–1,500), Long (~2,000–3,000), or content-determined. These are targets, not padding quotas; an explicit user limit takes precedence.
+- **Presentation:** establish intended use (live talk, workshop, read-ahead or standalone), any speaking-time or slide limit, and whether written narration is needed. Every visible slide counts. This skill produces the written narrative and notes; visual rendering is outside its required workflow.
+- **Both:** confirm which format is primary: Prose → Presentation or Presentation → Prose. Approve the shared argument once; adapt it and review each format's actual output. Never assume the first version's verdict certifies the second.
 
-**Note:** The shapes (answer-first, withheld-reveal, named arcs) are *narrative structures* — they work for both formats. The divergence happens at the Build phase.
-
-### Presentation path: embedded deck craft + a render stage
-
-The deck craft is embedded, not invoked. The build subagent reads [`deck-title-craft.md`](deck-title-craft.md) (a verbatim embed of keynote-create's title guide) and applies it directly — titles as story beats, the spoken-prose and antecedent tests, register variants. The Focal Statement doubles as the deck's punchline line. Only the **render stage** legitimately calls keynote-create: after the gates pass, the orchestrator runs keynote-create's Stage 4 render (`keynote-render.mjs` → `/impeccable` layout promotion → PDF) in the main conversation, since that is main-conversation work, not a subagent.
+Record required inclusions, exclusions and evidence standards. Capture explicit style preferences now, but resolve detailed treatment in Phase 2. Source material and audience facts may expose an infeasible objective: surface it rather than silently changing the assignment.
 
 ---
 
-## PHASE 1.75: Focal Discovery
+## PHASE 1.75: Material Read
 
-**Purpose:** establish who the piece is for, what it asks of them, and the single point — before anything else.
+Read the complete supplied source against the assignment. Record:
 
-**Step 1 — Audience + Ask first (one line; skip only if already stated).** Before proposing any focal, pin down in one line each: who reads/hears this, and what they should do, decide, or believe afterward. Every focal candidate is judged against these two lines.
+- **Supported findings:** claims with quoted or pinpointed source passages.
+- **Purpose relevance:** which findings help fulfill the success condition and how.
+- **Audience relevance:** which knowledge gap, belief, concern or objection each important finding addresses. Make the connection visible: "Because the audience believes/needs X, passage Y matters because Z." Distinguish user-supplied facts from inferred audience hypotheses.
+- **Stake and tension:** what matters and what question is genuinely unresolved; either can be modest. Do not invent conflict.
+- **Genuine surprise:** what would be unexpected for this audience, with source support; otherwise "none — never manufacture one". When audience knowledge is unknown, mark surprise as uncertain rather than licensing a reveal on a guess.
+- **Strongest existing passages/examples:** 2–3 quoted or pinpointed passages where available; fewer is valid for a short source.
+- **What changes:** the supported change in understanding, decision or action.
+- **Limits and contrary evidence:** qualifications, alternative explanations, contradictions and scope.
+- **Missing information:** what the source cannot establish, including support missing for the user's desired conclusion.
 
-**Step 2 — Material Read.** Read the source and record, in plain language:
-- **Stake** — what is at risk or in play for this audience
-- **Tension** — the unresolved question or conflict the material carries
-- **Genuine surprise** — a finding that would surprise this audience, or **"none — never manufacture one"**
-- **Strongest existing passages** — the 2-3 passages already carrying the most force, quoted or pinpointed
-- **What changes** — what the reader knows, decides, or does differently after
+Separate "the user wants to argue X" from "the source establishes X." Do not silently discard contrary evidence. If the assignment requires unsupported claims, explain the gap and offer a narrower claim, more source material, or an explicitly conditional treatment. Do not invent evidence or initiate unrequested research.
 
-The Material Read is pasted in full into the Build Brief — it is the builder's Step 1 anchor and the raw material for shape selection.
-
-**Step 3 — Focal candidates.** Propose 2-3 stance-committing candidates. Each must pass the quality bar:
-- Speakable in one breath
-- A claim, recommendation, or reframing — never a topic
-- Specific — names the mechanism, the number, or the decision
-- Answers a question this audience actually cares about, given the Ask
-
-> "Based on your material, I see these possible points:
-> 1. **[Candidate A]** — [why this is the most consequential claim for this audience]
-> 2. **[Candidate B]** — [...]
->
-> Which should we optimize for? Or is there a different point you want to land?"
-
-**User-stated points** are tested against the same bar; offer a sharpened version alongside, but the original stays valid — the user owns the focal.
-
-**Fast mode:** the candidates appear in the consolidated brief, one line each, the chosen one marked.
-
-**Output:** a Focal Statement (1-2 sentences) that becomes the north star, with three components:
-- **The One Thing:** single idea the piece must land
-- **The Ask:** action or shift being driven toward
-- **The Through-Line:** logical/emotional thread connecting everything
-
-**The brief records `focal_origin`:** `inferred` (Fast mode, focal line never touched by the user) | `user-selected` (user picked or edited a candidate) | `user-stated` (user supplied the point) | `user-selected-after-reset` (chosen after a FOCAL_MISMATCH reopen). Only `inferred` is eligible for the automatic FOCAL_MISMATCH reset in Phase 4.6.
+Paste this Material Read into the final brief. No focal is locked at this phase.
 
 ---
 
-## PHASE 2: Discovery Questions
+## PHASE 2: Content Type, Writing Treatment and Provisional Points
 
-*Deep mode only — Fast mode infers these and surfaces them in the consolidated brief.*
+### Content type
 
-Ask one question at a time. Wait for the user to answer before asking the next question. User can respond with numbers or their own words. **Skip the audience question if Phase 1.75 Step 1 already answered it.**
+Suggest the best-fitting type from the material; invite correction in Deep or surface it in Fast:
 
-### Question 1: Audience (skip if answered)
+Counterintuitive research findings; Strategic plan / transformation roadmap; Scenario planning / decision fork; Paradigm shift / new mental model; Company/product origin story; Post-mortem / retrospective; Sales pitch; Investor pitch / fundraising; Product launch; Case study; Policy recommendation; Vision/inspiration piece. Accept an unlisted type.
 
-> **Who is your audience?**
-> 1. Executive / Board (time-constrained decision-makers)
-> 2. Technical / Engineering (methodology-focused, skeptical)
-> 3. Sales / Marketing (action-oriented, competitive)
-> 4. Investors / VCs (seeking growth story + traction)
-> 5. General Public / Keynote (broad, need accessibility)
-> 6. Skeptics / Resisters (need to be won over)
-> 7. Mixed / Cross-functional (varied expertise levels)
-> 8. Academic / Research (evidence-focused)
+Content type helps choose review expertise and candidate structures. It never selects an arc by itself or changes what the evidence supports. Review dispatch uses the Phase 5 table.
 
-### Question 2: Purpose
+### Writing treatment
 
-> **What are you trying to accomplish?**
-> 1. Persuade to act (get approval, close a deal)
-> 2. Inform / Educate (transfer knowledge)
-> 3. Inspire / Motivate (energize, create vision)
-> 4. Align / Build consensus (get buy-in)
-> 5. Report / Update (share status, results)
-> 6. Defend / Justify (support a position)
-> 7. Entertain / Engage (keynote, thought leadership)
+Resolve these independently; they are not competing packages:
 
-### Question 3: Content Type
+| Dimension | Choices | Consequence |
+|---|---|---|
+| Detail | Concise / Standard / Detailed | How much supporting explanation is visible. Never cuts an essential reasoning step or qualification. |
+| Assumed knowledge | Non-specialist / Informed / Specialist | What must be defined and how much context is needed. |
+| Rhythm | Compressed / Conversational / Expansive | Sentence/paragraph pace and space between ideas, within the length limit. |
+| Tone | Authoritative / Provocative / Warm / Urgent / Balanced / Visionary / Playful | Expression and relationship to the reader; never a license to distort evidence. |
 
-> **What type of content is this?**
-> 1. Counterintuitive research findings
-> 2. Strategic plan / transformation roadmap
-> 3. Scenario planning / decision fork
-> 4. Paradigm shift / new mental model
-> 5. Company/product origin story
-> 6. Post-mortem / retrospective
-> 7. Sales pitch
-> 8. Investor pitch / fundraising
-> 9. Product launch
-> 10. Case study
-> 11. Policy recommendation
-> 12. Vision/inspiration piece
+For presentations also resolve **register**: Boardroom (sentence-led titles) or Keynote (fragment-led beats with written narration). Here Keynote is a writing register, not a dependency on another skill. If the user expresses no preference, recommend sentence-led Boardroom and surface the choice. For fragment-led work, compile the actual spoken narration requirement into the brief. Prose does not need a presentation register.
 
-### Question 4: Tone
+Legacy density labels remain accepted as suggestions: High-Impact/Punchy → concise detail, compressed rhythm; Narrative/Flowing → standard detail, conversational or expansive rhythm; Evidence/Dense → detailed support; ELI5 → non-specialist knowledge and plain language, with detail resolved separately. Keynote/sparse means sparse visible support and fragment-led presentation, not permission to omit reasoning or evidence. Store the explicit dimensions; retain `Density` only as a compatibility summary when useful.
 
-> **What tone or attitude do you want?**
-> 1. Authoritative / Expert
-> 2. Provocative / Challenging
-> 3. Warm / Relatable
-> 4. Urgent / Action-oriented
-> 5. Balanced / Objective
-> 6. Visionary / Aspirational
-> 7. Playful / Creative
+Suggest a voice from [`voice-profiles.md`](voice-profiles.md)'s audience-plus-tone matrix; show its effect in plain language and permit override or a blend. Compile only relevant recommendations from the audience/voice profiles. Evidence, user instructions, purpose, approved outline and practical limits outrank profile defaults. No rhetorical quotas, mandatory emotion, invented examples, or caps on necessary qualifications.
+
+### Provisional focal candidates
+
+Now propose 2–3 distinct claims, recommendations, insights or organizing questions. One is sufficient when the user already supplies a clear point; do not fabricate alternatives to satisfy a count. An organizing question must have a bounded supported takeaway or explicitly unresolved outcome, not be a vague topic.
+
+For each candidate show:
+- The point, speakable in one breath.
+- Strongest source support and important limitation.
+- Relevance to this audience and purpose.
+- What understanding or action it enables.
+
+Do not ask for final commitment yet. A user-supplied point stays valid as their intent; offer sharpening without replacing it. If unsupported, preserve its origin while requiring an evidence-safe treatment before writing. Candidate exploration cannot authorize false claims.
 
 ---
 
-## PHASE 2.5: Density Mode Selection
+## PHASE 3: Compare Reasoning and Narrative Structures (Gate 1)
 
-*Deep mode only — Fast mode infers this and surfaces it in the consolidated brief.*
+For the promising point(s), write a short **Argument Outline**: what this audience needs to understand, in what order, what each section establishes, which source evidence supports it, and where the intended outcome lands. Test the transitions without framework labels or dramatic vocabulary. A broken inference returns to the candidate or source analysis before style work.
 
-### For Presentations:
+Make structure comparison visible. Offer:
+1. **Direct explanation:** answer-first is the normal baseline, with grouped reasons and a clear close; no named framework is a complete result.
+2. **Best supported narrative arc**, when eligible.
+3. **A second arc**, only when it provides a genuinely different useful route.
 
-> **How concentrated should this deck be?**
->
-> 1. **High-Impact** — Maximum compression. One punch per slide. Headlines do heavy lifting. For pitches and time-constrained execs.
->
-> 2. **Narrative** — Room to breathe. Story beats get space to land. Emotional builds allowed. For thought leadership and teaching.
->
-> 3. **Evidence** — Denser supporting material. Multiple proof points per section. For skeptics, technical audiences, due diligence.
->
-> 4. **ELI5** — Explain Like I'm 5. Maximum accessibility. Simple words, concrete analogies, zero jargon. For non-experts, broad audiences, or when clarity trumps sophistication.
+Each option shows **opening, reader's question, progression, payoff, source support and trade-offs** (time, complexity, delayed explanation). Describe the experience in plain language alongside the arc's name. Do not require users to know arc terminology. Do not force alternatives where none are supported.
 
-### For Prose:
+Use [`framework-selection.md`](framework-selection.md) for candidate selection and [`narrative-arcs.md`](narrative-arcs.md) for the ten arcs. The Material Read's real surprise gates delayed-reveal choices. Match the kind of takeaway; quote source support for every essential/anchor beat; reject an arc with an unsupported essential beat. Optional/nonessential beats can be omitted. Run the skeleton stamp test: payoff delivers the provisional point, close fulfills the intended outcome, progression carries the reasoning. A withheld-reveal route requires a supported genuine surprise even without a named arc.
 
-> **How should this piece read?**
->
-> 1. **Punchy** — Short paragraphs. High signal density. Every sentence pulls its weight. Hemingway, not Faulkner.
->
-> 2. **Flowing** — Room to breathe. Narrative builds allowed. Transitions smooth the ride. Story beats get space to land.
->
-> 3. **Dense** — Detailed and thorough. Evidence-heavy. Multiple proof points per section. For readers who want depth.
->
-> 4. **ELI5** — Explain Like I'm 5. Simple words, everyday analogies, short sentences. No jargon, no abstractions. Like explaining to a curious child or smart non-expert.
+No compulsory mid-piece turn, emotional reversal, minimum length or prewritten killer line. Purpose and source support decide whether the added structure earns its complexity. Communication-framework overlays may clarify delivery after this comparison, but must not add a second competing sequence. Emotional pacing is a suggestion derived from supported events, never a demand to manufacture feelings.
 
-**Key principle:** No minimum word/slide counts. Content determines length.
+If no arc passes, show direct explanation and briefly explain the relevant rejection. Do not widen the search indefinitely. Source facts remain facts; forecasts stay conditional, scenarios stay scenarios.
+
+For investor pitches, sales pitches, strategic plans, policy recommendations and multi-stakeholder/controversial material, run Audience Advocate and Comms Specialist on the proposed reasoning before final approval. Their advice informs the choice; they do not choose a different user-owned point. Create a unique run directory if needed; save the original source as `ne-source-content.md` and the assignment, Material Read, candidates and structure comparison as `ne-prebuild-review.md`. Dispatch `prompts/reviewer.md` with `review_stage: prebuild`, the two named roles and their Phase 5 reference files. This mode reads the working packet and source, not a nonexistent draft or approved brief. Keep this run directory for Phase 4. Resolve critical support/logic issues before presenting final approval.
 
 ---
 
-### ELI5 Mode Guidelines
+## PHASE 3.5: Final Choice, Compiled Brief and Pre-Build Check
 
-When ELI5 is selected, apply these rules throughout:
+Choose the **point and how it unfolds together**, as the last major framing decision. In Deep, present the tested options and resolve the user's selection; in Fast, mark the proposed combination and expose the alternatives in the consolidated brief. Ask for correction or approval before drafting. An explicit approval of this concrete brief counts; a generic earlier "go ahead" does not approve unseen inferred decisions.
 
-**Language Rules:**
-- Use common words (≤2 syllables when possible)
-- Replace jargon with plain language or define it immediately
-- Prefer active voice: "X does Y" not "Y is done by X"
-- Maximum sentence length: ~15 words
-- One idea per sentence
+Record `focal_origin`: `user-stated` if supplied by the user; `user-selected` if they selected/edited a proposed point; `inferred` only if the model chose it and the user merely approved the overall brief; `user-selected-after-reset` after an eligible focal reopen. Generic approval never downgrades a user-stated focal or conceals an inferred one.
 
-**Analogy Requirements:**
-- Use a concrete analogy when it explains an abstract concept more clearly
-- Draw from everyday experience: kitchen, playground, family, sports, weather
-- Use the source's concrete examples where they suffice; no analogy quota applies
-- Test: Would a smart 10-year-old understand this?
+### Build Brief — compile actual instructions, not profile labels
 
-**Structure Rules:**
-- Shorter paragraphs (2-3 sentences max)
-- More frequent section breaks
-- Use questions as headers when helpful ("So what does that mean?")
-- Build from familiar → unfamiliar
+- **Purpose + success condition:** primary/secondary purpose, what success looks like; `Ask` may be understanding rather than action.
+- **Audience + starting position:** relevant knowledge, beliefs, concerns, objections; distinguish known, inferred and unknown.
+- **Format + intended use + limits:** Prose / Presentation / Both, primary format when Both, length/time, standalone or spoken context, inclusions/exclusions and evidence standards.
+- **Focal Statement:** One Thing (claim/insight or question with supported takeaway), Ask, Through-Line; `focal_origin`.
+- **Material Read:** the full source analysis from Phase 1.75, including evidence passages, relevance links, contrary evidence, uncertainty and missing information.
+- **Argument Outline:** each section's job, support and reasoning transition; no unexplained jump between finding and recommendation.
+- **Shape + Register:** `answer-first` / `withheld-reveal` / named arc; `prose` / `boardroom` / `keynote`. Paste the selected supported beat skeleton and pacing instructions in full, identify essential beats, list omitted optional beats, and retain a brief reason for the selection over alternatives.
+- **Writing treatment:** detail, assumed knowledge, rhythm, tone, operative voice and audience instructions; optional legacy Density summary. Specify narration when needed.
+- **Opening opportunity:** a supported question, finding, passage or example and why it matters here; direct statement of the answer is valid. No compulsory hook device or prewritten killer line.
+- **Evidence boundaries:** claims that cannot be made, qualifications to retain, no invented essential beats or examples.
+- **Success checks:** observable tests tied to purpose—for education, can a reader explain the mechanism/distinction; for persuasion, can they assess the supported action and principal objection; for reporting, can they identify changes and uncertainty? Adapt to the actual purpose.
 
-**What to Avoid:**
-- Industry jargon (or define immediately if unavoidable)
-- Acronyms without expansion
-- Abstract nouns (transformation → change, optimization → making better)
-- Passive constructions
-- Compound sentences with multiple clauses
-- Assuming prior knowledge
+The brief is the builder's sole assignment rule source. The writer also reads the source and craft files; it does not inherit this conversation or browse the profile catalogs. Include the operative instruction wherever a label alone would lose a decision.
 
-**Examples:**
+### Pre-build consistency check
 
-| Instead of... | Write... |
-|---------------|----------|
-| "Leverage synergies across verticals" | "Use what works in one area to help another" |
-| "The algorithm optimizes for engagement" | "The system figures out what keeps people interested" |
-| "Market volatility impacts portfolio allocation" | "When prices jump around, you might want to spread your money differently" |
-| "Stakeholder alignment is critical" | "Everyone involved needs to agree on what we're doing" |
+Before dispatch, verify:
+1. Purpose, success condition and Ask agree; no forced action for an educational or reflective piece.
+2. Audience needs map to evidence and section jobs; unknown audience facts are not treated as known.
+3. Every essential claim/arc beat has support; contrary evidence and necessary qualifications survive.
+4. Outline transitions work and the chosen point fits the evidence and length budget.
+5. Format, use, detail, knowledge level, rhythm and tone are mutually feasible.
+6. Profile defaults do not contradict evidence, purpose or the approved outline.
+7. The approved point, structure and constraints all appear in the brief.
 
-**Shape Adjustment:**
-In ELI5 mode, prefer the simplest shapes: answer-first keeps people oriented; a familiar named arc (Hero's Journey) only if its beats are fully source-supported. Avoid withheld reveals and multi-perspective structures — they demand patience ELI5 audiences shouldn't need.
-
----
-
-## PHASE 3: Argument Outline + Conditional Shape (Gate 1)
-
-The primary step is not framework selection. It is the **Argument Outline** — a plain-language account of the argument:
-
-- What does this audience need to understand, and in what order?
-- What does each section add to the case for the focal claim?
-- Where does the Ask land?
-
-**The test:** the sequence must make sense with no framework labels and no dramatic vocabulary. If the outline only holds together when you name an arc, the outline is not done.
-
-### Conditional shape
-
-With the Argument Outline in hand, choose the shape — in this order of preference:
-
-1. **Answer-first (the default).** The claim lands by slide/section 2; the middle defends it in the outline's grouped reasons; the close returns to the Ask. This is the shape unless the material licenses something else. **"No named framework — direct explanation" is a first-class outcome**, not a fallback.
-2. **Withheld-reveal (conditional).** Only when the Material Read named a **genuine surprise** — never manufacture one. Stakes first, the reveal at its natural midpoint, consequences after.
-3. **Named arc (conditional, audited).** A named arc from [`framework-selection.md`](framework-selection.md)'s payload table, only when it survives the selection protocol there:
-   - **Reveal gate:** engagement arcs are gated on the Material Read's surprise line.
-   - **Payload match:** 2-4 candidates whose climax payload kind matches the focal's payload kind (Focal Fit Definition table).
-   - **Beat-support audit:** every essential/anchor beat matched to a **QUOTED source passage**. Any unmatched beat rejects the arc — no [GENERATED] backfill. Note rejections in the brief.
-   - **Skeleton stamp test:** stamp the surviving candidate's beat structure onto the Focal Statement and verify: (a) the climax/payoff beat structurally delivers the One Thing, (b) the closing beat structurally delivers the Ask, (c) the Through-Line is carried by the arc's natural emotional shape. All three must be Y.
-
-*Fast mode: the outline and shape selection run silently; the chosen shape, its trace-to-material line, and any rejected-arc notes surface in the consolidated brief. An audit or stamp failure still escalates to the user.*
-
-If a named arc was wanted but no candidate passes, do NOT force one. Widen to adjacent payload kinds once; otherwise fall back to answer-first direct explanation and say so:
-
-> "No named arc structurally lands your focal with full source support — the candidates either pull toward [X] or need beats the source can't fill. I recommend direct answer-first explanation; the argument outline already carries the piece."
-
-See [`framework-selection.md`](framework-selection.md) for the full selection protocol and the Focal Fit Definition table. See [`narrative-arcs.md`](narrative-arcs.md) and [`communication-frameworks.md`](communication-frameworks.md) for arc/framework details, [`emotional-arcs.md`](emotional-arcs.md) for emotional textures — all orchestrator/judge reference, never builder input.
-
-### High-Stakes Content: Early Agent Review
-
-For these content types, run Audience Advocate and Comms Specialist during shape recommendation:
-- Investor pitch / fundraising
-- Sales pitch
-- Multi-stakeholder / controversial topic
-- Policy recommendation
-- Strategic plan / transformation
-
----
-
-## PHASE 3.5: Build Brief
-
-**Purpose:** compile everything the builder is allowed to know into one self-contained artifact. This is the bridge between "what did the user say" and "how should this be written." Present the Build Brief to the user for confirmation before building.
-
-**The brief is a compiled artifact and the builder's sole rule source.** Paste the operative rules in; a rule left un-compiled does not exist for the builder. The builder reads the brief, the source, and exactly four craft files — it does **not** open `narrative-arcs.md`, `voice-profiles.md`, `audience-profiles.md`, `emotional-arcs.md`, `opening-closing-strategies.md`, `communication-frameworks.md`, or `rhetorical-figures.md`.
-
-Generate a Build Brief in this format:
-
----
-
-### Build Brief
-
-**Focal Statement:** [from Phase 1.75]
-- **The One Thing:** [single idea the piece must land]
-- **The Ask:** [action or shift being driven toward]
-- **The Through-Line:** [logical/emotional thread connecting everything]
-- `focal_origin:` [inferred | user-selected | user-stated | user-selected-after-reset]
-
-**Audience + Ask:** [the two one-liners from Phase 1.75 Step 1]
-
-**Material Read:** [pasted IN FULL from Phase 1.75 Step 2 — stake, tension, genuine surprise or "none", strongest existing passages, what changes. This is the builder's Step 1 anchor.]
-
-**Argument Outline:** [from Phase 3 — what this audience needs to understand, in what order, what each section adds, where the Ask lands]
-
-**Shape + Register:** [`answer-first` | `withheld-reveal` | named arc: <name>] · [`boardroom` | `keynote` | prose]
-- [Named arc only: the kept-beat skeleton and its pacing notes pasted VERBATIM — never a one-line shape string. Beats the source could not support were already cut; list them so the builder does not resurrect them.]
-
-**Density:** [from Phase 2.5]
-
-**Voice essentials:** [the operative rules compiled from `voice-profiles.md`: sentence structure, vocabulary register, paragraph rhythm, signature moves]
-
-**Audience essentials:** [compiled from `audience-profiles.md`]
-- Trust signals to hit: [2-3]
-- Resistance triggers to avoid: [2-3]
-- Evidence style: [type]
-- Headline style: [specific to this audience]
-
-**Opening/Closing note (optional):** [ONLY a pointer to a specific strongest passage from the Material Read — e.g., "open on the 9:14 scene". Never a strategy type from a catalog matrix. Omit if the Material Read offers no standout passage.]
-
----
-
-> "Here's the Build Brief I'll use to guide the output. Anything you'd change before I build?"
-
-The user can adjust any element. Once confirmed, the Build Brief becomes the binding reference for Phase 4. There is no Killer Line section and no opening/closing strategy matrix: ornament is licensed inside the builder's spine when the material yields it, never pre-drafted here.
+Fix compilation omissions before presenting the final brief. If a substantive choice must change, return it to the user (or mark it as an unresolved proposal in Fast); do not silently substitute. Approval closes the framing stage. Then write and run all gates. No mandatory external rendering skill is part of completion.
 
 ---
 
@@ -454,12 +280,12 @@ The build runs as a subagent executing **THE SPINE** — the nine-step procedure
 
 ### Content-Driven Length
 
-The builder determines length from the source content, not from any template. Named-arc beat structures are a **menu, not a checklist** — beats the source could not fill were already cut at brief compilation. A strong 8-slide deck beats a padded 20-slide deck.
+The builder determines length from the source content, not from any template. Named arcs preserve every essential/anchor beat. Unsupported essential beats reject an arc; unsupported nonessential beats are omitted at brief compilation. A strong 8-slide deck beats a padded 20-slide deck.
 
 ### Pre-Build: Write Handoff Files
 
 Before dispatching:
-1. Create the run directory: `RUN_DIR = /tmp/ne-<yymmdd>-<slug>/`
+1. Create a new unique temporary run directory (`mkdtemp`), or retain the unique directory already created for prebuild review
 2. Write the confirmed Build Brief to `RUN_DIR/ne-build-brief.md`
 3. Write the user's source content to `RUN_DIR/ne-source-content.md`
 4. State the RUN_DIR path explicitly in every subagent dispatch message
@@ -488,7 +314,7 @@ The evidence reviewer (Phase 4.8) spot-checks these tags against the source.
 
 ### Post-Build
 
-1. Read `RUN_DIR/ne-output.md` (the orchestrator may read the sidecar too; the focal judge never does)
+1. If the writer returns a brief-gap report or produces no valid body/sidecar, return to Phase 3.5 and resolve it before running gates. Otherwise read `RUN_DIR/ne-output.md` (the orchestrator may read the sidecar too; the focal judge never does)
 2. Do NOT present the output yet — run the gates in order: **Phase 4.6 → 4.7 → 4.8**
 3. Present the output only after all three pass, then proceed to Phase 5
 
@@ -498,7 +324,7 @@ The evidence reviewer (Phase 4.8) spot-checks these tags against the source.
 
 ## PHASE 4.6: Focal Fidelity Gate (Gate 2)
 
-A single-purpose blind judge whose only obsession is: **does this piece land The One Thing?** Phase 5 reviewers focus on prose quality, audience fit, and persuasion — without Gate 2, focal drift slips past them because the piece reads internally coherent.
+A blind judge checks **what the piece communicates and whether it fulfills the approved purpose**. Purpose and success criteria are inspected only after the cold read, when the brief is opened. Phase 5 reviewers focus on prose quality, audience fit, and persuasion — without Gate 2, focal drift slips past them because the piece reads internally coherent.
 
 ### Why a blind gate, not just another reviewer
 
@@ -524,7 +350,7 @@ Do NOT parallelize the judge — its protocol depends on a deterministic file-re
    Do not silently restart Phase 3 — the user owns that decision.
    - **Fresh-draft restart:** after the user authorizes a new shape or focal, archive the current reports, then clear all trigger files and `ne-focal-judge-prior.md` before the new builder dispatch. Reset the evidence review count for the new draft. Preserve the run-level focal-reopen count; a shape restart does not grant another automatic focal reset.
 4. **FOCAL_MISMATCH** → the judge's source check found an audience-relevant, source-supported claim more consequential than the brief's focal. The piece is not badly built — it is built on the wrong One Thing.
-   - **Automatic reset (once per run):** ONLY when the brief marks `focal_origin: inferred` (Fast mode, user never touched the focal line) and no reset has happened this run. Before re-entering the pipeline: delete ALL trigger files (`ne-focal-judge.md`, `ne-focal-judge-prior.md`, `ne-evidence-review.md`, `ne-humanizing-flags.md`) so the reset build starts clean in Initial Build Mode with a fresh `needs_revision_count`; the evidence reviewer's two-run cap also resets with the new draft. Then reopen Phase 1.75 with the judge's quoted passage as a new candidate; the user's new choice is marked `focal_origin: user-selected-after-reset`; then re-run Phases 3 → 3.5 → 4.
+   - **Automatic reset (once per run):** ONLY when the brief marks `focal_origin: inferred` (Fast mode, user never touched the focal line) and no reset has happened this run. Before re-entering the pipeline: delete ALL trigger files (`ne-focal-judge.md`, `ne-focal-judge-prior.md`, `ne-evidence-review.md`, `ne-humanizing-flags.md`) so the reset build starts clean in Initial Build Mode with a fresh `needs_revision_count`; the evidence reviewer's two-run cap also resets with the new draft. Then revisit Phase 1.75 with the judge's quoted passage, regenerate provisional candidates in Phase 2, and compare them in Phase 3; the user's new choice is marked `focal_origin: user-selected-after-reset`; then re-run Phases 3 → 3.5 → 4.
    - **Advisory (every other case):** for `user-selected`, `user-stated`, or `user-selected-after-reset` origins — and for ANY second mismatch in a run regardless of origin — the judge downgrades to an advisory inside the verdict it otherwise issues. The orchestrator surfaces the quoted passage and the audience-relevance argument to the user, never resets on its own.
 
 ### Cleanup
@@ -533,9 +359,9 @@ After the gate resolves: delete `ne-focal-judge.md` once its findings are closed
 
 ### What Phase 4.6 does NOT do
 
-- It does not coach prose quality (Phase 5), check persuasion or originality (Phase 5/5.5), or audit sourcing (Phase 4.8).
+- It does not coach prose style (Phase 5), replace specialist persuasion/originality review (Phase 5/5.5), or replace the evidence audit (Phase 4.8). After the cold read it does check the approved purpose and observable success condition.
 - It does not receive the focal, the sidecar, or any draft line in its dispatch — blindness is the mechanism.
-- Its cold read DOES check engagement: an opening that raises no question, or an ending that ignores the opening, blocks PASS even on a semantic match. For decks, a broken title chain forces NEEDS_REVISION regardless of focal match.
+- Its cold read checks a reason to continue and whether the close fulfills the opening's promise. A direct answer can establish relevance without suspense or a literal question. A failed purpose or broken promise blocks PASS even on a semantic match. For decks, a broken title chain forces NEEDS_REVISION regardless of focal match.
 
 ---
 
@@ -590,7 +416,7 @@ Unsupported claims · altered qualifications (correlation→causation, hedge-str
 - **FINDINGS with only MINOR entries** → the gate passes with notes: delete the trigger file, surface the findings to the user alongside the deliverable as evidence notes, and offer the repair in one line ("want the minor evidence findings fixed? one builder pass"). No automatic repair dispatch — MINOR means the claim is defensible.
 - **Two-run cap:** the reviewer runs at most twice per draft (the second run re-checks changed sections + prior findings only). Findings still unresolved after the second run → escalate to the user with `ne-evidence-review.md` attached; the user decides.
 
-For decks: after this gate passes (and Phase 5 if run), the orchestrator runs the render stage — keynote-create Stage 4 (`keynote-render.mjs` → `/impeccable` → PDF).
+After the applicable reviews pass, deliver the written prose or presentation narrative. Rendering is a separate optional downstream task, not required for standalone completion.
 
 ---
 
@@ -598,7 +424,7 @@ For decks: after this gate passes (and Phase 5 if run), the orchestrator runs th
 
 ### When to Run
 
-Auto-run the panel only for high-stakes content types (the same list as Phase 3's early review: investor pitch, sales pitch, strategic plan / transformation, policy recommendation, multi-stakeholder / controversial). For everything else, offer it in one line after Gate 4 passes — "Want the two-reviewer pass? Optional for a piece like this; the four gates have already run." — and proceed without it if declined. The gates already guarantee focal fidelity, de-slop, and source fidelity; the panel adds audience and persuasion depth that low-stakes pieces can skip.
+Auto-run the panel only for high-stakes content types (the same list as Phase 3's early review: investor pitch, sales pitch, strategic plan / transformation, policy recommendation, multi-stakeholder / controversial). For everything else, offer it in one line after Gate 4 passes — "Want the two-reviewer pass? Optional for a piece like this; the four gates have already run." — and proceed without it if declined. The gates assess focal/purpose fidelity, writing drift, and source fidelity; the panel adds audience and persuasion depth that low-stakes pieces can skip.
 
 Two specialist agents review the output simultaneously via the Task tool, selected by content type to focus on the dimensions that matter most for this piece.
 
@@ -781,7 +607,7 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 | File | Contains |
 |------|----------|
 | [`prose-craft.md`](prose-craft.md) + [`prose-craft-constructions.md`](prose-craft-constructions.md) | Embedded sentence-level discipline (Floor/Filter/Ceiling + construction catalog). Tier 1 of the humanizing pass. **Builder input** — applied directly by the builder, not a separate skill call. |
-| [`deck-title-craft.md`](deck-title-craft.md) | Embedded keynote-create title guide — action titles, the title-chain tests (spoken-prose + antecedent), register variants, rewrite examples. **Builder input** (presentation path) and the judge's deck-branch test source. |
+| [`deck-title-craft.md`](deck-title-craft.md) | Local title guide — action titles, title-chain tests (spoken-prose + antecedent), register variants and rewrite examples. **Builder input** (presentation path) and the judge's deck-branch test source. |
 | [`humanizing-pass.md`](humanizing-pass.md) | The de-slop layer — Tier 1 (prose-craft) + Tier 2 (discourse structural-delta checklist), judge hygiene, the gate-not-objective rule. **Builder input** (Tier-2 checklist as self-check); Phase 4.7 verifies and flags only. |
 | [`framework-selection.md`](framework-selection.md) | The Phase 3 shape-selection protocol — reveal gate, payload match (Focal Fit Definition table), beat-support audit, skeleton stamp test. Orchestrator/judge reference — never builder input. |
 | [`narrative-arcs.md`](narrative-arcs.md) | 10 narrative arc structures with beats. Orchestrator/judge reference — never builder input. |
@@ -807,24 +633,13 @@ See [`checklists.md`](checklists.md) for the Change Log template and Metric Menu
 
 ## Quick Start
 
-1. User provides content
-2. **Require an explicit mode choice: Fast or Deep; never default.** If none has been supplied for this piece, ask and wait. Fast infers steps 3–8 from the content and presents one consolidated brief (focal candidates always visible, `focal_origin: inferred`); Deep walks them one at a time.
-3. Ask output format (Presentation / Prose / Both). **If Presentation → ask the register: Boardroom sentence-titles or Keynote fragments (default Boardroom).** *(Deep; inferred + surfaced in Fast)*
-4. **Pin audience + ask** (one line each; skip only if stated), then do the **Material Read** (stake, tension, genuine surprise or "none", strongest passages, what changes)
-5. **Propose 2-3 stance-committing focal candidates** → user confirms → Focal Statement (One Thing / Ask / Through-Line) + `focal_origin` recorded. For decks this is the punchline.
-6. Ask remaining discovery (purpose, content type, tone), then density mode *(Deep; inferred in Fast)*
-7. **Write the Argument Outline**, then choose the shape conditionally (**Gate 1**): answer-first default; withheld-reveal only on a genuine surprise; named arc only after the beat-support audit (quoted passages) + skeleton stamp test in `framework-selection.md`
-8. **Compile the Build Brief** (focal + origin, audience/ask, Material Read in full, argument outline, shape + register, density, voice + audience essentials, optional passage-pointer for open/close) → user confirms
-9. **Create RUN_DIR** (`/tmp/ne-<yymmdd>-<slug>/`), write Build Brief and source content into it
-10. **Dispatch build subagent** — runs THE SPINE, writes `ne-output.md` (body only) + `ne-output-meta.md` (sidecar)
-11. **Gate 2** — dispatch the blind focal judge (dispatch message: audience, ask, register — never the focal). Route the verdict:
-    - PASS → step 12
-    - NEEDS_REVISION → shared repair loop (counter-capped at 3)
-    - FRAMEWORK_MISMATCH → escalate to user; consider Phase 3 reset
-    - FOCAL_MISMATCH → reopen Phase 1.75 once if `focal_origin: inferred`; otherwise surface as advisory
-12. **Gate 3** — Tier-2 humanizing check, flag-only; drift → `ne-humanizing-flags.md` → shared repair loop
-13. **Gate 4** — dispatch the evidence reviewer; BLOCKING findings → shared repair loop; minor-only findings pass with notes; two-run cap; then present the output. For decks, render (→ `/impeccable` → PDF) after step 14 when the review runs, immediately otherwise.
-14. **Targeted review** — auto-dispatch 2 parallel subagents for high-stakes content; offer in one line otherwise (roles from the Phase 5 table, named in dispatch)
-15. **Director synthesis**; for high-stakes content offer the Stress Test Panel (3 subagents, personas from the Phase 5.5 table); "tighter" and Change Log export on demand
-
-
+1. Import source; require explicit Fast or Deep.
+2. Purpose/success, audience starting position, format/use/limits (Phase 1.5).
+3. Read source for evidence, relevance and limits (Phase 1.75).
+4. Resolve treatment and propose provisional points (Phase 2).
+5. Compare plain reasoning and supported arcs (Phase 3; Gate 1).
+6. Approve point and structure together; compile and check brief (Phase 3.5).
+7. Dispatch isolated writer with brief, source and craft only (Phase 4).
+8. Run blind focal/purpose, humanizing and evidence gates with the shared repair loop (Phases 4.6–4.8). A focal PASS does not authorize delivery.
+9. Run applicable specialist reviews and any chosen stress test. Route changes through affected gates.
+10. Deliver prose/presentation text; offer compression or a change log as appropriate.

@@ -6,7 +6,7 @@ Narrative Engine embeds copies of external material so the build subagent runs s
 |---|---|---|---|
 | `prose-craft.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/SKILL.md` | Adapted body (finite NE substitutions in `scripts/ne-prose-adaptations.json`; header, scope and local refs differ) | 2026-09-16; NE adaptations preserve Floor/Filter and make Ceiling optional |
 | `prose-craft-constructions.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/constructions.md` | Verbatim (title + internal refs differ) | 2026-08-24 |
-| `deck-title-craft.md` | `~/Projects/keynote-create-skill/references/title-craft.md` | Verbatim body (header differs) | 2026-09-16 |
+| `deck-title-craft.md` | Historical title-craft embed from 2026-09-16; now maintained inside Narrative Engine | Independent local reference, not synchronized to another installed skill | 2026-09-17; standalone ownership and source-qualification rules |
 | `rhetorical-figures.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/figures.md` | **Adapted, not verbatim** — this file adds NE-specific sections (humanizing-pass tie-in, deck-title tests); the figure tables and Filter budgets must stay aligned | 2026-08-24 |
 
 ## Sync procedure
@@ -15,3 +15,5 @@ Narrative Engine embeds copies of external material so the build subagent runs s
 2. If a pair is stale: apply the canonical's changes to the embed (keep the embed's header banner and local file references), update the Last synced column, and note the canonical's commit sha where it has one.
 3. `rhetorical-figures.md` is checked by eye: confirm the figure tables and the Filter reconciliation budgets (anaphora ≤2, one tricolon/section, zero negative-parallelism) match `figures.md`.
 4. Update the embed banner's re-synced date inside the file itself.
+
+The title guide is now a maintained standalone reference. Its historical provenance is preserved here; changes in another skill do not silently alter or invalidate Narrative Engine. Review title changes against the presentation behavioral scenarios and the source-fidelity rules. `check-sync.sh` continues checking the prose-craft embeds against available canonicals.

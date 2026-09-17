@@ -44,20 +44,9 @@ already delivers two of the corpus's humanizing levers for free:
 - **Lexical de-slop** = prose-craft's Filter (strip "it's worth noting," delve/leverage/robust, signposted conclusions).
 - **Stylistic variance** (Reinhart et al., PNAS 2025: LLMs occupy a narrower band, lower sentence-length variance) = prose-craft's Ceiling, whose explicit job is to *kill monotony — vary length, vary where the weight falls.*
 
-**Register routing** — map the Density Mode to prose-craft's register so it rations the Ceiling correctly:
+**Register routing:** use the brief's independent treatment dimensions. Concise detail and compressed rhythm favor short base clauses. Detailed support may need developed sentences. Non-specialist knowledge calls for definitions and plain language without cutting necessary explanation. Legacy density labels are translated during discovery; they do not override the explicit treatment.
 
-| Density Mode | prose-craft register |
-|---|---|
-| High-Impact / Punchy | Floor-dominant — short base clauses, payload up front, ration the Ceiling |
-| Narrative / Flowing | Balanced — developed sentences when their detail or rhythm serves the material |
-| Evidence / Dense | Floor on claim sentences; Ceiling allowed for evidence development (longer paragraphs are fine) |
-| ELI5 | Floor-dominant + prose-craft's plain-language rules reinforce ELI5 |
-
-**Conflict with persuasion copy.** prose-craft's own boundary: it warns off pure conversion copy
-because its Filter fights persuasion sweeps. For CTA lines, pricing lines, and the explicit Ask, the
-Persuasion Overlay (`agent-reference-persuasion.md`) and `copy-editing` discipline take precedence —
-do not let the Filter strip a CTA that is working. prose-craft governs the body; the overlay governs
-the ask.
+**Requests and recommendations:** keep the approved Ask clear and proportional to the evidence. For educational or reflective purposes, an understanding outcome is sufficient; do not manufacture an action request. Preserve qualifications in any recommendation or price claim. No external copy-editing skill or persuasion overlay is required by the builder; relevant assignment rules are already compiled into its brief.
 
 ---
 

@@ -2,11 +2,13 @@
 
 > **Reference layer.** Read by the orchestrator (brief compilation, shape selection) and by judges/reviewers. Never read by the build subagent — a rule that matters is compiled into the Build Brief.
 
-Detailed beat-by-beat structures for all 10 narrative arcs. These are **engagement-optimized** — they use mystery, delayed revelation, and reframing to hold attention.
+The pacing, emotional textures and sample phrasing below are suggestions, not mandates; the supported outline and audience purpose take precedence. Never manufacture an event, emotional turn, false lead or quotable line.
+
+Detailed beat-by-beat structures for all 10 narrative arcs. They offer different information orders: some delay a reveal; others explain an outcome first, develop a plan or synthesize perspectives. They are options for both prose and presentations, not proven engagement improvements.
 
 ### Beat Weights
 
-The Weight column indicates relative importance, not slide count. Content determines length.
+The Weight column indicates relative importance, not slide count. Content determines length within the user’s limits. Essential/anchor beats require quoted source support; missing one rejects the arc. Other beats may be omitted or combined. Evidence qualifications remain mandatory regardless of weight. Example counts, reveal percentages, escalating patterns and headlines below are illustrative, not quotas or facts to reuse. No false trail or dramatic event may be invented; a requested arc with an unsupported anchor is rejected.
 
 | Weight | Meaning |
 |--------|---------|
@@ -103,7 +105,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Pacing:** The Riddle opens with a hook that pulls the reader forward — fast, lean, question-driven. Clues #1 and #2 build at a steady investigative pace, each adding a piece. Clue #3 (the decoy) and the Red Herring exploration speed up — the reader thinks they're closing in. The Failed Attempt creates a hard stop. The Overlooked Clue arrives quietly, almost casually. The Click is a single, sharp beat. Then Re-interpretation slows down luxuriously — let the reader enjoy the re-reading of earlier evidence. Takeaways and Tag are brisk and clean.
 
-**Language shifts:** The Riddle uses question syntax or anomaly framing — something that demands explanation. Clues use evidence language: data, specifics, "we found that." The Red Herring section should sound plausible and confident — write it as if it's the real answer. The Failed Attempt deflates that confidence with flat, factual contradiction. The Overlooked Clue is understated — the smallest sentence in the section. The Click uses declarative, revelatory prose — no questions, no hedging, just the answer. Re-interpretation revisits earlier language but adds the new interpretive layer.
+**Language shifts:** The Riddle uses question syntax or anomaly framing — something that demands explanation. Clues use evidence language: data, specifics, "we found that." The Red Herring section should sound plausible and confident — write it as if it's the real answer. The Failed Attempt deflates that confidence with flat, factual contradiction. The Overlooked Clue is understated — the smallest sentence in the section. The Click uses declarative, revelatory prose — no questions, preserving necessary qualifications, just the answer. Re-interpretation revisits earlier language but adds the new interpretive layer.
 
 **The key moment:** The Click (Beat 8). Everything the reader has been holding in their head must snap into place in this beat. Write it as one to two sentences that name the actual answer. Do not lead up to it. Do not frame it as "what we discovered was." Just state it. The Click should feel like a lock opening — mechanical, precise, satisfying. If the reader has to re-read the Click to understand it, the clues weren't set up properly.
 
@@ -339,7 +341,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Pacing:** Exposition is spacious and deliberate — let the world breathe before disrupting it. Rising Action beats accelerate incrementally, each shorter and more urgent than the last; by Rising Action C, sentences should feel compressed and propulsive. The Climax holds for a beat longer than expected — don't rush through it. Falling Action decelerates noticeably, like an exhale after holding breath. The Denouement and Button are slow, warm, and final.
 
-**Language shifts:** Exposition uses rich, contextual prose — scene-setting, descriptive, patient. As rising action builds, sentences get shorter, paragraphs tighter, transitions sharper. Strip away adjectives. At the Climax, the writing should be at its most stripped-down and direct — active verbs, no hedging, no subordinate clauses. Falling Action reintroduces longer sentences and reflection. The Button should have the cadence of a final line of poetry — measured, resonant, complete.
+**Language shifts:** Exposition uses rich, contextual prose — scene-setting, descriptive, patient. As rising action builds, sentences get shorter, paragraphs tighter, transitions sharper. Strip away adjectives. At the Climax, the writing should be at its most stripped-down and direct — active verbs, preserving necessary qualifications, no subordinate clauses. Falling Action reintroduces longer sentences and reflection. The Button should have the cadence of a final line of poetry — measured, resonant, complete.
 
 **The key moment:** The Climax (Beat 6). This is pure dramatic structure — the moment everything turns. Do not dilute it with explanation or context. The Climax should feel like a door slamming. One to three sentences maximum for the core turning point. Let the reader feel the impact before you explain what happened. The Falling Action exists to process what the Climax delivered; the Climax itself delivers without processing.
 
@@ -439,7 +441,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Language shifts:** Early beats use informal, wry, observational language — the voice of a smart friend noticing something. During heightening, sentences get punchier and more parallel in structure; repetition becomes a tool. The Twist should break the linguistic pattern as sharply as it breaks the conceptual one — different sentence structure, different register. Why It Works shifts to analytical, almost academic prose. The Tag returns to the conversational voice of the opening.
 
-**The key moment:** Name the Game (Beat 3). This is the comedic thesis statement — the moment the pattern gets a name. It must land as a one-line formulation that's immediately quotable. Write it as a declarative sentence with no hedging, no "perhaps," no "it seems like." Think bumper sticker, not paragraph. If this beat doesn't click, the heightening rounds will feel like a list instead of a comedy set.
+**The key moment:** Name the Game (Beat 3). This is the comedic thesis statement — the moment the pattern gets a name. It must land as a one-line formulation that's immediately quotable. Write it as a declarative sentence with preserving necessary qualifications, retaining "perhaps" or "seems" when the evidence requires them. Think bumper sticker, not paragraph. If this beat doesn't click, the heightening rounds will feel like a list instead of a comedy set.
 
 **Protected emotional beats:**
 - Name the Game — the conceptual anchor; must be crisp enough to remember and repeat

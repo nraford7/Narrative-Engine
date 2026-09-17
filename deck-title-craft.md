@@ -1,11 +1,6 @@
 # Deck Title Craft (embedded module)
 
-> **This is a verbatim embed of keynote-create's `references/title-craft.md`, copied into Narrative
-> Engine so the deck build is self-contained — the build subagent never has to reach into another
-> skill at dispatch time.** Source: `~/.claude/skills/keynote-create/references/title-craft.md` ·
-> embedded 2026-06-22 · re-synced 2026-09-16. If keynote-create changes, re-sync this file. The render
-> stage (Stage 4 — `keynote-render.mjs` + `/impeccable` + style-pack layouts) runs in the orchestrator,
-> not the subagent, so it legitimately still calls keynote-create; only the *title build* is embedded here.
+> Maintained inside Narrative Engine. Originally embedded from a title-craft reference on 2026-09-16; see SYNC.md for provenance. No external skill or renderer is required. The approved purpose, source qualifications and selected outline outrank stylistic examples below.
 
 Slide titles in this skill carry the story. The body of each slide supports the title; the title delivers the takeaway. This document goes deeper than the core rules in `SKILL.md`.
 
@@ -58,7 +53,8 @@ Titles that name what's on the slide rather than what it means.
 ### The hedge problem
 Titles that bury the takeaway in qualification.
 - Weak: "It appears adoption may have been affected by some onboarding issues."
-- Strong: "Onboarding broke adoption."
+- Strong, when causal evidence supports it: "Onboarding broke adoption."
+- If evidence is preliminary or correlational: preserve that scope, for example "Early findings link onboarding problems to lower adoption."
 
 ### The list problem
 Sequential titles with parallel structure, suggesting items rather than narrative motion.
@@ -235,9 +231,9 @@ When unsure between two candidate titles, pick the one a friend would more likel
 - **Fragments are correct**, not lazy: "Warlord tax collectors," "Persistent basic needs," "Two worlds in one."
 - **One-to-three-word punches** are the strongest beats: "Bonkers," "Normal," "It did," "Accelerating," "Six days."
 - **Pivot questions** mark the turns: "What can we do about it?", "What about government?"
-- **Coined terms** carry concepts the deck wants you to leave with: "Volitocracy," "guberment" — but only invent them when the source has a genuinely new idea to name (see the anti-pastiche rule in [`keynote-devices.md`](~/.claude/skills/keynote-create/references/keynote-devices.md)).
-- **Complete sentences are rationed** — spend them on the 3–4 lines meant to land: the turn, the thesis, the closing aphorism ("Analysis is focused on what is. Design is focused on what can be.").
+- **Coined terms** carry concepts the deck wants you to leave with: "Volitocracy," "guberment" — but only when a source-supported idea benefits from a clear name. Do not imitate a distinctive coined term or create opaque jargon for effect.
+- **Complete sentences are available when the reasoning needs them**, including the turn, the thesis, the closing aphorism ("Analysis is focused on what is. Design is focused on what can be.").
 
-**The titles-only / spoken-prose test does not govern a Keynote deck as a whole.** Reading Keynote captions top-to-bottom will *not* narrate the talk — and that is by design. The strict chained-caption test applies **only to a designated climax run** (device #10 in `keynote-devices.md`), where captions grammatically complete across slides ("…which will lead to… / …but at a cost…"). Everywhere else, use the **beat + narration read**: imagine one spoken line per slide and check the sequence tracks as a told story.
+**The titles-only / spoken-prose test does not govern a Keynote deck as a whole.** Reading Keynote captions top-to-bottom will *not* narrate the talk — and that is by design. The strict chained-caption test applies **only to a designated climax run** (a short passage of connected fragments), where captions grammatically complete across slides ("…which will lead to… / …but at a cost…"). Everywhere else, use the **beat + narration read**: imagine one spoken line per slide and check the sequence tracks as a told story.
 
-What still applies in Keynote mode: cut hedges, cut AI tells, avoid accidental sameness across adjacent beats, and keep the stranger test for anything that isn't a deliberately withheld setup. A fragment can still be opaque — "Regulatory ambiguity defers capex" is a bad beat in either mode.
+What still applies in Keynote mode: remove rhetorical filler while preserving evidentiary qualifications, cut AI tells, avoid accidental sameness across adjacent beats, and keep the stranger test for anything that isn't a deliberately withheld setup. A fragment can still be opaque — "Regulatory ambiguity defers capex" is a bad beat in either mode.
