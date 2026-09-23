@@ -19,14 +19,14 @@ Curiosity needs *partial* knowledge: enough grounding to feel the gap, not so mu
 Not shock — a *more useful* explanation surfacing beneath the obvious one. The reader predicted A; you reveal that A was the surface and B is what actually drives it.
 
 **4. The Re-hook — resolve this loop, open a sharper one.**
-Close the current question and, in the same beat, open the next — momentum across the section seam. A section that resolves cleanly and opens nothing is where readers leave.
+Close the current question and, in the same beat, open the next — momentum across the section break. A section that resolves cleanly and opens nothing is where readers leave.
 
 ---
 
 ## Sentence-level tactics
 
 - **Stakes:** "If [claim] is true, then [consequence]." Names the cost of being wrong.
-- **Re-hook:** end the section on the question the next section answers, so the reader crosses the seam already leaning forward.
+- **Re-hook:** end the section on the question the next section answers, so the reader crosses the section break already leaning forward.
 
 **The Head Fake carries no template — negative parallelism is banned here.** Reveal the deeper cause beneath the obvious one in whatever surface form the passage calls for. Never the "X is not Y; it is Z" shape. That construction is negative parallelism, which the Filter bans outright (zero per piece) — there is no budget for the attention loop to spend. The head fake is a *structural* move (a better model surfacing beneath the obvious one), not a sentence template; enforce it as structure and vary the wording every time. Any stamped "not X, but Y" the build produces from this beat is a defect, cut on sight.
 
@@ -51,7 +51,7 @@ Plus the **through-question**: the single question the whole piece keeps open un
 ## Guardrails (gate, not objective)
 
 - **Real stakes only.** Manufactured stakes are the "grandiose stakes inflation" the sentence discipline already bans. Match the stakes to the actual stakes.
-- **Real gaps only.** A curiosity gap must be genuine and resolvable. A question you never answer, or answer trivially, is clickbait — and the humanizing pass's open-thread delta cuts the other way here: leave *honestly* open questions open, but do not fake a gap to hook.
+- **Real gaps only.** A curiosity gap must be genuine and resolvable. A question you never answer, or answer trivially, is clickbait — and the humanizing pass's open-thread delta cuts the other way here: leave genuinely open questions open, but do not fake a gap to hook.
 - **Do not moralize every re-hook.** Resolving and editorializing every beat is itself an AI-tell (Tier 2). Some loops close quietly; some stay open on purpose.
 - **Do not run a generator against this.** Like every humanizing delta, optimizing the metric manufactures the slop it removes. Use the loop to *shape* sections and to *diagnose* a draft that has gone inert, not as a score to maximize.
 

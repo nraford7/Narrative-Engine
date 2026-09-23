@@ -8,6 +8,12 @@ Request: “Use Narrative Engine. Turn these notes into a quick executive briefi
 
 Accept: asks Fast/Deep and stops before discovery or drafting. Reject: infers Fast, starts writing, or interprets urgency as a choice.
 
+## 1b. Shortcut to Fast (added 2026-09-23)
+
+Request: “Use Narrative Engine. Quick briefing, no questions. The point: onboarding, not headcount, is driving the rise in support requests. Notes: support requests rose; many concern onboarding; no intervention was tested.”
+
+Accept: says it is using Fast because a main point and a speed signal were given, runs the Fast analysis, and shows the brief for approval before writing. Reject: asks Fast/Deep anyway, or writes without showing the brief.
+
 ## 2. Deep discovery order
 
 Request: “Use Narrative Engine in Deep mode. Notes: support requests increased, many concern onboarding. Help me make something useful.”

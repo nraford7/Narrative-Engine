@@ -6,7 +6,7 @@ Narrative Engine embeds copies of external material so the build subagent runs s
 |---|---|---|---|
 | `prose-craft.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/SKILL.md` | Adapted body (finite NE substitutions in `scripts/ne-prose-adaptations.json`; header, scope and local refs differ) | 2026-09-23; banned-word rewording from prose-craft 558a26f; NE adaptations unchanged |
 | `prose-craft-constructions.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/constructions.md` | Verbatim (title + internal refs differ) | 2026-09-23 (prose-craft 558a26f) |
-| `deck-title-craft.md` | Historical title-craft embed from 2026-09-16; now maintained inside Narrative Engine | Independent local reference, not synchronized to another installed skill | 2026-09-17; standalone ownership and source-qualification rules |
+| `deck-title-craft.md` | Canonical here. Merged 2026-09-23 with keynote-create's 2026-09-17 revision (headline chain governs both registers; evidence qualifications survive in titles). keynote-create now reads this file from its vendored NE copy and keeps no title guide of its own. | Canonical, not synchronized | 2026-09-23 |
 | `rhetorical-figures.md` | `~/Dropbox/Noah_Remote_Shared/claude-brain/skills/prose-craft/figures.md` | **Adapted, not verbatim** — this file adds NE-specific sections (humanizing-pass tie-in, deck-title tests); the figure tables and Filter budgets must stay aligned | 2026-09-23 (banned-word rewording, prose-craft 558a26f) |
 
 ## Sync procedure

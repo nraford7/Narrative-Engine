@@ -376,7 +376,7 @@ Used in the ON-DEMAND Change Log Export phase. The Change Log is **not a generic
 
 ## Tradeoffs Made
 
-[Be honest about what was sacrificed for what was gained]
+[State plainly what was sacrificed for what was gained]
 
 | Gained | Lost/Reduced | Why acceptable |
 |--------|--------------|----------------|

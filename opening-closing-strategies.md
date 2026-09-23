@@ -210,7 +210,7 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 
 ### 4. Lingering Question
 
-**Description:** End with one carefully chosen unanswered question that the audience will carry out of the room.
+**Description:** End with one carefully chosen unanswered question that the audience will carry home.
 
 **How it works:** The Zeigarnik effect shows that incomplete tasks occupy the mind more than completed ones. A lingering question turns your presentation into an open loop in the audience's memory, ensuring continued mental engagement after you stop speaking. The question must be genuinely open (not rhetorical) and must arise naturally from the content — it should be the one question your material raises but cannot fully answer.
 
@@ -240,7 +240,7 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 **Example:**
 > "Your customers still love your product. They leave over your price. Fix the price. Keep the customers."
 
-**Avoid when:** The truth is genuinely complex and cannot be honestly reduced to one sentence without distortion. A false simplification undermines the rigor of everything before it. Also avoid when the audience values nuance as a signal of expertise (academic settings, policy discussions).
+**Avoid when:** The truth is genuinely complex and cannot be truthfully reduced to one sentence without distortion. A false simplification undermines the rigor of everything before it. Also avoid when the audience values nuance as a signal of expertise (academic settings, policy discussions).
 
 ---
 

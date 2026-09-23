@@ -22,7 +22,7 @@ Deep reference for messaging, persuasion, and copywriting techniques.
 - Write like one human being talking to another
 - Short sentences. Short paragraphs. Plain words.
 - Long copy sells when the stakes are high
-- Every word must earn its place
+- Every word must do a job
 
 ### Concept Development
 - Go 180° against common sense — that's where viral ideas live
@@ -67,7 +67,7 @@ Named after Mr. Whipple (annoying but effective Charmin ads):
 | **Plain Folks** | "I'm just like you" | Authentic relatability |
 | **Glittering Generalities** | Emotionally charged vague words | Replace with concrete specifics |
 | **Card Stacking** | Selective presentation of facts | Acknowledge counterarguments |
-| **Fear/Uncertainty/Doubt** | Create anxiety about alternatives | Honest risk communication |
+| **Fear/Uncertainty/Doubt** | Create anxiety about alternatives | Truthful risk communication |
 | **Transfer** | Associate with respected symbols | Genuine alignment with values |
 | **Testimonial** | Endorsement by respected figure | Authentic, relevant endorsers |
 
@@ -583,7 +583,7 @@ These models explain *why* specific narrative choices work. Use them to make mor
 
 **Pratfall Effect** — A competent person or brand becomes *more* likable after showing a small, relatable flaw. Perfection creates distance; strategic vulnerability creates connection.
 
-*Narrative application:* One honest admission of limitation, difficulty, or past failure makes the rest of your claims more believable. "We tried X and it didn't work — here's what we learned" is more persuasive than an unbroken success story.
+*Narrative application:* One plain admission of limitation, difficulty, or past failure makes the rest of your claims more believable. "We tried X and it didn't work — here's what we learned" is more persuasive than an unbroken success story.
 
 *Builder instruction:* Include one moment of strategic vulnerability — a lesson learned, a limitation acknowledged, or a challenge still being worked on. Place it before your strongest proof points so credibility compounds.
 
@@ -611,7 +611,7 @@ These models explain *why* specific narrative choices work. Use them to make mor
 
 *Narrative application:* If anything in your offering is genuinely free (trial, consultation, resource, tool), call it out explicitly. "Free" triggers an emotional response that "low-cost" or "affordable" cannot match.
 
-*Builder instruction:* If a free element exists, give it its own moment — don't bury "free trial" in a list of features. The word "free" earns a headline.
+*Builder instruction:* If a free element exists, give it its own moment — don't bury "free trial" in a list of features. The word "free" deserves a headline.
 
 ---
 

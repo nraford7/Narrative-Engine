@@ -37,7 +37,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 | 6. Misdirection addressed | Why we missed this before | standard |
 | 7. **Prestige** | The new understanding; what this means | anchor |
 | 8. Consequences | Implications and applications | standard |
-| 9. Limits | Honest caveats and boundaries | brief |
+| 9. Limits | Plain caveats and boundaries | brief |
 | 10. Action | What to do with this knowledge | brief |
 | 11. Callback | Return to opening with new eyes | anchor |
 
@@ -150,18 +150,18 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 ### Emotional Texture & Pacing
 
-**Emotional shape:** ambition and swagger → sobering reality → resourceful energy → focused tension → gut-punch setback → improvised recovery → earned triumph → cocky wink
+**Emotional shape:** ambition and swagger → sobering reality → resourceful energy → focused tension → gut-punch setback → improvised recovery → hard-won triumph → cocky wink
 
 **Pacing:** Opens with the Vault and Stakes at a confident, forward-leaning pace — this is a pitch, and it should feel like one. Obstacles slow things down as reality hits. Assemble the Crew is the longest sustained section and should feel like a montage — crisp, energetic, each capability introduced with punch. The Plan accelerates. The Setback hits like a wall — a sudden stop. The Workaround is scrappy and fast. Execution unfolds at a deliberate, controlled pace. The Payoff exhales. The Epilogue Twist is a quick, delightful kicker.
 
 **Language shifts:** The Vault uses aspirational, goal-oriented language — strong verbs, clear targets, specific numbers. Obstacles are written in the language of constraint: "but," "however," "the problem is." Assemble the Crew shifts to capability language — what each piece does, why it matters, how it fits. The Setback should drop into blunt, short, concrete sentences — no softening, no spin. The Workaround uses improvisation language: "so instead," "we pivoted," "the play became." Execution is precise, operational prose. The Epilogue Twist is light, almost playful — a raised eyebrow after a job well done.
 
-**The key moment:** The Setback (Beat 7). This is where the heist earns its credibility. The audience needs to feel that the plan genuinely broke — not a minor complication, not a "challenge we overcame." Write the Setback in two to three short sentences. State the damage plainly. No silver lining in this beat. The Workaround exists to provide the recovery; the Setback must commit to the problem.
+**The key moment:** The Setback (Beat 7). This is where the heist gets its credibility. The audience needs to feel that the plan genuinely broke — not a minor complication, not a "challenge we overcame." Write the Setback in two to three short sentences. State the damage plainly. No silver lining in this beat. The Workaround exists to provide the recovery; the Setback must commit to the problem.
 
 **Protected emotional beats:**
 - The Vault — the emotional contract with the audience; they need to want this goal before they'll care about obstacles
 - Setback — the credibility beat; without genuine jeopardy, the Payoff feels predetermined
-- Payoff — the earned reward; must include specific results and must feel proportional to the difficulty of the journey
+- Payoff — the reward the struggle paid for; must include specific results and must feel proportional to the difficulty of the journey
 - Epilogue Twist — the emotional dessert; cutting it makes the arc feel like a report instead of a story
 
 ---
@@ -209,7 +209,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 **Protected emotional beats:**
 - Future Headline — the emotional hook; must be vivid and specific enough to feel real, not like a thought experiment
 - Tiny Past Cause — the wonder beat; the emotional power of tracing a massive outcome to a small decision must not be compressed into a summary
-- Fork Reveal — the conceptual pivot; this is where the arc earns its name, and it must land as a genuine reframing, not a restatement
+- Fork Reveal — the conceptual pivot; this is where the arc gets its name, and it must land as a genuine reframing, not a restatement
 
 ---
 
@@ -301,15 +301,15 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Pacing:** The Ordinary World and Call are measured and human — give the reader time to care about the protagonist before testing them. Refusal and early Tests maintain a narrative pace, each beat a self-contained scene. The Approach compresses time, creating urgency. The Ordeal is the slowest, most detailed beat in the entire arc — expand it, linger in it, make the reader feel the cost. After the Ordeal, pacing gradually lightens through Reward, Road Back, and Return.
 
-**Language shifts:** Ordinary World uses warm, grounded, personal language — this should sound like someone telling their own story. The Refusal brings doubt and hedging into the voice. Tests use active, episodic prose — "we tried X, then Y happened." The Ordeal shifts to visceral, present-tense-feeling language even if technically past tense — sensory details, short sentences, emotional honesty. The Return with Elixir lifts into a more expansive, generous register — the voice of someone who's been through something and wants to share what they learned.
+**Language shifts:** Ordinary World uses warm, grounded, personal language — this should sound like someone telling their own story. The Refusal brings doubt and hedging into the voice. Tests use active, episodic prose — "we tried X, then Y happened." The Ordeal shifts to visceral, present-tense-feeling language even if technically past tense — sensory details, short sentences, emotional candor. The Return with Elixir lifts into a more expansive, generous register — the voice of someone who's been through something and wants to share what they learned.
 
 **The key moment:** The Ordeal (Beat 11). This is where the hero is genuinely tested and the transformation becomes real. Do not skip to the lesson. Sit in the difficulty. Name specific costs, specific fears, specific moments of doubt. If the Ordeal feels easy or summarized, the Reward will feel unearned. Write it like a scar the protagonist can still feel.
 
 **Protected emotional beats:**
 - Ordinary World — the emotional anchor; if the reader doesn't care about "before," the transformation means nothing
-- Refusal/Skeptics — the honesty beat that makes the journey feel real, not like a highlight reel
+- Refusal/Skeptics — the candor beat that makes the journey feel real, not like a highlight reel
 - Ordeal — the emotional core of the entire arc; this beat must breathe, must hurt, must cost something
-- Return with Elixir — the payoff for the entire emotional journey; must feel earned, not stated
+- Return with Elixir — the payoff for the entire emotional journey; must feel paid for by the journey, not stated
 
 ---
 
@@ -446,7 +446,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 **Protected emotional beats:**
 - Name the Game — the conceptual anchor; must be crisp enough to remember and repeat
 - Heighten #3 (Domain C) — the most unexpected application; this is where the audience goes from "interesting" to "oh, this is everywhere," and it must be given room to land
-- Anti-Game — the intellectual honesty beat; cutting it makes the piece feel like a TED talk that never questions itself
+- Anti-Game — the intellectual candor beat; cutting it makes the piece feel like a TED talk that never questions itself
 
 ---
 

@@ -7,7 +7,7 @@ description: "Requires an explicit Fast or Deep choice before work. Transform an
 
 ## Start here — mode gate
 
-For a new piece, first check whether the user explicitly selected **Fast** or **Deep**. If neither was selected, the next response is only the mode question with a brief explanation of the two choices. Stop there: no source analysis, brief, outline, writing or agent dispatch. Do not treat “quick”, “just write it”, or “no questions” as selecting a mode. Asking the mode is part of invoking this skill, not optional discovery. Use this first-response form:
+For a new piece, first check whether the user explicitly selected **Fast** or **Deep**. One shortcut counts as selecting Fast: the user states the main point they want the piece to make AND signals speed ("quick", "just write it", "no questions"). Then go straight to Fast and say so in one line; the Fast brief still goes to the user for approval before any writing. If neither mode was selected and the shortcut does not apply, the next response is only the mode question with a brief explanation of the two choices. Stop there: no source analysis, brief, outline, writing or agent dispatch. Without a stated main point, “quick”, “just write it” or “no questions” do not select a mode. Asking the mode is part of invoking this skill, not optional discovery. Use this first-response form:
 
 > Choose **Fast** (I infer the framing and show a brief for approval) or **Deep** (we work through the framing together). Neither is selected by default.
 
@@ -97,7 +97,7 @@ Accept content in any form:
 - Outlines or bullet points
 - Research notes or data
 - Existing presentation text
-- URLs (fetch and extract)
+- URLs (fetch the raw page with `curl -sL` and extract the text yourself; never use a summarizing fetch tool)
 
 If user pastes content without instructions, acknowledge receipt and proceed to Mode.
 
@@ -111,7 +111,7 @@ A mode choice is mandatory for each new piece. Before discovery, outlining or dr
 > 1. **Fast** — I work through the same analysis, infer missing answers, and show the assumptions, candidate points and structure comparison in one brief for correction or approval.
 > 2. **Deep** — we work through unresolved framing questions, then choose the point and how it unfolds together.
 
-**No default mode. Never select Fast automatically.** Urgency, clear instructions, "quick pass", "just write it", "no questions" and permission to proceed are not choices. Ask Fast or Deep and stop until answered. Silence is not a choice. The former name Guided means Deep.
+**No default mode.** The only automatic Fast is the shortcut above (a stated main point plus a speed signal). Otherwise urgency, clear instructions, "quick pass", "just write it", "no questions" and permission to proceed are not choices. Ask Fast or Deep and stop until answered. Silence is not a choice. The former name Guided means Deep.
 
 Both modes perform Phases 1.5–3.5 in the same order. Fast infers missing answers and labels assumptions, especially `[INFERRED — LOW CONFIDENCE]`; it never presents assumptions about an audience as known facts. Deep asks one unresolved question at a time, offering the relevant menu and accepting free text; confirm supplied information instead of asking twice. Fast surfaces 2–3 provisional focal candidates unless a supplied point makes alternatives unnecessary, relevant evidence limits, and direct explanation alongside any eligible arc. Neither mode bypasses final brief approval or the review gates.
 
@@ -229,7 +229,7 @@ Each option shows **opening, reader's question, progression, payoff, source supp
 
 Use [`framework-selection.md`](framework-selection.md) for candidate selection and [`narrative-arcs.md`](narrative-arcs.md) for the ten arcs. The Material Read's real surprise gates delayed-reveal choices. Match the kind of takeaway; quote source support for every essential/anchor beat; reject an arc with an unsupported essential beat. Optional/nonessential beats can be omitted. Run the skeleton stamp test: payoff delivers the provisional point, close fulfills the intended outcome, progression carries the reasoning. A withheld-reveal route requires a supported genuine surprise even without a named arc.
 
-No compulsory mid-piece turn, emotional reversal, minimum length or prewritten killer line. Purpose and source support decide whether the added structure earns its complexity. Communication-framework overlays may clarify delivery after this comparison, but must not add a second competing sequence. Emotional pacing is a suggestion derived from supported events, never a demand to manufacture feelings.
+No compulsory mid-piece turn, emotional reversal, minimum length or prewritten killer line. Purpose and source support decide whether the added structure justifies its complexity. Communication-framework overlays may clarify delivery after this comparison, but must not add a second competing sequence. Emotional pacing is a suggestion derived from supported events, never a demand to manufacture feelings.
 
 If no arc passes, show direct explanation and briefly explain the relevant rejection. Do not widen the search indefinitely. Source facts remain facts; forecasts stay conditional, scenarios stay scenarios.
 
