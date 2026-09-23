@@ -65,7 +65,7 @@ The ten arcs offer different ways to organize understanding:
 | Game of the Scene | Examples → recurring pattern → recognition |
 | Rashomon | Different accounts → comparison → synthesis |
 
-An arc earns its place through the source. Essential stages need evidence. Missing ones reject the arc; optional stages can be omitted. There is always a direct-explanation option. No invented surprise, obligatory emotional reversal or minimum number of sections.
+An arc belongs only when the source supports it. Essential stages need evidence. Missing ones reject the arc; optional stages can be omitted. There is always a direct-explanation option. No invented surprise, obligatory emotional reversal or minimum number of sections.
 
 ## What it is good at
 
