@@ -25,5 +25,6 @@ Record:
 3. The understanding/action gap the piece addresses.
 4. Evidence that addresses that gap, and limits that may prevent it.
 5. Relevant trust signals, resistance concerns, terminology and presentation needs.
+6. Expertise and attention: specialist or newcomer (sets scaffolding; expertise reversal), engaged reader or skimmer (sets whether the conclusion is also restated at the end).
 
 A reader should be able to trace a recommendation back to the actual assignment: "They dispute the sample's relevance, so explain its selection and limits before generalizing." "Technical audience → add jargon" is not an adequate instruction.

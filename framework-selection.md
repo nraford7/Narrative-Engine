@@ -8,9 +8,11 @@ Use the assignment (purpose, success, audience starting position, format/use/lim
 
 ## Selection protocol
 
-### 1. Establish direct explanation
+**Principle.** Choose structure for comprehension, memory and attention. Let evidence carry persuasion. Across 30 meta-analysed message-design choices, form choices (narrative vs non-narrative r = .067, sidedness, framing) moved persuasion little and inconsistently, while evidence amount (r = .225) and argument strength (r = .190) were larger and steadier; an explicit conclusion and a specific recommendation also helped (O'Keefe & Hoeken, 2021; Research Bible 2026-09-23, S02). Structure still has side effects on what readers notice, which Gate 4's salience audit checks.
 
-Sketch the plain reasoning first: findings, explanation, implications, intended outcome. Answer-first is a useful baseline, not an automatic winner. If the inference chain fails, repair it before considering dramatic order.
+### 1. Establish direct explanation (the blended memo)
+
+Sketch the plain reasoning first: findings, explanation, implications, intended outcome. The default form is the blended memo: claim; strong arguments grouped in one labelled block; one illustrative source case after the proof; a close restating claim and ask. Blended analytical-narrative messages beat pure forms, and strong arguments worked better before a narrative than inside it (Orazi et al., 2025; Zhou & Yang, 2024). Guard: the case may not carry an argument the proof block cannot carry, because weak arguments do better hidden inside stories. Answer-first is a useful baseline, not an automatic winner. If the inference chain fails, repair it before considering dramatic order.
 
 ### 2. Find supported alternatives
 
@@ -24,6 +26,16 @@ Match the kind of takeaway to a small candidate set:
 | Transformation | Hero's Journey, Freytag | Shows a supported change through events and consequences. |
 | Synthesis across views | Rashomon | Explains the relationship between supported competing accounts. |
 | Hidden pattern | Game of the Scene | Makes a recurring pattern recognizable. |
+
+**Route by target outcome** (recorded in Phase 1.5):
+
+| Target outcome | Lead with | Role of the case |
+|---|---|---|
+| Belief or attitude | Answer-first with a statistical spine | Illustrates the numbers; never replaces them |
+| Intention (decide or act) | A specific source case with its stakes, then the next step | Carries the decision; numbers give scale |
+| Understanding only | Whatever order best supplies context before it is needed | As needed for comprehension |
+
+This is a relative tendency, not a law (statistics beat narrative on beliefs d = −.16 and attitudes d = −.11; narrative beat statistics on intentions d = .10; Zebregs et al., 2015). Audience and source support still decide.
 
 These are candidates, not automatic assignments. Consider 2–4 at most; if there is no useful match, direct explanation is sufficient. Content-type, audience and tone categories cannot supply missing events, opposition or evidence.
 
@@ -46,6 +58,7 @@ Write the opening, progression, payoff and close against the provisional point. 
 - Close fulfills the purpose and success condition (the Ask can be understanding, not action).
 - The reasoning remains intact under this order, with necessary context supplied before it is needed.
 - The essential beats and required evidence fit the user’s limits.
+- The order suits the reader's expertise and attention: for engaged readers with labelled sections, the conclusion comes first; for skimmers or readers outside their field, it is also restated at the end, because such readers weight what comes last. For specialists, tutorial scaffolding is cut.
 
 A transformation story that ends in personal change does not automatically land an operational decision. Reject a mismatch rather than adding an unrelated final recommendation. A second adjacent candidate set may be considered once; never relax source requirements to rescue an arc.
 

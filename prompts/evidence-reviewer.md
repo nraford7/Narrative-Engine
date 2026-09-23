@@ -21,9 +21,9 @@ Builders drift toward stronger claims under narrative pressure — a hedge dropp
 
 ---
 
-## The Five Checks
+## The Six Checks
 
-Run all five, in order. For each check the method is mechanical — do the lookup, don't estimate.
+Run all six, in order. For each check the method is mechanical — do the lookup, don't estimate.
 
 ### 1. Unsupported claims
 
@@ -54,6 +54,14 @@ The ask exceeds what the argument establishes — the evidence supports a pilot,
 The sidecar's provenance tags verified against reality.
 
 **Method:** sample 3 sections tagged [DIRECT] or [PARAPHRASE] in `ne-output-meta.md` — or ALL such sections when fewer than 3 exist (record the shortage in the Spot-Check Record; zero tagged sections = state that and move on). On a second run, sample from the changed sections. Locate each sampled section's claimed source passage verbatim in `ne-source-content.md` and confirm the tag is accurate ([DIRECT] = near-verbatim, [PARAPHRASE] = same content restated); a tag that doesn't survive the lookup → finding, and widen the sample to every tagged section.
+
+---
+
+### 6. Salience audit
+
+Structure can shift a reader's judgement without any false sentence: what the piece dramatizes, gives a character, describes in emotional language or places last carries weight. A narrative written only to inform still shifted readers' decisions through wording around one point (Freeman et al., 2024).
+
+**Method:** list the three to five points the piece makes most prominent (concrete scene or case, named person, emotive wording, opening or final position, repetition). For each, compare its prominence with the weight the source gives it. A minor or heavily qualified source point that the piece makes a centrepiece → finding (MINOR unless it changes what a reader would decide, then BLOCKING), with the rebalancing required.
 
 ---
 

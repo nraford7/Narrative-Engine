@@ -33,10 +33,10 @@ Import → mandatory Fast / Deep choice
 
 **Four structural gates protect the work:**
 
-- **Gate 1 (Phase 3)** stops a wrong shape from being chosen. The default is a plain argument outline delivered answer-first; a dramatic shape is admitted only when the material licenses it — a withheld reveal requires a genuine surprise in the Material Read, and a named arc requires every essential beat matched to a quoted source passage plus a passing skeleton stamp test.
+- **Gate 1 (Phase 3)** stops a wrong shape from being chosen. The default is a plain argument outline delivered answer-first; a dramatic shape is admitted only when the material licenses it — a withheld reveal requires a genuine surprise in the Material Read, and a named arc requires every essential beat matched to a quoted source passage plus a passing skeleton stamp test. Structure is chosen for comprehension, memory and attention; persuasive weight rests on evidence amount, argument strength and an explicit, specific recommendation (evidence review 2026-09-23).
 - **Gate 2 (Phase 4.6)** catches drift between intent and execution — a blind judge cold-reads the body-only output before ever seeing the brief, names the One Thing, checks the source for a more consequential claim, and compares. Four verdicts: PASS, NEEDS_REVISION, FRAMEWORK_MISMATCH, FOCAL_MISMATCH. For decks, the judge runs the title-chain tests (spoken-prose + antecedent, register-appropriate) as part of its cold read.
 - **Gate 3 (Phase 4.7)** catches AI-slop the first two miss — a discourse-level structural-delta check grounded in the narrative-structure research corpus. The evidence: a classifier still detects AI from *structure* at 93.9% after surface lexical cleanup. The orchestrator flags only; repairs go through the builder. See [`humanizing-pass.md`](humanizing-pass.md).
-- **Gate 4 (Phase 4.8)** holds the source. An evidence reviewer with the original material open checks that the piece claims only what the source supports — unsupported claims, stripped hedges, hardened correlations, cut reasoning steps, overreaching asks, and mis-tagged provenance. Style is out of its scope; fidelity to the source is its only axis.
+- **Gate 4 (Phase 4.8)** holds the source. An evidence reviewer with the original material open checks that the piece claims only what the source supports — unsupported claims, stripped hedges, hardened correlations, cut reasoning steps, overreaching asks, and mis-tagged provenance. Style is out of its scope; fidelity to the source is its only axis, including a salience audit: nothing may be made more prominent than the source makes it.
 
 **Sentence discipline is always on.** Every prose paragraph and every deck title is built through the **embedded prose-craft discipline** ([`prose-craft.md`](prose-craft.md) + [`prose-craft-constructions.md`](prose-craft-constructions.md)) during the build (Tier 1 of the humanizing pass). It is *embedded, not invoked* — the build subagent reads these files directly, so Narrative Engine runs once with no dependency on a separate skill.
 
@@ -137,6 +137,8 @@ Record these before the Material Read. A quick source inspection to understand t
 
 Then establish a concrete success condition: what should the reader understand, be able to explain, decide, feel or do afterward? Choose a primary purpose when purposes compete; record a secondary one only when useful. An action is optional. Keep the internal `Ask` field for compatibility: for education or reflection it means the intended change in understanding, not a forced call to action.
 
+Also record the **target outcome** the piece must change: **belief** (what the reader holds true), **attitude** (how they evaluate it), **intention** (what they will decide or do), or **understanding** only. Evidence type works differently by outcome: statistics moved beliefs and attitudes more than narrative, and narrative moved intentions more than statistics (Zebregs et al., 2015; see `framework-selection.md` step 2).
+
 ### Audience and starting position
 
 > **Who is this for?** Executive / Board; Technical / Engineering; Sales / Marketing; Investors / VCs; General Public; Skeptics / Resisters; Mixed / Cross-functional; Academic / Research; or a description in your own words.
@@ -192,7 +194,7 @@ Resolve these independently; they are not competing packages:
 | Dimension | Choices | Consequence |
 |---|---|---|
 | Detail | Concise / Standard / Detailed | How much supporting explanation is visible. Never cuts an essential reasoning step or qualification. |
-| Assumed knowledge | Non-specialist / Informed / Specialist | What must be defined and how much context is needed. |
+| Assumed knowledge | Non-specialist / Informed / Specialist | What must be defined and how much context is needed. Match scaffolding to expertise: newcomers gain from full context and worked examples; specialists gain from less (expertise reversal) and want methods, boundaries, uncertainty, provenance and novelty instead of tutorial material. |
 | Rhythm | Compressed / Conversational / Expansive | Sentence/paragraph pace and space between ideas, within the length limit. |
 | Tone | Authoritative / Provocative / Warm / Urgent / Balanced / Visionary / Playful | Expression and relationship to the reader; never a license to distort evidence. |
 
@@ -221,7 +223,7 @@ Do not ask for final commitment yet. A user-supplied point stays valid as their 
 For the promising point(s), write a short **Argument Outline**: what this audience needs to understand, in what order, what each section establishes, which source evidence supports it, and where the intended outcome lands. Test the transitions without framework labels or dramatic vocabulary. A broken inference returns to the candidate or source analysis before style work.
 
 Make structure comparison visible. Offer:
-1. **Direct explanation:** answer-first is the normal baseline, with grouped reasons and a clear close; no named framework is a complete result.
+1. **Direct explanation (the blended memo):** claim first; the strong arguments grouped in one labelled block; one illustrative case from the source after the proof; a close that restates the claim and the ask. This is the normal baseline; named arcs are variants of it. Guard: the case may not carry an argument the proof block cannot carry.
 2. **Best supported narrative arc**, when eligible.
 3. **A second arc**, only when it provides a genuinely different useful route.
 
@@ -245,7 +247,7 @@ Record `focal_origin`: `user-stated` if supplied by the user; `user-selected` if
 
 ### Build Brief — compile actual instructions, not profile labels
 
-- **Purpose + success condition:** primary/secondary purpose, what success looks like; `Ask` may be understanding rather than action.
+- **Purpose + success condition:** primary/secondary purpose, target outcome (belief / attitude / intention / understanding), what success looks like; `Ask` may be understanding rather than action.
 - **Audience + starting position:** relevant knowledge, beliefs, concerns, objections; distinguish known, inferred and unknown.
 - **Format + intended use + limits:** Prose / Presentation / Both, primary format when Both, length/time, standalone or spoken context, inclusions/exclusions and evidence standards.
 - **Focal Statement:** One Thing (claim/insight or question with supported takeaway), Ask, Through-Line; `focal_origin`.
@@ -405,9 +407,9 @@ The final gate before anything reaches the user: a subagent holding the source a
 - **Inputs:** `ne-output.md`, `ne-output-meta.md` (the sidecar — the reviewer is the sidecar's auditor), `ne-source-content.md`, `ne-build-brief.md`, `ne-cold-read.md` if present (peak-impact moments are priority audit targets).
 - **Output:** `RUN_DIR/ne-evidence-review.md` — verdict **CLEAN | FINDINGS**, numbered findings (severity BLOCKING/MINOR, location, source passage vs output claim, required fix), spot-check record.
 
-### The five checks
+### The six checks
 
-Unsupported claims · altered qualifications (correlation→causation, hedge-stripping, "may"→"will", subgroup→universal) · missing reasoning steps · ask overreach (with the supportable ask proposed) · sourcing-tag spot-check (≥3 [DIRECT]/[PARAPHRASE] tags verified verbatim against the source). Style and taste are explicitly out of its scope.
+Unsupported claims · altered qualifications (correlation→causation, hedge-stripping, "may"→"will", subgroup→universal) · missing reasoning steps · ask overreach (with the supportable ask proposed) · sourcing-tag spot-check (≥3 [DIRECT]/[PARAPHRASE] tags verified verbatim against the source) · salience audit (what gets concrete detail, a character, emotional language or the final position versus the weight the source gives it). Style and taste are explicitly out of its scope.
 
 ### Routing
 
