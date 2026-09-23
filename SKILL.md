@@ -1,6 +1,6 @@
 ---
 name: narrative-engine
-description: "Requires an explicit Fast or Deep choice before work. Transform any content into narrative-driven presentations OR prose through a minimal build spine wrapped in rich judgment — a blind focal judge, a source-holding evidence gate, and content-driven length. Use when converting content to presentations, restructuring existing decks, writing long-form pieces, or optimizing for specific audiences."
+description: "Asks Fast or Deep before work (a stated main point plus "quick" selects Fast). Transform any content into narrative-driven presentations OR prose through a minimal build spine wrapped in rich judgment — a blind focal judge, a source-holding evidence gate, and content-driven length. Use when converting content to presentations, restructuring existing decks, writing long-form pieces, or optimizing for specific audiences."
 ---
 
 # Narrative Engine
