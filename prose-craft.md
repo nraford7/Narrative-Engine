@@ -33,7 +33,7 @@ Any prose for human eyes. Strongest signal: the draft reads flat, padded, hedged
 
 **Generating from scratch** — construct with the Ceiling, then run Filter and Floor as a single tightening pass.
 
-**Threshold — edit vs. regenerate:** if the Filter pass would gut more than half the draft's *sentences*, stop editing. The draft is machine-prose, not a near-good draft with tells. Treat the original as a *brief*, extract its actual claims, and generate from scratch (Ceiling-first), still honouring the target register's Floor/Ceiling balance. **If the brief yields no defensible claim — only platitudes — say so and write the smallest honest version; do not invent substance to fill the space.** Polishing a 90%-tell paragraph word by word wastes effort and leaves the original's dead bones in place.
+**Threshold — edit vs. regenerate:** if the Filter pass would gut more than half the draft's *sentences*, stop editing. The draft is machine-prose, not a near-good draft with tells. Treat the original as a *brief*, extract its actual claims, and generate from scratch (Ceiling-first), still honouring the target register's Floor/Ceiling balance. **If the brief yields no defensible claim — only platitudes — say so and write the smallest truthful version; do not invent substance to fill the space.** Polishing a 90%-tell paragraph word by word wastes effort and leaves the original's dead bones in place.
 
 ## The Floor — Strunk (correctness + economy)
 
@@ -109,7 +109,7 @@ The three layers above work one sentence at a time. This is how sentences *join*
 - **Point a demonstrative back.** Open with *this / that* scooping the whole prior idea ("...we must come back to love. **That** alone raises us..."). Replaces "This is important because..." padding.
 - **End-load the pivot.** Drive the connecting word to the end of one sentence so it sits beside its echo at the start of the next ("...brought into man's suffering. **This joy** becomes..."). The order makes the link; no "Furthermore" needed.
 - **Hang parallel members off a topic sentence.** Shared structure *is* the cohesion ("We live in an era of great inventions. Television sets bring... Atomic submarines travel... Manned ships orbit...").
-- **Given-before-new ordering**, including a deliberate passive, keeps the thread visible across the seam.
+- **Given-before-new ordering**, including a deliberate passive, keeps the thread visible from one sentence to the next.
 
 Use a connector word only when none of these fits and the logical turn (*but, so, yet*) genuinely needs naming — then use it once, accurately.
 

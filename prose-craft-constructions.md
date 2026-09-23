@@ -52,7 +52,7 @@ Interrupt the base clause in the middle, suspending the grammatical completion. 
 
 ## Sentence Openers and Inversion
 
-The branches above decide where free modifiers go relative to the base clause. This decides *how the sentence starts.* Tufte's data on professional prose: experts put something before the subject in **under a quarter** of sentences — so subject-first is right most of the time, and these moves earn their place only when there is a reason. But that quarter is where monotony dies. The menu of what can stand before the subject:
+The branches above decide where free modifiers go relative to the base clause. This decides *how the sentence starts.* Tufte's data on professional prose: experts put something before the subject in **under a quarter** of sentences — so subject-first is right most of the time, and these moves belong only when there is a reason. But that quarter is where monotony dies. The menu of what can stand before the subject:
 
 **Adverbial opener (the workhorse).** When / where / how, fronted. The safest non-subject opener and the one pros reach for most.
 
@@ -150,7 +150,7 @@ The default list — `A, B, and C` — is the **weakest** of the three series fo
 - **Correlatives suspend and pull forward.** *either…or, not only…but, neither…nor* hold the first element incomplete until the second resolves it — built-in forward tension a plain "and" can't give.
 - **Coordination vs. subordination at the close.** End on loose "and"-coordination for calm and resolution (the exhale of a last line); end on subordination (*although, because, while*) to keep ranking and qualifying to the very end.
 
-**When:** any list where you want felt parallelism instead of a flat tally. (This is the craft underneath the Filter's tricolon cap — the cap rations the *device*; these forms are how you build the ones that earn their place.)
+**When:** any list where you want felt parallelism instead of a flat tally. (This is the craft underneath the Filter's tricolon cap — the cap rations the *device*; these forms are how you build the ones that survive.)
 
 ---
 
@@ -174,7 +174,7 @@ Make the sentence's *structure enact its meaning*. The shape and the sense coinc
 - An **inverted** sentence holding the subject till the end to mirror "something finally arriving."
 - A sentence that **accelerates** (short clauses quickening) to enact speed or panic.
 
-This is where grammar becomes analogue — the syntax doesn't just carry the meaning, it *performs* it. Rare and earned. You don't reach for it on every sentence; you recognize when a sentence's content has a shape, and you give the syntax that shape.
+This is where grammar becomes analogue — the syntax doesn't just carry the meaning, it *performs* it. Rare, and only on purpose. You don't reach for it on every sentence; you recognize when a sentence's content has a shape, and you give the syntax that shape.
 
 **When:** the climactic sentence of a passage, where you want form and content to fuse. The test: if you flattened the sentence to neutral order, would something be lost beyond the words? If yes, the structure is doing symbolic work.
 
@@ -190,4 +190,4 @@ This is where grammar becomes analogue — the syntax doesn't just carry the mea
 6. Build lists as one of the three series forms (asyndeton / polysyndeton / dropped-final-and), never the default `A, B, and C` by reflex.
 7. Vary across sentences. Three cumulatives in a row is as monotone as three kernels in a row.
 8. Reserve syntactic symbolism for the sentence that climaxes the passage.
-9. Run every built sentence through the **deletion test** (does each modifier earn its place?) and the **naming test** (can you name the effect?). If a modifier or device fails, it's filler or a tell — cut it.
+9. Run every built sentence through the **deletion test** (does each modifier do real work?) and the **naming test** (can you name the effect?). If a modifier or device fails, it's filler or a tell — cut it.
