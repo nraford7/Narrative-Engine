@@ -219,7 +219,7 @@ Make desired behaviors: **E**asy, **A**ttractive, **S**ocial, **T**imely
 - [ ] Prompt clear and specific?
 - [ ] Is the recommendation specific (who does what, by when)? Specificity has a small positive effect; loss framing has none.
 - [ ] Risk reducers present? (Guarantee, trial, "no commitment")
-- [ ] Social proof near CTA?
+- [ ] Social proof near CTA, only if the source documents it? (Optional; untested in the retrieved evidence.)
 - [ ] Immediate benefit emphasized over future benefit?
 - [ ] Status-quo addressed? (Why change is safe/necessary)
 
@@ -341,7 +341,7 @@ Use this checklist when crafting key slides, S.T.A.R. moments, and benefit secti
 ### Intensification Checklist for Key Slides
 
 - [ ] Does the slide show what happens on Day 1 of "ownership"?
-- [ ] Is there expert or social proof validating the claim?
+- [ ] If the source has expert or peer validation, is it used? (Optional.)
 - [ ] Does it contrast the old painful way vs. the new way?
 - [ ] Are metaphors making abstract benefits tangible?
 - [ ] Are benefits stretched across time (not just immediate)?

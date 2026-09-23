@@ -170,7 +170,7 @@ Layer onto any deck:
 
 - [ ] **Reciprocity:** Do we give value before asking?
 - [ ] **Commitment:** Are there micro-agreements building?
-- [ ] **Social Proof:** Are examples relatable to THIS audience?
+- [ ] **Social Proof (optional):** If the source documents peer adoption, is it relatable to THIS audience? Never required; never invented.
 - [ ] **Authority:** Are credentials and sources clear?
 - [ ] **Liking:** Is there common ground and "we" language?
 - [ ] **Cost of inaction:** If the source quantifies it, is it stated plainly (not as loss framing)?
