@@ -51,6 +51,16 @@ Condensed. The rules that do real work:
 
 **Cut by default** (these survive only if they pass the naming test — a nameable rhetorical job, e.g. "actually" flagging a real contrast): very, really, quite, just, actually, basically, in order to (→ to), the fact that, there is/are openings. Default is delete; the burden of proof is on the word. Replace: utilize→use, leverage→use, facilitate→help.
 
+**Mechanics (Strunk rules 1 to 7 and 17).** Mechanical checks; fix on sight:
+- Possessive singular takes 's, even after s: "Charles's," "the witness's."
+- Serial comma in a list of three or more ("red, white, and blue"), unless a house style says otherwise.
+- An aside set off by commas takes a comma on both sides, never just one.
+- Two independent clauses joined by "and," "but" or "so" take a comma before the conjunction.
+- No comma splices. Two independent clauses with no conjunction take a semicolon or a period.
+- No accidental fragments. A fragment used on purpose must pass the naming test; see the Filter's limit on fragment paragraphs.
+- An opening participial phrase must refer to the sentence's subject. "Walking in, the room felt cold" becomes "Walking in, I felt the cold."
+- A summary stays in one tense.
+
 **Passive: when it's the right choice.** The passive is right for four specific jobs — and never as mere change of pace, never back-to-back:
 - **Dropped agent.** The actor is unknown, obvious, or irrelevant. "Aristotle's psychology is marred with obscurity" — naming the agent yields the absurd "marred *by Aristotle*."
 - **End-weight.** The payload deserves the loud final slot. "...the fundamentals of life, such as death." Active buries "death" mid-sentence and kills the punch.
@@ -150,6 +160,7 @@ When context is tight, run this single checklist instead of three passes:
 - [ ] Active, positive, concrete; emphatic word at the end (Floor)
 - [ ] First sentence gives the audience a reason to continue; answer-first claims are valid openings (Floor)
 - [ ] Dead words cut: very/just/actually/in order to/the fact that (Floor)
+- [ ] Mechanics: possessives, serial comma, paired commas, no comma splices, no dangling openers, one tense in summaries (Floor)
 - [ ] Zero negative parallelism (any variant, incl. "not because X, but because Y"), ≤1 tricolon/section, ≤3 em-dashes total (Filter)
 - [ ] No delve/leverage/robust/tapestry/nuanced/pivotal/compelling, no "earns its weight," no "it's worth noting," no signposted conclusion, no generic superlatives (Filter)
 - [ ] No fragment-paragraphs, no listicle-in-prose, no false ranges; metaphors retired after two uses (Filter)
