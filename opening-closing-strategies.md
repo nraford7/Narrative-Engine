@@ -158,7 +158,7 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 
 **Description:** Return to the opening image, scene, or phrase — but with the meaning transformed by everything between.
 
-**How it works:** Callbacks exploit the brain's pattern-completion instinct and the peak-end rule. When the audience re-encounters the opening, they involuntarily compare "what I understood then" to "what I understand now," making the transformation tangible and felt rather than merely stated. The gap between the two understandings *is* the argument landing. This also creates a sense of structural closure that signals "this was designed, not improvised."
+**How it works:** Readers who skim or process lightly weight what comes last (recency), so a close that restates the point in the opening's terms is well placed. When the audience re-encounters the opening, they involuntarily compare "what I understood then" to "what I understand now," making the transformation tangible and felt rather than merely stated. The gap between the two understandings *is* the argument landing. This also creates a sense of structural closure that signals "this was designed, not improvised."
 
 **Best for:**
 - Audience: General public/keynote, mixed/cross-functional, investors/VCs
@@ -176,7 +176,7 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 
 **Description:** End with a direct call to the audience that reframes the decision as inevitable — the only question is timing.
 
-**How it works:** Challenges leverage loss aversion and social pressure. By framing action as inevitable ("this will happen"), you remove the option of inaction from the audience's mental model. The "when" framing is critical: it implies that delay has a cost and early movers gain advantage. This works by shifting the audience's internal question from "should I?" to "when will I?" — a far easier question to answer affirmatively.
+**How it works:** A challenge states a specific action and a time. Its value comes from specificity (a specific recommendation has a small, reliable edge) and from any cost of delay the source actually documents. Loss framing adds nothing measurable (gain vs loss framing averages r = .016 across 165 effects), so do not invent urgency or an inevitability the source does not support.
 
 **Best for:**
 - Audience: Executive/board, sales/marketing, investors/VCs
@@ -212,10 +212,10 @@ Rhetorical strategies for how to *begin* and *end* a narrative piece. These laye
 
 **Description:** End with one carefully chosen unanswered question that the audience will carry home.
 
-**How it works:** The Zeigarnik effect shows that incomplete tasks occupy the mind more than completed ones. A lingering question turns your presentation into an open loop in the audience's memory, ensuring continued mental engagement after you stop speaking. The question must be genuinely open (not rhetorical) and must arise naturally from the content — it should be the one question your material raises but cannot fully answer.
+**How it works:** A real open question that the material raises can prompt further thought and information-seeking, as curiosity research shows for moderate knowledge gaps. It is not a persuasion device (the older Zeigarnik rationale had no support in the retrieved evidence). The question must be genuinely open (not rhetorical) and must arise naturally from the content — it should be the one question your material raises but cannot fully answer.
 
 **Best for:**
-- Audience: Academic/research, technical/engineering, executive/board
+- Audience: Academic/research, technical/engineering (not decision-makers who need closure)
 - Purpose: Inform/educate, entertain/engage, inspire/motivate
 - Frameworks: Prestige (Consequences beat), Mystery Box (Limits beat), Rashomon (Consequences beat), Time Machine (Limits beat)
 

@@ -4,7 +4,7 @@
 
 The pacing, emotional textures and sample phrasing below are suggestions, not mandates; the supported outline and audience purpose take precedence. Never manufacture an event, emotional turn, false lead or quotable line.
 
-Detailed beat-by-beat structures for all 10 narrative arcs. They offer different information orders: some delay a reveal; others explain an outcome first, develop a plan or synthesize perspectives. They are options for both prose and presentations, not proven engagement improvements.
+Detailed beat-by-beat structures for all 10 narrative arcs. The "typical turn" percentages describe where the turn often falls; they are not targets. Adherence to a canonical shape did not predict success in large text studies, while real, supported reversals did (Research Bible 2026-09-23, S09), so place the turn where the source's reasoning puts it. They offer different information orders: some delay a reveal; others explain an outcome first, develop a plan or synthesize perspectives. They are options for both prose and presentations, not proven engagement improvements.
 
 ### Beat Weights
 
@@ -23,7 +23,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Magic trick structure (Pledge → Turn → Prestige)
 **Best for:** Counterintuitive findings, debunking conventional wisdom, "everything you thought was wrong"
-**Reveal position:** ~60%
+**Typical turn (descriptive only, not a target):** ~60%
 
 ### Beat Structure
 
@@ -71,7 +71,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** J.J. Abrams storytelling philosophy
 **Best for:** Research with unexpected conclusions, investigative reports, "whodunit" analyses
-**Reveal position:** ~60%
+**Typical turn (descriptive only, not a target):** ~60%
 
 ### Beat Structure
 
@@ -121,7 +121,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Heist film structure
 **Best for:** Strategy presentations, transformation roadmaps, "how we'll win" pitches
-**Reveal position:** ~75% (execution/payoff)
+**Typical turn (descriptive only, not a target):** ~75% (execution/payoff)
 
 ### Beat Structure
 
@@ -170,7 +170,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Scenario planning, strategic foresight
 **Best for:** Decision-point presentations, "two futures" framing, strategic planning
-**Reveal position:** ~55% (the fork)
+**Typical turn (descriptive only, not a target):** ~55% (the fork)
 
 ### Beat Structure
 
@@ -217,7 +217,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Improv comedy, paradigm shifts
 **Best for:** Introducing new mental models, winning over skeptics, "aha moment" content
-**Reveal position:** ~50% (the reframe)
+**Typical turn (descriptive only, not a target):** ~50% (the reframe)
 
 ### Beat Structure
 
@@ -265,7 +265,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Joseph Campbell's monomyth, adapted for business
 **Best for:** Origin stories, transformation cases, founder narratives, change management
-**Reveal position:** ~65% (the ordeal)
+**Typical turn (descriptive only, not a target):** ~65% (the ordeal)
 
 ### Beat Structure
 
@@ -317,7 +317,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Gustav Freytag's dramatic structure
 **Best for:** Complex narratives needing emotional catharsis, literary/dramatic content
-**Reveal position:** ~60% (the climax)
+**Typical turn (descriptive only, not a target):** ~60% (the climax)
 
 ### Beat Structure
 
@@ -357,7 +357,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Inverted detective story (outcome known, method revealed)
 **Best for:** Post-mortems, root cause analyses, retrospectives
-**Reveal position:** ~70% (the howdunit)
+**Typical turn (descriptive only, not a target):** ~70% (the howdunit)
 
 ### Beat Structure
 
@@ -406,7 +406,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Upright Citizens Brigade improv comedy
 **Best for:** Pattern recognition, "here's the hidden dynamic," cross-domain insight transfer
-**Reveal position:** ~65%
+**Typical turn (descriptive only, not a target):** ~65%
 
 ### Beat Structure
 
@@ -454,7 +454,7 @@ The Weight column indicates relative importance, not slide count. Content determ
 
 **Source:** Akira Kurosawa's film structure
 **Best for:** Controversial topics, multi-stakeholder situations, synthesis presentations
-**Reveal position:** ~70% (the integrative frame)
+**Typical turn (descriptive only, not a target):** ~70% (the integrative frame)
 
 ### Beat Structure
 

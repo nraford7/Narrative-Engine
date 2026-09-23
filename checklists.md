@@ -12,7 +12,7 @@ Run on every deck before delivery:
 - [ ] **Slide necessity:** Does every slide justify its spot? (Could any be cut without loss?)
 - [ ] **Headline power:** Vivid verb, concrete nouns, one idea, ≤14 words
 - [ ] **Spotlight quality:** ≤60 words, specific, tied to headline, cited if sourced
-- [ ] **Arc integrity:** Reveal at correct position (~55-65% for twist arcs); plants and callbacks present
+- [ ] **Arc integrity:** The turn sits where the source's reasoning puts it (no target percentage); every anchor beat is source-supported; plants and callbacks pay off
 - [ ] **Variety:** No three consecutive headlines share same pattern or verb
 - [ ] **Balance:** Limitations/counterevidence get their own slides
 
@@ -114,7 +114,7 @@ Delete or replace these words:
 For S.T.A.R. moments, reveal slides, and key benefit claims:
 
 - [ ] Shows what happens on Day 1 of "ownership" (bring in the reader)
-- [ ] Includes expert validation or social proof (authority)
+- [ ] Includes sourced expert validation or peer evidence, if the source has it (optional)
 - [ ] Contrasts old painful way vs. new approach (comparative analysis)
 - [ ] Uses metaphor to make abstract benefits concrete (imaginative language)
 - [ ] Stretches benefits across time — weeks, months, not just immediate
@@ -130,9 +130,9 @@ For action slides and calls-to-action:
 - [ ] Motivation built sufficiently before ask?
 - [ ] First step trivially easy? (Activation energy minimized)
 - [ ] Prompt clear and specific?
-- [ ] Loss framing used? (What they lose by not acting)
+- [ ] Recommendation specific? (Who does what, by when; specificity has a small positive effect, loss framing has none)
 - [ ] Risk reducers present? (Guarantee, trial, "no commitment")
-- [ ] Social proof near CTA?
+- [ ] Main objection stated and answered?
 - [ ] Immediate benefit emphasized over future benefit?
 - [ ] Status-quo addressed? (Why change is safe/necessary)
 
@@ -173,13 +173,13 @@ Layer onto any deck:
 - [ ] **Social Proof:** Are examples relatable to THIS audience?
 - [ ] **Authority:** Are credentials and sources clear?
 - [ ] **Liking:** Is there common ground and "we" language?
-- [ ] **Scarcity:** Is cost of inaction clear?
+- [ ] **Cost of inaction:** If the source quantifies it, is it stated plainly (not as loss framing)?
 - [ ] **Unity:** Does this feel like "us" not "us vs. them"?
 - [ ] **Confirmation Bias:** Does messaging align with what the audience already believes?
-- [ ] **Curse of Knowledge:** Would someone unfamiliar with this space understand every sentence?
+- [ ] **Assumed knowledge:** Is scaffolding matched to the reader's expertise (full context for newcomers; methods, limits and novelty for specialists)?
 - [ ] **Paradox of Choice:** Is there ONE clear next step, not multiple competing CTAs?
 - [ ] **Contrast Effect:** Is the before/after or old-way/new-way contrast vivid and specific?
-- [ ] **Pratfall Effect:** Is there one strategic vulnerability that builds trust?
+- [ ] **Main objection:** Is the strongest sourced objection or limitation stated and answered (not just mentioned)?
 
 ---
 

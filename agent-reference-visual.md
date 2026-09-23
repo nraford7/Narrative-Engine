@@ -52,7 +52,7 @@ Lie Factor should equal 1.0. Above 1.05 is deceptive.
 | **Emotive Story** | Personal narrative that humanizes data |
 | **Shocking Statistic** | Number presented for maximum impact |
 
-**Goal:** Design at least one S.T.A.R. moment per presentation — ideally at the reveal point.
+**Use when licensed:** A S.T.A.R. moment is optional. Use one only when the source supports a real demonstration, image or finding worth it. It is a memorability device, not a tested persuasion effect.
 
 ---
 
@@ -69,10 +69,10 @@ Lie Factor should equal 1.0. Above 1.05 is deceptive.
 - **Bad:** Reading bullet points aloud while they're on screen
 - **Good:** Visual metaphor while narrating the insight
 
-### Peak-End Rule
-- People remember the **peak moment** and the **ending**
-- Design your strongest visual for the reveal
-- End with a powerful, clean final image
+### Endings (recency)
+- Readers who process lightly weight what comes last; restate the point at the end
+- The "peak-end rule" had no support in the retrieved evidence for documents or decks (Research Bible 2026-09-23); do not use it as a design rule
+- End with a clean final slide that carries the claim and the ask
 
 ---
 
@@ -180,7 +180,7 @@ Symbols vary by culture. Always consider:
 - [ ] One metaphor family used consistently
 - [ ] 3-second rule: each slide readable at a glance
 - [ ] No chartjunk — every visual element does a job
-- [ ] S.T.A.R. moment designed for the reveal
+- [ ] If a S.T.A.R. moment is used, the source supports it
 - [ ] Data visualizations have graphical integrity
 - [ ] Color palette consistent (3-5 colors max)
 - [ ] Cultural appropriateness verified for audience

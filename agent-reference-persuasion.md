@@ -207,10 +207,9 @@ Make desired behaviors: **E**asy, **A**ttractive, **S**ocial, **T**imely
 
 | Principle | Mechanism | Application |
 |-----------|-----------|-------------|
-| **Loss Aversion** | Losses feel ~2x as painful as equivalent gains | Frame inaction as loss: "Every day without this costs you..." |
+| **Loss framing (not recommended)** | Gain vs loss framing averages r = .016 across 165 effects and did not change managers' market-entry choices (Research Bible 2026-09-23, S02/S08) | Do not frame inaction as loss to add persuasion. State the real cost of inaction only when the source quantifies it. |
 | **Endowment Effect** | People value things more once they own them | Free trials, samples let them "own" it before paying |
 | **IKEA Effect** | People value things they helped create | Let them customize, configure, or build — investment increases commitment |
-| **Zeigarnik Effect** | Unfinished tasks occupy the mind | "You're 80% there" creates pull to complete |
 | **Regret Aversion** | People avoid actions that might cause regret | Address directly: "30-day guarantee" removes regret fear |
 
 ### CTA Audit Checklist
@@ -218,7 +217,7 @@ Make desired behaviors: **E**asy, **A**ttractive, **S**ocial, **T**imely
 - [ ] Motivation built sufficiently before ask?
 - [ ] First step trivially easy? (Activation energy minimized)
 - [ ] Prompt clear and specific?
-- [ ] Loss framing used? (What they lose by not acting)
+- [ ] Is the recommendation specific (who does what, by when)? Specificity has a small positive effect; loss framing has none.
 - [ ] Risk reducers present? (Guarantee, trial, "no commitment")
 - [ ] Social proof near CTA?
 - [ ] Immediate benefit emphasized over future benefit?
@@ -230,32 +229,32 @@ Make desired behaviors: **E**asy, **A**ttractive, **S**ocial, **T**imely
 
 These explain WHY narrative techniques work, enabling more intentional application.
 
-### Why Mystery/Delayed Revelation Works
+### Why Delayed Revelation Can Help (and What It Costs)
 
-**Zeigarnik Effect:** Unfinished tasks and unanswered questions occupy mental resources until resolved. Opening a "mystery box" creates cognitive tension that demands closure.
-
-**Application:** The Prestige and Mystery Box arcs leverage this by:
-- Opening with an unanswered question (tension created)
-- Providing clues that partially resolve but open new questions (tension maintained)
-- Delivering reveal at ~60% (tension released, then new understanding crystallizes)
-
-### Why S.T.A.R. Moments Work
-
-**Peak-End Rule:** People judge experiences primarily by the peak (best or worst moment) and the ending, not by the sum or average.
+**Curiosity and prediction error.** A question the reader cares about, with a gap of moderate size, raises information-seeking and later recall of the answer. Surprise after a confident belief improves correction (hypercorrection), and asking readers to predict before a reveal boosts memory for unexpected outcomes. These are engagement and memory effects. None of the retrieved studies shows that withholding the answer persuades professional readers more. The older "Zeigarnik effect" rationale had no support in the retrieved evidence and is retired.
 
 **Application:**
-- Design ONE intentional peak — this is your S.T.A.R. moment
-- Invest disproportionate effort in the ending
-- A mediocre middle is forgiven if peak and end are strong
+- Withhold only what the source makes worth waiting for, and only for readers who will stay (talks, workshops, teaching).
+- A knowledge-gap opening (what the reader knows, what is missing, why it matters) is a supported alternative to a hook.
+- Revealing the outcome early costs little; revealing the whole mechanism early removes the gain (Columbo).
+- There is no target reveal position. Place the turn where the source's reasoning puts it.
+
+### Why Endings Matter
+
+**Recency and ending valence.** Readers who skim or process lightly weight what comes last; ads that end positively and with a clear emotional shift were rated higher. The "peak-end rule" and "S.T.A.R. moment" rationales had no support in the retrieved evidence and are retired as justifications (a memorable demonstration is still allowed when the source supports it).
+
+**Application:**
+- Close by restating the claim and the ask; do not leave decision-makers with an open question.
+- End on what can be done, where the source supports it.
 
 ### Why Transformation Narratives Work
 
 **Identity-Based Persuasion:** People act consistently with who they believe they are. Transformation narratives (Hero's Journey) work because they offer a new identity.
 
 **Application:**
-- Frame the journey as identity transformation, not just behavior change
-- "Become the kind of company that..." vs. "Do this thing"
-- The "Return with Elixir" is an identity upgrade the audience can claim
+- Frame the journey around a real, sourced change in someone's situation.
+- When readers judge the author's capability (investors, boards, committees, procurement), make the customer, user, a team member or the data the protagonist, and put a number in each test beat. In a field experiment with 188 angel investors, a narrative pitch raised identification but lowered perceived capability.
+- The earlier "identity upgrade" rationale is untested and is retired.
 
 ### Why "Name the Game" Works
 
@@ -577,7 +576,7 @@ These models explain *why* specific narrative choices work. Use them to make mor
 
 *Narrative application:* Show others wanting, pursuing, or benefiting from what you're offering. "Teams at [respected company] adopted this" works not because of authority alone, but because it triggers imitative desire.
 
-*Builder instruction:* Include at least one moment where the audience sees peers or aspirational figures already engaged with your solution. Social proof and mimetic desire compound each other.
+*Builder instruction:* Optional. Use a peer example only when the source documents it. Social proof was not tested in the retrieved evidence, so it is never required.
 
 ### Building Trust & Likability
 
@@ -585,7 +584,7 @@ These models explain *why* specific narrative choices work. Use them to make mor
 
 *Narrative application:* One plain admission of limitation, difficulty, or past failure makes the rest of your claims more believable. "We tried X and it didn't work — here's what we learned" is more persuasive than an unbroken success story.
 
-*Builder instruction:* Include one moment of strategic vulnerability — a lesson learned, a limitation acknowledged, or a challenge still being worked on. Place it before your strongest proof points so credibility compounds.
+*Builder instruction:* State the main objection or limitation the source supports and answer it. Refutational two-sided messages beat one-sided ones, while mentioning a weakness without answering it underperforms. Do not manufacture a vulnerability.
 
 ### Driving Action
 
