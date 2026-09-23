@@ -179,7 +179,7 @@ Symbols vary by culture. Always consider:
 
 - [ ] One metaphor family used consistently
 - [ ] 3-second rule: each slide readable at a glance
-- [ ] No chartjunk — every visual element earns its place
+- [ ] No chartjunk — every visual element does a job
 - [ ] S.T.A.R. moment designed for the reveal
 - [ ] Data visualizations have graphical integrity
 - [ ] Color palette consistent (3-5 colors max)

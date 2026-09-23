@@ -416,7 +416,7 @@ Perfect for investor pitches: humble origins → traction → setback → ultima
 | 3 | GO | "I'll learn something new" — cross into unfamiliar territory |
 | 4 | SEARCH | "Let me evaluate this" — explore the solution |
 | 5 | FIND | "This could work" — show proof/results |
-| 6 | TAKE | "What's the cost?" — honest about investment |
+| 6 | TAKE | "What's the cost?" — plain about investment |
 | 7 | RETURN | "How does this apply to me?" — implementation |
 | 8 | CHANGE | "I'm ready" — call to action |
 

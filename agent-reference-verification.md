@@ -14,7 +14,7 @@ Quick-reference for fact-checking, source evaluation, and logical validity.
 | **Nonpartisanship** | Apply same standard to every claim, regardless of source |
 | **Transparency of Sources** | Provide enough detail that readers can verify findings |
 | **Transparency of Methodology** | Explain how claims are selected, researched, and rated |
-| **Honest Corrections** | Acknowledge and correct errors openly |
+| **Open Corrections** | Acknowledge and correct errors openly |
 
 ### Verification Process
 
