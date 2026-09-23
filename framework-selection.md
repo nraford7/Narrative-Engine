@@ -27,6 +27,10 @@ Match the kind of takeaway to a small candidate set:
 
 These are candidates, not automatic assignments. Consider 2–4 at most; if there is no useful match, direct explanation is sufficient. Content-type, audience and tone categories cannot supply missing events, opposition or evidence.
 
+**Evaluator rule:** When readers judge the author's capability (investors, boards, committees, procurement), a Hero's Journey or other narrative option must use the customer, user, team or data as protagonist and carry numbers in its evidence beats (see `narrative-arcs.md` F).
+
+**Reader-will-stay rule:** Mystery Box pays off in engagement and memory only for readers who reach the reveal. For pre-reads, board papers and investor materials, rank it below Columbo or answer-first unless the user chooses it with that trade-off shown.
+
 **Reveal gate:** Prestige, Mystery Box, Trojan Horse and any unnamed withheld-reveal treatment require a genuine surprise supported by a source passage and the audience starting position. An uncertain audience hypothesis is not proof of surprise. If the Material Read says none, exclude these choices. Other arcs need no manufactured surprise: Columbo gives the outcome first; Heist can explain execution; Rashomon can synthesize openly.
 
 ### 3. Audit source support
