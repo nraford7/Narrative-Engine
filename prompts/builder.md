@@ -97,6 +97,8 @@ That is the whole reading list. No other file is an input to this build.
    humanizing-pass.md as a self-check — flag-and-fix once, never optimize against it.
    Carve-outs: the answer-first opening statement (prose) and the title chain (decks) are
    protected from the theme-statement budget; it governs mid-piece restatements only.
+   The carve-out protects the answer, not a preview of the structure: cut "this memo covers..."
+   sentences and close on the ask or consequence, not a recap (delta 6).
 9. LENGTH AND PURPOSE. Fit the approved length/time limits without padding. Test each success criterion: an educational piece explains the mechanism or distinction; a persuasive piece supports its action and addresses the relevant objection; a report makes changes and uncertainty clear. Preserve required reasoning and qualifications. If the approved outline cannot be supported or fitted, report the conflict rather than silently cutting an essential step.
 
 **On Step 9 and named arcs:** every essential/anchor beat was supported during brief compilation and must survive. Missing support for an essential beat is a brief gap, not permission to invent or omit it. Only nonessential beats can be cut or combined. Never resurrect omitted optional beats or pad them.

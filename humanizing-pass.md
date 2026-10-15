@@ -4,7 +4,9 @@ The de-slopping layer for Narrative Engine output. It exists because of one find
 narrative-structure research corpus: **a classifier detects AI-written narrative from structure
 alone at 93.2% macro-F1, and still at 93.9% *after* span-level lexical rewriting** (StoryScope,
 arXiv 2604.03136; LAMP, Chakrabarty/Laban/Wu 2025). Scrubbing the surface prose does not de-AI the
-structure. Therefore the humanizing pass has two tiers, and the second is not optional.
+structure. The finding now holds outside fiction: on 2,250 pre-ChatGPT company blog posts against
+AI mirrors from five models, structure alone detects AI posts at 97.0 macro-F1, and still at 96.1
+after each model rewrites its own posts (SlopShape, arXiv 2609.15369, 2026). Therefore the humanizing pass has two tiers, and the second is not optional.
 
 | Tier | Operates at | Tool | Catches |
 |------|------------|------|---------|
@@ -26,9 +28,12 @@ Two further don'ts from the evidence:
 - **Don't trust token-level AI-detectors** (DetectGPT / GPTZero-class) as a gate — brittle, stale within months.
 - **Don't trust LLM-as-judge creativity scores as oracles** — they carry position, verbosity, and self-preference bias (see *Judge hygiene* below).
 
-**Provenance caveat.** Every percentage below is *fiction-derived* — measured on ~5,000-word
-stories, not decks or articles. The human/AI structural contrast is assumed to transfer; treat the
-figures as **directional**, not as thresholds to hit precisely.
+**Provenance caveat.** Deltas 1 to 5 carry *fiction-derived* percentages, measured on ~5,000-word
+stories. Delta 6 comes from commercial non-fiction (B2B blog posts, single-pass generation), which
+confirms the contrast transfers to articles and memos. Decks remain untested. Treat all figures as
+**directional**, not as thresholds to hit precisely. SlopShape's author runs a commercial GEO
+product, and human writers had full business context while models wrote from a short brief, so part
+of the gap may be missing context rather than model habit.
 
 ---
 
@@ -100,6 +105,23 @@ Reviewers miss it because each paragraph reads fine *locally.*
 
 - [ ] Flag templated sameness where it appears; when the source offers a concrete particular, prefer it over an abstraction — but a plain, well-supported section is NOT a failure, and no "un-templatable moment" may be manufactured to satisfy this check.
 
+### 6. The tidy, self-announcing shape (non-fiction)
+
+SlopShape's nine core features, in order of the human-AI gap: AI posts close by **restating the thesis**
+(gap 0.65) or with a **summary stage** (0.61); have **no outside voices** (0.59); set the subject
+against a **legacy way of working** (0.50); state the **thesis and announce the flow before section
+one** (0.42); use **modern / next-generation framing** (0.36); speak in a **confident institutional
+voice** (0.35); add a **mechanism-explanation stage** (0.29). Human posts carry **specific dates and
+periods** (0.28) and run **shorter** (0.27). Human posts are the structurally rarest of six versions
+of the same brief 86% of the time (Cohen's d = 1.80).
+
+- [ ] **Preview:** no sentence before the first section that lists what the piece will cover. The answer-first claim stays; the table of contents goes.
+- [ ] **Old-versus-new frame:** if the piece sets the subject against "the old way" or calls it modern or next-generation, keep it only when the source supplies the contrast with specifics.
+- [ ] **Close:** the last section does not summarize the body or reword the thesis. It lands the claim through the ask, a consequence, or the open question the source leaves.
+- [ ] **Voices:** where the source names people, customers, or documents, attribute claims to them instead of an unvoiced "we know / it is clear" authority. Never invent a voice.
+- [ ] **Time:** where the source dates an event, keep the date or period instead of generalizing it to "today" or "increasingly".
+- **Carve-out:** the answer-first opening statement and deck title chains stay protected (delta 1). A mechanism explanation the reader needs is not drift; flag it only when it restates what the audience already knows.
+
 ---
 
 ## Judge hygiene (Phases 4.6, 5, 5.5)
@@ -127,5 +149,6 @@ When context is tight, the humanizing pass collapses to:
 - [ ] **Resolution:** preserve questions the source leaves open; a fully resolved piece passes when the source supports its resolution.
 - [ ] **Time:** intended non-linearity survived; recurring patterns told iteratively.
 - [ ] **Redundancy:** no run of paragraphs making the identical move; no fractal summary.
+- [ ] **Shape:** no structure preview, no recap close, no unsupported old-versus-new frame; named voices and dates from the source kept.
 - [ ] **Idiosyncrasy:** templated sameness flagged; concrete particulars from the source preferred over abstractions; nothing manufactured — a plain, well-supported section passes.
 - [ ] **Gate, not objective:** none of the above was optimized toward as a target.

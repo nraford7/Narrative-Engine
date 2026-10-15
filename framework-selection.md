@@ -58,7 +58,7 @@ Write the opening, progression, payoff and close against the provisional point. 
 - Close fulfills the purpose and success condition (the Ask can be understanding, not action).
 - The reasoning remains intact under this order, with necessary context supplied before it is needed.
 - The essential beats and required evidence fit the user’s limits.
-- The order suits the reader's expertise and attention: for engaged readers with labelled sections, the conclusion comes first; for skimmers or readers outside their field, it is also restated at the end, because such readers weight what comes last. For specialists, tutorial scaffolding is cut.
+- The order suits the reader's expertise and attention: for engaged readers with labelled sections, the conclusion comes first; for skimmers or readers outside their field, it is also restated at the end, because such readers weight what comes last. The end restatement is one line tied to the ask or consequence, never a paragraph that paraphrases the opening (see humanizing-pass.md delta 6). For specialists, tutorial scaffolding is cut.
 
 A transformation story that ends in personal change does not automatically land an operational decision. Reject a mismatch rather than adding an unrelated final recommendation. A second adjacent candidate set may be considered once; never relax source requirements to rescue an arc.
 

@@ -223,7 +223,7 @@ Do not ask for final commitment yet. A user-supplied point stays valid as their 
 For the promising point(s), write a short **Argument Outline**: what this audience needs to understand, in what order, what each section establishes, which source evidence supports it, and where the intended outcome lands. Test the transitions without framework labels or dramatic vocabulary. A broken inference returns to the candidate or source analysis before style work.
 
 Make structure comparison visible. Offer:
-1. **Direct explanation (the blended memo):** claim first; the strong arguments grouped in one labelled block; one illustrative case from the source after the proof; a close that restates the claim and the ask. This is the normal baseline; named arcs are variants of it. Guard: the case may not carry an argument the proof block cannot carry.
+1. **Direct explanation (the blended memo):** claim first; the strong arguments grouped in one labelled block; one illustrative case from the source after the proof; a close that lands the claim through the ask or its consequence, in fresh terms (one line, never a recap of the proof; a summary close is the strongest structural AI tell in commercial prose, SlopShape arXiv 2609.15369). This is the normal baseline; named arcs are variants of it. Guard: the case may not carry an argument the proof block cannot carry.
 2. **Best supported narrative arc**, when eligible.
 3. **A second arc**, only when it provides a genuinely different useful route.
 
@@ -386,7 +386,7 @@ After focal fidelity passes, the orchestrator runs the Tier-2 discourse-level st
 
 **Why a separate check from prose-craft.** prose-craft (Tier 1, run in the build) cleans the *sentence*. But the research corpus shows a classifier still detects AI from *structure* at 93.9% macro-F1 after that lexical cleanup. The AI signature lives in the discourse, not the words.
 
-**The deltas checked** (full definitions and carve-outs in `humanizing-pass.md`): theme-statement budget (mid-piece restatements only — the answer-first opening and title chains are exempt), tolerated asymmetry / open threads, temporal complexity preserved, discourse redundancy, idiosyncrasy as a conditional detector (a plain, well-supported section is NOT a failure; no un-templatable moment may be manufactured).
+**The deltas checked** (full definitions and carve-outs in `humanizing-pass.md`): theme-statement budget (mid-piece restatements only — the answer-first opening and title chains are exempt), tolerated asymmetry / open threads, temporal complexity preserved, discourse redundancy, the tidy self-announcing shape (structure preview, legacy-versus-modern frame, recap close, unvoiced institutional authority), idiosyncrasy as a conditional detector (a plain, well-supported section is NOT a failure; no un-templatable moment may be manufactured).
 
 **The cardinal rule, non-negotiable:** these are **gates and drift detectors, never optimization objectives**. Do not loop a generator against them — optimizing the metric manufactures the slop the check removes.
 
