@@ -92,6 +92,7 @@ Reviewers miss it because each paragraph reads fine *locally.*
 
 - [ ] Read the section as a sequence of *moves*, not sentences. If three paragraphs all do "claim → example → restate-claim," collapse or vary them.
 - [ ] No fractal summary — the piece should not say the same thing at three zoom levels.
+- [ ] No thematic point restated across sections in new words. Watch the template "any one alone is fine; stacked together they reveal...". Say it once, where it lands hardest (deslop-text W31, added 2026-10-15).
 
 ### 5. Idiosyncrasy (conditional detector)
 

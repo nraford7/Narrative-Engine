@@ -2,7 +2,7 @@
 
 > **This is an NE-adapted embed of the standalone `prose-craft` skill, copied into Narrative Engine so
 > the build subagent is self-contained — it never has to invoke another skill at dispatch time.**
-> Source: `~/.claude/skills/prose-craft/SKILL.md` · embedded 2026-06-22 · re-synced 2026-08-24 (canonical b6cdbe0). If the canonical skill
+> Source: `~/.claude/skills/prose-craft/SKILL.md` · embedded 2026-06-22 · re-synced 2026-10-15 (canonical a517a3f). If the canonical skill
 > changes, re-sync this file. The companion catalog lives at
 > [`prose-craft-constructions.md`](prose-craft-constructions.md).
 
@@ -91,7 +91,7 @@ A single instance is usually fine. The tell is repetition or stacking. Sweep for
 
 **House-style override.** The caps here are ceilings, not entitlements. A house or personal style guide layered above this skill may lower any cap (em-dashes to zero, for instance); the lower cap always wins.
 
-**Composition** — No fractal summaries (say it once). No signposted conclusion ("in conclusion, to sum up"). No "despite its challenges" acknowledge-then-dismiss. If the argument is one point, write it in the space one point needs. Retire a metaphor after two uses. One example developed well beats five name-dropped companies or revolutions.
+**Composition** — No fractal summaries (say it once). No signposted conclusion ("in conclusion, to sum up"). No structure-narration: text that announces its own organization instead of having it ("In this post we'll cover...", "Below, I've grouped these by...", "As discussed above"); delete it and let the headings work. No section-end summary: a section's last sentence must not paraphrase its first sentence or heading. No repeated thematic point: one idea restated in new words across sections, often in the shape "any one alone is fine; stacked together they reveal..."; say it once, in the strongest place, and spend the other slots on points that move the argument. (Added 2026-10-15 from deslop-text W10/W14/W31. SlopShape, arXiv 2609.15369, found the same moves among the strongest structural AI tells in commercial prose: a preview before section one and a close that restates the thesis.) No "despite its challenges" acknowledge-then-dismiss. If the argument is one point, write it in the space one point needs. Retire a metaphor after two uses. One example developed well beats five name-dropped companies or revolutions.
 
 ## The Ceiling — Tufte (construct on purpose)
 
@@ -163,6 +163,7 @@ When context is tight, run this single checklist instead of three passes:
 - [ ] Mechanics: possessives, serial comma, paired commas, no comma splices, no dangling openers, one tense in summaries (Floor)
 - [ ] Zero negative parallelism (any variant, incl. "not because X, but because Y"), ≤1 tricolon/section, ≤3 em-dashes total (Filter)
 - [ ] No delve/leverage/robust/tapestry/nuanced/pivotal/compelling, no "earns its weight," no "it's worth noting," no signposted conclusion, no generic superlatives (Filter)
+- [ ] No structure-narration ("In this post..."), no section-end summary, no thematic point restated across sections (Filter)
 - [ ] No fragment-paragraphs, no listicle-in-prose, no false ranges; metaphors retired after two uses (Filter)
 - [ ] Check for monotonous repetition; vary sentence construction where the meaning benefits, with no per-section quota (Ceiling)
 - [ ] Any figure serves a source-supported moment and passes the naming test; an entirely plain piece passes (Figure)
@@ -195,7 +196,7 @@ Rules a model forgets are rules a literal search catches. Run this on the finish
 
 1. **Ban list.** Substring-scan for every banned word in the Filter (delve, leverage, robust, nuanced, pivotal, plethora...). Any hit goes.
 2. **Em-dashes.** Count them. Four or more: cut to the cap, keeping only the named ones. Then check the survivors against any stricter house cap.
-3. **Templates.** Search for: "not X — it's", "isn't just", "not because", "The question isn't", "worth noting", "In conclusion", "Think of it as".
+3. **Templates.** Search for: "not X — it's", "isn't just", "not because", "The question isn't", "worth noting", "In conclusion", "Think of it as", "In this post", "In this article", "we'll cover", "As discussed", "In short", "Ultimately,". Then compare each section's last sentence with its first.
 4. **Openers.** Three consecutive sentences opening with the same word: vary one.
 
 Anything the scan flags goes back through the Filter by hand. The scan finds; it does not fix.
